@@ -43,18 +43,6 @@ export default {
   },
   css: ['~/assets/styles/main.styl'],
   modules: [['@nuxtjs/pwa', { workbox: false }]],
-  vuetify: {
-    materialIcons: false,
-    theme: {
-      primary: '#3f51b5',
-      secondary: '#757de8',
-      accent: '#ff4081',
-      error: '#F44336',
-      warning: '#ff9800',
-      info: '#2196F3',
-      success: '#4CAF50'
-    }
-  },
   extensions: ['js', 'ts'],
   build: {
     extend(config, ctx) {
