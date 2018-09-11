@@ -1,79 +1,84 @@
-import minimist from "minimist";
+import minimist from 'minimist'
 const argv = minimist(process.argv.slice(2), {
   alias: {
-    H: "hostname",
-    p: "port"
+    H: 'hostname',
+    p: 'port'
   },
-  string: ["H"],
+  string: ['H'],
   unknown: parameter => false
-});
+})
 
 const port =
   argv.port ||
   process.env.PORT ||
   process.env.npm_package_config_nuxt_port ||
-  "3000";
+  '3000'
 const host =
   argv.hostname ||
   process.env.HOST ||
   process.env.npm_package_config_nuxt_host ||
-  "localhost";
+  'localhost'
 
 export default {
   env: {
     baseUrl: process.env.BASE_URL || `http://${host}:${port}`
   },
   head: {
-    title: "fantem.com"
+    title: 'fantem.com'
   },
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: "#3B8070" },
+  loading: { color: '#3B8070' },
+  mode: 'spa',
+  router: {
+    middleware: 'vue-i18n'
+  },
+  plugins: ['~/plugins/vue-i18n.js'],
   /*
   ** Build configuration
   */
   generate: {
-    dir: "public"
+    dir: 'public'
   },
-  css: ["~/assets/styles/main.styl"],
-  modules: [["@nuxtjs/pwa", { workbox: false }]],
+  css: ['~/assets/styles/main.styl'],
+  modules: [['@nuxtjs/pwa', { workbox: false }]],
   vuetify: {
     materialIcons: false,
     theme: {
-      primary: "#3f51b5",
-      secondary: "#757de8",
-      accent: "#ff4081",
-      error: "#F44336",
-      warning: "#ff9800",
-      info: "#2196F3",
-      success: "#4CAF50"
+      primary: '#3f51b5',
+      secondary: '#757de8',
+      accent: '#ff4081',
+      error: '#F44336',
+      warning: '#ff9800',
+      info: '#2196F3',
+      success: '#4CAF50'
     }
   },
-  extensions: ["js", "ts"],
+  extensions: ['js', 'ts'],
   build: {
     extend(config, ctx) {
       if (ctx.isClient) {
-        config.devtool = "eval-source-map";
+        config.devtool = 'eval-source-map'
       }
       const tsLoader = {
-        loader: "ts-loader",
+        loader: 'ts-loader',
         options: { appendTsSuffixTo: [/\.vue$/], transpileOnly: true }
-      };
+      }
       config.module.rules.push({
         test: /((client|server)\.js)|(\.tsx?)$/,
         ...tsLoader
-      });
+      })
       config.module.rules.map(rule => {
-        if (rule.loader === "vue-loader") {
-          rule.options.loaders = { ts: tsLoader };
+        if (rule.loader === 'vue-loader') {
+          rule.options.loaders = { ts: tsLoader }
         }
-        return rule;
-      });
+        return rule
+      })
       // Add .ts extension in webpack resolve
-      if (config.resolve.extensions.indexOf(".ts") === -1) {
-        config.resolve.extensions.push(".ts");
+      if (config.resolve.extensions.indexOf('.ts') === -1) {
+        config.resolve.extensions.push('.ts')
       }
     }
   }
-};
+}

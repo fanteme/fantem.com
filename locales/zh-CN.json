@@ -1,0 +1,12 @@
+{
+  "links": {
+    "home": "首页",
+    "about": "关于",
+    "chinese": "中文版本",
+    "english": "英文版本"
+  },
+  "home": {
+    "title": "欢迎",
+    "introduction": "这是中文简介"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "links": {
+    "home": "Home",
+    "about": "About",
+    "chinese": "Chinese version",
+    "english": "English version"
+  },
+  "home": {
+    "title": "Welcome",
+    "introduction": "This is an introduction in English."
+  }
+}
