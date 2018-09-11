@@ -24,13 +24,23 @@ export default {
     baseUrl: process.env.BASE_URL || `http://${host}:${port}`
   },
   head: {
-    title: 'fantem.com'
+    title: '官网首页',
+    titleTemplate: '丰唐物联 - %s | 丰唐物联智能家居',
+    htmlAttrs: {
+      lang: 'zh'
+    }
   },
+  meta: [
+    {
+      name: 'keywords',
+      content:
+        '丰唐物联,丰唐物联官网,物联网,IOT,Oomi,智能家居公司,智能家居系统,智能家居加盟,智能家居控制系统'
+    }
+  ],
   /*
   ** Customize the progress-bar color
   */
   loading: { color: '#3B8070' },
-  mode: 'spa',
   router: {
     middleware: 'vue-i18n'
   },
@@ -39,7 +49,9 @@ export default {
   ** Build configuration
   */
   generate: {
-    dir: 'public'
+    dir: 'public',
+    fallback: '404.html',
+    routes: ['/', '/en']
   },
   css: ['~/assets/styles/main.styl'],
   modules: [['@nuxtjs/pwa', { workbox: false }]],
