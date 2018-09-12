@@ -1,0 +1,141 @@
+<template>
+  <header :class="{'isFixed fadeInDown': isFixed}">
+    <nav class="container nav">
+      <div class="navbar-wrapper navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-wrapper-left navbar-brand is-vertical-center">
+          <nuxt-link to="/">
+            <img src="http://cdn.fantem.cn/fantem/logo.svg" alt="fantem logo" />
+          </nuxt-link>
+        </div>
+        <div class="navbar-burger is-vertical-center is-hidden-tablet" data-target="navMenu" :class="{'showMenu': isActive}" @click='isActive = !isActive'>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="navbar-wrapper-right has-text-right is-hidden-mobile">
+          <div class="navbar-wrapper-right-menu">
+            <ul>
+              <li class="is-inline" v-for="menu in menus" :key="menu.id">
+                <nuxt-link :to="menu.link">{{menu.title}}</nuxt-link>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div v-show="isActive" class="mobile-list is-hidden-tablet" @touchmove.prevent>
+          <ul>
+            <li v-for="(menu, key) in menus" :key="key" class="has-text-centered">
+              <nuxt-link class="nav-item" :class="menu.class" :to="menu.link">
+                {{menu.title}}
+              </nuxt-link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>   
+</template>
+<style lang="stylus">
+  .fadeInDown
+    animation-duration: 1s
+    animation-fill-mode: both
+    animation-name: fadeInDown
+  header
+    background: #fff
+    box-shadow: 0 0 10px rgba(0,0,0,0.4)
+    >nav.container
+      padding: 0
+    &.isFixed
+      position: fixed
+      z-index: 9
+      width: 100%
+      box-shadow: 0 0 10px rgba(0,0,0,0.4)
+      &+main
+        padding-top: 6.75rem
+  .navbar
+    box-shadow: none
+    &-brand
+      margin-left: 0 !important
+    &-wrapper
+      height: 80px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      @media (max-width: 769px)
+        height: 3.8rem
+      &-left
+        img
+          width: 85px
+          @media (max-width: 769px)
+            width: 60px
+            margin-left: 15px
+      &-right
+        display: flex
+        justify-content: center
+        flex-direction: column
+        flex-grow: 1
+        &-menu
+          padding-left: calc(100vw * .2)
+          ul
+            display: flex
+            justify-content: space-between
+      .mobile-list
+          position: fixed
+          display: flex
+          align-items: flex-start
+          justify-content: center
+          background: #fff
+          box-shadow: 0 10px 60px rgba(29,29,31,.07)
+          width: 100%
+          height: 100vh
+          z-index: 9
+          top: 108px
+          @media (max-width: 769px)
+            top: 61px
+          ul li a
+            margin: 20px 32px
+            display: inline-block
+    &-burger
+      position: relative
+      cursor: pointer
+      transition: .4s
+      &.showMenu
+        transform: rotate(90deg)
+        span
+          &:first-child
+            margin-top: 0
+            transform: rotate(45deg) translate(4px,6px)
+          &:nth-child(2)
+            transform: scaleX(0)
+          &:last-child
+            margin-top: 0
+            transform: rotate(-45deg) translate(1px,-3px)
+      &:hover span
+        background-image: linear-gradient(100deg, #f26f21 33%, #f37825 48%, #f59031 72%, #f9b443 100%)
+      span
+        position: absolute
+        display: block
+        background-color: #343434
+        width: 1.25rem
+        height: 1.5px
+        left: 50%
+        top: 50%
+        margin-left: -@width*.5
+        transition: .4s
+        &:first-child
+          margin-top: -6px
+        &:nth-child(2)
+          margin-top: -1px
+        &:nth-child(3)
+          margin-top: 4px                   
+</style>
+<script>
+  export default{
+    data(){
+      return {
+        isActive: false,
+        isFixed: false,
+        menus: this.$t('navigation.menus')
+      }
+    }
+  }
+</script>
