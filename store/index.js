@@ -1,6 +1,7 @@
 export const state = () => ({
   locales: ['en', 'zh'],
-  locale: 'zh'
+  locale: 'zh',
+  cdn: 'http://cdn.fantem.cn'
 })
 
 export const mutations = {
