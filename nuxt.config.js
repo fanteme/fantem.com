@@ -25,18 +25,16 @@ export default {
   },
   head: {
     title: '官网首页',
-    titleTemplate: '丰唐物联 - %s | 丰唐物联智能家居',
     htmlAttrs: {
       lang: 'zh'
-    }
+    },
+    link: [
+      {
+        rel: 'stylesheet',
+        href: 'https://cdn.bootcss.com/bulma/0.7.1/css/bulma.min.css'
+      }
+    ]
   },
-  meta: [
-    {
-      name: 'keywords',
-      content:
-        '丰唐物联,丰唐物联官网,物联网,IOT,Oomi,智能家居公司,智能家居系统,智能家居加盟,智能家居控制系统'
-    }
-  ],
   /*
   ** Customize the progress-bar color
   */
@@ -50,11 +48,10 @@ export default {
   */
   generate: {
     dir: 'public',
-    fallback: '404.html',
     routes: ['/', '/en']
   },
   css: ['~/assets/styles/main.styl'],
-  modules: [['@nuxtjs/pwa', { workbox: false }]],
+  modules: [['@nuxtjs/pwa', { workbox: false }], '@nuxtjs/axios'],
   extensions: ['js', 'ts'],
   build: {
     extend(config, ctx) {
