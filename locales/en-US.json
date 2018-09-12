@@ -8,5 +8,37 @@
   "home": {
     "title": "Welcome",
     "introduction": "This is an introduction in English."
+  },
+  "navigation": {
+    "menus":[
+      {
+        "title": "home",
+        "link": "/"
+      },
+      {
+        "title": "products",
+        "link": "/products"
+      },
+      {
+        "title": "application",
+        "link": "/application"
+      },
+      {
+        "title": "solution",
+        "link": "/solution"
+      },
+      {
+        "title": "business",
+        "link": "/business"
+      },
+      {
+        "title": "support",
+        "link": "/support"
+      },
+      {
+        "title": "about",
+        "link": "/about"
+      }
+    ]
   }
 }

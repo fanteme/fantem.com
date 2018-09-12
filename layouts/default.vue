@@ -1,8 +1,12 @@
 <template>
-  <nuxt/>
+  <div>
+    <page-header/>
+    <nuxt/>
+  </div>
 </template>
 
 <script>
+import PageHeader from '~/components/Header.vue'
 export default {
   head() {
     return {
@@ -21,6 +25,9 @@ export default {
         }
       ]
     }
+  },
+  components: {
+    PageHeader
   }
 }
 </script>
