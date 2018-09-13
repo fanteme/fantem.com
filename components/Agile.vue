@@ -1,9 +1,18 @@
 <template>
   <div class="agile" :class="{'agile--fade': settings.fade}">
     <div class="agile__list">
-      <div class="agile__track"
-           :style="{width: width.track + 'px', transform: 'translate(-' + transform + 'px)', transition: 'transform ' + settings.timing + ' ' + transitionDelay + 'ms'}">
+      <div class="agile__track" :style="{width: width.track + 'px', transform: 'translate(-' + transform + 'px)', transition: 'transform ' + settings.timing + ' ' + transitionDelay + 'ms'}">
         <slot></slot>
+      </div>
+      <div class="agile__indicate">
+        <div class="container agile__indicate__wrap">
+          <div class="columns has-text-centered">
+            <div class="item column" v-for="(slide, index) in slides" :key="index" :class="{'active': index==currentSlide}" @mouseover="selectSlide(index)">
+              <div class="number-container" v-html="slide.icon"></div>
+              <h3 v-text="slide.title"></h3>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -15,7 +24,11 @@ export default {
   props: {
     autoplay: {
       type: Boolean,
-      default: true
+      default: false
+    },
+    slides: {
+      type: Array,
+      default: []
     },
     autoplaySpeed: {
       type: Number,
@@ -23,7 +36,7 @@ export default {
     },
     fade: {
       type: Boolean,
-      default: true
+      default: false
     },
     infinite: {
       type: Boolean,
@@ -531,6 +544,61 @@ export default {
     align-items: center;
     display: flex;
     justify-content: flex-start;
+  }
+
+  &__indicate {
+    background: #f0f4f5;
+    height: 90px;
+
+    &__wrap {
+      position: absolute;
+      left: 50%;
+      bottom: 11px;
+      transform: translateX(-50%);
+      background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+      z-index: 1;
+      box-shadow: 0 5px 12px -8px;
+
+      .item {
+        position: relative;
+        padding: 65px 45px 25px;
+
+        .number-container {
+          position: relative;
+          height: 23.5px;
+          font-size: 0px;
+
+          svg {
+            position: absolute;
+            left: 50%;
+            height: 47px;
+            transform: translateX(-50%) translateY(0px);
+            transition: all 0.3s linear 0s;
+
+            path {
+              transition: all 0.3s linear 0s;
+            }
+          }
+        }
+
+        h3 {
+          position: relative;
+          padding-top: 23.5px;
+          font-size: 20px;
+          color: #3e3a39;
+          background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+          z-index: 1;
+        }
+
+        &.active svg {
+          transform: translateX(-50%) translateY(-23px);
+
+          path {
+            fill: #ed7422;
+          }
+        }
+      }
+    }
   }
 
   &__slide {
