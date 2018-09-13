@@ -11,7 +11,7 @@ export default {
     banner
   },
   head() {
-    return { title: this.$t('page.home.title') }
+    return { title: this.$t('首页') }
   }
 }
 </script>

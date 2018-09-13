@@ -42,52 +42,158 @@
 </template>
 
 <style lang="stylus">
-  footer.footer
-    padding: 4rem 1.5rem 3rem
-    background: #fff
-    .company
-      font-size: 12px
-      color: #3e3a39
-      .icp
-        margin-left: 22px
-    .column
-      font-size: 14px
-      .caption
-        color: #3e3a39
-        font-size: 16px
-        line-height: 2.5rem
-        margin-bottom: 20px 
-      &.contact
-        .tel
-          color: #ee7623
-          font-size: 28px
-        .fa-qrcode
-          margin: 10px 0   
-        .wechat-mp
-          span 
-            padding: 0 15px 0
-      hr 
-        background-color: #ef853e
-        height: 1px    
-        margin: 5px 0
-      .link
-        padding-right: 8px
-        li
-          padding: 0 6px
-          span 
-            color: #ef853e     
-</style>
+footer.footer {
+  padding: 4rem 1.5rem 3rem;
+  background: #fff;
 
-<script>
-  import QrcodeVue from 'qrcode.vue'
-  export default {
-    components: {
-      QrcodeVue
-    },
-    data () {
-      return {
-        menus: this.$t('footer.menus')
+  .company {
+    font-size: 12px;
+    color: #3e3a39;
+
+    .icp {
+      margin-left: 22px;
+    }
+  }
+
+  .column {
+    font-size: 14px;
+
+    .caption {
+      color: #3e3a39;
+      font-size: 16px;
+      line-height: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    &.contact {
+      .tel {
+        color: #ee7623;
+        font-size: 28px;
+      }
+
+      .fa-qrcode {
+        margin: 10px 0;
+      }
+
+      .wechat-mp {
+        span {
+          padding: 0 15px 0;
+        }
+      }
+    }
+
+    hr {
+      background-color: #ef853e;
+      height: 1px;
+      margin: 5px 0;
+    }
+
+    .link {
+      padding-right: 8px;
+
+      li {
+        padding: 0 6px;
+
+        span {
+          color: #ef853e;
+        }
       }
     }
   }
+}
+</style>
+
+<script>
+import QrcodeVue from 'qrcode.vue'
+export default {
+  components: {
+    QrcodeVue
+  },
+  data() {
+    return {
+      menus: [
+        {
+          title: this.$t('关于丰唐物联'),
+          menus: [
+            {
+              title: this.$t('公司简介'),
+              link: '/'
+            },
+            {
+              title: this.$t('加入我们'),
+              link: '/'
+            },
+            {
+              title: this.$t('联系我们'),
+              link: '/'
+            }
+          ]
+        },
+        {
+          title: this.$t('产品及服务'),
+          menus: [
+            {
+              title: this.$t('产品中心'),
+              link: '/'
+            },
+            {
+              title: this.$t('应用场景'),
+              link: '/'
+            },
+            {
+              title: this.$t('行业方案'),
+              link: '/'
+            },
+            {
+              title: this.$t('服务体系'),
+              link: '/'
+            }
+          ]
+        },
+        {
+          title: this.$t('商务合作'),
+          menus: [
+            {
+              title: this.$t('经销商合作'),
+              link: '/'
+            },
+            {
+              title: this.$t('项目合作'),
+              link: '/'
+            },
+            {
+              title: this.$t('典型案例'),
+              link: '/'
+            }
+          ]
+        },
+        {
+          title: this.$t('技术支持'),
+          menus: [
+            {
+              title: this.$t('下载中心'),
+              link: '/'
+            },
+            {
+              title: this.$t('APP下载'),
+              link: '/'
+            },
+            {
+              title: this.$t('常见问题'),
+              link: '/'
+            },
+            {
+              title: this.$t('视频中心'),
+              link: '/'
+            },
+            {
+              title: this.$t('关注我们'),
+              link: '/'
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
 </script>

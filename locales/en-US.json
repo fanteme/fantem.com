@@ -1,44 +1,10 @@
 {
-  "links": {
-    "home": "Home",
-    "about": "About",
-    "chinese": "Chinese version",
-    "english": "English version"
+  "head": {
+    "titleTemplate": "丰唐物联 - %s | 丰唐物联智能家居",
+    "meta": {
+      "keywords": "丰唐物联,丰唐物联官网,物联网,IOT,Oomi,智能家居公司,智能家居系统,智能家居加盟,智能家居控制系统",
+      "description": "丰唐物联技术（深圳）有限公司是由美国公司Aeon Labs LLC和深圳英唐智控2011年合资成立的一家集设计、研发、生产及销售于一体、专业从事物联网产品及无线智能家居产品研发制造的中美合资高新企业"
+    }
   },
-  "home": {
-    "title": "Welcome",
-    "introduction": "This is an introduction in English."
-  },
-  "navigation": {
-    "menus":[
-      {
-        "title": "home",
-        "link": "/"
-      },
-      {
-        "title": "products",
-        "link": "/products"
-      },
-      {
-        "title": "application",
-        "link": "/application"
-      },
-      {
-        "title": "solution",
-        "link": "/solution"
-      },
-      {
-        "title": "business",
-        "link": "/business"
-      },
-      {
-        "title": "support",
-        "link": "/support"
-      },
-      {
-        "title": "about",
-        "link": "/about"
-      }
-    ]
-  }
+  "首页": "Home"
 }
