@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <div class="wrapper">
+    <div style="display: none">
+      <img :src="`${$store.state.cdn}/fantem/wechat-share.jpg`" />
+    </div>
     <page-header/>
     <nuxt/>
   </div>
