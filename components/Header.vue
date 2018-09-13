@@ -40,6 +40,8 @@
     animation-fill-mode: both
     animation-name: fadeInDown
   header
+    position: relative
+    z-index: 2  
     background: #fff
     box-shadow: 0 0 10px rgba(0,0,0,0.4)
     >nav.container
@@ -74,7 +76,7 @@
         flex-direction: column
         flex-grow: 1
         &-menu
-          padding-left: calc(100vw * .2)
+          padding-left: calc(100vw * .25)
           ul
             display: flex
             justify-content: space-between

@@ -5,11 +5,13 @@
     </div>
     <page-header/>
     <nuxt/>
+    <page-footer/>
   </div>
 </template>
 
 <script>
 import PageHeader from '~/components/Header.vue'
+import PageFooter from '~/components/Footer.vue'
 export default {
   head() {
     return {
@@ -30,7 +32,8 @@ export default {
     }
   },
   components: {
-    PageHeader
+    PageHeader,
+    PageFooter
   }
 }
 </script>
