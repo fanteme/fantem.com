@@ -2,16 +2,19 @@
   <main class="main">
     <banner></banner>
     <feature></feature>
+    <application></application>
   </main>
 </template>
 
 <script>
-import Banner from '~/components/Banner.vue'
 import Feature from '~/components/HomeFeature.vue'
+import banner from '~/components/Banner.vue'
+import application from '~/components/SectionApplication.vue'
 export default {
   components: {
-    Banner,
-    Feature
+    Feature,
+    banner,
+    application
   },
   head() {
     return { title: this.$t('首页') }
