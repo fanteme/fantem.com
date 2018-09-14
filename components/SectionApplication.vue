@@ -37,42 +37,62 @@
   </section>  
 </template>
 <style lang="stylus">
-  .application
-    .container-fluid
-      padding-top: 60px
-      >h2 
-        margin: 0 0 32px 0
-        &:after 
-          display: block
-          margin: 0 auto
-          content: ''
-          margin-top: 8px
-          width: 73px
-          height: 2px
-          background-color: #ed7422
-    .column
-      @media screen and (min-width:769px) {
-        margin: 5px
+.application {
+  .container-fluid {
+    padding-top: 60px;
+    margin-bottom: 17px;
+
+    >h2 {
+      margin: 0 0 32px 0;
+
+      &:after {
+        display: block;
+        margin: 0 auto;
+        content: '';
+        margin-top: 8px;
+        width: 73px;
+        height: 2px;
+        background-color: #ed7422;
       }
-      height: 650px 
-      padding-top: 60px
-      background-position: center
-      background-size: cover        
-    .caption
-      font-size: 36px
-      line-height: 44px 
-    .subtittle
-      font-size: 18px
-      line-height: 22px
-      margin: 17px 0 12px 
-    .more
-      color: #ee7623
-      padding-bottom: 10px 
-      border-bottom: 2px solid transparent
-      svg
-        margin-left: 14px 
-        vertical-align: middle  
-      &:hover
-        transition: all 0.5s 
-        border-bottom-color: #ee7623   
+    }
+  }
+
+  .column {
+    @media screen and (min-width: 769px) {
+      margin: 5px;
+    }
+
+    height: 650px;
+    padding-top: 60px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .caption {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .subtittle {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 17px 0 12px;
+  }
+
+  .more {
+    color: #ee7623;
+    padding-bottom: 10px;
+    border-bottom: 2px solid transparent;
+
+    svg {
+      margin-left: 14px;
+      vertical-align: middle;
+    }
+
+    &:hover {
+      transition: all 0.5s;
+      border-bottom-color: #ee7623;
+    }
+  }
+}
 </style>

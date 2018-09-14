@@ -1,7 +1,8 @@
 export const state = () => ({
   locales: ['en', 'zh'],
   locale: 'zh',
-  cdn: 'http://cdn.fantem.cn'
+  cdn: 'http://cdn.fantem.cn',
+  api: 'http://api.fantem.cn/wp-json/wp/v2'
 })
 
 export const mutations = {
