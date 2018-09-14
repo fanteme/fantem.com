@@ -190,9 +190,12 @@ export default {
   data() {
     return {
       isActive: false,
-      isFixed: false,
-      menus: [
-        {
+      isFixed: false
+    }
+  },
+  computed: {
+    menus() {
+      return [{
           title: this.$t('首页'),
           link: '/'
         },
@@ -219,8 +222,7 @@ export default {
         {
           title: this.$t('关于我们'),
           link: '/about'
-        }
-      ]
+        }]
     }
   },
   mounted () {

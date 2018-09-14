@@ -19,7 +19,7 @@
               <div class="fa fa-qrcode">
                 <qrcode-vue value="http://weixin.qq.com/r/fHVZQa3EsPDPreki9yBu" :size="85" level="H"></qrcode-vue>
               </div>
-              <span>关注我们</span>
+              <span>{{$t('关注我们')}}</span>
             </li>
           </ul>
         </div>
@@ -29,7 +29,7 @@
       </div>
       <div class="columns">
         <div class="column has-text-left company">
-          ©2018 丰唐物联技术（深圳）有限公司<a target="_blank" href="http://www.miitbeian.gov.cn" class="icp">粤ICP备14021056号-1</a>
+          {{$t('©2018 丰唐物联技术（深圳）有限公司')}}<a target="_blank" href="http://www.miitbeian.gov.cn" class="icp">粤ICP备14021056号-1</a>
         </div>
         <div class="column has-text-right">
           <ul class="is-inline-flex link">
@@ -57,11 +57,12 @@ footer.footer {
 
   .column {
     font-size: 14px;
+    line-height: 24px; 
 
     .caption {
       color: #3e3a39;
       font-size: 16px;
-      line-height: 2.5rem;
+      line-height: 26px;
       margin-bottom: 20px;
     }
 
@@ -109,9 +110,9 @@ export default {
   components: {
     QrcodeVue
   },
-  data() {
-    return {
-      menus: [
+  computed: {
+    menus() {
+      return [
         {
           title: this.$t('关于丰唐物联'),
           menus: [
