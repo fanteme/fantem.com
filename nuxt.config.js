@@ -32,6 +32,10 @@ export default {
       {
         rel: 'stylesheet',
         href: 'https://cdn.bootcss.com/bulma/0.7.1/css/bulma.min.css'
+      },
+      {
+        rel: 'stylesheet',
+        href: '//cdn.bootcss.com/animate.css/3.5.2/animate.min.css'
       }
     ]
   },

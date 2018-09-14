@@ -4,7 +4,7 @@
       <div class="navbar-wrapper navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-wrapper-left navbar-brand is-vertical-center">
           <nuxt-link to="/">
-            <img src="http://cdn.fantem.cn/fantem/logo.svg" alt="fantem logo" />
+            <img :src="`${this.$store.state.cdn}/fantem/logo.svg`" alt="fantem logo" />
           </nuxt-link>
         </div>
         <div class="navbar-burger is-vertical-center is-hidden-tablet" data-target="navMenu" :class="{'showMenu': isActive}" @click='isActive = !isActive'>
@@ -222,6 +222,16 @@ export default {
         }
       ]
     }
+  },
+  mounted () {
+    window.addEventListener('scroll', () => {
+      let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop
+      if (scrollTop > 80) {
+        this.isFixed = true
+      } else {
+        this.isFixed = false
+      }
+    })
   }
 }
 </script>
