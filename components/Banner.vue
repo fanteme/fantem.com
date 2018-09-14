@@ -1,6 +1,6 @@
 <template>
   <section class="slider">
-    <agile :slides="slides">
+    <agile :slides="slides" :fade="true">
       <div v-for="(slide,i) in slides" :key="i" class="slide">
         <div class="imgwrap" :style="{backgroundImage: `url(${slide.img})`}">
           <div class="contentwrap"></div>

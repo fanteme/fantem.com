@@ -10,6 +10,7 @@
             <div class="item column" v-for="(slide, index) in slides" :key="index" :class="{'active': index==currentSlide}" @mouseover="selectSlide(index)">
               <div class="number-container" v-html="slide.icon"></div>
               <h3 v-text="slide.title"></h3>
+              <progress-bar :percent="percent" :active="index==currentSlide"></progress-bar>
             </div>
           </div>
         </div>
@@ -19,12 +20,16 @@
 </template>
 
 <script>
+import progressBar from '~/components/Progress.vue'
 export default {
   name: 'agile',
+  components: {
+    progressBar
+  },
   props: {
     autoplay: {
       type: Boolean,
-      default: false
+      default: true
     },
     slides: {
       type: Array,
@@ -36,7 +41,7 @@ export default {
     },
     fade: {
       type: Boolean,
-      default: false
+      default: true
     },
     infinite: {
       type: Boolean,
