@@ -1,15 +1,18 @@
 <template>
   <main class="main">
     <banner></banner>
+    <feature></feature>
     <application></application>
   </main>
 </template>
 
 <script>
+import Feature from '~/components/HomeFeature.vue'
 import banner from '~/components/Banner.vue'
 import application from '~/components/SectionApplication.vue'
 export default {
   components: {
+    Feature,
     banner,
     application
   },
