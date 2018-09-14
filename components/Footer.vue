@@ -38,6 +38,9 @@
         </div>
       </div>
     </div>
+    <div class="go2top is-vertical-center" v-show="isDisplay2Top">
+      <svg @click="go2top" width="22" height="23" viewBox="0 0 22 23" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero" fill="none"><path d="M21 12.5c-.3 0-.5-.1-.7-.3l-9-9.2-9 9.2c-.4.4-1 .4-1.4 0-.4-.4-.4-1 0-1.4l9.7-9.9c.4-.4 1.1-.4 1.4 0l9.7 9.9c.4.4.4 1 0 1.4-.2.2-.5.3-.7.3z" id="Shape" fill="#3E3A39"/><path d="M17.4 22.5h-12.4c-.6 0-1-.4-1-1s.4-1 1-1h12.4c.6 0 1 .4 1 1s-.5 1-1 1z" fill="#EE7623"/></g></svg>
+    </div>
   </footer>
 </template>
 
@@ -57,7 +60,7 @@ footer.footer {
 
   .column {
     font-size: 14px;
-    line-height: 24px; 
+    line-height: 24px;
 
     .caption {
       color: #3e3a39;
@@ -101,6 +104,18 @@ footer.footer {
       }
     }
   }
+
+  .go2top {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: 1px solid #e2e2e2;
+    border-radius: 50%;
+    box-shadow: 1px 1px 9px -4px;
+    position: fixed;
+    right: 48px;
+    bottom: 96px;
+  }
 }
 </style>
 
@@ -110,6 +125,9 @@ export default {
   components: {
     QrcodeVue
   },
+  data: () => ({
+    isDisplay2Top: false
+  }),
   computed: {
     menus() {
       return [
@@ -195,6 +213,33 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    go2top() {
+      let timer = setInterval(() => {
+        let oTop = document.documentElement.scrollTop || document.body.scrollTop
+        let speed = Math.floor(-oTop / 10)
+        document.documentElement.scrollTop = document.body.scrollTop =
+          oTop + speed
+        if (oTop === 0) {
+          clearInterval(timer)
+        }
+      }, 30)
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', () => {
+      let scrollTop =
+        document.documentElement.scrollTop ||
+        window.pageYOffset ||
+        document.body.scrollTop
+      let clientHeight = document.documentElement.clientHeight
+      if (scrollTop > clientHeight) {
+        this.isDisplay2Top = true
+      } else {
+        this.isDisplay2Top = false
+      }
+    })
   }
 }
 </script>
