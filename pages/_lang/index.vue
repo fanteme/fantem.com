@@ -1,14 +1,17 @@
 <template>
   <main class="main">
     <banner></banner>
+    <feature></feature>
   </main>
 </template>
 
 <script>
-import banner from '~/components/Banner.vue'
+import Banner from '~/components/Banner.vue'
+import Feature from '~/components/HomeFeature.vue'
 export default {
   components: {
-    banner
+    Banner,
+    Feature
   },
   head() {
     return { title: this.$t('首页') }
