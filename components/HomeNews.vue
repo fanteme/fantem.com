@@ -18,7 +18,10 @@
                 </figure>
               </div>
             </div>
-            <p>{{item.date | formatDate}}</p>
+            <p>
+              <svg width="19" height="19" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg"><path d="M9.1.6c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9zm3.7 9.7h-4.1c-.3 0-.6-.3-.6-.6v-4.8c0-.3.2-.6.6-.6.4 0 .6.2.6.6v4.3h3.5c.3 0 .6.3.6.6s-.3.5-.6.5z" fill-rule="nonzero" fill="#3E3A39"/></svg>
+              {{item.date | formatDate}}
+            </p>
             <p v-text="item.title.rendered" :title="item.title.rendered"></p>
             <p v-html="item.excerpt.rendered"></p>
           </nuxt-link>
@@ -121,9 +124,14 @@
       }
 
       p {
-        padding: 0 18px 20px;
+        padding: 0 12px 20px;
         font-size: 16px;
         color: #3e3a39;
+
+        svg {
+          vertical-align: middle;
+          margin-right: 5px;
+        }
 
         &:nth-child(2) {
           margin-top: 22px;
