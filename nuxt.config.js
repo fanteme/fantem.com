@@ -35,7 +35,7 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href: '//cdn.bootcss.com/animate.css/3.5.2/animate.min.css'
+        href: 'https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css'
       }
     ]
   },

@@ -38,7 +38,7 @@
         </div>
       </div>
     </div>
-    <div class="go2top is-vertical-center" v-show="isDisplay2Top">
+    <div class="go2top is-vertical-center" v-show="isDisplay2Top" :title="$t('返回顶部')">
       <svg @click="go2top" width="22" height="23" viewBox="0 0 22 23" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero" fill="none"><path d="M21 12.5c-.3 0-.5-.1-.7-.3l-9-9.2-9 9.2c-.4.4-1 .4-1.4 0-.4-.4-.4-1 0-1.4l9.7-9.9c.4-.4 1.1-.4 1.4 0l9.7 9.9c.4.4.4 1 0 1.4-.2.2-.5.3-.7.3z" id="Shape" fill="#3E3A39"/><path d="M17.4 22.5h-12.4c-.6 0-1-.4-1-1s.4-1 1-1h12.4c.6 0 1 .4 1 1s-.5 1-1 1z" fill="#EE7623"/></g></svg>
     </div>
   </footer>

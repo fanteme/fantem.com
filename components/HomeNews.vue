@@ -3,7 +3,7 @@
     <div class="container">
       <h2 class="caption has-text-centered">{{$t('新闻动态')}}</h2>
       <ul class="columns is-wrap is-mobile">
-        <span class="btn btn-prev" @click="prevNews">
+        <span class="btn btn-prev" :title="$t('前一页')" @click="prevNews">
           <svg width="49" height="49" viewBox="0 0 49 49" xmlns="http://www.w3.org/2000/svg"><path d="M28.2 14.4c.2-.2.5-.2.7 0 .2.2.2.5 0 .7l-9.3 9.2 9.3 9.2c.2.2.2.5 0 .7-.1.1-.2.1-.4.1-.1 0-.3 0-.4-.1l-9.7-9.5c-.1-.1-.1-.2-.1-.4s.1-.3.1-.4l9.8-9.5zm-3.6-13.7c13.2 0 24 10.8 24 24s-10.8 24-24 24-24-10.8-24-24 10.7-24 24-24zm0 47c12.7 0 23-10.3 23-23s-10.3-23-23-23-23 10.3-23 23 10.3 23 23 23z" fill-rule="nonzero" fill="#878787"/></svg>
         </span>
         <li class="column is-full-mobile is-one-third-tablet" v-for="(item, index) in currentNews" :key="index">
@@ -19,11 +19,11 @@
               </div>
             </div>
             <p>{{item.date | formatDate}}</p>
-            <p v-text="item.title.rendered"></p>
+            <p v-text="item.title.rendered" :title="item.title.rendered"></p>
             <p v-html="item.excerpt.rendered"></p>
           </nuxt-link>
         </li>
-        <span class="btn btn-next" @click="nextNews">
+        <span class="btn btn-next" :title="$t('后一页')" @click="nextNews">
           <svg width="49" height="49" viewBox="0 0 49 49" xmlns="http://www.w3.org/2000/svg"><path d="M20.8 14.4c-.2-.2-.5-.2-.7 0-.2.2-.2.5 0 .7l9.3 9.2-9.3 9.2c-.2.2-.2.5 0 .7.1.1.2.1.4.1.1 0 .3 0 .4-.1l9.7-9.5c.1-.1.1-.2.1-.4s-.1-.3-.1-.4l-9.8-9.5zm3.6-13.7c-13.2 0-24 10.8-24 24s10.8 24 24 24 24-10.8 24-24-10.7-24-24-24zm0 47c-12.7 0-23-10.3-23-23s10.3-23 23-23 23 10.3 23 23-10.3 23-23 23z" fill-rule="nonzero" fill="#878787"/></svg>
         </span>
       </ul>
@@ -133,6 +133,9 @@
         &:nth-child(3) {
           font-size: 18px;
           font-weight: bold;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
       }
     }
