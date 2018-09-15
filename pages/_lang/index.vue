@@ -24,7 +24,7 @@ export default {
   },
   async asyncData({ app, store }) {
     const { data } = await app.$axios.get(
-      `${store.state.api}/posts?categories=news&per_page=3&_embed`
+      `${store.state.api}/posts?categories=news&per_page=9&_embed`
     )
     return {
       news: data
