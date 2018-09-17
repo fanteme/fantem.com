@@ -3,8 +3,8 @@
     <div class="container">
       <div class="columns">
         <div class="column  is-8"> 
-          <section class="columns">
-              <ul class="column" :key="index" v-for="(menu, index) of menus">
+          <section class="columns is-multiline is-mobile">
+              <ul class="column is-half-mobile" :key="index" v-for="(menu, index) of menus">
                 <h2 class="caption">{{menu.title}}</h2>
                 <li v-for="(item, index) of menu.menus" :key="index">
                   <nuxt-link :to="item.link" v-text="item.title"></nuxt-link>
@@ -12,7 +12,7 @@
               </ul>
             </section>
         </div>
-        <div class="column is-4 contact has-text-right">
+        <div class="column is-4 contact has-text-right has-text-left-mobile">
           <ul>
             <li class="tel has-text-weight-semibold">400-880-3757</li>
             <li class="wechat-mp">
