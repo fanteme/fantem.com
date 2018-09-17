@@ -4,7 +4,7 @@
       <div class="agile__track" :style="{width: width.track + 'px', transform: 'translate(-' + transform + 'px)', transition: 'transform ' + settings.timing + ' ' + transitionDelay + 'ms'}">
         <slot></slot>
       </div>
-      <div class="agile__indicate">
+      <div class="agile__indicate is-hidden-touch">
         <div class="container agile__indicate__wrap">
           <div class="columns has-text-centered">
             <div class="item column" v-for="(slide, index) in slides" :key="index" :class="{'active': index==currentSlide}" @mouseover="selectSlide(index)">
