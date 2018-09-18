@@ -3,7 +3,7 @@
     <nav class="container nav">
       <div class="navbar-wrapper navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-wrapper-left navbar-brand">
-          <nuxt-link :to="`${this.$store.state.locale}/`">
+          <nuxt-link :to="`/${this.$store.state.locale}`">
             <img :src="`${this.$store.state.cdn}/fantem/logo.svg`" alt="fantem logo" />
           </nuxt-link>
         </div>
@@ -198,31 +198,31 @@ export default {
       return [
         {
           title: this.$t('首页'),
-          link: `${this.$store.state.locale}/`
+          link: `/${this.$store.state.locale}`
         },
         {
           title: this.$t('产品中心'),
-          link: `${this.$store.state.locale}/products`
+          link: `/${this.$store.state.locale}/products`
         },
         {
           title: this.$t('应用场景'),
-          link: `${this.$store.state.locale}/application`
+          link: `/${this.$store.state.locale}/application`
         },
         {
           title: this.$t('行业方案'),
-          link: `${this.$store.state.locale}/solution`
+          link: `/${this.$store.state.locale}/solution`
         },
         {
           title: this.$t('商务合作'),
-          link: `${this.$store.state.locale}/business`
+          link: `/${this.$store.state.locale}/business`
         },
         {
           title: this.$t('技术支持'),
-          link: `${this.$store.state.locale}/support`
+          link: `/${this.$store.state.locale}/support`
         },
         {
           title: this.$t('关于我们'),
-          link: `${this.$store.state.locale}/about`
+          link: `/${this.$store.state.locale}/about`
         }
       ]
     }

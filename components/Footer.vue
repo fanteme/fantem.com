@@ -138,15 +138,15 @@ export default {
           menus: [
             {
               title: this.$t('公司简介'),
-              link: `${this.$store.state.locale}/`
+              link: `/${this.$store.state.locale}`
             },
             {
               title: this.$t('加入我们'),
-              link: `${this.$store.state.locale}/`
+              link: `/${this.$store.state.locale}`
             },
             {
               title: this.$t('联系我们'),
-              link: `${this.$store.state.locale}/`
+              link: `/${this.$store.state.locale}`
             }
           ]
         },
@@ -155,19 +155,19 @@ export default {
           menus: [
             {
               title: this.$t('产品中心'),
-              link: `${this.$store.state.locale}`
+              link: `/${this.$store.state.locale}`
             },
             {
               title: this.$t('应用场景'),
-              link: `${this.$store.state.locale}`
+              link: `/${this.$store.state.locale}`
             },
             {
               title: this.$t('行业方案'),
-              link: `${this.$store.state.locale}`
+              link: `/${this.$store.state.locale}`
             },
             {
               title: this.$t('服务体系'),
-              link: `${this.$store.state.locale}`
+              link: `/${this.$store.state.locale}`
             }
           ]
         },
@@ -176,15 +176,15 @@ export default {
           menus: [
             {
               title: this.$t('经销商合作'),
-              link: `${this.$store.state.locale}`
+              link: `/${this.$store.state.locale}`
             },
             {
               title: this.$t('项目合作'),
-              link: `${this.$store.state.locale}`
+              link: `/${this.$store.state.locale}`
             },
             {
               title: this.$t('典型案例'),
-              link: `${this.$store.state.locale}`
+              link: `/${this.$store.state.locale}`
             }
           ]
         },
@@ -193,23 +193,23 @@ export default {
           menus: [
             {
               title: this.$t('下载中心'),
-              link: `${this.$store.state.locale}`
+              link: `/${this.$store.state.locale}`
             },
             {
               title: this.$t('APP下载'),
-              link: `${this.$store.state.locale}`
+              link: `/${this.$store.state.locale}`
             },
             {
               title: this.$t('常见问题'),
-              link: `${this.$store.state.locale}`
+              link: `/${this.$store.state.locale}`
             },
             {
               title: this.$t('视频中心'),
-              link: `${this.$store.state.locale}`
+              link: `/${this.$store.state.locale}`
             },
             {
               title: this.$t('关注我们'),
-              link: `${this.$store.state.locale}`
+              link: `/${this.$store.state.locale}`
             }
           ]
         }
