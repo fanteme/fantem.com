@@ -29,11 +29,13 @@
       </div>
       <div class="columns">
         <div class="column has-text-left company">
-          {{$t('©2018 丰唐物联技术（深圳）有限公司')}}<a target="_blank" href="http://www.miitbeian.gov.cn" class="icp">粤ICP备14021056号-1</a>
+          ©2018 {{$t('丰唐物联技术（深圳）有限公司')}}<a target="_blank" href="http://www.miitbeian.gov.cn" class="icp">粤ICP备14021056号-1</a>
         </div>
         <div class="column has-text-right">
           <ul class="is-inline-flex link">
-            <li><nuxt-link to="/">中文</nuxt-link></li><li><span>|</span></li><li><nuxt-link to="/en">ENG</nuxt-link></li>
+            <li><nuxt-link to="/">中文</nuxt-link></li>
+            <li><span>|</span></li>
+            <li><nuxt-link to="/en">ENG</nuxt-link></li>
           </ul>  
         </div>
       </div>
