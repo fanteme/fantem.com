@@ -15,21 +15,21 @@
       <div class="container columns" style="margin: 0 auto">
         <div class="column">
           <div class="num">1</div>
-          <figure class="is-vertical-center">
+          <figure class="center">
             <img :src="`${this.$store.state.cdn}/2018/09/e7a9735acc6dd7a9317aeea45a1a282f.png`">
           </figure>
           <p class="text has-text-centered">{{$t('轻触')}}</p>
         </div>
         <div class="column">
           <div class="num">2</div>
-          <figure class="is-vertical-center">
+          <figure class="center">
             <img :src="`${this.$store.state.cdn}/2018/09/59183cc0661d8b7f96f0e8480597b5d5.png`">
           </figure>
           <p class="text has-text-centered">{{$t('连接')}}</p>
         </div>
         <div class="column">
           <div class="num">3</div>
-          <figure class="is-vertical-center">
+          <figure class="center">
             <img :src="`${this.$store.state.cdn}/2018/09/50e8679226119dd5527d8aa56ac4890e.png`">
           </figure>
           <p class="text has-text-centered">{{$t('操控')}}</p>
@@ -51,11 +51,11 @@
     <div class="columns">
       <div class="container columns" style="margin: 0 auto">
         <div class="column is-10">
-          <div class="is-vertical-center">
+          <div class="center">
             <img :src="`${this.$store.state.cdn}/2018/09/c3bd8a49f94e8f1f641e78eb0e6a8d90.png`">
           </div>
         </div>
-        <div class="column is-2 is-vertical-center">
+        <div class="column is-2 center">
           <div class="one-account">
             <img :src="`${this.$store.state.cdn}/2018/09/1d695774a486ac7d2ea4158f86c3f7ab.png`">
             <p class="text has-text-centered">{{$t('一个账号，集中控制！')}}</p>

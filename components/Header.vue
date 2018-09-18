@@ -2,12 +2,12 @@
   <header :class="{'isFixed fadeInDown': isFixed}">
     <nav class="container nav">
       <div class="navbar-wrapper navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-wrapper-left navbar-brand is-vertical-center">
+        <div class="navbar-wrapper-left navbar-brand">
           <nuxt-link :to="`${this.$store.state.locale}/`">
             <img :src="`${this.$store.state.cdn}/fantem/logo.svg`" alt="fantem logo" />
           </nuxt-link>
         </div>
-        <div class="navbar-burger is-vertical-center is-hidden-tablet" data-target="navMenu" :class="{'showMenu': isActive}" @click='isActive = !isActive'>
+        <div class="navbar-burger is-hidden-tablet" data-target="navMenu" :class="{'showMenu': isActive}" @click='isActive = !isActive'>
           <span></span>
           <span></span>
           <span></span>
@@ -195,7 +195,8 @@ export default {
   },
   computed: {
     menus() {
-      return [{
+      return [
+        {
           title: this.$t('首页'),
           link: `${this.$store.state.locale}/`
         },
@@ -222,12 +223,16 @@ export default {
         {
           title: this.$t('关于我们'),
           link: `${this.$store.state.locale}/about`
-        }]
+        }
+      ]
     }
   },
-  mounted () {
+  mounted() {
     window.addEventListener('scroll', () => {
-      let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop
+      let scrollTop =
+        document.documentElement.scrollTop ||
+        window.pageYOffset ||
+        document.body.scrollTop
       if (scrollTop > 80) {
         this.isFixed = true
       } else {
