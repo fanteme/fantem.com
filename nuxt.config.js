@@ -37,6 +37,12 @@ export default {
         rel: 'stylesheet',
         href: 'https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css'
       }
+    ],
+    script: [
+      {
+        src:
+          '//cdn.bootcss.com/smooth-scroll/12.1.5/js/smooth-scroll.polyfills.min.js'
+      }
     ]
   },
   /*
