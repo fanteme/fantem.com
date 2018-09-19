@@ -4,11 +4,8 @@
       <div class="hero-content center" :style="{backgroundImage: `url(${$store.state.cdn}/fantem/news-detail-banner.jpg)`}">
         <div class="container-fluid has-text-centered">
           <h1 class="title">
-            {{$t('合作共赢 协同智能')}}
+            {{$t('新闻动态')}}
           </h1>
-          <h2 class="subtitle">
-            {{$t('虚位以待 丰唐物联期待与您携手')}}
-          </h2>
         </div>
       </div>
     </section>
@@ -18,7 +15,7 @@
           <nav class="breadcrumb is-small" aria-label="breadcrumbs">
             <ul>
               <li><nuxt-link :to="`/${this.$store.state.locale}`">{{$t('首页')}}</nuxt-link></li>
-              <li><nuxt-link :to="`/${this.$store.state.locale}/news`">{{$t('新闻')}}</nuxt-link></li>
+              <li><nuxt-link :to="`/${this.$store.state.locale}/news`">{{$t('新闻动态')}}</nuxt-link></li>
             </ul>
           </nav>
           <div class="title" v-text="news.title.rendered"></div>
@@ -156,7 +153,6 @@
         display: inline-block;
         text-align: center;
 
-
         &.icon-twitter {
           background-color: #1cb2e8;
         }
@@ -201,6 +197,11 @@ export default {
         title: {},
         content: {}
       }
+    }
+  },
+  head() {
+    return {
+      title: this.$t('新闻动态')
     }
   },
   computed: {

@@ -4,11 +4,8 @@
       <div class="hero-content center" :style="{backgroundImage: `url(${$store.state.cdn}/fantem/news-banner.jpg)`}">
         <div class="container-fluid has-text-centered">
           <h1 class="title">
-            {{$t('合作共赢 协同智能')}}
+            {{$t('新闻动态')}}
           </h1>
-          <h2 class="subtitle">
-            {{$t('虚位以待 丰唐物联期待与您携手')}}
-          </h2>
         </div>
       </div>
     </section>
