@@ -9,13 +9,13 @@
                 <span class="icon">
                   <i class="fa fa-home" aria-hidden="true"></i>
                 </span>
-                <span>Oomi产品</span>
+                <span>OOMI{{$t('产品')}}</span>
               </a>
             </li>
             <li :class="isOomiProduct?'':'is-active'" @click="switchToThird">
               <a>
                 <span class="icon"><i class="fa fa-cubes" aria-hidden="true"></i></span>
-                <span>第三方产品</span>
+                <span>{{$t('第三方产品')}}</span>
               </a>
             </li>
           </ul>
@@ -123,8 +123,8 @@
 
 <script>
 export default {
-  head: {
-    title: '产品'
+  head() {
+    return {title: this.$t('产品中心')}
   },
   data() {
     return {
@@ -134,19 +134,19 @@ export default {
       products: [],
       categories: [
         {
-          name: '网关类',
+          name: this.$t('网关类'),
           slug: 'gateway'
         },
         {
-          name: '开关类',
+          name: this.$t('开关类'),
           slug: 'switch'
         },
         {
-          name: '传感类',
+          name: this.$t('传感类'),
           slug: 'sensor'
         },
         {
-          name: '辅助类',
+          name: this.$t('辅助类'),
           slug: 'auxiliary'
         }
       ],
@@ -159,7 +159,7 @@ export default {
   },
   async mounted() {
     let { data } = await this.$axios.get(
-      'http://api.fantem.cn/wp-json/wp/v2/posts?categories=39&per_page=50&_embed&order=asc'
+      `${this.$store.state.api}/posts?categories=39&per_page=50&_embed&order=asc`
     )
     this.products = data
     this.categories.forEach(category => {
@@ -185,7 +185,7 @@ export default {
     async switchToThird() {
       if (!this.thirdProducts.length) {
         let { data } = await this.$axios.get(
-          'http://api.fantem.cn/wp-json/wp/v2/posts?categories=44&per_page=40&_embed&order=asc'
+          `${this.$store.state.api}/posts?categories=44&per_page=40&_embed&order=asc`
         )
         this.thirdProducts = data
       }
