@@ -33,7 +33,7 @@
         </div>
         <div class="column has-text-right">
           <ul class="is-inline-flex link">
-            <li><nuxt-link to="/">中文</nuxt-link></li>
+            <li><nuxt-link to="/zh">中文</nuxt-link></li>
             <li><span>|</span></li>
             <li><nuxt-link to="/en">ENG</nuxt-link></li>
           </ul>  

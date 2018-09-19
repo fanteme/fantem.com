@@ -39,11 +39,22 @@ export default {
       }
     ],
     script: [
+      { src: 'https://pv.sohu.com/cityjson' },
+      {
+        innerHTML: `
+        if (!/^[1-6][0-7][0-3]\d0[0-4]$/.test(returnCitySN.cid)) {
+          if(location.pathname === '/') {
+            location.href = location.origin + '/en' + location.pathname + location.search + location.hash
+          }
+        }
+        `
+      },
       {
         src:
-          '//cdn.bootcss.com/smooth-scroll/12.1.5/js/smooth-scroll.polyfills.min.js'
+          'https://cdn.bootcss.com/smooth-scroll/12.1.5/js/smooth-scroll.polyfills.min.js'
       }
-    ]
+    ],
+    __dangerouslyDisableSanitizers: ['script']
   },
   /*
   ** Customize the progress-bar color
@@ -58,7 +69,67 @@ export default {
   */
   generate: {
     dir: 'public',
-    routes: ['/', '/en']
+    routes: [
+      '/en',
+      '/en/news',
+      '/en/products',
+      '/news/91',
+      '/en/news/91',
+      '/news/104',
+      '/en/news/104',
+      '/news/110',
+      '/en/news/110',
+      '/news/113',
+      '/en/news/113',
+      '/news/116',
+      '/en/news/116',
+      '/news/119',
+      '/en/news/119',
+      '/news/122',
+      '/en/news/122',
+      '/news/126',
+      '/en/news/126',
+      '/news/129',
+      '/en/news/129',
+      '/news/132',
+      '/en/news/132',
+      '/news/135',
+      '/en/news/135',
+      '/news/138',
+      '/en/news/138',
+      '/news/141',
+      '/en/news/141',
+      '/news/144',
+      '/en/news/144',
+      '/news/147',
+      '/en/news/147',
+      '/news/150',
+      '/en/news/150',
+      '/news/153',
+      '/en/news/153',
+      '/news/156',
+      '/en/news/156',
+      '/news/159',
+      '/en/news/159',
+      '/news/162',
+      '/en/news/162',
+      '/news/165',
+      '/en/news/165',
+      '/news/168',
+      '/en/news/168',
+      '/news/171',
+      '/en/news/171',
+      '/news/174',
+      '/en/news/174',
+      '/news/177',
+      '/en/news/177',
+      '/news/180',
+      '/en/news/180',
+      '/news/197',
+      '/en/news/197',
+      '/news/913',
+      '/en/news/913'
+    ]
   },
   css: ['~/assets/styles/main.styl'],
   modules: [['@nuxtjs/pwa', { workbox: false }], '@nuxtjs/axios'],
