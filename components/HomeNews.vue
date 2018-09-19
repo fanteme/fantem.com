@@ -7,7 +7,7 @@
           <svg width="49" height="49" viewBox="0 0 49 49" xmlns="http://www.w3.org/2000/svg"><path d="M28.2 14.4c.2-.2.5-.2.7 0 .2.2.2.5 0 .7l-9.3 9.2 9.3 9.2c.2.2.2.5 0 .7-.1.1-.2.1-.4.1-.1 0-.3 0-.4-.1l-9.7-9.5c-.1-.1-.1-.2-.1-.4s.1-.3.1-.4l9.8-9.5zm-3.6-13.7c13.2 0 24 10.8 24 24s-10.8 24-24 24-24-10.8-24-24 10.7-24 24-24zm0 47c12.7 0 23-10.3 23-23s-10.3-23-23-23-23 10.3-23 23 10.3 23 23 23z" fill-rule="nonzero" fill="#878787"/></svg>
         </span>
         <li class="column is-full-mobile is-one-third-tablet" v-for="(item, index) in currentNews" :key="index">
-          <nuxt-link :to="`${$store.state.locale}/news/${item.id}`">
+          <nuxt-link :to="`/${$store.state.locale}/news/${item.id}`">
             <div class="newsinner-img-wrap">
               <div class="newsinner-img-mask">
                 <figure>
@@ -31,7 +31,7 @@
         </span>
       </ul>
       <div class="more has-text-centered">
-        <nuxt-link :to="`${$store.state.locale}/news`">
+        <nuxt-link :to="`/${$store.state.locale}/news`">
           {{$t('更多')}}
           <svg width="10" height="14" viewBox="0 0 10 14" xmlns="http://www.w3.org/2000/svg"><path d="M8.9 6.6l-7.1-6.2c-.2-.2-.5-.2-.7 0-.2.2-.2.5 0 .7l6.6 5.8-6.6 5.8c-.2.2-.2.5 0 .7.1.1.2.2.4.2.1 0 .2 0 .3-.1l7.1-6.2c.1-.1.2-.2.2-.4l-.2-.3z" fill-rule="nonzero" fill="#EE7623"></path></svg>
         </nuxt-link>
