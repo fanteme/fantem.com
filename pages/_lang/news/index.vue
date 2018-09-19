@@ -33,8 +33,8 @@
         </li>
       </ul>
       <nav class="pagination" role="navigation" aria-label="pagination">
-        <nuxt-link class="pagination-previous button" title="这是第一页" :to="currentPage <= 1 ? `?page=1`:`?page=${Number(currentPage)-1}`" :disabled="currentPage-1?false:true">上一页</nuxt-link>
-        <nuxt-link class="pagination-next button" :to="currentPage >= pageCount-1 ? `?page=${pageCount}`:`?page=${Number(currentPage)+1}`" :disabled="pageCount-currentPage?false:true">下一页</nuxt-link>
+        <nuxt-link class="pagination-previous button" :title="$t('上一页')" :to="currentPage <= 1 ? `?page=1`:`?page=${Number(currentPage)-1}`" :disabled="currentPage-1?false:true">{{$t('上一页')}}</nuxt-link>
+        <nuxt-link class="pagination-next button" :title="$t('下一页')" :to="currentPage >= pageCount-1 ? `?page=${pageCount}`:`?page=${Number(currentPage)+1}`" :disabled="pageCount-currentPage?false:true">{{$t('下一页')}}</nuxt-link>
         <ul class="pagination-list">
           <li v-for="(i,index) in pageCount" :key="index">
             <nuxt-link class="pagination-link button" :class="isloading && currentPage == i? 'is-loading' : ''" :to="`?page=${i}`" v-text="i"></nuxt-link>
@@ -147,8 +147,8 @@
 
 <script>
 export default {
-  head: {
-    title: '新闻动态'
+  head() {
+    return { title: this.$t('新闻动态') }
   },
   data() {
     return {
@@ -163,7 +163,9 @@ export default {
       this.isloading = true
       if (typeof val.query.page === 'undefined') {
         let { headers, data } = await this.$axios.get(
-          'http://api.fantem.cn/wp-json/wp/v2/posts?categories=3&per_page=12&page=1&_embed'
+          `${
+            this.$store.state.api
+          }/posts?categories=news&per_page=12&page=1&_embed`
         )
         this.news = data
         this.currentPage = 1
@@ -172,7 +174,7 @@ export default {
         this.isloading = true
         this.currentPage = Number(val.query.page)
         let { headers, data } = await this.$axios.get(
-          `http://api.fantem.cn/wp-json/wp/v2/posts?categories=3&per_page=12&page=${
+          `${this.$store.state.api}/posts?categories=news&per_page=12&page=${
             val.query.page
           }&_embed`
         )
@@ -181,17 +183,18 @@ export default {
       }
     }
   },
-  computed: {},
   async mounted() {
     if (typeof location.search.split('=')[1] === 'undefined') {
       let { headers, data } = await this.$axios.get(
-        'http://api.fantem.cn/wp-json/wp/v2/posts?categories=3&per_page=12&page=1&_embed'
+        `${
+          this.$store.state.api
+        }/posts?categories=news&per_page=12&page=1&_embed`
       )
       this.news = data
       this.pageCount = Number(headers['x-wp-totalpages'])
     } else {
       let { headers, data } = await this.$axios.get(
-        `http://api.fantem.cn/wp-json/wp/v2/posts?categories=3&per_page=12&page=${
+        `${this.$store.state.api}/posts?categories=news&per_page=12&page=${
           location.search.split('=')[1]
         }&_embed`
       )
