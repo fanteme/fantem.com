@@ -31,6 +31,11 @@ export default {
     link: [
       {
         rel: 'stylesheet',
+        href:
+          'https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css'
+      },
+      {
+        rel: 'stylesheet',
         href: 'https://cdn.bootcss.com/bulma/0.7.1/css/bulma.min.css'
       },
       {
