@@ -16,7 +16,7 @@
           <ul>
             <li class="tel has-text-weight-semibold">400-880-3757</li>
             <li class="wechat-mp">
-              <div class="fa fa-qrcode">
+              <div class="qrcode">
                 <qrcode-vue value="http://weixin.qq.com/r/fHVZQa3EsPDPreki9yBu" :size="85" level="H"></qrcode-vue>
               </div>
               <span>{{$t('关注我们')}}</span>
