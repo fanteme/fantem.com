@@ -30,6 +30,14 @@ export default {
     },
     link: [
       {
+        rel: 'dns-prefetch',
+        href: 'http://cdn.fantem.cn'
+      },
+      {
+        rel: 'dns-prefecth',
+        href: '//api.fantem.cn'
+      },
+      {
         rel: 'stylesheet',
         href: 'https://unpkg.com/bulma@0.7.1/css/bulma.min.css'
       }
