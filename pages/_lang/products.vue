@@ -9,7 +9,7 @@
                 <span class="icon">
                   <i class="fa fa-home" aria-hidden="true"></i>
                 </span>
-                <span>OOMI{{$t('产品')}}</span>
+                <span>OOMI {{$t('产品')}}</span>
               </a>
             </li>
             <li :class="isOomiProduct?'':'is-active'" @click="switchToThird">
@@ -124,7 +124,7 @@
 <script>
 export default {
   head() {
-    return {title: this.$t('产品中心')}
+    return { title: this.$t('产品中心') }
   },
   data() {
     return {
@@ -159,7 +159,9 @@ export default {
   },
   async mounted() {
     let { data } = await this.$axios.get(
-      `${this.$store.state.api}/posts?categories=39&per_page=50&_embed&order=asc`
+      `${
+        this.$store.state.api
+      }/posts?categories=39&per_page=50&_embed&order=asc`
     )
     this.products = data
     this.categories.forEach(category => {
@@ -185,7 +187,9 @@ export default {
     async switchToThird() {
       if (!this.thirdProducts.length) {
         let { data } = await this.$axios.get(
-          `${this.$store.state.api}/posts?categories=44&per_page=40&_embed&order=asc`
+          `${
+            this.$store.state.api
+          }/posts?categories=44&per_page=40&_embed&order=asc`
         )
         this.thirdProducts = data
       }
