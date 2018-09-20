@@ -61,6 +61,21 @@ export default {
           name: 'description',
           content: this.$t('head.meta.description')
         }
+      ],
+      link: [
+        {
+          rel: 'stylesheet',
+          href: this.$t('head.link.fontAwesome')
+        },
+        {
+          rel: 'stylesheet',
+          href: this.$t('head.link.animate')
+        }
+      ],
+      script: [
+        {
+          src: this.$t('head.script.smoothScroll')
+        }
       ]
     }
   },

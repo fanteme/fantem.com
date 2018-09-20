@@ -12,11 +12,14 @@
       </section>
       <div class="container">
         <div class="columns">
-          <div class="column aboutus-map">
+          <div class="column aboutus-map" v-if="$store.state.locale == 'zh'">
             <iframe width='100%' height='350' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='https://lbs.amap.com/console/show/map/?1_660_350_113.94648_22.534884&=%E8%8B%B1%E5%94%90%E5%A4%A7%E5%8E%A6&=%E7%A7%91%E6%8A%80%E5%9B%AD%E7%A7%91%E6%8A%80%E5%8D%97%E4%BA%94%E9%81%93%E8%8B%B1%E5%94%90%E5%A4%A7%E5%8E%A65%E6%A5%BC&=&=&='></iframe>
           </div>
+          <div class="column aboutus-map" v-else>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1519.0075004346652!2d113.94696693848931!3d22.534576047895122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403ee04b9a0bced%3A0x1ab313f450b24025!2sYingtang+Mansion%2C+Nanshan+Qu%2C+Shenzhen+Shi%2C+Guangdong+Sheng%2C+China%2C+518057!5e0!3m2!1sen!2sus!4v1537436542786" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
           <div class="column aboutus-content">
-            <p>丰唐物联技术（深圳）有限公司</p>
+            <p>{{$t('丰唐物联技术（深圳）有限公司')}}</p>
             <P>地址：深圳市南山区科技园科技南五道英唐大厦5楼</P>
             <p>客服热线：4008803757</p>
             <p>电话：0755-26616688</p>
@@ -29,7 +32,7 @@
         </div>
         <div class="columns">
           <div class="column center aboutus-company">
-            <div class="title has-text-centered">关于丰唐</div>
+            <div class="title has-text-centered">{{$t('关于丰唐')}}</div>
             <p>丰唐公司是一家集设计研发、生产、销售于一体，专注于物联网产品及无线智能家居产品的高端品牌企业。公司成立于2011年，是美国Aeon Labs LLC与中国YITOA英唐智控（股票代码：300131）强强联合的高新技术企业。公司致力于为人们提供安全、节能、便捷和舒适的智慧生活，是领先的智能家居产品和系统方案服务提供商。
         我们的产品在满足用户的日常使用需求的同时，力求突出时尚感、科技感，并且做到安装便捷，操作简单。产品功能覆盖全面，可实现对灯光、窗帘、空调、影音设备等家电的全方位智能操控。不仅适用于家庭，同样适用于酒店、办公室等场所。
             </p>

@@ -31,26 +31,13 @@ export default {
     link: [
       {
         rel: 'stylesheet',
-        href:
-          'https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css'
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://cdn.bootcss.com/bulma/0.7.1/css/bulma.min.css'
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css'
+        href: 'https://unpkg.com/bulma@0.7.1/css/bulma.min.css'
       }
     ],
     script: [
       { src: 'https://pv.sohu.com/cityjson?ie=utf-8' },
       {
         src: '/ip2lang.js'
-      },
-      {
-        src:
-          'https://cdn.bootcss.com/smooth-scroll/12.1.5/js/smooth-scroll.polyfills.min.js'
       }
     ]
   },
