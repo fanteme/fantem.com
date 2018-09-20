@@ -33,9 +33,9 @@
         </div>
         <div class="column has-text-right">
           <ul class="is-inline-flex link">
-            <li><nuxt-link to="/zh">中文</nuxt-link></li>
+            <li><a @click.prevent="switchLang('zh')">中文</a></li>
             <li><span>|</span></li>
-            <li><nuxt-link to="/en">ENG</nuxt-link></li>
+            <li><a @click.prevent="switchLang('en')">ENG</a></li>
           </ul>  
         </div>
       </div>
@@ -217,6 +217,25 @@ export default {
     }
   },
   methods: {
+    switchLang(locale) {
+      if (/^\/en/.test(this.$route.path)) {
+        if (locale == 'en') {
+          return
+        }
+        this.$router.push({
+          path: this.$route.path.replace(/^\/en/, '/zh'),
+          params: { lang: locale }
+        })
+      } else {
+        if (locale == 'zh') {
+          return
+        }
+        this.$router.push({
+          path: this.$route.path.replace(/^\//, '/en/'),
+          params: { lang: locale }
+        })
+      }
+    },
     go2top() {
       let timer = setInterval(() => {
         let oTop = document.documentElement.scrollTop || document.body.scrollTop
