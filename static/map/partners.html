@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+  <title>经销商</title>
+  <link rel="stylesheet" href="//cache.amap.com/lbs/static/main1119.css" />
+  <script src="//cache.amap.com/lbs/static/es5.min.js"></script>
+  <script src="//webapi.amap.com/maps?v=1.4.6&key=0e8008d232ea7c76e22c8bb49df43a61"></script>
+  <script type="text/javascript" src="//cache.amap.com/lbs/static/addToolbar.js"></script>
+</head>
+
+<body>
+  <div id="container"></div>
+  <style>
+    .map-overlays {
+      position: relative;
+    }
+
+    .map-overlays img:hover+.amap-info {
+      display: block;
+    }
+
+    .amap-info {
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+      display: none;
+      background: #fff;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .amap-info h4 {
+      font-size: 16px;
+      line-height: 28px;
+      margin: 0 0 10px 0;
+      border-bottom: 2px solid #666;
+    }
+
+    .amap-info span {
+      font-size: 13px;
+    }
+  </style>
+  <script>
+    var map = new AMap.Map('container', {
+      resizeEnable: true,
+      center: [116.397428, 39.90923],
+      zoom: 13
+    });
+    map.clearMap();  // 清除地图覆盖物
+    var markers = [{
+      position: [113.946456, 22.534906],
+      content: '<div class="amap-overlays map-overlays"><img src="//webapi.amap.com/theme/v1.3/markers/n/mark_b1.png"/><div class="amap-info"><h4>丰唐物联</h4><span>地址：深圳市南山区科技园科技南五道英唐大厦5楼</span></div></div>'
+    }, {
+      icon: '//webapi.amap.com/theme/v1.3/markers/n/mark_b2.png',
+      position: [113.980778, 22.722307],
+      content: '<div class="amap-overlays map-overlays"><img src="//webapi.amap.com/theme/v1.3/markers/n/mark_b2.png"/><div class="amap-info"><h4>英唐科技产业园</h4><span>地址：深圳市光明新区光明街道第二工业区白花园路18号英唐科技产业园B栋三楼</span></div></div>'
+    }];
+    // 添加一些分布不均的点到地图上,地图上添加三个点标记，作为参照
+    markers.forEach(function (marker) {
+      new AMap.Marker({
+        map: map,
+        content: marker.content,
+        title: marker.title,
+        position: [marker.position[0], marker.position[1]],
+        offset: new AMap.Pixel(-12, -36)
+      });
+    });
+    map.setFitView();
+  </script>
+</body>
+
+</html>
