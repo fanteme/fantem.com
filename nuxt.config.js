@@ -41,20 +41,13 @@ export default {
     script: [
       { src: 'https://pv.sohu.com/cityjson' },
       {
-        innerHTML: `
-        if (!/^[1-6][0-7][0-3]\d0[0-4]$/.test(returnCitySN.cid)) {
-          if(location.pathname === '/') {
-            location.href = location.origin + '/en' + location.pathname + location.search + location.hash
-          }
-        }
-        `
+        src: '/ip2lang.js'
       },
       {
         src:
           'https://cdn.bootcss.com/smooth-scroll/12.1.5/js/smooth-scroll.polyfills.min.js'
       }
-    ],
-    __dangerouslyDisableSanitizers: ['script']
+    ]
   },
   /*
   ** Customize the progress-bar color
