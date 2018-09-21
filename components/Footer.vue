@@ -75,6 +75,7 @@ footer.footer {
       .tel {
         color: #ee7623;
         font-size: 28px;
+        margin-bottom: 20px;
       }
 
       .fa-qrcode {
