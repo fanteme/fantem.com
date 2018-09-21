@@ -78,10 +78,6 @@ footer.footer {
         margin-bottom: 20px;
       }
 
-      .fa-qrcode {
-        margin: 10px 0;
-      }
-
       .wechat-mp {
         span {
           padding: 0 15px 0;
