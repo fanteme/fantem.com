@@ -53,12 +53,12 @@
                 </div>  
               </div> 
             </div> 
-            <div class="column is-4" style="margin: -2px 0 0 -1px;">
+            <div class="column is-4" style="margin: -2px 0 0 0; border-left: none;">
               <img :src="`${this.$store.state.cdn}/2018/09/fe7d5be8caf5b7427dcfbc05bd1a1ba0.png`" alt="">
               <span>{{$t('智能窗帘电机')}}</span>
             </div>
           </div> 
-          <div class="columns is-gapless" style="margin-top: -2px;">
+          <div class="columns is-gapless" style="margin: -2px -1px 0 0;">
             <div class="column is-4">
               <img :src="`${this.$store.state.cdn}/2018/09/032662676f0e55ff0626d3ed6ad870bc.png`" alt="">
               <span>{{$t('智能嵌入式开关')}}</span>
@@ -67,7 +67,7 @@
               <img :src="`${this.$store.state.cdn}/2018/09/10f3c0b49e624649089b415c32a6c60c.png`" alt="">
               <span>{{$t('智能嵌入式调光开关')}}</span>
             </div>
-            <div class="column is-4">
+            <div class="column is-4" style="margin-right:-1px;">
               <img :src="`${this.$store.state.cdn}/2018/09/7647e1fe72a6dccff8be7683d4fe1dea.png`" alt="">
               <span>{{$t('智能马达控制器')}}</span>
             </div>
@@ -179,17 +179,18 @@
         position: relative
         margin-right: -1px
         margin-top: -1px
-        &:first-of-type
-          // border-left: none
 
         img 
           vertical-align: middle
 
         span 
           position: absolute
-          bottom: 45px
+          font-size: 24px
+          font-weight: 600
+          bottom: 24px
           width: 100%
-          left: 0        
+          left: 0  
+          color: #3e3a39      
 
   .thirdProducts
     padding-bottom: 105px 
@@ -198,6 +199,9 @@
         border: none
         li
           padding: 0 45px
+          font-size: 18px
+          font-weight: 600
+          color: #3e3a39  
     .column 
       .item 
         margin: 10px 0

@@ -14,7 +14,7 @@
           </nuxt-link>
         </div>
         <div class="column is-2 has-text-centered">
-          <nuxt-link :to="`/${this.$store.state.locale}/application/ent`">
+          <nuxt-link :to="`/${this.$store.state.locale}/application/ent` " :class="{'is-active': mode=='ent'}">
             <svg xmlns="http://www.w3.org/2000/svg" width="56" height="41" viewBox="0 0 56 41">
               <g fill="none" fill-rule="evenodd" stroke="#040000" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 1)">
                 <path d="M43.7708,27.7072 L43.6078,27.7842 L43.3868,27.8892 C42.5588,28.2832 41.6728,28.4822 40.7538,28.4822 C38.7628,28.4822 36.9428,27.5732 35.7618,25.9882 L27.8568,15.4642 L20.0188,25.9892 C19.0178,27.3202 17.5538,28.1862 15.8988,28.4242 C15.6218,28.4632 15.3298,28.4822 15.0088,28.4822 C14.0968,28.4822 13.2138,28.2832 12.3848,27.8892 L12.0008,27.7072"/>
