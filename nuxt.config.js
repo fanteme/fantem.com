@@ -66,6 +66,7 @@ export default {
       '/en',
       '/en/news',
       '/en/products',
+      '/en/application',
       '/en/business',
       '/en/support',
       '/en/support/downloads/apps',
@@ -125,7 +126,9 @@ export default {
       '/news/197',
       '/en/news/197',
       '/news/913',
-      '/en/news/913'
+      '/en/news/913',
+      '/news/953',
+      '/en/news/953'
     ]
   },
   css: ['~/assets/styles/main.styl'],
