@@ -2,14 +2,91 @@
   <main class="main">
     <application-header :mode="'security'"></application-header>
     <application-hero :hero="hero"></application-hero>
-    <section class="application-features">
+    <section class="application-advantage">
       <div class="container">
         <p class="caption has-text-centered">{{$t('八大优势 稳定可靠')}}</p>
         <div class="columns is-multiline">
           <div class="column is-3 has-text-centered" v-for="(feature, index) in features" :key="index">
             <div class="item">
               <p class="svg" v-html="feature.svg"></p>
-              <p class="txt">{{feature.txt}}</p>
+              <p class="txt" :title="feature.txt">{{feature.txt}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <img style="vertical-align:top" src="http://cdn.fantem.cn/2018/09/136284be4d457591fa50272a0487276b.jpg">
+    </section>
+    <section class="application-features">
+      <div class="columns is-gapless is-multiline">
+        <div class="column is-6">
+          <div class="columns is-multiline">
+            <div class="column is-12">
+              <img src="http://cdn.fantem.cn/2018/09/48ea83b56b20ea741e68a0b43c98131d.jpg">
+            </div>
+            <div class="column is-12 has-text-right description">
+              <h2>{{$t('智能防护——智能红外传感器')}}</h2>
+              <p>{{$t('红外人体感应，5米/120°超大范围探测，监测家中异动，智能探测人或宠物移动。智能声光报警，有效震慑外来入侵者，手机上轻松查看室内所有情况。')}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="columns is-multiline">
+            <div class="column is-12 description">
+              <h2>{{$t('防盗报警——门磁')}}</h2>
+              <p>{{$t('无线门磁被触碰打开，会发生警报，您的手机会收到报警信息提醒，提醒您家里有不速之客到来，并且主机会收到信号，现场高分贝蜂鸣威慑，有效震慑外来之客！')}}</p>
+            </div>
+            <div class="column is-12">
+              <img src="http://cdn.fantem.cn/2018/09/903286e99f9e2098a3738b9078a72091.jpg">
+            </div>
+          </div>
+        </div>
+        <div class="column is-12">
+          <div class="columns is-gapless">
+            <div class="column">
+              <img src="http://cdn.fantem.cn/2018/09/71efe471ff9925e69bbae4d49ac0e318.jpg">
+            </div>
+            <div class="column center">
+              <span>
+                <h2>{{$t('安全管家——智能有害气体传感器')}}</h2>
+                <p>{{$t('红稳定监测到可能影响您与家人身体健康的空气污染物的存在，例如CO、PM2.5、VOC等。当传感器检测到气体浓度高于设定的浓度值，会有声音和灯光闪动双重提醒并发送通知至手机上，及时警示，让您在第一时间内掌握家中空气质量，及时作出相关防护措施。')}}</p>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="columns is-multiline">
+            <div class="column is-12 has-text-right description">
+              <h2>{{$t('贴心助手——智能水位传感器')}}</h2>
+              <p>{{$t('实时水体感应，兼具水位控制和漏水浸漫提醒功能。可通过手机APP实现预设安防场景，一旦监测水位达到预设高度，立即远程提示报警，让您即时知晓，并采取应对措施。同时也可联动智能机械手自动关闭水阀，让你在外也能远程操控，让您省心、放心。')}}</p>
+            </div>
+            <div class="column is-12">
+              <img src="http://cdn.fantem.cn/2018/09/a25bf67ffd8be418b1d5fae30ca0fd76.jpg">
+            </div>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="columns is-multiline">
+            <div class="column is-12">
+              <img src="http://cdn.fantem.cn/2018/09/7551ef81a179ce612faefedfef83fa6c.jpg">
+            </div>
+            <div class="column is-12 description">
+              <h2>{{$t('一键操作——智能安防控制')}}</h2>
+              <p>{{$t('一键设置撤防模式、居家模式、离家模式。支持门锁、门磁、智能人体红外传感器、智能有害气体传感器、智能摄像头等多种安防设备的组合与联动。做到一键离家的同时切断家中灯光和非必要电器的电源，且布防工作开始；回家时一键撤防，满足您对家庭安全的所有需求！')}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-12">
+          <div class="columns is-gapless">
+            <div class="column center has-text-right">
+              <span>
+                <h2>{{$t('一键操作——智能安防控制')}}</h2>
+                <p>{{$t('出厂前己提前设置好布防、撤防模式')}}</p>
+              </span>
+            </div>
+            <div class="column">
+              <img src="http://cdn.fantem.cn/2018/09/2cfb4598ce3738398fab70848d3760c2.jpg">
             </div>
           </div>
         </div>
@@ -19,11 +96,13 @@
 </template>
 
 <style lang="stylus">
-.application-features {
+.application-advantage {
+  padding: 50px 0;
+
   .caption {
     color: #3e3a39;
     font-size: 36px;
-    margin: 50px auto;
+    margin-bottom: 50px;
 
     &:after {
       display: block;
@@ -44,7 +123,11 @@
 
         p {
           &.svg {
-            &:after {
+            height: 50px;
+          }
+
+          &.txt {
+            &:before {
               display: block;
               margin: 0 auto;
               content: '';
@@ -53,12 +136,64 @@
               height: 1px;
               background-color: #848484;
             }
-          }
 
-          &.txt {
             color: #231815;
             font-size: 20px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
           }
+        }
+      }
+    }
+  }
+}
+
+.application-features {
+  .columns {
+    .column {
+      &.center {
+        span {
+          margin: 0 70px;
+        }
+
+        &.has-text-right {
+          span {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+
+      p {
+        color: #231815;
+      }
+
+      h2 {
+        color: #3e3a39;
+        font-size: 36px;
+        margin-bottom: 50px;
+        position: relative;
+
+        &:after {
+          position: absolute;
+          display: block;
+          left: 0;
+          content: '';
+          width: 73px;
+          height: 2px;
+          background-color: #ed7422;
+        }
+      }
+
+      &.description {
+        padding: 30% 70px 20%;
+      }
+
+      &.has-text-right {
+        h2:after {
+          left: initial;
+          right: 0;
         }
       }
     }
