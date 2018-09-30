@@ -67,6 +67,8 @@ export default {
       '/en/news',
       '/en/products',
       '/en/application',
+      '/en/application/security',
+      '/en/application/ent',
       '/en/business',
       '/en/support',
       '/en/support/downloads/apps',
