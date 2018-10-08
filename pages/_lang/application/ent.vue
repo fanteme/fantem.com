@@ -6,14 +6,14 @@
       <p class="caption has-text-centered">{{$t('智能娱乐 满足所想')}}</p>
       <div class="container-fluid">
         <div class="columns">
-          <div class="column"><img src="http://cdn.fantem.cn/2018/09/0a4de4e96dd47bbf2bdbb47f9ef0edce.jpg" alt=""></div>
+          <div class="column"><img :src="`${this.$store.state.cdn}/2018/09/0a4de4e96dd47bbf2bdbb47f9ef0edce.jpg`" alt=""></div>
         </div>
       </div>
       <p class="caption has-text-centered">{{$t('聚会模式 一键开启')}}</p>
       <div class="subtitle has-text-centered is-size-6">{{$t('一键开启聚会模式。周末约上三五好友，来家中开启一场久违的Party！在闪烁的温暖灯光下、适宜的音乐中，让老友的情谊更加绵长。')}}</div>
       <div class="container-fluid">
         <div class="columns is-gapless">
-          <div class="column"><img src="http://cdn.fantem.cn/2018/09/22445f1310f66155120c4a1fb56baf96.jpg" alt=""></div>
+          <div class="column"><img :src="`${this.$store.state.cdn}/2018/09/22445f1310f66155120c4a1fb56baf96.jpg`" alt=""></div>
         </div>
       </div>
       <div class="mode" :style="{backgroundImage: `url(${$store.state.cdn}/2018/09/6e2488db67f477e5d315de1952b2ef0e.jpg)`}">
@@ -23,14 +23,14 @@
                 <div class="item">
                   <p class="caption">{{$t('影院模式 即时体验')}}</p>
                   <div class="subtitle center is-size-6">{{$t('饭后，坐在客厅一键开启影院模式，影院布帘缓缓降下，窗帘会悄然关闭，灯光自动调节到合适的亮度，投影机开启，美好的影院时光就此开启！')}}</div>
-                  <img src="http://cdn.fantem.cn/2018/09/74dd4a6bfb02757c8e65cc904aebee4c.jpg" alt="">
+                  <img :src="`${this.$store.state.cdn}/2018/09/74dd4a6bfb02757c8e65cc904aebee4c.jpg`" alt="">
                 </div>
               </div>
               <div class="column">
                 <div class="item">
                   <p class="caption">{{$t('音乐模式 全景环绕')}}</p>
                   <div class="subtitle center is-size-6">{{$t('当您悠闲地坐在露台凝望夕阳西下时，当您在与爱人共进烛光晚餐时，当您在午后的起居室里读着自己心爱的诗集时，当您兴致勃勃的与挚友品鉴美酒时，当您慵懒的地家中泡SPA时…美妙动听的音乐将使您更加陶醉其中。')}}</div>
-                  <img src="http://cdn.fantem.cn/2018/09/27a369bcd3c83c44a71424fa6fda7ddf.jpg" alt="">
+                  <img :src="`${this.$store.state.cdn}/2018/09/27a369bcd3c83c44a71424fa6fda7ddf.jpg`" alt="">
                 </div>
               </div>
             </div>
@@ -65,7 +65,7 @@
             <div class="list center"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="49"><path fill="none" stroke="#E76C26" stroke-linecap="round" d="M39.928 47.817H7.785A7.247 7.247 0 0 1 .54 40.571V8.428a7.247 7.247 0 0 1 7.246-7.246h32.143a7.247 7.247 0 0 1 7.246 7.246v32.143a7.247 7.247 0 0 1-7.246 7.246zM.54 24.501h46.635H.54zM23.86 1.182v46.635V1.182z"/></svg></div>
             <p class="is-size-7">{{$t('智能场景面板X1')}}</p>
           </div>
-          <div class="column is-2">
+          <div class="column">
             <div class="list center"><svg xmlns="http://www.w3.org/2000/svg" width="99" height="30"><g fill="none" fill-rule="evenodd" stroke="#E76C26" stroke-linecap="round" stroke-linejoin="round" stroke-width=".75"><path d="M85.928 28.842V5.364M5.9 16.152v2.223H.887a.511.511 0 0 1-.511-.51v-1.202c0-.282.229-.51.51-.51h5.015zM5.901 25.348H4.857l-1.102-.919 1.073-.92h1.073z"/><path d="M5.901 28.842h92V5.317H17.194V.743H5.901zM17.194 28.739V5.214"/></g></svg></div>
             <p class="is-size-7">{{$t('智能窗帘电机X1')}}</p>
           </div>
@@ -73,7 +73,7 @@
             <div class="list center"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="49"><g fill="none" fill-rule="evenodd" stroke="#E76C26" stroke-linecap="round" stroke-linejoin="round"><path d="M46.891 48.5H1.297V22.9c0-2.56 1.22-7.66 4.394-11.177 2.56-2.84 6.387-4.231 9.052-4.943 2.71-.721 6.242-.963 8.187-1.058 2.546-.12 8.357.56 8.357.56 5.312.997 8.151 2.247 10.68 4.694 3.265 3.164 4.924 8.219 4.924 10.63V48.5z"/><path d="M8.514 41.329a1.867 1.867 0 1 1-3.735 0 1.87 1.87 0 0 1 1.867-1.87 1.87 1.87 0 0 1 1.868 1.87zm5.586 0a1.795 1.795 0 1 1-3.59.001 1.795 1.795 0 0 1 3.59-.001zm5.658 0a1.795 1.795 0 1 1-1.794-1.796c.99 0 1.794.805 1.794 1.796zm5.66 0a1.797 1.797 0 1 1-3.594-.001 1.797 1.797 0 0 1 3.593.001zm5.657 0a1.794 1.794 0 1 1-3.59 0 1.795 1.795 0 1 1 3.59 0zm5.66 0a1.796 1.796 0 1 1-3.593 0 1.796 1.796 0 0 1 3.592 0zM41.046 48.5h5.562v-9.451h-5.562zM46.891 20.892V.5"/></g></svg></div>
             <p class="is-size-7">{{$t('智能马达控制器X1')}}</p>
           </div>
-          <div class="column is-3">
+          <div class="column">
             <div class="group list center">
               <svg xmlns="http://www.w3.org/2000/svg" width="46" height="47"><g fill="none" fill-rule="evenodd" stroke="#E76C26" stroke-linecap="round" stroke-linejoin="round" stroke-width=".75"><path d="M40.675 46H5.38a4.852 4.852 0 0 1-4.852-4.852V5.852A4.852 4.852 0 0 1 5.38 1h35.296a4.852 4.852 0 0 1 4.852 4.852v35.296A4.852 4.852 0 0 1 40.675 46z"/><path d="M26.683 27.293h-7.311a1.655 1.655 0 0 1-1.656-1.656v-7.31c0-.915.74-1.657 1.656-1.657h7.31c.916 0 1.656.742 1.656 1.656v7.311c0 .915-.74 1.656-1.655 1.656z"/></g></svg>
               <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47"><g fill="none" fill-rule="evenodd" stroke="#E76C26" stroke-linecap="round" stroke-linejoin="round" stroke-width=".75"><path d="M41.395 46l-35.293-.003a4.851 4.851 0 0 1-4.851-4.853l.003-35.292A4.852 4.852 0 0 1 6.106 1l35.293.003a4.852 4.852 0 0 1 4.851 4.853l-.003 35.292A4.852 4.852 0 0 1 41.395 46z"/><path d="M27.404 37.157h-7.31a1.656 1.656 0 0 1-1.656-1.657l.001-7.31c0-.914.741-1.656 1.656-1.656l7.31.001c.915 0 1.656.742 1.655 1.656v7.31c0 .915-.74 1.656-1.656 1.656zm.002-16.692h-7.31a1.657 1.657 0 0 1-1.656-1.656l.001-7.31c0-.915.741-1.656 1.655-1.656h7.311c.914 0 1.655.742 1.655 1.656v7.311c0 .914-.742 1.655-1.656 1.655z"/></g></svg>
@@ -85,6 +85,35 @@
         <img src="http://cdn.fantem.cn/2018/09/0124b52a5e2795a23032715df84c8608.png" alt="">
         <div class="is-size-5">{{$t('（*配件产品可以随心拓展，以上套装仅供参考）')}}</div>
       </div>
+      <div class="products">
+        <div class="container has-text-centered is-clearfix">
+          <p class="title">{{$t('娱乐模式控制相关产品')}}</p>
+          <div class="is-size-5 character"><span>{{$t('智能网关')}}</span>|<span>{{$t('智能灯光控制')}}</span>|<span>{{$t('智能开关插座')}}</span></div>
+          <div class="columns">
+            <div class="column">
+              <div class="products-wrap">
+                <div class="products-bg"><img :src="`${this.$store.state.cdn}/2018/09/64f0bd13c54a37aaeff495ae5807d27c.png`" alt=""></div>
+                <span>{{$t('Cube智能家庭网关')}}</span>
+              </div>
+              
+            </div>
+            <div class="column">
+              <div class="products-wrap">
+                <div class="products-bg"><img :src="`${this.$store.state.cdn}/2018/09/22d3cd935c86ba20c1e426e907b31df8.png`" alt=""></div>
+                <span>{{$t('Hub智能家庭网关')}}</span>
+              </div>
+              
+            </div>
+            <div class="column">
+              <div class="products-wrap">
+                <div class="products-bg"><img :src="`${this.$store.state.cdn}/2018/09/2eacc02d2d200f0bd16fa07bde18b177.png`" alt=""></div>
+                <span>{{$t('智能操控平板')}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </section>
   </main>
 </template>
@@ -92,10 +121,15 @@
   .application-features
     font-weight: 600
     color: #231815
+
+    .title 
+      color: #3e3a39
+      font-size: 36px
+      margin: 50px auto
+
     .caption 
       color: #3e3a39
       font-size: 36px
-      
       margin: 50px auto
 
       &:after 
@@ -133,9 +167,44 @@
     .list
       min-height: 80px
     .group
-      justify-content: space-around       
+      justify-content: space-around  
 
+      svg
+        margin: 0 7px     
 
+    .products
+      margin-top: 65px
+      background: #edf1f2
+      padding: 0 0 75px 0
+      
+      .container
+        overflow: hidden
+      .columns 
+        .column
+
+          .products-wrap
+            position: relative
+            background: #fff 
+            border: 1px solid #8c8b8b
+            height: 360px
+
+          .products-bg
+            display: flex
+            justify-content: center
+            align-items: center
+            height: 100%
+
+          img 
+            vertical-align: middle
+
+          span 
+            position: absolute
+            font-size: 16px
+            font-weight: 600
+            bottom: 24px
+            width: 100%
+            left: 0  
+            color: #3e3a39      
 </style>
 
 
