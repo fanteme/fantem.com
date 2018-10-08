@@ -25,7 +25,7 @@
           </nuxt-link>
         </div>
         <div class="column is-2 has-text-centered">
-          <nuxt-link :to="`/${this.$store.state.locale}/application/eco`">
+          <nuxt-link :to="`/${this.$store.state.locale}/application/eco`" :class="{'is-active': mode=='eco'}">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="38" viewBox="0 0 40 38">
               <g fill="none" fill-rule="evenodd" stroke="#040000" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M7.3991,27.4684 C7.3991,27.4684 15.5741,33.5544 25.7191,27.1784 C36.4051,20.4634 38.8221,0.6894 38.8221,0.6894 C38.8221,0.6894 16.0371,-0.7016 7.9211,4.0514 C2.8411,7.0264 -2.1669,14.6004 3.7471,24.6864"/>
@@ -36,7 +36,7 @@
           </nuxt-link>
         </div>
         <div class="column is-2 has-text-centered">
-          <nuxt-link :to="`/${this.$store.state.locale}/application/health`">
+          <nuxt-link :to="`/${this.$store.state.locale}/application/health`" :class="{'is-active': mode=='health'}">
             <svg xmlns="http://www.w3.org/2000/svg" width="43" height="41" viewBox="0 0 43 41">
               <g fill="none" fill-rule="evenodd" stroke="#221714" transform="translate(0 1)">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M30.789,0.4999 C29.05,0.4999 27.3,0.9349 25.73,1.7659 C24.177,2.5819 22.784,3.7909 21.702,5.2539 L21.494,5.5349 L21.286,5.2539 C20.203,3.7909 18.81,2.5819 17.259,1.7659 C15.689,0.9349 13.94,0.4999 12.198,0.4999 C5.747,0.4999 0.5,6.2479 0.5,13.3129 C0.5,17.5409 2.4,20.5199 3.925,22.9159 C8.39,29.9199 19.638,38.6529 20.116,39.0199 C20.522,39.3339 20.999,39.4999 21.493,39.4999 C21.989,39.4999 22.466,39.3339 22.871,39.0199 C23.347,38.6529 34.587,29.9359 39.061,22.9159 C40.588,20.5199 42.486,17.5409 42.486,13.3129 C42.486,6.2479 37.24,0.4999 30.789,0.4999 Z"/>
@@ -47,7 +47,7 @@
           </nuxt-link>
         </div>
         <div class="column is-2 has-text-centered">
-          <nuxt-link :to="`/${this.$store.state.locale}/application/scene`">
+          <nuxt-link :to="`/${this.$store.state.locale}/application/scene`" :class="{'is-active': mode=='scene'}">
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="40" viewBox="0 0 48 40">
               <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
                 <polygon stroke="#040000" points="30.661 23.887 20.354 31.167 20.354 23.887 20.354 16.608"/>
