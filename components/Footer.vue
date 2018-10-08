@@ -203,10 +203,6 @@ export default {
             {
               title: this.$t('视频中心'),
               link: `/${this.$store.state.locale}`
-            },
-            {
-              title: this.$t('关注我们'),
-              link: `/${this.$store.state.locale}`
             }
           ]
         }

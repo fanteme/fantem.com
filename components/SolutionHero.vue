@@ -1,25 +1,23 @@
 <template>
-  <section class="application-hero">
+  <section class="solution-hero">
     <div class="hero">
       <div class="hero-content center" :style="{backgroundImage: `url(${hero.bg})`}">
         <div class="container has-text-centered has-text-white">
+          <p v-html="hero.svg"></p>
           <h1>
             {{ hero.title }}
           </h1>
-          <h2>
-            {{ hero.subtitle }}
-          </h2>
-          <p>
-            {{ hero.detail }}
-          </p>
         </div>
       </div>
+    </div>
+    <div class="container description">
+      {{hero.description}}
     </div>
   </section>
 </template>
 
 <style lang="stylus">
-.application-hero {
+.solution-hero {
   .hero {
     height: 490px;
 
@@ -37,6 +35,12 @@
       background-attachment: fixed;
       background-repeat: no-repeat;
     }
+
+    &+.description {
+      color: #3e3a39;
+      line-height: 2;
+      padding: 100px 0;
+    }
   }
 }
 </style>
@@ -51,4 +55,3 @@ export default {
   }
 }
 </script>
-
