@@ -3,7 +3,7 @@
     <solution-header :mode="'hotel'"></solution-header>
     <solution-hero :hero="hero"></solution-hero>
     <section class="solution-main has-text-centered">
-      <h1>{{$t('OOMI 智慧酒店')}}</h1>
+      <h1>OOMI {{$t('智慧酒店')}}</h1>
       <img src="http://cdn.fantem.cn/2018/10/875a667e7e2ba748e826b097a3612d2a.svg">
     </section>
   </main>

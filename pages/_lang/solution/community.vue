@@ -3,7 +3,7 @@
     <solution-header :mode="'community'"></solution-header>
     <solution-hero :hero="hero"></solution-hero>
     <section class="solution-main has-text-centered">
-      <h1>{{$t('OOMI 智慧小区')}}</h1>
+      <h1>OOMI {{$t('智慧小区')}}</h1>
       <img src="http://cdn.fantem.cn/2018/10/3f3b31226b407af9fd31b51d3acd1db3.svg">
     </section>
   </main>
@@ -11,22 +11,22 @@
 
 <style lang="stylus">
 .solution-main {
-    background-color: #f0f4f5;
-    padding: 100px 0;
+  background-color: #f0f4f5;
+  padding: 100px 0;
 
-    h1 {
-        color: #3e3a39;
-        font-size: 36px;
+  h1 {
+    color: #3e3a39;
+    font-size: 36px;
 
-        &:after {
-            display: block;
-            margin: 8px auto 50px;
-            content: '';
-            width: 73px;
-            height: 2px;
-            background-color: #ed7422;
-        }
+    &:after {
+      display: block;
+      margin: 8px auto 50px;
+      content: '';
+      width: 73px;
+      height: 2px;
+      background-color: #ed7422;
     }
+  }
 }
 </style>
 
