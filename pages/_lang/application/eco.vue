@@ -89,16 +89,16 @@
       min-height: 800px
       margin-top: 33px
 
-      &.boderT
-        border-top: 12px solid #edf1f2
+    .boderT
+      border-top: 12px solid #edf1f2
 
     .sectionB
       min-height: 860px 
     .sectionC
       background: #edf1f2
       padding: 70px 0
-      &.marginT
-        margin-top: 60px
+    .marginT
+      margin-top: 60px
       svg
         vertical-align: middle 
       span 
