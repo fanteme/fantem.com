@@ -3,7 +3,7 @@
     <solution-header :mode="'education'"></solution-header>
     <solution-hero :hero="hero"></solution-hero>
     <section class="solution-main has-text-centered">
-      <h1>{{$t('OOMI 智慧教育')}}</h1>
+      <h1>OOMI {{$t('智慧教育')}}</h1>
       <img src="http://cdn.fantem.cn/2018/10/fb0ad1e0e2171eec47785bb39fe01b79.svg">
     </section>
   </main>

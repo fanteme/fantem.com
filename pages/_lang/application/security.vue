@@ -16,7 +16,7 @@
       </div>
     </section>
     <section>
-      <img style="vertical-align:top" src="http://cdn.fantem.cn/2018/09/136284be4d457591fa50272a0487276b.jpg">
+      <img class="is-fullwidth" style="vertical-align:top" src="http://cdn.fantem.cn/2018/09/136284be4d457591fa50272a0487276b.jpg">
     </section>
     <section class="application-features">
       <div class="columns is-gapless is-multiline">
