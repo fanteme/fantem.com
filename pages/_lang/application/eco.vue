@@ -8,7 +8,7 @@
         <div class="subtitle has-text-centered is-size-6">{{$t('OOMI智能家居节点设备支持定时开关的功能，您可以关闭没有必要长期待机的家电，智能控制厨卫家电，定时供断电，绿色节能且环保。')}}</div>      
         <div class="columns"><div class="column"><img :src="`${this.$store.state.cdn}/2018/10/188d4736ccb47a7d1fb3f32b35852c1a.jpg`" alt=""></div></div>
       </div>
-      <div class="sectionA" :style="{backgroundImage: `url(${this.$store.state.cdn}/2018/10/1fd2ee7a11164225c00ba9b779a9a232.jpg)`}">
+      <div class="sectionA boderT" :style="{backgroundImage: `url(${this.$store.state.cdn}/2018/10/1fd2ee7a11164225c00ba9b779a9a232.jpg)`}">
         <div class="container">
           <div class="columns">
             <div class="column is-offset-7">
@@ -28,7 +28,7 @@
           </div>
         </div>
       </div>
-      <div class="sectionC">
+      <div class="sectionC marginT">
         <div class="container">
           <div class="columns">
             <div class="column is-6">
@@ -87,14 +87,18 @@
     
     .sectionA
       min-height: 800px
-      border-top: 12px solid #edf1f2
       margin-top: 33px
+
+      &.boderT
+        border-top: 12px solid #edf1f2
+
     .sectionB
       min-height: 860px 
     .sectionC
-      margin-top: 60px
       background: #edf1f2
       padding: 70px 0
+      &.marginT
+        margin-top: 60px
       svg
         vertical-align: middle 
       span 
