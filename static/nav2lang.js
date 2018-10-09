@@ -1,4 +1,5 @@
-if (!/^[1-6][0-7][0-3]\d0[0-4]$/.test(returnCitySN.cid)) {
+var lang = (navigator.language || navigator.browserLanguage).toLowerCase()
+if (!/zh/.test(lang)) {
   if (!/^\/en/.test(location.pathname)) {
     location.href =
       location.origin +

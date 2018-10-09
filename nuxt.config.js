@@ -39,13 +39,13 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href: 'https://unpkg.com/bulma@0.7.1/css/bulma.min.css'
+        href:
+          'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css'
       }
     ],
     script: [
-      { src: 'https://pv.sohu.com/cityjson?ie=utf-8' },
       {
-        src: '/ip2lang.js'
+        src: '/nav2lang.js'
       }
     ]
   },
