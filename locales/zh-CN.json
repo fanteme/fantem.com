@@ -6,11 +6,11 @@
       "description": "丰唐物联技术（深圳）有限公司是由美国公司Aeon Labs LLC和深圳英唐智控2011年合资成立的一家集设计、研发、生产及销售于一体、专业从事物联网产品及无线智能家居产品研发制造的中美合资高新企业"
     },
     "link": {
-      "fontAwesome": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
-      "animate": "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+      "fontAwesome": "http://cdn.fantem.cn/libs/css/font-awesome.min.css",
+      "animate": "http://cdn.fantem.cn/libs/css/animate.min.css"
     },
     "script": {
-      "smoothScroll": "https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/14.2.1/smooth-scroll.min.js"
+      "smoothScroll": "http://cdn.fantem.cn/libs/js/smooth-scroll.min.js"
     }
   },
   "智科技 慧生活": "智科技 慧生活",

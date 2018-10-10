@@ -6,11 +6,11 @@
       "description": "Fantem Technologies Ltd. was founded in 2011. This joint venture between Aeon Labs and Yitoa Intelligent Control Co., Ltd. combines the advanced technologies from an American Silicon Valley firm with the advantages of a Chinese public company. "
     },
     "link": {
-      "fontAwesome": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
-      "animate": "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+      "fontAwesome": "/css/font-awesome.min.css",
+      "animate": "/css/animate.min.css"
     },
     "script": {
-      "smoothScroll": "https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/14.2.1/smooth-scroll.min.js"
+      "smoothScroll": "/js/smooth-scroll.min.js"
     }
   },
   "智科技 慧生活": "Smart Technology Intelligent Life",

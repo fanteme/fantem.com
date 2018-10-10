@@ -14,21 +14,21 @@
     <div class="columns">
       <div class="container columns" style="margin: 0 auto">
         <div class="column">
-          <div class="num">1</div>
+          <div class="num center">1</div>
           <figure class="center">
             <img :src="`${this.$store.state.cdn}/2018/09/e7a9735acc6dd7a9317aeea45a1a282f.png`">
           </figure>
           <p class="text has-text-centered">{{$t('轻触')}}</p>
         </div>
         <div class="column">
-          <div class="num">2</div>
+          <div class="num center">2</div>
           <figure class="center">
             <img :src="`${this.$store.state.cdn}/2018/09/59183cc0661d8b7f96f0e8480597b5d5.png`">
           </figure>
           <p class="text has-text-centered">{{$t('连接')}}</p>
         </div>
         <div class="column">
-          <div class="num">3</div>
+          <div class="num center">3</div>
           <figure class="center">
             <img :src="`${this.$store.state.cdn}/2018/09/50e8679226119dd5527d8aa56ac4890e.png`">
           </figure>
@@ -116,9 +116,9 @@
     .num {
       width: 42px;
       height: 42px;
-      text-align: center;
       color: #e66c25;
-      font: 23.38px 'SegoeUI-Light';
+      font-size: 24px;
+      font-weight: 500;
       border: 1px solid #dadbdb;
       border-radius: 50%;
     }
