@@ -37,35 +37,7 @@
           </div>
       </div> 
       <application-suit :suit="suit"></application-suit>
-      <div class="products">
-        <div class="container has-text-centered is-clearfix">
-          <p class="title">{{$t('娱乐模式控制相关产品')}}</p>
-          <div class="is-size-5 character"><span>{{$t('智能网关')}}</span>|<span>{{$t('智能灯光控制')}}</span>|<span>{{$t('智能开关插座')}}</span></div>
-          <div class="columns">
-            <div class="column">
-              <div class="products-wrap">
-                <div class="products-bg"><img :src="`${this.$store.state.cdn}/2018/09/64f0bd13c54a37aaeff495ae5807d27c.png`" alt=""></div>
-                <span>{{$t('Cube智能家庭网关')}}</span>
-              </div>
-              
-            </div>
-            <div class="column">
-              <div class="products-wrap">
-                <div class="products-bg"><img :src="`${this.$store.state.cdn}/2018/09/22d3cd935c86ba20c1e426e907b31df8.png`" alt=""></div>
-                <span>{{$t('Hub智能家庭网关')}}</span>
-              </div>
-              
-            </div>
-            <div class="column">
-              <div class="products-wrap">
-                <div class="products-bg"><img :src="`${this.$store.state.cdn}/2018/09/2eacc02d2d200f0bd16fa07bde18b177.png`" alt=""></div>
-                <span>{{$t('智能操控平板')}}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
+      <application-products :products="products"></application-products>
     </section>
   </main>
 </template>
@@ -117,49 +89,15 @@
           margin-top: 50px
           height: 100px
 
-    .products
-      margin-top: 65px
-      background: #edf1f2
-      padding: 0 0 75px 0
-      
-      .container
-        overflow: hidden
-      .columns 
-        .column
-
-          .products-wrap
-            position: relative
-            background: #fff 
-            border: 1px solid #8c8b8b
-            height: 360px
-
-          .products-bg
-            display: flex
-            justify-content: center
-            align-items: center
-            height: 100%
-
-          img 
-            vertical-align: middle
-
-          span 
-            position: absolute
-            font-size: 16px
-            font-weight: 600
-            bottom: 24px
-            width: 100%
-            left: 0  
-            color: #3e3a39      
 </style>
-
-
 <script>
 import ApplicationHeader from '~/components/ApplicationHeader.vue'
 import ApplicationHero from '~/components/ApplicationHero.vue'
 import ApplicationSuit from '~/components/ApplicationSuit.vue'
+import ApplicationProducts from '~/components/ApplicationProducts.vue'
 
 export default{
-  components: { ApplicationHeader, ApplicationHero, ApplicationSuit},
+  components: { ApplicationHeader, ApplicationHero, ApplicationSuit, ApplicationProducts},
   data() {
     return {
         hero: {
@@ -228,7 +166,29 @@ export default{
           img: `${this.$store.state.cdn}/2018/09/0124b52a5e2795a23032715df84c8608.png`,
           detail: this.$t('（*配件产品可以随心拓展，以上套装仅供参考）')
           
-        }  
+        },
+        products: {
+          title: this.$t('娱乐模式控制相关产品'),
+          character: [this.$t('智能网关'), this.$t('智能传感器'), this.$t('智能辅助类')],
+          list: [
+            {
+              item:[
+                {
+                  img: `${this.$store.state.cdn}/2018/09/64f0bd13c54a37aaeff495ae5807d27c.png`,
+                  title: this.$t('Cube智能家庭网关')
+                },
+                {
+                  img: `${this.$store.state.cdn}/2018/09/22d3cd935c86ba20c1e426e907b31df8.png`,
+                  title: this.$t('Hub智能家庭网关')
+                },
+                {
+                  img: `${this.$store.state.cdn}/2018/09/2eacc02d2d200f0bd16fa07bde18b177.png`,
+                  title: this.$t('智能操控平板')
+                }
+              ]
+            }
+          ]
+        }
     }
   }
 }
