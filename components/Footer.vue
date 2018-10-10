@@ -128,6 +128,11 @@ export default {
     isDisplay2Top: false
   }),
   computed: {
+    baseUrl() {
+      return this.$store.state.locale == this.$store.state.fallbackLocale
+        ? ''
+        : `/${this.$store.state.locale}`
+    },
     menus() {
       return [
         {
@@ -135,15 +140,15 @@ export default {
           menus: [
             {
               title: this.$t('公司简介'),
-              link: `/${this.$store.state.locale}`
+              link: `${this.baseUrl}/`
             },
             {
               title: this.$t('加入我们'),
-              link: `/${this.$store.state.locale}`
+              link: `${this.baseUrl}/`
             },
             {
               title: this.$t('联系我们'),
-              link: `/${this.$store.state.locale}`
+              link: `${this.baseUrl}/`
             }
           ]
         },
@@ -152,19 +157,19 @@ export default {
           menus: [
             {
               title: this.$t('产品中心'),
-              link: `/${this.$store.state.locale}`
+              link: `${this.baseUrl}/products`
             },
             {
               title: this.$t('应用场景'),
-              link: `/${this.$store.state.locale}`
+              link: `${this.baseUrl}/application`
             },
             {
               title: this.$t('行业方案'),
-              link: `/${this.$store.state.locale}`
+              link: `${this.baseUrl}/solution`
             },
             {
               title: this.$t('服务体系'),
-              link: `/${this.$store.state.locale}`
+              link: `${this.baseUrl}/`
             }
           ]
         },
@@ -173,15 +178,15 @@ export default {
           menus: [
             {
               title: this.$t('经销商合作'),
-              link: `/${this.$store.state.locale}`
+              link: `${this.baseUrl}/`
             },
             {
               title: this.$t('项目合作'),
-              link: `/${this.$store.state.locale}`
+              link: `${this.baseUrl}/`
             },
             {
               title: this.$t('典型案例'),
-              link: `/${this.$store.state.locale}`
+              link: `${this.baseUrl}/`
             }
           ]
         },
@@ -190,19 +195,19 @@ export default {
           menus: [
             {
               title: this.$t('下载中心'),
-              link: `/${this.$store.state.locale}`
+              link: `${this.baseUrl}/`
             },
             {
               title: this.$t('APP下载'),
-              link: `/${this.$store.state.locale}`
+              link: `${this.baseUrl}/`
             },
             {
               title: this.$t('常见问题'),
-              link: `/${this.$store.state.locale}`
+              link: `${this.baseUrl}/`
             },
             {
               title: this.$t('视频中心'),
-              link: `/${this.$store.state.locale}`
+              link: `${this.baseUrl}/`
             }
           ]
         }
