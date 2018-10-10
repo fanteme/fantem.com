@@ -39,8 +39,7 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href:
-          'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css'
+        href: 'http://cdn.fantem.cn/libs/css/bulma.min.css'
       }
     ],
     script: [
