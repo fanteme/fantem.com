@@ -3,7 +3,7 @@
     <div class="container">
       <div class="columns">
         <div class="column is-offset-2 is-2 has-text-centered">
-          <nuxt-link :to="`${baseUrl}/application/security`" :class="{'nuxt-link-active': $route.path == '/application'}">
+          <nuxt-link :to="`${baseUrl}/application/security`" :class="{'nuxt-link-active': /\/application\/?$/.test($route.path)}">
             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="40" viewBox="0 0 36 40">
               <g fill="none" fill-rule="evenodd" stroke="#040000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".781" transform="translate(1)">
                 <path d="M17.31.39C17.31.39 11.67 7.72.39 6L.39 24.81C.39 24.81.69 31.62 8.85 35.58 12.91 37.58 15.13 37.45 17.31 39.39M17.31.39C17.31.39 23 7.72 34.23 6L34.23 24.81C34.23 24.81 33.92 31.62 25.77 35.58 21.71 37.58 19.48 37.45 17.31 39.39"/>

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="columns is-mobile">
         <div class="column is-offset-one-third-desktop is-one-quarter-mobile has-text-centered">
-          <nuxt-link :to="`${baseUrl}/solution/villa`" :class="{'nuxt-link-active': $route.path == '/solution'}">
+          <nuxt-link :to="`${baseUrl}/solution/villa`" :class="{'nuxt-link-active': /\/solution\/?$/.test($route.path)}">
             <svg xmlns="http://www.w3.org/2000/svg" width="55" height="49"><g fill="none" fill-rule="evenodd" stroke="#040000" stroke-linecap="round" stroke-linejoin="round"><path d="M11.566 3.067v15.017M4.082 27.191L26.593.246l23.869 26.209"/><path d="M7.027 47.951V33.963L27.33 11.289l20.187 22.233v14.429"/><path d="M21.988 47.951V33.374h10.568v14.577M.627 48.43h53.29"/></g></svg>
             <p>{{$t('智慧别墅')}}</p>
           </nuxt-link>
