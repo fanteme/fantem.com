@@ -213,11 +213,20 @@ export default {
     return {
       hero: {
         bg: 'http://cdn.fantem.cn/2018/09/e838aa40ff7687a92f5adb146b0f3fb9.jpg',
-        title: this.$t('OOMI智能家居系统') + '—— ' + this.$t('安防模式'),
+        isnum: 'is-12',
+        isalgin: '',
+        isoffset: 'is-offset-0',
+        title: this.$t('OOMI智能家居') + '—— ' + this.$t('安防模式'),
+        titalign: 'has-text-centered',
+        titcolor: 'has-text-white',
         subtitle: this.$t('家的安全，亲人的安全，一直是我们的渴望。'),
+        subalign: 'has-text-centered',
+        subcolor: 'has-text-white',
         detail: this.$t(
           '您可以通过智能操控平板 Oomi Touch 或手机，随时随地观察室内外的闭路监控点的影像，并可通过本地储存卡或云录像查看较早前发生的影像。另外，Oomi 智能安防系统拥有多重防线的布防，一旦发现入侵者，将触发智能安防系统并自动报警，及时通知主人或相关安保人员，及时阻止违法犯罪行为的发生，保障个人的利益不受侵害。同时，Oomi智能安防系统不仅仅局限于提供防范的功能，还包括火灾、煤气泄漏的监测以及老人、小孩意外事态的急救报警等人性化的功能。'
-        )
+        ),
+        detalign: 'has-text-centered',
+        detcolor: 'has-text-white'
       },
       features: [
         {
