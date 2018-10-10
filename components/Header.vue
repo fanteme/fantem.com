@@ -194,35 +194,40 @@ export default {
     }
   },
   computed: {
+    baseUrl() {
+      return this.$store.state.locale == this.$store.state.fallbackLocale
+        ? ''
+        : `/${this.$store.state.locale}`
+    },
     menus() {
       return [
         {
           title: this.$t('首页'),
-          link: `/${this.$store.state.locale}`
+          link: `${this.baseUrl}/`
         },
         {
           title: this.$t('产品中心'),
-          link: `/${this.$store.state.locale}/products`
+          link: `${this.baseUrl}/products`
         },
         {
           title: this.$t('应用场景'),
-          link: `/${this.$store.state.locale}/application`
+          link: `${this.baseUrl}/application`
         },
         {
           title: this.$t('行业方案'),
-          link: `/${this.$store.state.locale}/solution`
+          link: `${this.baseUrl}/solution`
         },
         {
           title: this.$t('商务合作'),
-          link: `/${this.$store.state.locale}/business`
+          link: `${this.baseUrl}/business`
         },
         {
           title: this.$t('技术支持'),
-          link: `/${this.$store.state.locale}/support`
+          link: `${this.baseUrl}/support`
         },
         {
           title: this.$t('关于我们'),
-          link: `/${this.$store.state.locale}/about`
+          link: `${this.baseUrl}/about`
         }
       ]
     }

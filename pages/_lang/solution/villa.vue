@@ -1,6 +1,6 @@
 <template>
   <main class="main">
-    <solution-header :mode="'villa'"></solution-header>
+    <solution-header></solution-header>
     <solution-hero :hero="hero"></solution-hero>
     <section class="solution-main has-text-centered">
       <h1>OOMI {{$t('智慧别墅')}}</h1>
