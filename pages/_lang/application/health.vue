@@ -4,7 +4,11 @@
     <application-hero :hero="hero"></application-hero>
     <section class="application-features">  
       <div class="container">
-        <div class="subtitle has-text-centered has-text-black is-size-6 marginT">{{$t('OOMI智能健康场景系统可以实时快速、高效监测家里空气中漂浮的PM2.5、CO、VOC、甲醛、燃气等有害气体浓度，自动打开空净、新风系统进行优化空气。结合OOMI智能家居系统来控制温度、湿度之间的协调统一，为您提供一个“恒温、恒湿、恒氧、恒净”的家居环境，给您一个绿色的智能健康的生活空间。')}}</div>      
+        <div class="columns is-centered">
+          <div class="column is-10">
+            <div class="subtitle has-text-centered has-text-black is-size-6 marginT">{{$t('OOMI智能健康场景系统可以实时快速、高效监测家里空气中漂浮的PM2.5、CO、VOC、甲醛、燃气等有害气体浓度，自动打开空净、新风系统进行优化空气。结合OOMI智能家居系统来控制温度、湿度之间的协调统一，为您提供一个“恒温、恒湿、恒氧、恒净”的家居环境，给您一个绿色的智能健康的生活空间。')}}</div>      
+          </div>
+        </div>
       </div>
       <div class="sectionA" :style="{backgroundImage: `url(${this.$store.state.cdn}/2018/10/1b0d24d69595d8fe0e77a629e2ab31a9.jpg)`}">
         <div class="container">
@@ -99,7 +103,6 @@
         color: #231815
         margin-bottom: 47px
     .sectionA
-      margin-top: 67px
       min-height: 800px
       overflow: hidden
 
@@ -120,8 +123,8 @@
             margin: 0 23px 
     .sectionC
       min-height: 800px
-      &.borderB
-        border-bottom: 12px solid #edf1f2
+    .borderB
+      border-bottom: 12px solid #edf1f2
 
 </style>
 
