@@ -1,6 +1,6 @@
 <template>
   <main>
-    <application-header :mode="'scene'"></application-header>
+    <application-header></application-header>
     <application-hero :hero="hero"></application-hero>
     <section class="application-features">
       <div class="container">

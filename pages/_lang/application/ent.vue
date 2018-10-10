@@ -1,6 +1,6 @@
 <template>
   <main class="main">
-    <application-header :mode="'ent'"></application-header>
+    <application-header></application-header>
     <application-hero :hero="hero"></application-hero>
     <section class="application-features">
       <p class="caption has-text-centered">{{$t('智能娱乐 满足所想')}}</p>

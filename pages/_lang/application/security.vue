@@ -1,6 +1,6 @@
 <template>
   <main class="main">
-    <application-header :mode="'security'"></application-header>
+    <application-header></application-header>
     <application-hero :hero="hero"></application-hero>
     <section class="application-advantage">
       <div class="container">
