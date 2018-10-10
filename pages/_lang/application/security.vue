@@ -96,6 +96,7 @@
         </div>
       </div>
       <application-suit :suit="suit"></application-suit>
+      <application-products :products="products"></application-products>
     </section>
   </main>
 </template>
@@ -272,8 +273,15 @@
 import ApplicationHeader from '~/components/ApplicationHeader.vue'
 import ApplicationHero from '~/components/ApplicationHero.vue'
 import ApplicationSuit from '~/components/ApplicationSuit.vue'
+import ApplicationProducts from '~/components/ApplicationProducts.vue'
+
 export default {
-  components: { ApplicationHeader, ApplicationHero, ApplicationSuit },
+  components: {
+    ApplicationHeader,
+    ApplicationHero,
+    ApplicationSuit,
+    ApplicationProducts
+  },
   head() {
     return { title: this.$t('应用场景') + '-' + this.$t('安防模式') }
   },
@@ -389,6 +397,39 @@ export default {
           this.$store.state.cdn
         }/2018/10/fdb1cab84938c699a3c954ce06440cee.png`,
         detail: this.$t('（*配件产品可以随心拓展，以上套装仅供参考）')
+      },
+      products: {
+        title: this.$t('安防模式控制相关产品'),
+        character: [
+          this.$t('智能网关'),
+          this.$t('智能传感器'),
+          this.$t('智能辅助类'),
+          this.$t('第三方兼容产品')
+        ],
+        list: [
+          {
+            item: [
+              {
+                img: `${
+                  this.$store.state.cdn
+                }/2018/09/64f0bd13c54a37aaeff495ae5807d27c.png`,
+                title: this.$t('Cube智能家庭网关')
+              },
+              {
+                img: `${
+                  this.$store.state.cdn
+                }/2018/09/22d3cd935c86ba20c1e426e907b31df8.png`,
+                title: this.$t('Hub智能家庭网关')
+              },
+              {
+                img: `${
+                  this.$store.state.cdn
+                }/2018/09/2eacc02d2d200f0bd16fa07bde18b177.png`,
+                title: this.$t('智能操控平板')
+              }
+            ]
+          }
+        ]
       }
     }
   }
