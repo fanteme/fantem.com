@@ -217,11 +217,20 @@ export default{
     return {
         hero: {
           bg:   `${this.$store.state.cdn}/2018/09/5d00b77bdb215e4a2bc2979c1efd050f.jpg`,
-          title: this.$t('OOMI智能家居系统') + '—— ' + this.$t('娱乐模式'),
+          isnum: 'is-12',
+          isalgin: '',
+          isoffset: 'is-offset-0',
+          title: this.$t('OOMI智能家居') + '—— ' + this.$t('娱乐模式'),
+          titalign: 'has-text-centered',
+          titcolor: 'has-text-white',
           subtitle: '',
+          subalign: 'has-text-centered',
+          subcolor: 'has-text-white',
           detail: this.$t(
           '当您周末与三五好友相聚时，在家中开启一场久违的party时，只需轻轻一键，窗帘关闭，灯光闪烁，音乐适时响起，营造出最适宜的聚会氛围，让朋友的情谊更加绵长。当您闲暇时，在您独处或与家人一起想要欣赏一部温馨的影片，聆听优美的音乐时，只要轻轻一键，灯光自动调暗，窗帘关上，影音播放系统依次启动，投影机及屏幕徐徐下降，空调自动调温。OOMI智能娱乐场景为您提供更加时尚潮流的视听效果，以及更为舒适安逸的观影环境。'
-        )
+        ),
+          detalign: 'has-text-centered',
+          detcolor: 'has-text-white'
         }  
     }
   }

@@ -4,8 +4,8 @@
     <application-hero :hero="hero"></application-hero>
     <section class="application-features">
       <div class="container">
-        <div class="columns is-centered">
-          <div class="column is-10">
+        <div class="columns">
+          <div class="column">
             <div class="subtitle has-text-centered has-text-black is-size-6 marginT">{{$t('OOMI场景模式能充分满足您在生活中的各类需求，借助OOMI一系列智能节点设备打造出各种可调整、灵活性强、支持多场景应用的智能家居场景模式。OOMI系列智能节点设备功能的组合，不仅能帮您大大减少传统家居繁琐的单设备操作所带来的麻烦，同时也省去不必要的生活成本。另外，您可以通过OOMI智能控制平板、OOMI PRO APP或场景控制面板，根据您自己的需求和使用习惯，联动不同的OOMI智能节点设备，自行设置不同的场景模式！')}}</div>
           </div>
         </div>
@@ -137,19 +137,28 @@ export default{
     return {
         hero: {
           bg:   `${this.$store.state.cdn}/2018/10/befa44773cf80f3d742d9fcca7d3fc3d.jpg`,
-          title: this.$t('OOMI智能家居系统') + '—— ' + this.$t('场景模式'),
+          isnum: 'is-10',
+          isalgin: '',
+          isoffset: 'is-offset-1',
+          title: this.$t('OOMI智能家居') + '—— ' + this.$t('场景模式'),
+          titalign: 'has-text-left',
+          titcolor: 'dark',
           subtitle: '',
-          detail: ''
+          subalign: 'has-text-centered',
+          subcolor: 'has-text-white',
+          detail: '',
+          detalign: 'has-text-centered',
+          detcolor: 'has-text-white'
         },
         show: [false, false, false, false, false, false, false]
     }
   },
   methods:{
-    showText(evl){
-      this.$set(this.show,evl,true)
+    showText(idx){
+      this.$set(this.show,idx,true)
     },
-    hideText(evl){
-      this.$set(this.show,evl,false)
+    hideText(idx){
+      this.$set(this.show,idx,false)
     }
   }
 }

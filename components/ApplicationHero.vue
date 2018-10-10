@@ -2,16 +2,20 @@
   <section class="application-hero">
     <div class="hero">
       <div class="hero-content center" :style="{backgroundImage: `url(${hero.bg})`}">
-        <div class="container has-text-centered has-text-white">
-          <h1>
-            {{ hero.title }}
-          </h1>
-          <h2>
-            {{ hero.subtitle }}
-          </h2>
-          <p>
-            {{ hero.detail }}
-          </p>
+        <div class="container">
+          <div class="columns">
+            <div class="column" :class="[hero.isnum, hero.isoffset]">
+              <h1 :class="[hero.titalign, hero.titcolor]">
+                {{ hero.title }}
+              </h1>
+              <h2 :class="[hero.subalign, hero.subcolor]">
+                {{ hero.subtitle }}
+              </h2>
+              <p :class="[hero.detalign, hero.detcolor]">
+                {{ hero.detail }}
+              </p>
+            </div>
+          </div>          
         </div>
       </div>
     </div>
@@ -36,6 +40,10 @@
       background-position: 50% 33%;
       background-attachment: fixed;
       background-repeat: no-repeat;
+
+      .dark {
+        color: #231815
+      }
     }
   }
 }

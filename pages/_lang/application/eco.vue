@@ -118,11 +118,20 @@ export default{
     return {
         hero: {
           bg:   `${this.$store.state.cdn}/2018/10/8da7523e7a042f1ba690592ad6e50ec3.jpg`,
-          title: this.$t('OOMI智能家居系统') + '—— ' + this.$t('节能模式'),
+          isnum: 'is-8',
+          isalgin: '',
+          isoffset: 'is-offset-1',
+          title: this.$t('OOMI智能家居') + '—— ' + this.$t('节能模式'),
+          titalign: 'has-text-centered',
+          titcolor: 'has-text-white',
           subtitle: '',
+          subalign: 'has-text-centered',
+          subcolor: 'has-text-white',
           detail: this.$t(
           'OOMI智能家居系统支持家用电器远程无线智能操控，能让您轻松控制家里的电器，并监控电器的工作状态及能耗，实时检测家中的用电情况，分析各类电器的耗电量，根据您的用电数据，从源头优化用电组合，为您科学节省能源，让生活更便捷，更加环保，为您节约每一分钱！'
-        )
+        ),
+          detalign: 'has-text-centered',
+          detcolor: 'has-text-white'
         }  
     }
   }
