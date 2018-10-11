@@ -183,5 +183,16 @@
   "娱乐模式套装选择（适用于有网络的小户型家庭）": "Choice of entertainment package (for small family with Internet)",
   "联动其他智能设备": "Linkage with other smart devices",
   "娱乐模式控制相关产品": "Entertainment mode control related products",
-  "智能一、二、四路开关": "Intelligent one, two, four way switch"
+  "智能一、二、四路开关": "Intelligent one, two, four way switch",
+  "OOMI智能家居系统支持家用电器远程无线智能操控，能让您轻松控制家里的电器，并监控电器的工作状态及能耗，实时检测家中的用电情况，分析各类电器的耗电量，根据您的用电数据，从源头优化用电组合，为您科学节省能源，让生活更便捷，更加环保，为您节约每一分钱！": "OOMI smart home system support household appliances remote wireless intelligent control, allows you to easily control the home appliances, and monitor the working state of the electrical and energy consumption, real-time detection of electricity in the home situation, analysis of electrical power consumption, electricity data according to you, from the source to optimize power combination, science to save energy for you, let the life more convenient, more environmentally friendly, saving every penny for you!",
+  "智能节能 定时开启": "Intelligent energy saving time opening",
+  "OOMI智能家居节点设备支持定时开关的功能，您可以关闭没有必要长期待机的家电，智能控制厨卫家电，定时供断电，绿色节能且环保。": "The OOMI smart home node device supports the function of timing switch. You can turn off the home appliances that do not need to be standby for a long time. With intelligent control of kitchen and bathroom appliances, the power supply is cut off regularly.",
+  "一键离家 智能红外感应": "One key away from home intelligent infrared induction",
+  "一键离家：只需一键点击，即可离家，并且自动关闭家中的灯光及电器；智能红外感应：人来灯亮，人走灯灭，智能感应人体移动。": "One key to leave home: only one click can leave home, and automatically shut the lights and appliances in the home; Intelligent infrared induction: people come to light, people go out, intelligent induction human movement.",
+  "智慧节能 能耗检测": "Intelligent energy-saving energy consumption detection",
+  "实时监控家用电器工作状态及能耗，支持实际功率检测和用电量查询，使用OOMI智能家居系统就能轻松知晓。让您清楚了解家电的用电情况，更科学的使用电器，减少不必要的待机时间，节能又环保。": "Monitor the working status and energy consumption of household appliances in real time, support the actual power detection and power consumption query, and use the OOMI smart home system to easily know. Let you clearly understand the electrical appliances, more scientific use of electrical appliances, reduce unnecessary standby time, energy conservation and environmental protection.",
+  "远程开关 一键可控": "Remote switch is controlled by one key",
+  "手机远程遥控，随时随地一键可控。各类电器的电源、开关状态在手机上一目了然！每当离开家或许要出差时，再也不用为关灯或者电器断电问题担心，通过OOMI APP，在手机上可以随时查看，控制电源开关，一键操作，安心无忧。": "Mobile phone remote control, whenever and wherever a key control. Various electrical power supply, switch status on the phone at a glance! Whenever leaving home for a business trip, you don't have to worry about turning off the lights or turning off the electrical appliances. With OOMI APP, you can check at any time on your phone, control the power switch, and operate with one key.",
+  "组网简单 轻松拓展": "Network is simple and easy to expand",
+  "组网设置超乎想象的简单！OOMI 使用自主创新的 Tap - and - Touch 专利技术，只需让 OOMI Touch 轻触其他 OOMI 产品，便可建立连接，实现 OOMI 系统对智能家电的全操控！且系统最大可支持232个节点设备，可轻松拓展新设备。": "Networking is incredibly simple! OOMI USES the Tap - and - Touch patent technology of independent innovation. Only by making OOMI Touch other OOMI products, OOMI can establish a connection and realize the OOMI system's full control of intelligent home appliances! The system can support up to 232 node devices and easily extend new devices."
 }
