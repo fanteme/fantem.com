@@ -1,6 +1,6 @@
 <template>
-  <main class="main products">
-    <section>
+  <main class="main">
+    <section class="products">
       <div class="hero"><img :src="`${this.$store.state.cdn}/2018/09/c69c7c58a2886d65d7f901c466150327.jpg`"/></div>
       <div class="container">
         <div class="OomiProducts has-text-centered">
@@ -149,67 +149,95 @@
 </template>
 
 <style lang="stylus">
-.products 
-  background: #f0f4f5
-  .hero
-    height: auto
-  .title,.caption
-    font-size: 36px
-    line-height: 44px
-  .title
-    margin: 105px 0 45px 0  
-  .noneborder
-    border: none !important
-  .OomiProducts
-    >h2 
-      margin: 50px 0 32px 0
+.products {
+  background: #f0f4f5;
 
-      &:after 
-        display: block
-        margin: 0 auto
-        content: ''
-        margin-top: 8px
-        width: 73px
-        height: 2px
-        background-color: #ed7422
-    .columns 
-      .column
-        background: #fff 
-        border: 1px solid #8c8b8b
-        position: relative
-        margin-right: -1px
-        margin-top: -1px
+  .hero {
+    height: auto;
+  }
 
-        img 
-          vertical-align: middle
+  .title, .caption {
+    font-size: 36px;
+    line-height: 44px;
+  }
 
-        span 
-          position: absolute
-          font-size: 24px
-          font-weight: 600
-          bottom: 24px
-          width: 100%
-          left: 0  
-          color: #3e3a39      
+  .title {
+    margin: 105px 0 45px 0;
+  }
 
-  .thirdProducts
-    padding-bottom: 105px 
-    .tabs
-      ul
-        border: none
-        li
-          padding: 0 45px
-          font-size: 18px
-          font-weight: 600
-          color: #3e3a39  
-    .column 
-      .item 
-        margin: 10px 0
-        background: #fff
-        height: 110px
-        img
-          width: 105px 
- 
+  .noneborder {
+    border: none !important;
+  }
+
+  .OomiProducts {
+    >h2 {
+      margin: 50px 0 32px 0;
+
+      &:after {
+        display: block;
+        margin: 0 auto;
+        content: '';
+        margin-top: 8px;
+        width: 73px;
+        height: 2px;
+        background-color: #ed7422;
+      }
+    }
+
+    .columns {
+      .column {
+        background: #fff;
+        border: 1px solid #8c8b8b;
+        position: relative;
+        margin-right: -1px;
+        margin-top: -1px;
+
+        img {
+          vertical-align: middle;
+        }
+
+        span {
+          position: absolute;
+          font-size: 24px;
+          font-weight: 600;
+          bottom: 24px;
+          width: 100%;
+          left: 0;
+          color: #3e3a39;
+        }
+      }
+    }
+  }
+
+  .thirdProducts {
+    padding-bottom: 105px;
+
+    .tabs {
+      ul {
+        border: none;
+
+        li {
+          padding: 0 45px;
+          font-size: 18px;
+          font-weight: 600;
+          color: #3e3a39;
+        }
+      }
+    }
+
+    .column {
+      .item {
+        margin: 10px 0;
+        background: #fff;
+        height: 110px;
+
+        img {
+          width: 105px;
+        }
+      }
+    }
+  }
+}
 </style>
 
 <script>
@@ -247,9 +275,6 @@ export default {
       }/posts?categories=44&per_page=40&_embed&order=asc`
     )
     this.thirdProducts = data
-  },
-  methods: {
-    
   }
 }
 </script>
