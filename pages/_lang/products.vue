@@ -1,7 +1,10 @@
 <template>
   <main class="main">
     <section class="products">
-      <div class="hero"><img :src="`${this.$store.state.cdn}/2018/09/c69c7c58a2886d65d7f901c466150327.jpg`"/></div>
+      <div class="hero">
+        <div class="hero-body" :style="{backgroundImage: `url(${$store.state.cdn}/2018/09/c69c7c58a2886d65d7f901c466150327.jpg)`}">
+        </div>
+      </div>
       <div class="container">
         <div class="OomiProducts has-text-centered">
           <h2 class="caption has-text-weight-bold">{{$t('Z-wave产品')}}</h2>
@@ -153,7 +156,12 @@
   background: #f0f4f5;
 
   .hero {
-    height: auto;
+    height: 701px;
+  }
+
+  .hero-body {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
   }
 
   .title, .caption {

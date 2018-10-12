@@ -1,5 +1,5 @@
 <template>
-  <section class="products">
+  <section class="applicationproducts">
       <div class="container has-text-centered is-clearfix">
         <p class="title">{{products.title}}</p>
         <div class="is-size-5 character">
@@ -19,7 +19,7 @@
     </section>
 </template>
 <style lang="stylus">
-  .products
+  .applicationproducts
     margin-top: 65px
     background: #edf1f2
     padding: 0 0 75px 0
