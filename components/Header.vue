@@ -193,6 +193,11 @@ export default {
       isFixed: false
     }
   },
+  watch: {
+    $route() {
+      this.isActive = false
+    }
+  },
   computed: {
     baseUrl() {
       return this.$store.state.locale == this.$store.state.fallbackLocale
