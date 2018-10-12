@@ -28,11 +28,13 @@
           </div>
         </div>
         <div class="columns">
-          <div class="column center aboutus-company">
-            <div class="title has-text-centered">{{$t('关于丰唐')}}</div>
-            <p>
-              {{$t('丰唐公司是一家集设计研发、生产、销售于一体，专注于物联网产品及无线智能家居产品的高端品牌企业。公司成立于2011年，是美国Aeon Labs LLC与中国YITOA英唐智控（股票代码：300131）强强联合的高新技术企业。公司致力于为人们提供安全、节能、便捷和舒适的智慧生活，是领先的智能家居产品和系统方案服务提供商。 我们的产品在满足用户的日常使用需求的同时，力求突出时尚感、科技感，并且做到安装便捷，操作简单。产品功能覆盖全面，可实现对灯光、窗帘、空调、影音设备等家电的全方位智能操控。不仅适用于家庭，同样适用于酒店、办公室等场所。')}}
-            </p>
+          <div class="column center">
+            <div>
+              <p class="title has-text-centered">{{$t('关于丰唐')}}</p>
+              <p>
+                {{$t('丰唐公司是一家集设计研发、生产、销售于一体，专注于物联网产品及无线智能家居产品的高端品牌企业。公司成立于2011年，是美国Aeon Labs LLC与中国YITOA英唐智控（股票代码：300131）强强联合的高新技术企业。公司致力于为人们提供安全、节能、便捷和舒适的智慧生活，是领先的智能家居产品和系统方案服务提供商。 我们的产品在满足用户的日常使用需求的同时，力求突出时尚感、科技感，并且做到安装便捷，操作简单。产品功能覆盖全面，可实现对灯光、窗帘、空调、影音设备等家电的全方位智能操控。不仅适用于家庭，同样适用于酒店、办公室等场所。')}}
+              </p>
+            </div>
           </div>
           <div class="column">
             <img :src="`${$store.state.cdn}/fantem/about1.jpg`">
@@ -42,20 +44,24 @@
           <div class="column">
             <img :src="`${$store.state.cdn}/fantem/about2.jpg`">
           </div>
-          <div class="column center aboutus-company">
-            <div class="title has-text-centered">{{$t('技术优势')}}</div>
-            <p>
-              {{$t('作为Z-Wave联盟成员，丰唐物联在中国及美国都拥有一流的研发团队。迄今为止，我们已获得100多项技术专利，并在不断的推出新品，以满足用户及市场需求。')}}
-            </p>
+          <div class="column center">
+            <div>
+              <p class="title has-text-centered">{{$t('技术优势')}}</p>
+              <p>
+                {{$t('作为Z-Wave联盟成员，丰唐物联在中国及美国都拥有一流的研发团队。迄今为止，我们已获得100多项技术专利，并在不断的推出新品，以满足用户及市场需求。')}}
+              </p>
+            </div>
           </div>
         </div>
         <div class="columns">
-          <div class="column center aboutus-company">
-            <div class="title has-text-centered">{{$t('产品优势')}}</div>
+          <div class="column center">
+            <div>
+              <p class="title has-text-centered">{{$t('产品优势')}}</p>
               <p>
                 {{$t('丰唐智能家居系统包含有网关类、开关类、传感类、控制类、照明类、安防类等多种类型的产品。产品功能覆盖全面，可实现对灯光、窗帘、空调、影音设备等家电的全方位智能操控。')}}
               </p>
             </div>
+          </div>
           <div class="column">
             <img :src="`${$store.state.cdn}/fantem/about3.jpg`">
           </div>
@@ -96,10 +102,6 @@
         padding-bottom: 30px;
       }
     }
-  }
-
-  &-company {
-    flex-direction: column;
   }
 
   &-awards {
