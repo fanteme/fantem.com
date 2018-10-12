@@ -42,12 +42,8 @@
         display: block;
         border-left: 1px solid #9a9b9b;
 
-        &.is-active {
-          color: #ef6f21;
-
-          svg * {
-            stroke: currentColor;
-          }
+        svg {
+          height: 49px;
         }
 
         p {
