@@ -10,10 +10,10 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid">
+      <div class="container-fluid has-text-centered">
         <div class=" columns is-gapless">
           <div class="column modeA is-multiline center positionR" @mouseover="showText(0)" @mouseleave="hideText(0)" :style="{backgroundImage: `url(${this.$store.state.cdn}/2018/10/6882d05aa030fd1a518ae995114aa6ac.jpg)`}">
-            <h4 class="has-text-white center ">{{$t('起床模式')}}</h4>
+            <h4 class="has-text-white center">{{$t('起床模式')}}</h4>
             <transition enter-active-class="fadeInUp" leave-active-class="fadeOutDown">
               <div v-show="show[0]" class="text has-text-centered animated">{{$t('在模拟日出的灯光下起床，窗帘缓缓拉开，阳光洒入室内，温度自动调节至体感最舒适的温度。当您走进浴室及厨房时灯光自动打开，伴随着自己喜欢的音乐享受着早餐，用美好的心情迎接新的一天。')}}</div>
             </transition>
@@ -32,7 +32,7 @@
           </div>
         </div>
       </div>
-      <div class="container-flu id">
+      <div class="container-fluid has-text-centered">
         <div class="columns is-multiline">
           <div class="column is-7" @mouseover="showText(3)" @mouseleave="hideText(3)">
             <div class="modeB center positionR" :style="{backgroundImage: `url(${this.$store.state.cdn}/2018/10/9ea31318e6cd053bd0cb0972a1484d52.jpg)`}">
@@ -116,6 +116,7 @@
     .modeA
       min-height: 900px
       border-bottom: 22px solid #edf1f2
+      overflow: hidden
 
     .modeB
       min-height: 685px
