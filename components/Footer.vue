@@ -194,10 +194,6 @@ export default {
           title: this.$t('技术支持'),
           menus: [
             {
-              title: this.$t('下载中心'),
-              link: `${this.baseUrl}/`
-            },
-            {
               title: this.$t('APP下载'),
               link: `${this.baseUrl}/`
             },
