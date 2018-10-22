@@ -55,7 +55,7 @@ export default {
   router: {
     middleware: 'vue-i18n'
   },
-  plugins: ['~/plugins/vue-i18n.js'],
+  plugins: ['~/plugins/vue-i18n.js', '~/plugins/vue-observe-visibility'],
   /*
   ** Build configuration
   */
