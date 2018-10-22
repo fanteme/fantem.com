@@ -76,6 +76,9 @@
 import videojs from '~/components/Video'
 import SectionHeader from '~/components/SectionHeader'
 export default {
+  head() {
+    return { title: this.$t('技术支持') +''+ this.$t('视频中心') }
+  },
   components: {
     videojs,SectionHeader
   },

@@ -168,6 +168,9 @@
 <script>
 import SectionHeader from '~/components/SectionHeader'
   export default {
+    head() {
+      return { title: this.$t('技术支持') + '-' + this.$t('服务体系') }
+    },
     components: {
       SectionHeader
     },

@@ -80,6 +80,8 @@ export default {
       '/en/business',
       '/en/support',
       '/en/support/downloads/apps',
+      '/en/support/service',
+      '/en/support/videos',
       '/en/about',
       '/news/91',
       '/en/news/91',
