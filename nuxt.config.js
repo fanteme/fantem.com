@@ -83,6 +83,7 @@ export default {
       '/en/support/service',
       '/en/support/videos',
       '/en/support/faq',
+      '/en/support/guide',
       '/en/about',
       '/news/91',
       '/en/news/91',

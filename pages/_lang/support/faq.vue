@@ -7,8 +7,8 @@
           <div class="column is-one-quarter">
             <ul>
               <li v-for="(category, index) in categories" :key="index">
-                <nuxt-link :to="`/support/faq#${category.slug}`" :class="{'nuxt-link-active': category.active}">
-                  {{category.name}}
+                <nuxt-link :to="`${baseUrl}/support/faq#${category.slug}`" :class="{'nuxt-link-active': category.active}">
+                  {{category.title}}
                 </nuxt-link>
               </li>
             </ul>
@@ -67,6 +67,11 @@ export default {
     }
   },
   computed: {
+    baseUrl() {
+      return this.$store.state.locale == this.$store.state.fallbackLocale
+        ? ''
+        : `/${this.$store.state.locale}`
+    },
     title() {
       if (this.$route.hash) {
         let faq = this.categories.find(category => {
@@ -91,52 +96,63 @@ export default {
       faqs: [],
       categories: [
         {
-          name: this.$t('Cube智能家庭网关'),
-          slug: 'cube',
-          active: true
+          title: this.$t('Cube智能家庭网关'),
+          name: 'Cube智能家庭网关',
+          slug: 'cube'
         },
         {
-          name: this.$t('Touch智能家庭控制平板'),
+          title: this.$t('Touch智能家庭控制平板'),
+          name: 'Touch智能家庭控制平板',
           slug: 'touch'
         },
         {
-          name: this.$t('智能传感器类'),
+          title: this.$t('智能传感器类'),
+          name: '智能传感器类',
           slug: 'smart-sensor'
         },
         {
-          name: this.$t('智能单火开关'),
+          title: this.$t('智能单火开关'),
+          name: '智能单火开关',
           slug: 'smart-single-fire-switch'
         },
         {
-          name: this.$t('智能零火开关'),
+          title: this.$t('智能零火开关'),
+          name: '智能零火开关',
           slug: 'smart-zero-fire-switch'
         },
         {
-          name: this.$t('智能嵌入式开关'),
+          title: this.$t('智能嵌入式开关'),
+          name: '智能嵌入式开关',
           slug: 'smart-embed-switch'
         },
         {
-          name: this.$t('智能灯泡/灯带'),
+          title: this.$t('智能灯泡/灯带'),
+          name: '智能灯泡/灯带',
           slug: 'smart-bulb-colorstrip'
         },
         {
           name: this.$t('智能插座/场景面板'),
+          name: '智能插座/场景面板',
           slug: 'smart-plug-panel'
         },
         {
-          name: this.$t('智能多功能警示器'),
+          title: this.$t('智能多功能警示器'),
+          name: '智能多功能警示器',
           slug: 'smart-multi-fun-siren'
         },
         {
-          name: this.$t('智能红外转换器'),
+          title: this.$t('智能红外转换器'),
+          name: '智能红外转换器',
           slug: 'smart-ir-switch'
         },
         {
-          name: this.$t('智能窗帘电机'),
+          title: this.$t('智能窗帘电机'),
+          name: '智能窗帘电机',
           slug: 'fantem-curtain-controller'
         },
         {
-          name: this.$t('第三方产品'),
+          title: this.$t('第三方产品'),
+          name: '第三方产品',
           slug: 'third-party'
         }
       ],
