@@ -2,7 +2,7 @@
   <section class="section-header">
     <div class="container">
       <div class="columns">
-        <div v-for="item in secheader" class="column is-2 has-text-centered" :class="item.class">
+        <div v-for="(item, index) in secheader" :key="index" class="column is-2 has-text-centered" :class="item.class">
           <nuxt-link :to="`${baseUrl}/support/${item.link}`" :class="{'nuxt-link-active': item.active}">
             <span v-html="item.icon" class="center"></span>
             <p>{{item.title}}</p>

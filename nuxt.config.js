@@ -82,6 +82,7 @@ export default {
       '/en/support/downloads/apps',
       '/en/support/service',
       '/en/support/videos',
+      '/en/support/faq',
       '/en/about',
       '/news/91',
       '/en/news/91',
