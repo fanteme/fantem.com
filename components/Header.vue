@@ -15,7 +15,7 @@
         <div class="navbar-wrapper-right has-text-right is-hidden-mobile">
           <div class="navbar-wrapper-right-menu">
             <ul>
-              <li class="is-inline" v-for="menu in menus" :key="menu.id">
+              <li class="is-inline" v-for="menu in menus" :key="menu.id" @mouseenter="ShowHeader()">
                 <nuxt-link :to="menu.link">{{menu.title}}</nuxt-link>
               </li>
             </ul>
@@ -24,7 +24,7 @@
         <div v-show="isActive" class="mobile-list is-hidden-tablet" @touchmove.prevent>
           <ul>
             <li v-for="(menu, key) in menus" :key="key" class="has-text-centered">
-              <nuxt-link class="nav-item" :class="menu.class" :to="menu.link">
+              <nuxt-link class="nav-item" :class="menu.class" :to="menu.link" >
                 {{menu.title}}
               </nuxt-link>
             </li>
@@ -190,7 +190,8 @@ export default {
   data() {
     return {
       isActive: false,
-      isFixed: false
+      isFixed: false,
+      show: true
     }
   },
   watch: {
@@ -249,6 +250,11 @@ export default {
         this.isFixed = false
       }
     })
+  },
+  methods: {
+    ShowHeader() {
+      this.$store.commit('SHOW_HEADER',this.show)
+    }
   }
 }
 </script>

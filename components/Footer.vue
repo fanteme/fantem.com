@@ -198,11 +198,15 @@ export default {
               link: `${this.baseUrl}/`
             },
             {
+              title: this.$t('视频中心'),
+              link: `${this.baseUrl}/`
+            },
+            {
               title: this.$t('常见问题'),
               link: `${this.baseUrl}/`
             },
             {
-              title: this.$t('视频中心'),
+              title: this.$t('使用手册'),
               link: `${this.baseUrl}/`
             }
           ]

@@ -11,7 +11,7 @@
           <div class="columns is-gapless">
             <div  class="column is-8">
               <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/09/2eacc02d2d200f0bd16fa07bde18b177.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/0fc8cb72096f67de319ee559bc53c677.png`" alt="">
               </div>
             </div>
             <div  class="column is-4 center">
@@ -24,7 +24,7 @@
           <div class="columns">
             <div class="column">
               <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/09/64f0bd13c54a37aaeff495ae5807d27c.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/36f5d4fea4f4f1c26f68c37bfa70a026.png`" alt="">
               </div>
               <div class="content-wrap">
                 <h3>{{$t('Cube智能家庭网关')}}</h3>
@@ -33,7 +33,7 @@
             </div>
             <div class="column">
               <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/09/22d3cd935c86ba20c1e426e907b31df8.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/9e1d66d8ffa3fd5772ab668eb99331fc.png`" alt="">
               </div>
               <div class="content-wrap">
                 <h3>{{$t('Hub智能家庭网关')}}</h3>
@@ -45,7 +45,7 @@
           <div class="columns is-multiline">
             <div class="column is-6">
               <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/09/25b018f3166e7a68bfbbbaec44723d95.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/8c936b8a72123f791a051e1958ef7897.png`" alt="">
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能插座')}}</h3>
@@ -54,7 +54,7 @@
             </div>
             <div class="column is-6">
               <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/09/1859e57be3e13c338b158a923b56f2e3.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/0952af6e1b9c16c925f74052f688714b.png`" alt="">
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能插座面板')}}</h3>
@@ -63,7 +63,7 @@
             </div> 
             <div class="column is-6">
               <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/09/9b365fe5ecfb304906a19025e30e6124.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/5e5ae9abb6a1b0ce07be45c1b76bea75.png`" alt="">
               </div>
               <div class="content-wrap"> 
                 <h3>{{$t('智能场景面板')}}</h3>
@@ -72,7 +72,7 @@
             </div> 
             <div class="column is-6">
               <div class="img-wrap"> 
-                <img :src="`${this.$store.state.cdn}/2018/09/8e3dc3d98d0036c446d502608a569a19.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/141890ba007ea3450083a6e4adf637a0.png`" alt="">
               </div>  
               <div class="content-wrap">
                 <h3>{{$t('智能开关')}}</h3>
@@ -81,7 +81,7 @@
             </div>
             <div class="column is-6">
               <div class="img-wrap"> 
-                <img :src="`${this.$store.state.cdn}/2018/09/fe7d5be8caf5b7427dcfbc05bd1a1ba0.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/eba1ec6bd9e7ab3ceca229a4084896eb.png`" alt="">
               </div>
               <div class="content-wrap"> 
                 <h3>{{$t('智能窗帘电机')}}</h3>
@@ -90,16 +90,16 @@
             </div>  
             <div class="column is-6">
               <div class="img-wrap"> 
-                <img :src="`${this.$store.state.cdn}/2018/09/032662676f0e55ff0626d3ed6ad870bc.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/439124df4d5c053206878fa9ee9e721e.png`" alt="">
               </div>
               <div class="content-wrap"> 
-                <span>{{$t('智能嵌入式开关')}}</span>
+                <h3>{{$t('智能嵌入式开关')}}</h3>
                 <span>{{$t('OOMI 智能家居总控制系统')}}</span>
               </div> 
             </div>
             <div class="column is-6">
               <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/09/10f3c0b49e624649089b415c32a6c60c.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/67ccdc28db8f9a5a37326dec3bb6f731.png`" alt="">
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能嵌入式调光开关')}}</h3>
@@ -108,7 +108,7 @@
             </div>
             <div class="column is-6">
               <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/09/7647e1fe72a6dccff8be7683d4fe1dea.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/5e9170adb6e8bdb4cb53268f1f569458.png`" alt="">
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能马达控制器')}}</h3>
@@ -120,7 +120,7 @@
           <div class="columns">
             <div class="column">
               <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/09/8746ed8f009dfe8b4ae3f11598d97095.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/d91f2c8f481bc4acb44c64c341624fe7.png`" alt="">
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能灯泡')}}</h3>
@@ -129,7 +129,7 @@
             </div>
             <div class="column">
               <div class="img-wrap center is-multiline">
-                <img :src="`${this.$store.state.cdn}/2018/09/9e5ea51c22cd713c92e8081a1d242f5d.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/3a31cea49aa01e84f3e92cf25abee67e.png`" alt="">
               </div>
               <div class="content-wrap"> 
                 <h3>{{$t('智能灯带')}}</h3>
@@ -141,7 +141,7 @@
           <div class="columns is-multiline">
             <div class="column is-6-tablet is-6-fullhd">
               <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/09/a4acb7303be7891cf0323c947cf0fee4.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/e95ad8faff6f05c47e7a16685b1bd9b3.png`" alt="">
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能门窗传感器')}}</h3>
@@ -150,7 +150,7 @@
             </div>
             <div class="column is-6-tablet is-6-fullhd">
               <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/09/a6a8cfe81ee3a2f17f07fc7bb0bb045a.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/3f2bec3082cc8a74843e3df4bfb63588.png`" alt="">
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能水位传感器')}}</h3>
@@ -159,7 +159,7 @@
             </div>
             <div class="column is-6-tablet is-6-fullhd">
               <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/09/0216ea952322227da3b75aa236000477.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/d70a537d7672355de18b8effec9b5001.png`" alt="">
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能六合一传感器')}}</h3>
@@ -168,7 +168,7 @@
             </div>
             <div class="column is-6-tablet is-6-fullhd">
               <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/09/a2f1f8d305e21144bf435881349a0185.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/5a9adf7ada73b4fbebcc96950264bc2a.png`" alt="">
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能三合一传感器')}}</h3>
@@ -180,7 +180,7 @@
           <div class="columns is-gapless">
             <div class="column is-8">
               <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/09/d144eff17b4b68a6ce4b91d615963efb.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/27db8c27766c4c6b4dff615ebf0e0e2c.png`" alt="">
               </div>
             </div>
             <div class="column is-4 center has-text-left">
@@ -193,7 +193,7 @@
           <div class="columns is-multiline">
             <div class="column is-6-tablet is-6-fullhd">
               <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/09/feb1d4e816f5b3b59b7eb461450c545e.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/a3793ecf4046132d34f46b02a91e67a1.png`" alt="">
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能水位传感器底座')}}</h3>
@@ -202,7 +202,16 @@
             </div>
             <div class="column is-6-tablet is-6-fullhd">
               <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/09/e9c400297fcdfa64d36fcb0d731c88ad.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/d4ec42815ba57a023fc28d596471c36b.png`" alt="">
+              </div>  
+              <div class="content-wrap">
+                <h3>{{$t('智能中继器')}}</h3>
+                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+              </div>
+            </div>
+            <div class="column is-6-tablet is-6-fullhd">
+              <div class="img-wrap">
+                <img :src="`${this.$store.state.cdn}/2018/10/45d1cb63fdfda346832b1c1068839fec.png`" alt="">
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能警示器')}}</h3>
@@ -211,18 +220,16 @@
             </div>
             <div class="column is-6-tablet is-6-fullhd">
               <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/09/851f4d86cfb68af25834d4a5bc58d4f1.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/de5322230c57b2555ea260610b64c415.png`" alt="">
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能多功能警示器')}}</h3>
                 <span>{{$t('OOMI 智能家居总控制系统')}}</span>
               </div>
-              
-              
             </div>
             <div class="column is-6-tablet is-6-fullhd">
               <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/09/1db3700512c69e605a1a5a8548b62817.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/015c865b905c9538339bef5eaa3dd0e9.png`" alt="">
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能红外转换器')}}</h3>
@@ -231,19 +238,10 @@
             </div>
             <div class="column is-6-tablet is-6-fullhd">
               <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/09/45413eac9bff4d07f28b0fb313615aeb.png`" alt="">
+                <img :src="`${this.$store.state.cdn}/2018/10/bcb33af07107428248c0ee7288334c5e.png`" alt="">
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能空调红外转换器')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
-              </div>
-            </div>
-            <div class="column is-6-tablet is-6-fullhd">
-              <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/09/cdf1fb635598a9d0b5b9eaff0b07c4d1.png`" alt="">
-              </div>  
-              <div class="content-wrap">
-                <h3>{{$t('智能中继器')}}</h3>
                 <span>{{$t('OOMI 智能家居总控制系统')}}</span>
               </div>
             </div>
