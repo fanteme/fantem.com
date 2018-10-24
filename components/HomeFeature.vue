@@ -3,7 +3,7 @@
     <div id="tap-and-touch" class="container">
       <div class="columns">
         <div class="column">
-          <div class="has-text-centered animated fadeInDown" v-show="Visibles['tap-and-touch']">
+          <div class="has-text-centered animated" :class="{'fadeInDown': isVisible}">
             <p class="title">Tap-and-Touch {{$t('专利技术')}}</p>
             <p class="subtitle">{{$t('让组网设置超乎想象的简单')}}</p>
             <p class="content">
@@ -12,23 +12,23 @@
           </div>
         </div>
       </div>
-      <div v-observe-visibility="{callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'tap-and-touch'), once: true}"></div>
-      <div class="columns" v-show="Visibles['tap-and-touch']">
-        <div class="column animated fadeInLeft">
+      <div v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry)"></div>
+      <div class="columns">
+        <div class="column animated" :class="{'fadeInLeft': isVisible}">
           <div class="num center">1</div>
           <figure class="center">
             <img :src="`${this.$store.state.cdn}/2018/09/e7a9735acc6dd7a9317aeea45a1a282f.png`">
           </figure>
           <p class="text has-text-centered">{{$t('轻触')}}</p>
         </div>
-        <div class="column animated fadeInUp">
+        <div class="column animated" :class="{'fadeInUp': isVisible}">
           <div class="num center">2</div>
           <figure class="center">
             <img :src="`${this.$store.state.cdn}/2018/09/59183cc0661d8b7f96f0e8480597b5d5.png`">
           </figure>
           <p class="text has-text-centered">{{$t('连接')}}</p>
         </div>
-        <div class="column animated fadeInRight">
+        <div class="column animated" :class="{'fadeInRight': isVisible}">
           <div class="num center">3</div>
           <figure class="center">
             <img :src="`${this.$store.state.cdn}/2018/09/50e8679226119dd5527d8aa56ac4890e.png`">
@@ -39,8 +39,8 @@
     </div>
     <div class="gap"></div>
     <div id="oomi3-big-house" class="container">
-      <div class="columns" v-show="Visibles['oomi3-big-house']">
-        <div class="column animated fadeInDown">
+      <div class="columns">
+        <div class="column">
           <div class="container has-text-centered">
             <p class="title">OOMI3.0{{$t('大宅系统')}}</p>
             <p class="subtitle">{{$t('让组网设置超乎想象的简单')}}</p>
@@ -50,14 +50,13 @@
           </div>
         </div>
       </div>
-      <div v-observe-visibility="{callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'oomi3-big-house'), once: true}"></div>
-      <div class="columns" v-show="Visibles['oomi3-big-house']">
-        <div class="column is-10 animated fadeInUp delay-1s">
+      <div class="columns">
+        <div class="column is-10">
           <div class="center">
-            <img :src="`${this.$store.state.cdn}/2018/09/c3bd8a49f94e8f1f641e78eb0e6a8d90.png`">
+            <oomi3></oomi3>
           </div>
         </div>
-        <div class="column is-2 center animated fadeInRight delay-1s">
+        <div class="column is-2 center">
           <div class="one-account">
             <img :src="`${this.$store.state.cdn}/2018/09/1d695774a486ac7d2ea4158f86c3f7ab.png`">
             <p class="text has-text-centered">{{$t('一个账号，集中控制！')}}</p>
@@ -70,13 +69,18 @@
 </template>
 
 <script>
+import Oomi3 from '~/components/Oomi3.0.vue'
+
 export default {
+  components: {
+    Oomi3
+  },
   data: () => ({
-    Visibles: {}
+    isVisible: false
   }),
   methods: {
     visibilityChanged(isVisible, entry, key) {
-      this.$set(this.Visibles, key, isVisible)
+      this.isVisible = isVisible
     }
   }
 }

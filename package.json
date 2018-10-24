@@ -15,6 +15,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.1",
     "@nuxtjs/pwa": "^2.5.0",
+    "ks-vue-scrollmagic": "^1.0.2",
     "nuxt-edge": "^2.0.0-25609473.c77fa47",
     "nuxt-property-decorator": "^1.2.0",
     "qrcode.vue": "^1.6.1",
