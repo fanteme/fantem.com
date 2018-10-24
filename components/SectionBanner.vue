@@ -1,7 +1,7 @@
 <template>
   <main class="main">
-    <section class="sectionbanner">
-      <div class="hero center" :style="{backgroundImage: `url(${$store.state.cdn + banner.backgroundimg})`}">
+    <section class="hero sectionbanner">
+      <div class="hero-body center" :class="{'parallax':banner.parallax}" :style="{backgroundImage: `url(${$store.state.cdn + banner.backgroundimg})`}">
         <div class="container-fluid has-text-centered">
           <div v-html="banner.icon"></div>
           <h2 class="caption has-text-weight-semibold">
@@ -14,13 +14,20 @@
     </section>
   </main>  
 </template>
-<style lang="stylus">
+<style lang="stylus" scope>
   .sectionbanner
     color: #fff
     padding-bottom: 24px
-    
-    .hero
-      height: 701px 
+    height: 701px 
+
+    .parallax
+      background-attachment: fixed
+      background-position: center
+      background-repeat: no-repeat
+      background-size: cover
+
+    .center   
+   
       .caption
         font-size: 36px
         line-height: 44px
