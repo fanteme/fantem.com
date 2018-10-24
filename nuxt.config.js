@@ -44,7 +44,7 @@ export default {
     ],
     script: [
       {
-        src: '/nav2lang.js'
+        src: '/js/nav2lang.js'
       }
     ]
   },
@@ -55,7 +55,11 @@ export default {
   router: {
     middleware: 'vue-i18n'
   },
-  plugins: ['~/plugins/vue-i18n.js', '~/plugins/vue-observe-visibility'],
+  plugins: [
+    '~/plugins/vue-i18n.js',
+    '~/plugins/vue-observe-visibility',
+    { src: '~/plugins/vue-scrollmagic', ssr: false }
+  ],
   /*
   ** Build configuration
   */
