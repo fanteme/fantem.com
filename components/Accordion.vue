@@ -1,6 +1,6 @@
 <template>
-  <section class="faq">
-    <div class="faq-wrapper">
+  <section class="faq-accordion">
+    <div class="faq-accordion-wrapper">
       <transition name="accordion-fade-slide" mode="out-in">
         <div class="accordion">
           <div
@@ -13,7 +13,7 @@
               <button :class="generateButtonClasses(i)"></button>
             </div>
               <collapse-transition>
-                <div v-if="i === activeQuestionIndex">
+                <div class="accordion__value_wrap" v-if="i === activeQuestionIndex">
                   <p class="accordion__value" v-html="item.content.rendered">
                   </p>
                 </div>
@@ -62,7 +62,13 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
+ol{
+  li{
+    margin-left: 18px
+  }
+}
+
 $active-color = #f79f24;
 $border-color = #dfdfdf;
 
@@ -72,13 +78,9 @@ button {
   outline: none;
 }
 
-.faq {
+.faq-accordion {
   padding: 15px 0 0;
   background: #fff;
-
-  &-wrapper {
-    padding: 0 28px;
-  }
 }
 
 .accordion-fade-slide {
@@ -100,7 +102,7 @@ button {
 .accordion {
 
   &__item {
-    border-bottom: 1px solid $border-color;
+   
 
     &:last-child {
       border-bottom: none;
@@ -112,6 +114,8 @@ button {
     justify-content: space-between;
     align-items: center;
     padding: 15px 5px 15px 9px;
+    margin: 0 28px; 
+    border-bottom: 1px solid $border-color;
     cursor: pointer;
     transition: all 0.3s;
 
@@ -129,11 +133,15 @@ button {
       margin-right: 10px;
     }
   }
-
-  &__value {
-    padding: 0 25px 25px 25px;
+  &__value_wrap {
+    background: #f7f7f7;
+    padding: 20px 28px; 
   }
-
+  &__value {
+    padding: 0 10px 0px 10px;
+    font-size: 14px;
+    
+  }
   &__toggle-button {
     position: relative;
     width: 16px;

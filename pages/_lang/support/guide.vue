@@ -4,9 +4,12 @@
     <section class="guide">
       <section class="guide-list">
         <div class="container">
+          <h2 class="caption has-text-centered">
+            {{$t('产品使用手册')}}
+          </h2>
           <div class="columns is-multiline is-mobile" >
             <div class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-third-widescreen is-one-quarter-fullhd" v-for="(category, index) in categories" :key="index">
-              <h2 class="caption">
+              <h2 class="subtitle">
                 {{category.title}}
               </h2>
               <ul>
@@ -35,9 +38,15 @@
     padding: 30px 0;
   }
   .caption {
+    font-size: 36px;
+    line-height: 44px;
+    margin: 42px 0;
+  }
+  .subtitle {
     font-size: 24px;
     line-height: 24px; 
     padding: 34px 0 22px 32px;
+    margin-bottom: 0;
   }
   .accordion {
     border-radius: 4px;

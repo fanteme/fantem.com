@@ -1,6 +1,6 @@
 <template>
-  <section class="section-header">
-    <div class="container">
+  <section class="section-header" v-show="$store.state.showsupport">
+    <div class="container" @mouseleave="HideHeader()">
       <div class="columns">
         <div v-for="(item, index) in secheader" :key="index" class="column is-2 has-text-centered" :class="item.class">
           <nuxt-link :to="`${baseUrl}/support/${item.link}`" :class="{'nuxt-link-active': item.active}">
@@ -15,7 +15,12 @@
 
 <style lang="stylus">
 .section-header {
+  width: 100%; 
   padding: 30px 0;
+  position: fixed;
+  top: 80px;
+  z-index: 1; 
+  background: #fff; 
 
   .columns {
     .column {
@@ -53,11 +58,21 @@ export default {
       required: true
     }
   },
+  data() {
+    return {
+      show: true
+    }
+  },
   computed: {
     baseUrl() {
       return this.$store.state.locale == this.$store.state.fallbackLocale
         ? ''
         : `/${this.$store.state.locale}`
+    }
+  },
+  methods: {
+    HideHeader() {
+      this.$store.commit('HIDE_HEADER',!this.show)
     }
   }
 }

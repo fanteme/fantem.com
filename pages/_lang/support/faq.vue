@@ -83,8 +83,15 @@ export default {
       }
     },
     currentFaqs() {
-      if (this.title == '常见问题FAQ') {
-        return this.faqs
+      if (this.title == '常见问题FAQ' && this.faqs.length > 0) {
+        let num , i
+        for(i = 0; this.arr.length < 10; i++) {
+          num = Math.floor(Math.random() * this.faqs.length)
+          if(this.arr.indexOf(this.faqs[num]) == -1 ) {
+            this.arr.push(this.faqs[num])
+          }
+        }
+        return this.arr
       } else {
         return this.faq[this.title]
       }
@@ -94,6 +101,7 @@ export default {
     return {
       faq: {},
       faqs: [],
+      arr: [],
       categories: [
         {
           title: this.$t('Cube智能家庭网关'),
