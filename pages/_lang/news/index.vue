@@ -1,50 +1,84 @@
 <template>
   <main class="main">
-    <section class="hero">
-      <div class="hero-content center" :style="{backgroundImage: `url(${$store.state.cdn}/fantem/news-banner.jpg)`}">
-        <div class="container-fluid has-text-centered">
-          <h1 class="title">
-            {{$t('新闻动态')}}
-          </h1>
-        </div>
-      </div>
-    </section>
-    <section class="container newsinner">
-      <ul class="columns is-multiline is-mobile">
-        <li class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-third-widescreen is-one-quarter-fullhd" v-for="(item, index) in news" :key="index">
-          <nuxt-link :to="`/news/${item.id}`">
-            <div class="newsinner-img-wrap">
-              <div class="newsinner-img-mask">
-                <figure>
-                  <div class="newsinner-img-bg">
-                    <img :src="item._embedded['wp:featuredmedia'][0].source_url" v-if="item._embedded['wp:featuredmedia']">
-                    <img src="https://picsum.photos/640/400/?random" v-else>
+    <section class="newsinner">
+      <section-banner :banner="banner"></section-banner>
+      <div class="container">
+        <h2 class="caption has-text-centered">{{$t('公司动态')}}</h2>
+        <div class="columns hotnews" v-if="currentNews.length>0">
+          <div class="column">
+            <div class="columns is-multiline">
+              <div class="column is-12-tablet is-7-desktop">
+                <div class="newsinner-img-wrap">
+                  <div class="newsinner-img-mask">
+                    <figure>
+                      <div class="newsinner-img-bg">
+                        <img :src="currentNews[0]['_embedded']['wp:featuredmedia'][0]['source_url']" v-if="currentNews[0]['_embedded']['wp:featuredmedia']">
+                        <img src="https://picsum.photos/640/400/?random" v-else>
+                      </div>
+                    </figure>
                   </div>
-                </figure>
+                </div>
               </div>
-            </div>
-            <p v-text="item.title.rendered"></p>
-            <p v-html="item.excerpt.rendered"></p>
-            <p>{{getDate(item.date)}}</p>
-          </nuxt-link>
-        </li>
-      </ul>
-      <nav class="pagination" role="navigation" aria-label="pagination">
-        <nuxt-link class="pagination-previous button" :title="$t('上一页')" :to="currentPage <= 1 ? `?page=1`:`?page=${Number(currentPage)-1}`" :disabled="currentPage-1?false:true">{{$t('上一页')}}</nuxt-link>
-        <nuxt-link class="pagination-next button" :title="$t('下一页')" :to="currentPage >= pageCount-1 ? `?page=${pageCount}`:`?page=${Number(currentPage)+1}`" :disabled="pageCount-currentPage?false:true">{{$t('下一页')}}</nuxt-link>
-        <ul class="pagination-list">
-          <li v-for="(i,index) in pageCount" :key="index">
-            <nuxt-link class="pagination-link button" :class="isloading && currentPage == i? 'is-loading' : ''" :to="`?page=${i}`" v-text="i"></nuxt-link>
+              <div class="column is-12-tablet is-5-desktop center">
+                <div class="content-wrap">
+                  <div>
+                    <p v-text="currentNews[0].title.rendered"></p>
+                    <p v-html="currentNews[0]['excerpt']['rendered']"></p>
+                  </div>
+                  <div class="stick-dots">
+                    <span @click="getCurrentNews(0)" :class="{active: currentIndex == 0}"></span>
+                    <span @click="getCurrentNews(1)" :class="{active: currentIndex == 1}"></span>
+                    <span @click="getCurrentNews(2)" :class="{active: currentIndex == 2}"></span>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+        <ul class="columns is-multiline is-mobile">
+          <li class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-third-widescreen is-one-quarter-fullhd" v-for="(item, index) in news" :key="index">
+            <nuxt-link :to="`/news/${item.id}`">
+              <div class="newsinner-img-wrap">
+                <div class="newsinner-img-mask">
+                  <figure>
+                    <div class="newsinner-img-bg">
+                      <img :src="item._embedded['wp:featuredmedia'][0].source_url" v-if="item._embedded['wp:featuredmedia']">
+                      <img src="https://picsum.photos/640/400/?random" v-else>
+                    </div>
+                  </figure>
+                </div>
+              </div>
+              <p v-text="item.title.rendered"></p>
+              <p v-html="item.excerpt.rendered"></p>
+              <p>{{getDate(item.date)}}</p>
+            </nuxt-link>
           </li>
         </ul>
-      </nav>
+        <nav class="pagination" role="navigation" aria-label="pagination">
+          <nuxt-link class="pagination-previous button" :title="$t('上一页')" :to="currentPage <= 1 ? `?page=1`:`?page=${Number(currentPage)-1}`" :disabled="currentPage-1?false:true">{{$t('上一页')}}</nuxt-link>
+          <nuxt-link class="pagination-next button" :title="$t('下一页')" :to="currentPage >= pageCount-1 ? `?page=${pageCount}`:`?page=${Number(currentPage)+1}`" :disabled="pageCount-currentPage?false:true">{{$t('下一页')}}</nuxt-link>
+          <ul class="pagination-list">
+            <li v-for="(i,index) in pageCount" :key="index">
+              <nuxt-link class="pagination-link button" :class="isloading && currentPage == i? 'is-loading' : ''" :to="`?page=${i}`" v-text="i"></nuxt-link>
+            </li>
+          </ul>
+        </nav>
+      </div>  
     </section>
   </main>
 </template>
 <style lang="stylus" >
 .newsinner {
-  margin-top: 30px;
+  background-color: #edf1f2;
+  padding-bottom: 47px;
 
+  .caption {
+    font-size: 36px;
+    line-height: 44px;
+    margin: 20px 0 30px;
+  }
+  .hotnews {
+  }
   &-img {
     &-wrap {
       overflow: hidden;
@@ -80,24 +114,66 @@
       }
     }
   }
+  .column{
+    background-color: #fff;
+    background-clip: content-box;
+    border-radius: 17px;  
 
-  ul li {
+    a {
+      display: block;
+      border-radius: 5px; 
+      overflow: hidden; 
+      background-color: #fff;
+    }
     p {
-      margin: 10px 0;
-      color: #333;
+      margin: 10px 9px;
+      color: #3e3a39;
 
-      &:nth-child(2) {
+      &:nth-of-type(1) {
         font-size: 18px;
+        line-height: 22px; 
       }
 
-      &:nth-child(3) {
+      &:nth-of-type(2) {
         font-size: 16px;
-        color: #666;
+        line-height: 20px; 
       }
 
-      &:nth-child(4) {
-        font-size: 14px;
-        color: #888;
+      &:nth-of-type(3) {
+        font-size: 12px;
+      }
+    }
+    .newsinner-img-mask {
+      padding-top: 44%;
+    }
+    .center {
+      align-items: stretch;
+    }
+    .content-wrap {
+      padding: 91px 25px 20px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; 
+
+      @media screen and (max-width: 1280px) {
+        padding: 25px 25px 20px 10px;
+      }
+       
+      .stick-dots {
+        display: flex;
+        justify-content: flex-end;
+        align-items: stretch; 
+        span {
+          cursor: pointer;
+          background-color: #eaeaea;
+          border-radius: 50px;
+          margin: 0 6px;
+          width: 12px;
+          height: 12px;
+          &.active {
+            background-color: #e76c26;
+          }
+        } 
       }
     }
   }
@@ -115,7 +191,6 @@
           color: #fff;
         }
       }
-
       &:nth-child(1) {
         .pagination-link:not(.nuxt-link-active) {
           background-color: #f79f24;
@@ -141,8 +216,8 @@
   }
 }
 </style>
-
 <script>
+import SectionBanner from '~/components/SectionBanner'
 export default {
   head() {
     return { title: this.$t('新闻动态') }
@@ -152,8 +227,17 @@ export default {
       news: [],
       currentPage: 1,
       pageCount: 1,
-      isloading: false
+      isloading: false,
+      banner: {
+        backgroundimg: '/2018/10/a876975db592cb60761b6d80506c8c04.jpg',
+        parallax: false,
+        height: '500px'
+      },
+      currentIndex: 0
     }
+  },
+  components: {
+    SectionBanner
   },
   watch: {
     $route: async function(val) {
@@ -178,6 +262,14 @@ export default {
         this.news = data
         this.isloading = false
       }
+    }
+  },
+  computed: {
+    hotnews() {
+      return this.news.slice(0,3)
+    },
+    currentNews() {
+      return this.hotnews.slice(this.currentIndex, this.currentIndex+1)
     }
   },
   async mounted() {
@@ -209,6 +301,9 @@ export default {
           : '0' + `${date.getMonth() + 1}`
       const day = date.getDate() > 9 ? date.getDate() : '0' + date.getDate()
       return date.getFullYear() + '-' + month + '-' + day
+    },
+    getCurrentNews(val) {
+      this.currentIndex = val
     }
   }
 }

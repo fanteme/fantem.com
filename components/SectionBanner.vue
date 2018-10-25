@@ -1,6 +1,6 @@
 <template>
   <main class="main">
-    <section class="hero sectionbanner">
+    <section class="hero sectionbanner" :style="{height:banner.height}">
       <div class="hero-body center" :class="{'parallax':banner.parallax}" :style="{backgroundImage: `url(${$store.state.cdn + banner.backgroundimg})`}">
         <div class="container-fluid has-text-centered">
           <div v-html="banner.icon"></div>
@@ -18,7 +18,6 @@
   .sectionbanner
     color: #fff
     padding-bottom: 24px
-    height: 701px 
 
     .parallax
       background-attachment: fixed
