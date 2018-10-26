@@ -11,12 +11,10 @@
             <a v-if="banner.buttontxt" class="button">{{banner.buttontxt}}</a>
           </div>
         </div>
-      </div>
-      
     </section>
   </main>  
 </template>
-<style lang="stylus" scope>
+<style lang="stylus">
   .sectionbanner
     color: #fff
     padding-bottom: 24px

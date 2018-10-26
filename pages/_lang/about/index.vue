@@ -2,7 +2,7 @@
   <join></join>
 </template>
 <script>
-  import Join from '~/pages/_lang/about/join'
+  import Join from '~/pages/_lang/about/contact'
   export default {
     components: {
       Join
