@@ -1,6 +1,5 @@
 <template>
   <main class="main">
-    <solution-header></solution-header>
     <solution-hero :hero="hero"></solution-hero>
     <section class="solution-main has-text-centered">
       <h1>OOMI {{$t('智慧别墅')}}</h1>
@@ -31,10 +30,9 @@
 </style>
 
 <script>
-import SolutionHeader from '~/components/SolutionHeader.vue'
 import SolutionHero from '~/components/SolutionHero.vue'
 export default {
-  components: { SolutionHeader, SolutionHero },
+  components: { SolutionHero },
   head() {
     return { title: this.$t('行业方案') + '-' + this.$t('智慧别墅') }
   },

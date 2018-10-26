@@ -34,6 +34,7 @@
       background-position: 50% 33%;
       background-attachment: fixed;
       background-repeat: no-repeat;
+      background-size: cover;
     }
 
     &+.description {
