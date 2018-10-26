@@ -182,6 +182,11 @@ import SectionBanner from '~/components/SectionBanner'
     components: {
       SectionBanner
     },
+    head() {
+      return {
+       title: this.$t('关于丰唐物联') + '-' + this.$t('公司简介')
+      }
+    },
     data() {
       return {
         company: {

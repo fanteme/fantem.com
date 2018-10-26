@@ -17,6 +17,11 @@ import { join } from 'path';
     components: {
       SectionBanner
     },
+    head() {
+      return {
+        title:this.$t('关于丰唐物联') + '-' + this.$t('加入我们')
+      }
+    },
     data() {
       return {
         join: {
