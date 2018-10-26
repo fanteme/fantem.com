@@ -10,21 +10,23 @@
               <div class="column is-12-tablet is-7-desktop">
                 <div class="newsinner-img-wrap">
                   <div class="newsinner-img-mask">
-                    <figure>
-                      <div class="newsinner-img-bg">
-                        <img :src="currentNews[0]['_embedded']['wp:featuredmedia'][0]['source_url']" v-if="currentNews[0]['_embedded']['wp:featuredmedia']">
-                        <img src="https://picsum.photos/640/400/?random" v-else>
-                      </div>
-                    </figure>
+                    <nuxt-link :to="`/news/${currentNews[0].id}`">
+                      <figure>
+                        <div class="newsinner-img-bg">
+                          <img :src="currentNews[0]['_embedded']['wp:featuredmedia'][0]['source_url']" v-if="currentNews[0]['_embedded']['wp:featuredmedia']">
+                          <img src="https://picsum.photos/640/400/?random" v-else>
+                        </div>
+                      </figure>
+                    </nuxt-link>
                   </div>
                 </div>
               </div>
               <div class="column is-12-tablet is-5-desktop center">
                 <div class="content-wrap">
-                  <div>
+                  <nuxt-link :to="`/news/${currentNews[0].id}`">
                     <p v-text="currentNews[0].title.rendered"></p>
                     <p v-html="currentNews[0]['excerpt']['rendered']"></p>
-                  </div>
+                  </nuxt-link>
                   <div class="stick-dots">
                     <span @click="getCurrentNews(0)" :class="{active: currentIndex == 0}"></span>
                     <span @click="getCurrentNews(1)" :class="{active: currentIndex == 1}"></span>
