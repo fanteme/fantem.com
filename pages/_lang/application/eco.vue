@@ -1,6 +1,5 @@
 <template>
   <main>
-    <application-header></application-header>
     <application-hero :hero="hero"></application-hero>
     <section class="application-features">
       <div class="container">
@@ -110,10 +109,9 @@
 
 
 <script>
-import ApplicationHeader from '~/components/ApplicationHeader.vue'
 import ApplicationHero from '~/components/ApplicationHero.vue'
 export default{
-  components: { ApplicationHeader, ApplicationHero },
+  components: { ApplicationHero },
   data() {
     return {
         hero: {

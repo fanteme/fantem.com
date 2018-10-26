@@ -1,12 +1,21 @@
+
 <template>
   <section class="section-header" v-show="$store.state.showsupport">
     <div class="container" @mouseleave="HideHeader()">
       <div class="columns">
         <div v-for="(item, index) in secheader" :key="index" class="column is-2 has-text-centered" :class="item.class">
-          <nuxt-link :to="`${baseUrl}/support/${item.link}`" :class="{'nuxt-link-active': item.active}">
-            <span v-html="item.icon" class="center"></span>
-            <p>{{item.title}}</p>
-          </nuxt-link>
+          <template v-if="item.link">
+            <nuxt-link :to="item.link" :class="{'nuxt-link-active': item.active}">
+              <span v-html="item.icon" class="center"></span>
+              <p>{{item.title}}</p>
+            </nuxt-link>
+          </template>  
+          <template v-else>
+            <nuxt-link to="#" :class="{'nuxt-link-active': item.active}">
+              <span v-html="item.icon" class="center"></span>
+              <p>{{item.title}}</p>
+            </nuxt-link>
+          </template>
         </div>
       </div>
     </div>
@@ -61,13 +70,6 @@ export default {
   data() {
     return {
       show: true
-    }
-  },
-  computed: {
-    baseUrl() {
-      return this.$store.state.locale == this.$store.state.fallbackLocale
-        ? ''
-        : `/${this.$store.state.locale}`
     }
   },
   methods: {
