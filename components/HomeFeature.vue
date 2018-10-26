@@ -50,19 +50,7 @@
           </div>
         </div>
       </div>
-      <div class="columns">
-        <div class="column is-10">
-          <div class="center">
-            <oomi3></oomi3>
-          </div>
-        </div>
-        <div class="column is-2 center">
-          <div class="one-account">
-            <img :src="`${this.$store.state.cdn}/2018/09/1d695774a486ac7d2ea4158f86c3f7ab.png`">
-            <p class="text has-text-centered">{{$t('一个账号，集中控制！')}}</p>
-          </div>
-        </div>
-      </div>
+      <oomi3></oomi3>
     </div>
     <div class="gap"></div>
   </section>
