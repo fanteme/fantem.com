@@ -19,7 +19,7 @@
   padding: 30px 0;
   position: fixed;
   top: 80px;
-  z-index: 1; 
+  z-index: 3; 
   background: #fff; 
 
   .columns {

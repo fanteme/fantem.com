@@ -10,7 +10,7 @@
               <div class="column is-12-tablet is-7-desktop">
                 <div class="newsinner-img-wrap">
                   <div class="newsinner-img-mask">
-                    <nuxt-link :to="`/news/${currentNews[0].id}`">
+                    <nuxt-link :to="`/about/news/${currentNews[0].id}`">
                       <figure>
                         <div class="newsinner-img-bg">
                           <img :src="currentNews[0]['_embedded']['wp:featuredmedia'][0]['source_url']" v-if="currentNews[0]['_embedded']['wp:featuredmedia']">
@@ -23,7 +23,7 @@
               </div>
               <div class="column is-12-tablet is-5-desktop center">
                 <div class="content-wrap">
-                  <nuxt-link :to="`/news/${currentNews[0].id}`">
+                  <nuxt-link :to="`/about/news/${currentNews[0].id}`">
                     <p v-text="currentNews[0].title.rendered"></p>
                     <p v-html="currentNews[0]['excerpt']['rendered']"></p>
                   </nuxt-link>
@@ -39,7 +39,7 @@
         </div>
         <ul class="columns is-multiline is-mobile">
           <li class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-third-widescreen is-one-quarter-fullhd" v-for="(item, index) in news" :key="index">
-            <nuxt-link :to="`/news/${item.id}`">
+            <nuxt-link :to="`/about/news/${item.id}`">
               <div class="newsinner-img-wrap">
                 <div class="newsinner-img-mask">
                   <figure>
