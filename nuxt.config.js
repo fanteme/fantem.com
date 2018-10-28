@@ -45,6 +45,9 @@ export default {
     script: [
       {
         src: '/js/nav2lang.js'
+      },
+      {
+        src: '/js/smooth-scroll.polyfills.min.js'
       }
     ]
   },

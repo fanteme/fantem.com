@@ -7,7 +7,7 @@
       </div>
       <div class="container">
         <div class="OomiProducts">
-          <div class="caption  has-text-centered">{{$t('智能网关')}}</div>
+          <div id="gateway" class="caption  has-text-centered">{{$t('智能网关')}}</div>
           <div class="columns is-gapless">
             <div  class="column is-8">
               <div class="img-wrap">
@@ -41,7 +41,7 @@
               </div>
             </div>
           </div>  
-          <div class="caption  has-text-centered">{{$t('智能开关')}}</div>
+          <div id="switch" class="caption  has-text-centered">{{$t('智能开关')}}</div>
           <div class="columns is-multiline">
             <div class="column is-6">
               <div class="img-wrap">
@@ -116,7 +116,7 @@
               </div>
             </div>
           </div>
-          <div class="caption  has-text-centered">{{$t('智能照明')}}</div>
+          <div id="light" class="caption  has-text-centered">{{$t('智能照明')}}</div>
           <div class="columns">
             <div class="column">
               <div class="img-wrap">
@@ -137,7 +137,7 @@
               </div>    
             </div>
           </div>
-          <div class="caption  has-text-centered">{{$t('智能传感器')}}</div>
+          <div id="sensor" class="caption  has-text-centered">{{$t('智能传感器')}}</div>
           <div class="columns is-multiline">
             <div class="column is-6-tablet is-6-fullhd">
               <div class="img-wrap">
@@ -176,7 +176,7 @@
               </div>
             </div>
           </div>
-          <div class="caption has-text-centered">{{$t('智能辅助类')}}</div>
+          <div id="auxiliary" class="caption has-text-centered">{{$t('智能辅助类')}}</div>
           <div class="columns is-gapless">
             <div class="column is-8">
               <div class="img-wrap">
@@ -248,15 +248,15 @@
           </div>
         </div> 
         <div class="thirdProducts has-text-centered">
-          <div class="caption">{{$t('第三方兼容产品')}}</div>
-          <div class="tabs is-centered">
+          <div id="thirdProducts" class="caption">{{$t('第三方兼容产品')}}</div>
+          <!-- <div class="tabs is-centered">
             <ul>
               <li class="is-active">{{$t('语控')}}</li>
               <li>{{$t('安全')}}</li>
               <li>{{$t('健康')}}</li>
               <li>{{$t('娱乐')}}</li>
             </ul>
-          </div>
+          </div> -->
           <div class="columns is-multiline is-variable is-7">   
             <div class="column is-4-tablet is-one-third-desktop is-one-quarter-widescreen is-2-fullhd" v-for="(product, index) in thirdProducts" :key="index">
               <div class="item center">
@@ -283,6 +283,7 @@
   .hero-body {
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .caption {
@@ -407,6 +408,14 @@ export default {
       }/posts?categories=44&per_page=40&_embed&order=asc`
     )
     this.thirdProducts = data
+    this.initSmoothScroll()
+  },
+  methods: {
+    initSmoothScroll() {
+      new SmoothScroll('a[href*="#"]', {
+        header: 'header'
+      })
+    }
   }
 }
 </script>

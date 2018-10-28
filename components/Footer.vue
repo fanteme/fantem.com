@@ -140,15 +140,15 @@ export default {
           menus: [
             {
               title: this.$t('公司简介'),
-              link: `${this.baseUrl}/`
+              link: `${this.baseUrl}/about/company`
             },
             {
               title: this.$t('加入我们'),
-              link: `${this.baseUrl}/`
+              link: `${this.baseUrl}/about/join`
             },
             {
               title: this.$t('联系我们'),
-              link: `${this.baseUrl}/`
+              link: `${this.baseUrl}/about/contact`
             }
           ]
         },
@@ -195,19 +195,19 @@ export default {
           menus: [
             {
               title: this.$t('APP下载'),
-              link: `${this.baseUrl}/`
+              link: `${this.baseUrl}/support/app`
             },
             {
               title: this.$t('视频中心'),
-              link: `${this.baseUrl}/`
+              link: `${this.baseUrl}/support/videos`
             },
             {
               title: this.$t('常见问题'),
-              link: `${this.baseUrl}/`
+              link: `${this.baseUrl}/support/faq`
             },
             {
               title: this.$t('使用手册'),
-              link: `${this.baseUrl}/`
+              link: `${this.baseUrl}/support/guide`
             }
           ]
         }
