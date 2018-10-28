@@ -4,18 +4,10 @@
     <div class="container" @mouseleave="HideHeader()">
       <div class="columns">
         <div v-for="(item, index) in secheader" :key="index" class="column is-2 has-text-centered" :class="item.class">
-          <template v-if="item.link">
-            <nuxt-link :to="item.link" :class="{'nuxt-link-active': item.active}">
-              <span v-html="item.icon" class="center"></span>
-              <p>{{item.title}}</p>
-            </nuxt-link>
-          </template>  
-          <template v-else>
-            <nuxt-link to="#" :class="{'nuxt-link-active': item.active}">
-              <span v-html="item.icon" class="center"></span>
-              <p>{{item.title}}</p>
-            </nuxt-link>
-          </template>
+          <nuxt-link :to="item.link" :class="{'nuxt-link-active': item.active}">
+            <span v-html="item.icon" class="center"></span>
+            <p>{{item.title}}</p>
+          </nuxt-link>
         </div>
       </div>
     </div>
