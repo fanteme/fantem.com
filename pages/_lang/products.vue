@@ -8,7 +8,7 @@
       <div class="container">
         <div class="OomiProducts">
           <div id="gateway" class="caption  has-text-centered">{{$t('智能网关')}}</div>
-          <div class="columns is-gapless">
+          <div class="columns is-gapless" @click="previewProduct(452)">
             <div  class="column is-8">
               <div class="img-wrap">
                 <img :src="`${this.$store.state.cdn}/2018/10/0fc8cb72096f67de319ee559bc53c677.png`" alt="">
@@ -22,7 +22,7 @@
             </div>
           </div>
           <div class="columns">
-            <div class="column">
+            <div class="column" @click="previewProduct(445)">
               <div class="img-wrap">
                 <img :src="`${this.$store.state.cdn}/2018/10/36f5d4fea4f4f1c26f68c37bfa70a026.png`" alt="">
               </div>
@@ -31,7 +31,7 @@
                 <span>{{$t('OOMI 智能家居总控制系统')}}</span>
               </div>
             </div>
-            <div class="column">
+            <div class="column" @click="previewProduct(450)">
               <div class="img-wrap">
                 <img :src="`${this.$store.state.cdn}/2018/10/9e1d66d8ffa3fd5772ab668eb99331fc.png`" alt="">
               </div>
@@ -43,7 +43,7 @@
           </div>  
           <div id="switch" class="caption  has-text-centered">{{$t('智能开关')}}</div>
           <div class="columns is-multiline">
-            <div class="column is-6">
+            <div class="column is-6" @click="previewProduct(454)">
               <div class="img-wrap">
                 <img :src="`${this.$store.state.cdn}/2018/10/8c936b8a72123f791a051e1958ef7897.png`" alt="">
               </div>
@@ -52,7 +52,7 @@
                 <span>{{$t('OOMI 智能家居总控制系统')}}</span>
               </div> 
             </div>
-            <div class="column is-6">
+            <div class="column is-6" @click="previewProduct(456)">
               <div class="img-wrap">
                 <img :src="`${this.$store.state.cdn}/2018/10/0952af6e1b9c16c925f74052f688714b.png`" alt="">
               </div>
@@ -61,7 +61,7 @@
                 <span>{{$t('OOMI 智能家居总控制系统')}}</span>
               </div>
             </div> 
-            <div class="column is-6">
+            <div class="column is-6" @click="previewProduct(460)">
               <div class="img-wrap">
                 <img :src="`${this.$store.state.cdn}/2018/10/5e5ae9abb6a1b0ce07be45c1b76bea75.png`" alt="">
               </div>
@@ -70,7 +70,7 @@
                 <span>{{$t('OOMI 智能家居总控制系统')}}</span>
               </div>               
             </div> 
-            <div class="column is-6">
+            <div class="column is-6" @click="previewProduct(464)">
               <div class="img-wrap"> 
                 <img :src="`${this.$store.state.cdn}/2018/10/141890ba007ea3450083a6e4adf637a0.png`" alt="">
               </div>  
@@ -79,7 +79,7 @@
                 <span>{{$t('OOMI 智能家居总控制系统')}}</span>
               </div>  
             </div>
-            <div class="column is-6">
+            <div class="column is-6" @click="previewProduct(458)">
               <div class="img-wrap"> 
                 <img :src="`${this.$store.state.cdn}/2018/10/eba1ec6bd9e7ab3ceca229a4084896eb.png`" alt="">
               </div>
@@ -88,7 +88,7 @@
                 <span>{{$t('OOMI 智能家居总控制系统')}}</span>
               </div>             
             </div>  
-            <div class="column is-6">
+            <div class="column is-6" @click="previewProduct(462)">
               <div class="img-wrap"> 
                 <img :src="`${this.$store.state.cdn}/2018/10/439124df4d5c053206878fa9ee9e721e.png`" alt="">
               </div>
@@ -97,7 +97,7 @@
                 <span>{{$t('OOMI 智能家居总控制系统')}}</span>
               </div> 
             </div>
-            <div class="column is-6">
+            <div class="column is-6" @click="previewProduct(466)">
               <div class="img-wrap">
                 <img :src="`${this.$store.state.cdn}/2018/10/67ccdc28db8f9a5a37326dec3bb6f731.png`" alt="">
               </div>
@@ -106,7 +106,7 @@
                 <span>{{$t('OOMI 智能家居总控制系统')}}</span>
               </div>
             </div>
-            <div class="column is-6">
+            <div class="column is-6" @click="previewProduct(468)">
               <div class="img-wrap">
                 <img :src="`${this.$store.state.cdn}/2018/10/5e9170adb6e8bdb4cb53268f1f569458.png`" alt="">
               </div>
@@ -118,7 +118,7 @@
           </div>
           <div id="light" class="caption  has-text-centered">{{$t('智能照明')}}</div>
           <div class="columns">
-            <div class="column">
+            <div class="column" @click="previewProduct(488)">
               <div class="img-wrap">
                 <img :src="`${this.$store.state.cdn}/2018/10/d91f2c8f481bc4acb44c64c341624fe7.png`" alt="">
               </div>
@@ -127,7 +127,7 @@
                 <span>{{$t('OOMI 智能家居总控制系统')}}</span>
               </div>             
             </div>
-            <div class="column">
+            <div class="column" @click="previewProduct(490)">
               <div class="img-wrap center is-multiline">
                 <img :src="`${this.$store.state.cdn}/2018/10/3a31cea49aa01e84f3e92cf25abee67e.png`" alt="">
               </div>
@@ -139,7 +139,7 @@
           </div>
           <div id="sensor" class="caption  has-text-centered">{{$t('智能传感器')}}</div>
           <div class="columns is-multiline">
-            <div class="column is-6-tablet is-6-fullhd">
+            <div class="column is-6-tablet is-6-fullhd" @click="previewProduct(474)">
               <div class="img-wrap">
                 <img :src="`${this.$store.state.cdn}/2018/10/e95ad8faff6f05c47e7a16685b1bd9b3.png`" alt="">
               </div>
@@ -148,7 +148,7 @@
                 <span>{{$t('OOMI 智能家居总控制系统')}}</span>
               </div>
             </div>
-            <div class="column is-6-tablet is-6-fullhd">
+            <div class="column is-6-tablet is-6-fullhd" @click="previewProduct(470)">
               <div class="img-wrap">
                 <img :src="`${this.$store.state.cdn}/2018/10/3f2bec3082cc8a74843e3df4bfb63588.png`" alt="">
               </div>
@@ -157,7 +157,7 @@
                 <span>{{$t('OOMI 智能家居总控制系统')}}</span>
               </div>
             </div>
-            <div class="column is-6-tablet is-6-fullhd">
+            <div class="column is-6-tablet is-6-fullhd" @click="previewProduct(476)">
               <div class="img-wrap">
                 <img :src="`${this.$store.state.cdn}/2018/10/d70a537d7672355de18b8effec9b5001.png`" alt="">
               </div>
@@ -177,7 +177,7 @@
             </div>
           </div>
           <div id="auxiliary" class="caption has-text-centered">{{$t('智能辅助类')}}</div>
-          <div class="columns is-gapless">
+          <div class="columns is-gapless" @click="previewProduct(478)">
             <div class="column is-8">
               <div class="img-wrap">
                 <img :src="`${this.$store.state.cdn}/2018/10/27db8c27766c4c6b4dff615ebf0e0e2c.png`" alt="">
@@ -191,7 +191,7 @@
             </div>
           </div>
           <div class="columns is-multiline">
-            <div class="column is-6-tablet is-6-fullhd">
+            <div class="column is-6-tablet is-6-fullhd" @click="previewProduct(480)">
               <div class="img-wrap">
                 <img :src="`${this.$store.state.cdn}/2018/10/a3793ecf4046132d34f46b02a91e67a1.png`" alt="">
               </div>
@@ -200,7 +200,7 @@
                 <span>{{$t('OOMI 智能家居总控制系统')}}</span>
               </div>
             </div>
-            <div class="column is-6-tablet is-6-fullhd">
+            <div class="column is-6-tablet is-6-fullhd" @click="previewProduct(486)">
               <div class="img-wrap">
                 <img :src="`${this.$store.state.cdn}/2018/10/d4ec42815ba57a023fc28d596471c36b.png`" alt="">
               </div>  
@@ -209,7 +209,7 @@
                 <span>{{$t('OOMI 智能家居总控制系统')}}</span>
               </div>
             </div>
-            <div class="column is-6-tablet is-6-fullhd">
+            <div class="column is-6-tablet is-6-fullhd" @click="previewProduct(482)">
               <div class="img-wrap">
                 <img :src="`${this.$store.state.cdn}/2018/10/45d1cb63fdfda346832b1c1068839fec.png`" alt="">
               </div>
@@ -236,7 +236,7 @@
                 <span>{{$t('OOMI 智能家居总控制系统')}}</span>
               </div>
             </div>
-            <div class="column is-6-tablet is-6-fullhd">
+            <div class="column is-6-tablet is-6-fullhd" @click="previewProduct(484)">
               <div class="img-wrap">
                 <img :src="`${this.$store.state.cdn}/2018/10/bcb33af07107428248c0ee7288334c5e.png`" alt="">
               </div>
@@ -267,6 +267,24 @@
           </div>  
         </div>
       </div>
+      <section class="previewProduct">
+        <div class="modal" :class="{'is-active': isActive}">
+          <div class="modal-background" @click="closeModal"></div>
+          <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title" v-text="currentProduct.title.rendered"></p>
+              <button class="delete" aria-label="close" @click="closeModal"></button>
+            </header>
+            <section class="modal-card-body">
+              <img v-if="currentProduct.image" class="productImage" :src="`${$store.state.cdn}/${currentProduct.image}`">
+              <div class="specification" v-html="currentProduct.content.rendered">
+              </div>
+            </section>
+            <footer class="modal-card-foot">
+            </footer>
+          </div>
+        </div>
+    </section>
     </section>
   </main>
 </template>
@@ -312,6 +330,7 @@
         margin: -6px;
       }
       .column {
+        cursor: pointer;
         padding: 6px;
         .img-wrap {
           background: radial-gradient(white, #e8e8e8);
@@ -370,6 +389,14 @@
       }
     }
   }
+  .previewProduct {
+    .modal-card-body {
+      .productImage {
+        height: 12rem;
+        box-shadow: 1px 1px 5px #ccc;
+      }
+    }
+  }
 }
 </style>
 
@@ -380,6 +407,7 @@ export default {
   },
   data() {
     return {
+      isActive: false,
       categories: [
         {
           name: this.$t('网关类'),
@@ -398,7 +426,11 @@ export default {
           slug: 'auxiliary'
         }
       ],
-      thirdProducts: []
+      thirdProducts: [],
+      currentProduct: {
+        title: {},
+        content: {}
+      }
     }
   },
   async mounted() {
@@ -415,7 +447,23 @@ export default {
       new SmoothScroll('a[href*="#"]', {
         header: 'header'
       })
-    }
+    },
+    async previewProduct(val) {
+      let { data } = await this.$axios.get(
+        `${
+          this.$store.state.api
+        }/posts?categories=39&include=${val}`
+      )
+      console.log(data[0])
+      this.currentProduct = data[0]
+      this.openModal()
+    },
+    openModal() {
+      this.isActive = true
+    },
+    closeModal() {
+      this.isActive = false
+    },
   }
 }
 </script>
