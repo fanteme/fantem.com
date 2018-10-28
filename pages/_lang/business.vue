@@ -16,6 +16,7 @@
       </div>
       <section-banner :banner="agency"></section-banner>
       <section-banner :banner="project"></section-banner>
+      
     </section>
   </main>
 </template>
@@ -56,7 +57,7 @@
         color: #727171;
       } 
     }
-  }
+  } 
 
 }
 </style>
@@ -124,7 +125,8 @@ export default {
         subtitle: this.$t('全方位品牌营销支持    完善全面的培训体系'),
         buttontxt: '立即申请',
         parallax: true,
-        height: '700px'
+        height: '700px',
+        modal: 'agency'
       },
       project: {
         backgroundimg: '/2018/10/9da8fe16efaa8b31066168115c81a5b1.jpg',
@@ -133,7 +135,8 @@ export default {
         subtitle: this.$t('丰富的项目支持经验    雄厚的技术研发背景'),
         buttontxt: '立即申请',
         parallax: true,
-        height: '700px'
+        height: '700px',
+        modal: 'project'
       }
     }
   }
