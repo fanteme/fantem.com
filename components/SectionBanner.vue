@@ -198,26 +198,27 @@
                 </div>
               </div>
             </div>
-            <div class="field is-horizontal" style="display:none;">
+            <div class="field is-horizontal">
               <div class="field-label is-normal">
                 <label class="label">*</label>
               </div>
-              <div class="field-body">
+              <div class="field-body is-vertical">
+                <p class="has-text-left">{{$t('销售区域')}}</p>
                 <div class="field is-horizontal space-between">
                   <div class="control">
-                    <div class="select" :class="{'is-success':ishouseType}">
-                      <select v-model="cooperation">
-                        <option v-for="item in cooperationlist" :key="item">{{item}}</option>
+                    <div class="select" :class="{'is-success':isProv}">
+                      <select v-model="prov">
+                        <option v-for="(option, inx) in arr" :value="option.name" :key="inx">{{ option.name }}</option>
                       </select>
                     </div>
-                    <div class="select" :class="{'is-success':ishouseType}">
-                      <select v-model="cooperation">
-                        <option v-for="item in cooperationlist" :key="item">{{item}}</option>
+                    <div class="select" :class="{'is-success':isCity}">
+                      <select v-model="city">
+                        <option v-for="(option, key) in cityArr" :value="option.name" :key="key">{{ option.name }}</option>
                       </select>
                     </div>
-                    <div class="select" :class="{'is-success':ishouseType}">
-                      <select v-model="cooperation">
-                        <option v-for="item in cooperationlist" :key="item">{{item}}</option>
+                    <div class="select" :class="{'is-success':isDistrict}">
+                      <select v-model="district" v-if="district">
+                        <option v-for="(option, num) in districtArr" :value="option.name" :key="num">{{ option.name }}</option>
                       </select>
                     </div>
                   </div>
@@ -289,7 +290,10 @@
         color: #fff
         background: #e76c26
         border: none
-
+    .is-vertical 
+      flex-direction: column
+    .has-text-left
+      color: #c4c5c5  
     .modal {
       font-size: 14px;
       color: #3e3a39;
@@ -364,6 +368,7 @@
   }      
 </style>
 <script>
+import area from '~/assets/area.json'
   export default {
     props: {
       banner: {
@@ -386,6 +391,12 @@
         isLoading: false,
         cooperation: '',
         email: '',
+        arr: area,
+		    prov: '北京',
+		    city: '请选择',
+		    district: '请选择',
+		    cityArr: [],
+		    districtArr: [],
         emailRegPattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
         projectlist: [
           this.$t('住宅'), this.$t('商业'), this.$t('办公'), this.$t('酒店')
@@ -398,7 +409,7 @@
         ]
       }
     },
-    computed: {
+  computed: {
       isCompany() {
         if (this.company != '') {
           return true
@@ -462,6 +473,27 @@
           return false
         }
       },
+      isProv() {
+        if (this.prov != '') {
+          return true
+        } else {
+          return false
+        }
+      },
+      isCity() {
+        if (this.city != '') {
+          return true
+        } else {
+          return false
+        }
+      },
+      isDistrict() {
+        if (this.district != '') {
+          return true
+        } else {
+          return false
+        }
+      },
       isDisabled() {
         if(this.modal == 'project'){
           if(this.isCompany && this.isName && this.isPhone && this.isprojectName && this.isprojectAddress && this.isprojectType && this.ishouseType) {
@@ -470,7 +502,7 @@
             return false
           }
         }else {
-          if (this.isCompany && this.isName && this.isPhone && this.isEmail && this.isCooperation) {
+          if (this.isCompany && this.isName && this.isPhone && this.isEmail && this.isProv && this.isCity && this.isDistrict && this.isCooperation) {
             return true
           } else {
             return false
@@ -480,6 +512,30 @@
       }
   },
   methods: {
+    updateCity() {
+			for (var i in this.arr) {
+				var obj = this.arr[i];
+				if (obj.name == this.prov) {
+					this.cityArr = obj.sub;
+					break;
+				}
+			}
+			this.city = this.cityArr[1].name;
+		},
+		updateDistrict () {
+			for (var i in this.cityArr) {
+				var obj = this.cityArr[i];
+				if (obj.name == this.city) {
+					this.districtArr = obj.sub;
+					break;
+				}
+			}
+			if(this.districtArr && this.districtArr.length > 0 && this.districtArr[1].name) {
+				this.district = this.districtArr[1].name;
+			} else {
+				this.district = '';
+			}
+		},
     openModal() {
      this.isActive = true
     },
@@ -493,13 +549,14 @@
           .post('http://api.fantem.cn/wp-json/wp/v2/mail', {
             company: this.company,
             name: this.name,
-            duty: this.duty,
             phone: this.phone,
-            projectName: this.projectName,
-            projectAddress: this.projectAddress,
-            projectType: this.projectType,
-            houseType: this.houseType,
-            content: this.content
+            content: `\n
+                      职务: ${this.duty}\n
+                      项目名称: ${this.projectName}\n
+                      项目地址: ${this.projectAddress}\n
+                      项目类型: ${this.projectType}\n
+                      户型: ${this.houseType}\n
+                      留言: ${this.content}`
           })
           .then(res => {
             if (res.statusText == 'OK') {
@@ -529,7 +586,9 @@
             name: this.name,
             phone: this.phone,
             email: this.email,
-            cooperation: this.cooperation
+            city: `${this.prov}-${this.city}-${this.district}`,
+            content: `\n
+                      合作意向: ${this.cooperation}`
           })
           .then(res => {
             if (res.statusText == 'OK') {
@@ -541,6 +600,9 @@
               this.name = ''
               this.phone = ''
               this.email = ''
+              this.prov = '北京'
+              this.city = ''
+              this.district = ''
               this.cooperation = ''
             }
           })
@@ -554,6 +616,19 @@
       this.modal = val
       this.isActive = true
     } 
-  }
+  },
+  beforeMount: function () {
+		this.updateCity();
+		this.updateDistrict();
+	},
+	watch: {
+		prov: function () {
+			this.updateCity();
+			this.updateDistrict();
+		},
+		city: function () {
+			this.updateDistrict();
+		}
+	}
   }
 </script>
