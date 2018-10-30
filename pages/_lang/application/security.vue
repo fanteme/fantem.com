@@ -16,9 +16,13 @@
     </section>
     <div class="container-fluid">
       <div class="video">
-        <video class="video-bg" autoplay muted loop>
+        <video v-if="$store.state.locale == 'zh'" class="video-bg" autoplay muted loop>
           <source :src="`${this.$store.state.cdn}/2018/10/24aec23f6ebd496946466b9d5a1040f4.mp4`" type="video/mp4" />
           <source :src="`${this.$store.state.cdn}/2018/10/e7e51e94be4f329ccaf8098ebaa5a699.webm`" type="video/webm" />
+        </video>
+        <video v-else class="video-bg" autoplay muted loop>
+          <source :src="`${this.$store.state.cdn}/2018/10/cb582bed11b7af621226669e6fdb052b.mp4`" type="video/mp4" />
+          <source :src="`${this.$store.state.cdn}/2018/10/66d880c1448ae8ea2ed7001ceca92a48.webm`" type="video/webm" />
         </video>
       </div>
     </div>
