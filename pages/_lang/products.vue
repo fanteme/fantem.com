@@ -2,7 +2,7 @@
   <main class="main">
     <section class="products">
       <div class="hero">
-        <div class="hero-body" :style="{backgroundImage: `url(${$store.state.cdn}/2018/09/c69c7c58a2886d65d7f901c466150327.jpg)`}">
+        <div class="hero-body" :style="{backgroundImage: `url(${$store.state.cdn}/2018/10/f94f666c31e8d23af73aa01788bb7493.jpg)`}">
         </div>
       </div>
       <div class="container">
@@ -17,7 +17,7 @@
             <div  class="column is-4 center">
               <div class="content-wrap">
                 <h3>{{$t('智能操控平板')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('OOMI智能家居设备操作中心')}}</span>
               </div>
             </div>
           </div>
@@ -28,7 +28,7 @@
               </div>
               <div class="content-wrap">
                 <h3>{{$t('Cube智能家庭网关')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('OOMI智能家居设备控制中心')}}</span>
               </div>
             </div>
             <div class="column" @click="previewProduct(450)">
@@ -37,7 +37,7 @@
               </div>
               <div class="content-wrap">
                 <h3>{{$t('Hub智能家庭网关')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('OOMI智能家居设备控制中心')}}</span>
               </div>
             </div>
           </div>  
@@ -49,7 +49,7 @@
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能插座')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('常规家电无线远程定时智能操控')}}</span>
               </div> 
             </div>
             <div class="column is-6" @click="previewProduct(456)">
@@ -58,7 +58,7 @@
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能插座面板')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('无线远程智能控制电源开关')}}</span>
               </div>
             </div> 
             <div class="column is-6" @click="previewProduct(460)">
@@ -67,7 +67,7 @@
               </div>
               <div class="content-wrap"> 
                 <h3>{{$t('智能场景面板')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('无线便携式自定义操控开关')}}</span>
               </div>               
             </div> 
             <div class="column is-6" @click="previewProduct(464)">
@@ -76,7 +76,7 @@
               </div>  
               <div class="content-wrap">
                 <h3>{{$t('智能开关')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('无线远程智能场景触摸控制')}}</span>
               </div>  
             </div>
             <div class="column is-6" @click="previewProduct(458)">
@@ -85,7 +85,7 @@
               </div>
               <div class="content-wrap"> 
                 <h3>{{$t('智能窗帘电机')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('无线遥控与远程操控二合一')}}</span>
               </div>             
             </div>  
             <div class="column is-6" @click="previewProduct(462)">
@@ -94,7 +94,7 @@
               </div>
               <div class="content-wrap"> 
                 <h3>{{$t('智能嵌入式开关')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('无线远程智能控制灯光')}}</span>
               </div> 
             </div>
             <div class="column is-6" @click="previewProduct(466)">
@@ -103,7 +103,7 @@
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能嵌入式调光开关')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('无线远程智能控制灯光与亮度调节')}}</span>
               </div>
             </div>
             <div class="column is-6" @click="previewProduct(468)">
@@ -112,7 +112,7 @@
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能马达控制器')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('无线远程交流电机控制')}}</span>
               </div>
             </div>
           </div>
@@ -124,7 +124,7 @@
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能灯泡')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('智能语音联动 调节灯泡颜色、亮度、颜色灰度')}}</span>
               </div>             
             </div>
             <div class="column" @click="previewProduct(490)">
@@ -133,7 +133,7 @@
               </div>
               <div class="content-wrap"> 
                 <h3>{{$t('智能灯带')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>  
+                <span>{{$t('1600万无极变色 长度任意裁剪')}}</span>  
               </div>    
             </div>
           </div>
@@ -145,7 +145,7 @@
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能门窗传感器')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('实时监测门窗柜体等物品开启/关闭状态')}}</span>
               </div>
             </div>
             <div class="column is-6-tablet is-6-fullhd" @click="previewProduct(470)">
@@ -154,7 +154,7 @@
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能水位传感器')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('感知水位溢出与漏水状态')}}</span>
               </div>
             </div>
             <div class="column is-6-tablet is-6-fullhd" @click="previewProduct(476)">
@@ -163,7 +163,8 @@
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能六合一传感器')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('多功能传感设备')}}</span>
+                <span>{{$t('集红外移动监测、震动、紫外线、亮度、温度、湿度感知于一体')}}</span>
               </div>             
             </div>
             <div class="column is-6-tablet is-6-fullhd">
@@ -172,7 +173,8 @@
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能三合一传感器')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('多功能传感设备')}}</span>
+                <span>{{$t('集红外移动监测、亮度、温度感知于一体')}}</span>
               </div>
             </div>
           </div>
@@ -186,7 +188,7 @@
             <div class="column is-4 center has-text-left">
               <div class="content-wrap">
                 <h3>{{$t('智能充电底座')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('智能操控平板即时充电续航')}}</span>
               </div>
             </div>
           </div>
@@ -197,7 +199,7 @@
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能水位传感器底座')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('OOMI智能水位传感器持续供电续航')}}</span>
               </div>
             </div>
             <div class="column is-6-tablet is-6-fullhd" @click="previewProduct(486)">
@@ -206,7 +208,7 @@
               </div>  
               <div class="content-wrap">
                 <h3>{{$t('智能中继器')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('增强Z-Wave信号 杜绝信号盲区')}}</span>
               </div>
             </div>
             <div class="column is-6-tablet is-6-fullhd" @click="previewProduct(482)">
@@ -215,7 +217,7 @@
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能警示器')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('无线声光警示器 防范于未然')}}</span>
               </div>
             </div>
             <div class="column is-6-tablet is-6-fullhd">
@@ -224,7 +226,7 @@
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能多功能警示器')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('无线声光警示器 安防漏洞即时警报')}}</span>
               </div>
             </div>
             <div class="column is-6-tablet is-6-fullhd">
@@ -233,7 +235,7 @@
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能红外转换器')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('普通家电轻松转换智能设备')}}</span>
               </div>
             </div>
             <div class="column is-6-tablet is-6-fullhd" @click="previewProduct(484)">
@@ -242,21 +244,13 @@
               </div>
               <div class="content-wrap">
                 <h3>{{$t('智能空调红外转换器')}}</h3>
-                <span>{{$t('OOMI 智能家居总控制系统')}}</span>
+                <span>{{$t('直插式空调控制设备 轻松实现空调智能化')}}</span>
               </div>
             </div>
           </div>
         </div> 
         <div class="thirdProducts has-text-centered">
           <div id="thirdProducts" class="caption">{{$t('第三方兼容产品')}}</div>
-          <!-- <div class="tabs is-centered">
-            <ul>
-              <li class="is-active">{{$t('语控')}}</li>
-              <li>{{$t('安全')}}</li>
-              <li>{{$t('健康')}}</li>
-              <li>{{$t('娱乐')}}</li>
-            </ul>
-          </div> -->
           <div class="columns is-multiline is-variable is-7">   
             <div class="column is-4-tablet is-one-third-desktop is-one-quarter-widescreen is-2-fullhd" v-for="(product, index) in thirdProducts" :key="index">
               <div class="item center">
@@ -292,9 +286,9 @@
 <style lang="stylus">
 .products {
   background: #f0f4f5;
-  color: #231815;i
+  color: #231815;
 
-  .hero {
+  i, .hero {
     height: 701px;
   }
 
@@ -326,18 +320,22 @@
     }
 
     .columns {
-      &:not(.is-gapless){
+      &:not(.is-gapless) {
         margin: -6px;
       }
+
       .column {
         cursor: pointer;
         padding: 6px;
+
         .img-wrap {
           background: radial-gradient(white, #e8e8e8);
+
           img {
             vertical-align: middle;
           }
         }
+
         .content-wrap {
           background: #fff;
           padding: 36px 49px;
@@ -346,16 +344,18 @@
             font-size: 24px;
             color: #3e3a39;
           }
+
           span {
             font-size: 16px;
-            color: #727171
+            color: #727171;
           }
         }
-        
       }
     }
+
     .is-gapless {
       margin-bottom: 12px;
+
       .column {
         background: #fff;
       }
@@ -389,6 +389,7 @@
       }
     }
   }
+
   .previewProduct {
     .modal-card-body {
       .productImage {
@@ -450,9 +451,7 @@ export default {
     },
     async previewProduct(val) {
       let { data } = await this.$axios.get(
-        `${
-          this.$store.state.api
-        }/posts?categories=39&include=${val}`
+        `${this.$store.state.api}/posts?categories=39&include=${val}`
       )
       console.log(data[0])
       this.currentProduct = data[0]
@@ -463,7 +462,7 @@ export default {
     },
     closeModal() {
       this.isActive = false
-    },
+    }
   }
 }
 </script>
