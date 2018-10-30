@@ -229,7 +229,8 @@
               <div class="field-label is-normal">
                 <label class="label">*</label>
               </div>
-              <div class="field-body">
+              <div class="field-body is-vertical">
+                <p class="has-text-left">{{$t('合作意向')}}</p>
                 <div class="field">
                   <div class="control">
                     <div class="select" :class="{'is-success':isCooperation}">

@@ -131,6 +131,7 @@
       height: 100vh;
       z-index: 9;
       top: 108px;
+      overflow-y: auto;  
 
       @media (max-width: 769px) {
         top: 61px;
@@ -432,7 +433,7 @@ export default {
     },
     ShowSubmenu(val) {
       this.currentIndex = val
-      this.showSubmenu = true
+      this.showSubmenu = !this.showSubmenu
     }
   }
 }

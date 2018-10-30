@@ -84,7 +84,7 @@ export default {
   data() {
     return {
       contact: {
-        backgroundimg: '/fantem/about-banner.jpg',
+        backgroundimg: '/2018/10/0e5d76afce01f3f58b89a24c74047217.jpg',
         parallax: true
       }
     }

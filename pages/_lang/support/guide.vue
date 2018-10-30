@@ -37,7 +37,7 @@
   .caption {
     font-size: 36px;
     line-height: 44px;
-    margin: 42px 0;
+    margin: 26px 0 42px;
   }
   .subtitle {
     font-size: 24px;
