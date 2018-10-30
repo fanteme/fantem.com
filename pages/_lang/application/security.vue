@@ -14,13 +14,14 @@
         </div>
       </div>
     </section>
-    <section class="application-house">
-      <div class="columns">
-        <div class="column is-offset-5">
-          <p class="caption has-text-centered">{{$t('全屋智能 一键设防 无死角安全守护')}}</p>
-        </div>
+    <div class="container-fluid">
+      <div class="video">
+        <video class="video-bg" autoplay muted loop>
+          <source :src="`${this.$store.state.cdn}/2018/10/24aec23f6ebd496946466b9d5a1040f4.mp4`" type="video/mp4" />
+          <source :src="`${this.$store.state.cdn}/2018/10/e7e51e94be4f329ccaf8098ebaa5a699.webm`" type="video/webm" />
+        </video>
       </div>
-    </section>
+    </div>
     <section class="application-features">
       <div class="columns is-gapless is-multiline">
         <div class="column is-6">
@@ -151,6 +152,10 @@
       }
     }
   }
+}
+
+.video-bg {
+  vertical-align: top
 }
 
 .application-house {

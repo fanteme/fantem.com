@@ -4,8 +4,8 @@
       <div class="container-fluid">
         <div class="video">
           <video class="video-bg" autoplay muted loop>
-            <source src="http://cdn.fantem.cn/fantem/videos/%E8%A7%86%E9%A2%91%E4%B8%AD%E5%BF%83800PX.mp4" type="video/mp4" />
-            <source src="http://cdn.fantem.cn/fantem/videos/%E8%A7%86%E9%A2%91%E4%B8%AD%E5%BF%83800PX.webm" type="video/webm" />
+            <source :src="`${this.$store.state.cdn}/fantem/videos/%E8%A7%86%E9%A2%91%E4%B8%AD%E5%BF%83800PX.mp4`" type="video/mp4" />
+            <source :src="`${this.$store.state.cdn}/fantem/videos/%E8%A7%86%E9%A2%91%E4%B8%AD%E5%BF%83800PX.webm`" type="video/webm" />
           </video>
         </div>
       </div>

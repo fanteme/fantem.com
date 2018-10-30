@@ -18,8 +18,8 @@
       <div class="container-fluid">
         <div class="video">
           <video class="video-bg" autoplay muted loop>
-            <source src="http://cdn.fantem.cn/fantem/video/OOMI%20APP_800PX.mp4" type="video/mp4" />
-            <source src="http://cdn.fantem.cn/fantem/video/OOMI%20APP_800PX.webm" type="video/webm" />
+            <source :src="`${this.$store.state.cdn}/fantem/video/OOMI%20APP_800PX.mp4`" type="video/mp4" />
+            <source :src="`${this.$store.state.cdn}/fantem/video/OOMI%20APP_800PX.webm`" type="video/webm" />
           </video>
         </div>
       </div>
