@@ -235,7 +235,8 @@ export default {
         parallax: false,
         height: '500px'
       },
-      currentIndex: 0
+      currentIndex: 0,
+      hotnews: []
     }
   },
   components: {
@@ -267,9 +268,6 @@ export default {
     }
   },
   computed: {
-    hotnews() {
-      return this.news.slice(0,3)
-    },
     currentNews() {
       return this.hotnews.slice(this.currentIndex, this.currentIndex+1)
     }
@@ -293,6 +291,10 @@ export default {
       this.news = data
       this.pageCount = Number(headers['x-wp-totalpages'])
     }
+    let { headers, data } = await this.$axios.get(
+        `${this.$store.state.api}/posts?categories=hotnews&per_page=12&_embed`
+    )
+      this.hotnews = data
   },
   methods: {
     getDate(val) {

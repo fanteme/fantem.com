@@ -25,17 +25,27 @@
             </div>
             <div v-show="isActive" class="mobile-list is-hidden-tablet" @touchmove.prevent>
               <ul>
-                <li v-for="(menu, key) in menus" :key="key" class="has-text-centered">
-                  <nuxt-link class="nav-item" :class="menu.class" :to="menu.link" >
+                <li v-for="(menu, key) in menus" :key="key" class="has-text-centered" @click="ShowSubmenu(menu.title)">
+                  <nuxt-link v-if="!menu.submenus" class="nav-item" :class="menu.class" :to="menu.link" >
                     {{menu.title}}
                   </nuxt-link>
+                  <template v-else>
+                    <span :class="{active: showSubmenu && currentIndex == menu.title}">{{menu.title}}</span>
+                    <ul v-if="menu.submenus" v-show="showSubmenu && currentIndex == menu.title">
+                      <li v-for="(item, ind) in menu.submenus" :key="ind">
+                        <nuxt-link class="nav-item" :class="menu.class" :to="item.link" >
+                        {{item.title}}
+                      </nuxt-link>
+                      </li>
+                    </ul>  
+                  </template>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
       </div>  
-      <section-header v-if="typeof (secheader) != 'undefined'" :secheader="secheader"></section-header> 
+      <section-header class="is-hidden-mobile" v-if="typeof (secheader) != 'undefined'" :secheader="secheader"></section-header> 
     </header> 
     
   </section>  
@@ -126,10 +136,30 @@
         top: 61px;
       }
 
-      ul li a {
-        margin: 20px 32px;
-        display: inline-block;
-      }
+      ul {
+        width: 100%;
+        li {
+          .active {
+            color: #ed7422;
+          }
+          .nav-item {
+            line-height 48px;
+          }  
+          span {
+            display: inline-block;
+            line-height: 48px;
+          }
+          ul{
+            li {
+              border-bottom: 1px solid #ccc;
+              background: rgba(0,0,0,0.06);
+                a {
+                  line-height: 32px;
+                }
+            }
+          }
+        }
+      }  
     }
   }
 
@@ -199,7 +229,9 @@ export default {
       isActive: false,
       isFixed: false,
       show: true,
-      secheader: []
+      secheader: [],
+      showSubmenu: false,
+      currentIndex: ''
     }
   },
   watch: {
@@ -397,6 +429,10 @@ export default {
     ShowHeader(val) {
       this.secheader = val
       this.$store.commit('SHOW_HEADER',this.show)
+    },
+    ShowSubmenu(val) {
+      this.currentIndex = val
+      this.showSubmenu = true
     }
   }
 }
