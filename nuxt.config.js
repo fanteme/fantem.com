@@ -85,6 +85,7 @@ export default {
       '/en/support',
       '/en/support/downloads/apps',
       '/en/support/service',
+      '/en/support/app',
       '/en/support/videos',
       '/en/support/faq',
       '/en/support/guide',

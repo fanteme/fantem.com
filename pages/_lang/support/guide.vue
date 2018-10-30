@@ -94,6 +94,9 @@
 
 <script>
 export default {
+  head() {
+    return { title: this.$t('技术支持') +'-'+ this.$t('使用手册') }
+  },
   data() {
     return {
       guides: [],

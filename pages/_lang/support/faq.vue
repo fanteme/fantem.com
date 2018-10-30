@@ -61,7 +61,7 @@ export default {
   },
   head() {
     return {
-      title: this.$t('技术支持') +' '+ this.title
+      title: this.$t('技术支持') +'-'+ this.title
     }
   },
   computed: {
