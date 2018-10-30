@@ -36,46 +36,80 @@
     </div>
   </main>
 </template>
-<style lang="stylus">
-.videos
-  padding-bottom: 23px
-  background: #edf1f2
-  color: #3e3a39
-  .caption
-    font-size: 36px
-    line-height: 44px
-    margin: 58px 0 26px 0
-  .subtitle
-    font-size: 16px
-  .is-one-quarter-fullhd
-    position: relative
-    .modal
-      display: block !important
-    .fa-play-circle-o
-      font-size: 60px
-      position: absolute
-      top: 44%
-      left: 50%
-      transform: translate(-50%, -50%)
-      color: rgba(255,255,255,0.95)
-      cursor: pointer
-      &:hover
-        color: rgba(255,255,255,0.65)
-  .video
-    display: grid
-    overflow: hidden  
-    .video-bg
-      grid-area: var(--fullGrid)
-      min-width: 100%
-      object-fit: cover
-</style>
 
+<style lang="stylus">
+.videos {
+  padding-bottom: 23px;
+  background: #edf1f2;
+  color: #3e3a39;
+
+  .caption {
+    font-size: 36px;
+    line-height: 44px;
+    margin: 58px 0 26px 0;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .is-one-quarter-fullhd {
+    position: relative;
+
+    .modal {
+      display: block !important;
+    }
+
+    .fa-play-circle-o {
+      font-size: 60px;
+      position: absolute;
+      top: 44%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgba(255, 255, 255, 0.95);
+      cursor: pointer;
+
+      &:hover {
+        color: rgba(255, 255, 255, 0.65);
+      }
+    }
+  }
+
+  .video {
+    display: grid;
+    overflow: hidden;
+
+    .video-bg {
+      grid-area: var(--fullGrid);
+      min-width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+</style>
 
 <script>
 import videojs from '~/components/Video'
 export default {
   head() {
-    return { title: this.$t('技术支持') +'-'+ this.$t('视频中心') }
+    return {
+      title: this.$t('技术支持') + '-' + this.$t('视频中心'),
+      script: [
+        {
+          src: 'https://cdn.jsdelivr.net/npm/video.js@7.2.3/dist/video.min.js'
+        },
+        {
+          src:
+            'https://cdn.jsdelivr.net/npm/vue-video-player@5.0.2/dist/vue-video-player.js'
+        }
+      ],
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://cdn.jsdelivr.net/npm/video.js@7.2.3/dist/video-js.css'
+        }
+      ]
+    }
   },
   components: {
     videojs
@@ -104,21 +138,24 @@ export default {
         return element['category'] === category
       })
     },
-    closeModal(){
+    closeModal() {
       this.showvideo = false
     },
-    showModal(val){
+    showModal(val) {
       this.option = val
-      console.log(val)
       this.option.autoplay = true
       this.showvideo = true
     }
   },
-  async mounted() {
-    let { data } = await this.$axios.get(
-      'http://api.fantem.cn/wp-json/wp/v2/sp_html5video?per_page=30'
+  async asyncData({ app, store }) {
+    const { data } = await app.$axios.get(
+      `${store.state.api}/sp_html5video?per_page=30`
     )
-    this.videos = data
+    return {
+      videos: data
+    }
+  },
+  async mounted() {
     await this.categories.forEach(category => {
       const videos = this.getVideosByCategory(category)
       this.$set(this.video, category, videos)
