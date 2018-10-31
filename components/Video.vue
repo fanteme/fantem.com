@@ -1,15 +1,14 @@
 <template>
-  <video-player class="video-player-box" 
+  <div class="video-player-box" 
     @play="onPlayerPlay($event)"
     @pause="onPlayerPause($event)"
     @ready="onPlayerReady"
     @statechanged="onPlayerStateChanged($event)"
-    :options="playOptions">
-  </video-player>
+    v-video-player:myVideoPlayer="playOptions">
+  </div>
 </template>
 
 <script>
-import Vue from 'vue'
 export default {
   props: {
     options: {
@@ -29,11 +28,6 @@ export default {
         fluid: true,
         playbackRates: [0.7, 1.0, 1.5, 2.0]
       })
-    }
-  },
-  mounted() {
-    if (process.browser) {
-      Vue.use(VueVideoPlayer)
     }
   },
   methods: {

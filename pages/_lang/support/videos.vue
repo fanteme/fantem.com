@@ -93,22 +93,7 @@ import videojs from '~/components/Video'
 export default {
   head() {
     return {
-      title: this.$t('技术支持') + '-' + this.$t('视频中心'),
-      script: [
-        {
-          src: 'https://cdn.jsdelivr.net/npm/video.js@7.2.3/dist/video.min.js'
-        },
-        {
-          src:
-            'https://cdn.jsdelivr.net/npm/vue-video-player@5.0.2/dist/vue-video-player.js'
-        }
-      ],
-      link: [
-        {
-          rel: 'stylesheet',
-          href: 'https://cdn.jsdelivr.net/npm/video.js@7.2.3/dist/video-js.css'
-        }
-      ]
+      title: this.$t('技术支持') + '-' + this.$t('视频中心')
     }
   },
   components: {
@@ -117,7 +102,6 @@ export default {
   data() {
     return {
       video: {},
-      videos: [],
       categories: [
         'APP使用',
         '产品使用',
