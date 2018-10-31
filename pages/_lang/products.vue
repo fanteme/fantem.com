@@ -327,6 +327,8 @@
       .column {
         cursor: pointer;
         padding: 6px;
+        background: #fff;
+        background-clip: content-box;
 
         .img-wrap {
           background: radial-gradient(white, #e8e8e8);
@@ -337,7 +339,6 @@
         }
 
         .content-wrap {
-          background: #fff;
           padding: 36px 49px;
 
           h3 {
