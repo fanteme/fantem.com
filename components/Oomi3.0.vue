@@ -997,55 +997,6 @@
         </div>
       </div>
     </section>
-    <section class="columns is-gapless panel panel1">
-      <div class="column is-10">
-        <img src="http://cdn.fantem.cn/2018/10/80278a0621efb8b11777c99f95e3505f.svg">
-      </div>
-      <div class="column is-2 is-size-1 center">
-        {{$t('客厅')}}
-      </div>
-    </section>
-    <section class="columns is-gapless panel panel2">
-      <div class="column is-2 is-size-1 center">
-        {{$t('厨房')}}
-      </div>
-      <div class="column is-10">
-        <img src="http://cdn.fantem.cn/2018/10/84247eedd73d61341cdce70e383abd73.svg">
-      </div>
-    </section>
-    <section class="columns is-gapless panel panel3">
-      <div class="column is-10">
-        <img src="http://cdn.fantem.cn/2018/10/7abe9729dea962d595c6edce0e55ee34.svg">
-      </div>
-      <div class="column is-2 is-size-1 center">
-        {{$t('卧室')}}
-      </div>
-    </section>
-    <section class="columns is-gapless panel panel4">
-      <div class="column is-2 is-size-1 center">
-        {{$t('书房')}}
-      </div>
-      <div class="column is-10">
-        <img src="http://cdn.fantem.cn/2018/10/5ff3dfa1fb03e7949c50ffea07ef9b4f.svg">
-      </div>
-    </section>
-    <section class="columns panel panel5">
-      <div class="img-left">
-        <img src="http://cdn.fantem.cn/2018/10/85fa56d431c0c017da9e38d30782b346.png">
-      </div>
-      <div class="img-middle has-text-centered">
-        <svg class="wifi" viewBox="0 0 40 32">
-          <path d="M17.98 28.12c0-1.1.9-2.02 2.02-2.02s2.02.9 2.02 2.02-.9 2.02-2.02 2.02-2.02-.9-2.02-2.02"/>
-          <path d="M20 18.02c3.34 0 6.37 1.36 8.57 3.55l-2.86 2.86c-1.45-1.46-3.47-2.37-5.7-2.37s-4.25.9-5.7 2.37l-2.87-2.86c2.2-2.2 5.23-3.55 8.57-3.55"/>
-          <path d="M5.7 15.86c3.83-3.82 8.9-5.92 14.3-5.92s10.47 2.1 14.3 5.92l-2.87 2.85C28.38 15.67 24.33 14 20 14s-8.38 1.68-11.43 4.73L5.7 15.87"/>
-          <path d="M31 4.08c3.38 1.43 6.4 3.47 9 6.06L37.14 13C32.56 8.42 26.48 5.9 20 5.9S7.44 8.42 2.86 13L0 10.14c2.6-2.6 5.62-4.63 9-6.06 3.48-1.47 7.18-2.22 11-2.22s7.52.74 11 2.22"/>
-        </svg>
-        <img src="http://cdn.fantem.cn/2018/10/2bb4aeb9bf65d637a7617bcb69543a55.png">
-      </div>
-      <div class="img-right">
-        <img src="http://cdn.fantem.cn/2018/10/02db2655c77889068373f17c2a7251a7.png">
-      </div>
-    </section>
   </div>
 </template>
 
@@ -1064,67 +1015,11 @@
         width: 100%;
       }
     }
-    &1{
-      transform: translate(-100%, 0%) translate3d(0px, 0px, 0px) scale(0.2, 0.2)
-    }
-    &2{
-      transform: translate(100%, 0%) translate3d(0px, 0px, 0px) scale(0.2, 0.2)
-    }
-    &3{
-      transform: translate(-100%, 0%) translate3d(0px, 0px, 0px) scale(0.2, 0.2)
-    }
-    &4{
-      transform: translate(100%, 0%) translate3d(0px, 0px, 0px) scale(0.2, 0.2)
-    }
-    &5{
-      transform: translate(0%, 100%) translate3d(0px, 0px, 0px) scale(0.2, 0.2)
-    }
-  }
-}
-svg.wifi{
-  width: 64px;
-	height: 64px;
-	fill: #eee;
-  path{
-    animation: wave 1s infinite;
-    @keyframes wave {
-      50% { fill: #000; }
-    }
-    &:nth-child(1) { animation-delay: -0.4s; }
-    &:nth-child(2) { animation-delay: -0.3s; }
-    &:nth-child(3) { animation-delay: -0.2s; }
-    &:nth-child(4) { animation-delay: -0.1s; }
   }
 }
 </style>
 
 <script>
 export default {
-  mounted() {
-    this.$nextTick(this.pinContainerScene)
-  },
-  methods: {
-    pinContainerScene() {
-      const tween = new this.$gsap.TimelineMax()
-      .fromTo("section.panel0", 1, {x: "0%", scale: 1}, {x: "100%", scale: 0, ease: Linear.easeInOut})
-      .to("section.panel1", 1, {x: "150%", scale: 1.5, ease: Linear.easeInOut})
-      .to("section.panel2", 1, {x: "-150%", scale: 1.5, ease: Linear.easeInOut})
-      .to("section.panel3", 1, {x: "150%", scale: 1.5, ease: Linear.easeInOut})
-      .to("section.panel4", 1, {x: "-150%", scale: 1.5, ease: Linear.easeInOut})
-      .to("section.panel5", 1, {y: "-100", scale: 2, ease: Linear.easeInOut})
-
-      const scene = new this.$scrollmagic.Scene({
-        triggerElement: '.pinContainer',
-        triggerHook: 'onLeave',
-        offset: -80,
-        duration: '600%'
-      }).setPin('.pinContainer').setTween(tween)
-
-      this.$ksvuescr.$emit('addScene', 'pinContainerScene', scene)
-    }
-  },
-  destroyed(){
-    this.$ksvuescr.$emit('destroy')
-  }
 }
 </script>
