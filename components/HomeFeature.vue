@@ -17,21 +17,21 @@
         <div class="column animated" :class="{'fadeInLeft': isVisible}">
           <div class="num center">1</div>
           <figure class="center">
-            <img :src="`${this.$store.state.cdn}/2018/09/e7a9735acc6dd7a9317aeea45a1a282f.png`">
+            <img :src="`${this.$store.state.cdn}/2018/10/0529dc3b6b109a78d4e0c27c5c0b27be.svg`">
           </figure>
           <p class="text has-text-centered">{{$t('轻触')}}</p>
         </div>
         <div class="column animated" :class="{'fadeInUp': isVisible}">
           <div class="num center">2</div>
           <figure class="center">
-            <img :src="`${this.$store.state.cdn}/2018/09/59183cc0661d8b7f96f0e8480597b5d5.png`">
+            <img :src="`${this.$store.state.cdn}/2018/10/5312ddbef202fea6084d45299c678b8c.svg`">
           </figure>
           <p class="text has-text-centered">{{$t('连接')}}</p>
         </div>
         <div class="column animated" :class="{'fadeInRight': isVisible}">
           <div class="num center">3</div>
           <figure class="center">
-            <img :src="`${this.$store.state.cdn}/2018/09/50e8679226119dd5527d8aa56ac4890e.png`">
+            <img :src="`${this.$store.state.cdn}/2018/10/02b1270f21f6b18211e7ca0417d544e6.svg`">
           </figure>
           <p class="text has-text-centered">{{$t('操控')}}</p>
         </div>
