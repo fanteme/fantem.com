@@ -24,7 +24,7 @@
         </div>
       </div>
     </section>
-    <div class="modal" :class="{'is-active': showvideo}">
+    <div class="modal" v-if="showvideo" :class="{'is-active': showvideo}">
       <div class="modal-background" @click="closeModal"></div>
       <div class="modal-card">
         <header class="modal-card-head">
