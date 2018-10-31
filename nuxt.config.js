@@ -40,6 +40,10 @@ export default {
       {
         rel: 'stylesheet',
         href: 'http://cdn.fantem.cn/libs/css/bulma.min.css'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'http://cdn.fantem.cn/libs/css/video-js.min.css'
       }
     ],
     script: [
