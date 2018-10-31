@@ -52,9 +52,9 @@ $height = 700px;
   position: relative;
   z-index: 1;
   width: 100%;
-  min-height: 32rem;
-  height: $height;
   margin-bottom: 90px;
+  min-height: 32rem;
+  height: calc(100vh - 80px);
 
   @media (max-width: 600px) {
     height: 32rem;
@@ -63,7 +63,7 @@ $height = 700px;
   .agile {
     .imgwrap {
       min-height: 32rem;
-      height: $height;
+      height: 100%;
       position: relative;
       background-size: cover;
       background-position: 50%;
