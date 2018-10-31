@@ -8,6 +8,20 @@
   </div>
 </template>
 
+<style lang="stylus">
+.video-player-box
+  .vjs-big-play-button
+    top: 50%
+    left: 50%
+    margin-left: -1.5em
+    margin-top: -1em
+    background-color: rgba(0,0,0,.45)
+    font-size: 3.5em
+    height: 2em!important
+    line-height: 2em!important
+    margin-top: -1em!important
+</style>
+
 <script>
 export default {
   props: {

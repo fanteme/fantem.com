@@ -531,6 +531,7 @@ export default {
 
 <style lang="stylus">
 .agile {
+  height: 100%;
   &, * {
     &:focus, &:active {
       outline: none;
@@ -543,6 +544,7 @@ export default {
     padding: 0;
     position: relative;
     width: 100%;
+    height: 100%;
     overflow: hidden;
   }
 
@@ -550,6 +552,7 @@ export default {
     align-items: center;
     display: flex;
     justify-content: flex-start;
+    height: calc(100vh - 170px)
   }
 
   &__indicate {
@@ -609,6 +612,7 @@ export default {
 
   &__slide {
     display: block;
+    height: 100%;
 
     .agile--fade & {
       opacity: 0;
