@@ -17,7 +17,7 @@
             <li class="tel has-text-weight-semibold">400-880-3757</li>
             <li class="wechat-mp">
               <div class="qrcode">
-                <qrcode-vue value="http://weixin.qq.com/r/fHVZQa3EsPDPreki9yBu" :size="85" level="H"></qrcode-vue>
+                <img width="85" :src="`${this.$store.state.cdn}/2018/11/ce44235d3aaeff8387bb0307ead2b106.png`">
               </div>
               <span>{{$t('关注我们')}}</span>
             </li>

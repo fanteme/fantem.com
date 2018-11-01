@@ -2,7 +2,7 @@
   <main class="main">
     <section class="products">
       <div class="hero">
-        <div class="hero-body" :style="{backgroundImage: `url(${$store.state.cdn}/2018/10/f94f666c31e8d23af73aa01788bb7493.jpg)`}">
+        <div class="hero-body" :style="{backgroundImage: `url(${$store.state.cdn}/2018/11/2fa06259d4a02a920c57fb13baa961a9.jpg)`}">
         </div>
       </div>
       <div class="container">

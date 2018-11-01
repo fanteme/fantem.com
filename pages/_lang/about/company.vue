@@ -31,51 +31,75 @@
           <h2 class="has-text-centered caption">{{$t('荣誉资质')}}</h2>
           <div class="columns is-multiline has-text-centered  is-mobile">
             <div class="column is-6-mobile is-3-tablet">
-              <img :src="`${$store.state.cdn}/2018/10/5b054c2325e666de8a9e6c3d2369c2ac.svg`">
+              <figure class="center">
+                <img :src="`${$store.state.cdn}/2018/10/5b054c2325e666de8a9e6c3d2369c2ac.svg`">
+              </figure>
               <p>{{$t('国家级高新技术企业')}}</p>
             </div>
             <div class="column is-6-mobile is-3-tablet">
-              <img :src="`${$store.state.cdn}/2018/10/444be13a8a86d7ce634a716705cca6f0.svg`">
+              <figure class="center">
+                <img :src="`${$store.state.cdn}/2018/10/444be13a8a86d7ce634a716705cca6f0.svg`">
+              </figure>  
               <p>{{$t('Z-wave联盟理事单位')}}</p>
             </div>
             <div class="column is-6-mobile is-3-tablet">
-              <img :src="`${$store.state.cdn}/2018/10/b1a6b6a33a58b590a6acbf33e72ec935.svg`">
+              <figure class="center">
+                <img :src="`${$store.state.cdn}/2018/10/b1a6b6a33a58b590a6acbf33e72ec935.svg`">
+              </figure>    
               <p>{{$t('国家物联网基础标准工作组成员')}}</p>
             </div>
             <div class="column is-6-mobile is-3-tablet">
-              <img :src="`${$store.state.cdn}/2018/10/23c3fea68581604cbe29371f33c403f3.svg`">
+              <figure class="center">
+                <img :src="`${$store.state.cdn}/2018/10/23c3fea68581604cbe29371f33c403f3.svg`">
+              </figure>    
               <p>{{$t('ISO9001质量管理体系认证')}}</p>
             </div>
             <div class="column is-6-mobile is-3-tablet">
-              <img :src="`${$store.state.cdn}/2018/10/1be35d01feb0e335c96f79ff357c9cd1.svg`">
+              <figure class="center">
+                <img :src="`${$store.state.cdn}/2018/10/1be35d01feb0e335c96f79ff357c9cd1.svg`">
+              </figure>  
               <p>{{$t('中国智能家居产业联盟理事单位')}}</p>
             </div>
             <div class="column is-6-mobile is-3-tablet">
-              <img :src="`${$store.state.cdn}/2018/10/3a8e2080f483524a72e5f91cc4453506.svg`">
+              <figure class="center">
+                <img :src="`${$store.state.cdn}/2018/10/3a8e2080f483524a72e5f91cc4453506.svg`">
+              </figure>  
               <p>{{$t('知识产权管理体系认证')}}</p>
             </div>
             <div class="column is-6-mobile is-3-tablet">
-              <img :src="`${$store.state.cdn}/2018/10/094e318410119c5806bf4ad418514956.svg`">
+              <figure class="center">
+                <img :src="`${$store.state.cdn}/2018/10/094e318410119c5806bf4ad418514956.svg`">
+              </figure>  
               <p>{{$t('深圳市知识产权优势企业')}}</p>
             </div>
             <div class="column is-6-mobile is-3-tablet">
-              <img :src="`${$store.state.cdn}/2018/10/ec202cfffc88305159681027240a59a0.svg`">
+              <figure class="center">
+                <img :src="`${$store.state.cdn}/2018/10/ec202cfffc88305159681027240a59a0.svg`">
+              </figure>  
               <p>{{$t('广东省守合同重信用企业')}}</p>
             </div>
             <div class="column is-6-mobile is-3-tablet">
-              <img :src="`${$store.state.cdn}/2018/10/ae3d09b1e0be7f0b5c1881587d14987b.svg`">
+              <figure class="center">
+                <img :src="`${$store.state.cdn}/2018/10/ae3d09b1e0be7f0b5c1881587d14987b.svg`">
+              </figure>  
               <p>{{$t('中国智能家居十大口碑品牌')}}</p>
             </div>
             <div class="column is-6-mobile is-3-tablet">
-              <img :src="`${$store.state.cdn}/2018/10/adbf7123a4d69a37ba20205dce8ecc65.svg`">
+              <figure class="center">
+                <img :src="`${$store.state.cdn}/2018/10/adbf7123a4d69a37ba20205dce8ecc65.svg`">
+              </figure>  
               <p>{{$t('慧聪网“十大智能家居品牌”')}}</p>
             </div>
             <div class="column is-6-mobile is-3-tablet">
-              <img :src="`${$store.state.cdn}/2018/10/ff1b4255ed1259cb30d8a63853aadb06.svg`">
+              <figure class="center">
+                <img :src="`${$store.state.cdn}/2018/10/ff1b4255ed1259cb30d8a63853aadb06.svg`">
+              </figure>  
               <p>{{$t('智能家居海外市场开拓品牌奖')}}</p>
             </div>
             <div class="column is-6-mobile is-3-tablet">
-              <img :src="`${$store.state.cdn}/2018/10/5b481eeb034d642e9bd62886b3a16862.svg`">
+              <figure class="center">
+                <img :src="`${$store.state.cdn}/2018/10/5b481eeb034d642e9bd62886b3a16862.svg`">
+              </figure>  
               <p>{{$t('中国智能建筑行业最具影响力品牌')}}</p>
             </div>
             <div class="column is-6-mobile is-3-tablet">
@@ -83,23 +107,33 @@
               <p>{{$t('中国国际高新技术成果交易会“优秀产品奖”')}}</p>
             </div>
             <div class="column is-6-mobile is-3-tablet">
-              <img :src="`${$store.state.cdn}/2018/10/9c2854e5d910d8424d0938083d2cf9c9.svg`">
+              <figure class="center">
+                <img :src="`${$store.state.cdn}/2018/10/9c2854e5d910d8424d0938083d2cf9c9.svg`">
+              </figure>  
               <p>{{$t('HCFT智能硬件供应链大会智能家居先锋奖')}}</p>
             </div>
             <div class="column is-6-mobile is-3-tablet">
-              <img :src="`${$store.state.cdn}/2018/10/7b4f054cf4d0890ba276eab440dde375.svg`">
+              <figure class="center">
+                <img :src="`${$store.state.cdn}/2018/10/7b4f054cf4d0890ba276eab440dde375.svg`">
+              </figure>  
               <p>{{$t('中国智慧城市技术与应用产品博览会“最佳解决方案奖”')}}</p>
             </div>
             <div class="column is-6-mobile is-3-tablet">
-              <img :src="`${$store.state.cdn}/2018/10/8985891f7788e2a8f4fd4ba6d5a49ea7.svg`">
+              <figure class="center">
+                <img :src="`${$store.state.cdn}/2018/10/8985891f7788e2a8f4fd4ba6d5a49ea7.svg`">
+              </figure>  
               <p>Samrt Home CES INNOVATION AWARDS</p>
             </div>
             <div class="column is-6-mobile is-3-tablet">
-              <img :src="`${$store.state.cdn}/2018/10/709e467a6f0fc64bea86054e16aa902c.svg`">
+              <figure class="center">
+                <img :src="`${$store.state.cdn}/2018/10/709e467a6f0fc64bea86054e16aa902c.svg`">
+              </figure>  
               <p>BEST BLOG DOMADOO AWARD CES 2017</p>
             </div>
             <div class="column is-6-mobile is-3-tablet">
-              <img :src="`${$store.state.cdn}/2018/10/aaae9f17868ad7a7351211c1fbcb42f0.svg`">
+              <figure class="center">
+                <img :src="`${$store.state.cdn}/2018/10/aaae9f17868ad7a7351211c1fbcb42f0.svg`">
+              </figure>  
               <p>CE Week Best In Show GOLD AWARDS</p>
             </div>
           </div>
@@ -174,6 +208,8 @@
 
   .content
     margin: 25px 0
+  .center
+    height: 65px  
 
 </style>
 <script>
