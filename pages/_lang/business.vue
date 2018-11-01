@@ -14,8 +14,8 @@
           </div>  
         </div> 
       </div>
-      <section-banner :banner="agency"></section-banner>
-      <section-banner :banner="project"></section-banner>
+      <section-banner id="agency" :banner="agency"></section-banner>
+      <section-banner id="project" :banner="project"></section-banner>
       
     </section>
   </main>
@@ -155,6 +155,19 @@ export default {
         modal: 'project'
       }
     }
+  },
+  methods: {
+    scrollToAnchor() {
+      const hash = this.$route.hash
+      const scroll = new SmoothScroll('a[href*="#"]', {
+        header: 'header'
+      })
+      const anchor = document.querySelector(decodeURI(hash))
+      scroll.animateScroll(anchor)
+    }
+  },
+  mounted() {
+    this.scrollToAnchor()
   }
 }
 </script>

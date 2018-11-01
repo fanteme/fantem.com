@@ -20,7 +20,7 @@ export default {
     return {
       slides: [
         {
-          img: `${this.$store.state.cdn}/2018/10/5780cd16e2ed56ed5832ad37f45e4d17.png`,
+          img: `${this.$store.state.cdn}/2018/11/3fde37b9928139cb671c743d2de74223.jpg`,
           icon: `<svg width="76" height="47" viewBox="0 0 76 47" xmlns="http://www.w3.org/2000/svg"><path d="M23.3.3c-12.7 0-23 10.3-23 23s10.3 23 23 23 23-10.3 23-23c0-12.6-10.3-23-23-23zm0 38c-8.3 0-15-6.7-15-15s6.7-15 15-15 15 6.7 15 15-6.7 15-15 15zm46.7-38c-1.5 1.6-3.5 3.1-5.8 4.5-2.3 1.3-4.5 2.2-6.6 2.7v7.5c4.3-1.2 7.7-3.1 10.5-5.6v36.9h7.5v-46h-5.6z" fill-rule="nonzero" fill="#DADBDB"/></svg>`,
           title: this.$t('技术研发 产品集成'),
           class: 'scroll-image'

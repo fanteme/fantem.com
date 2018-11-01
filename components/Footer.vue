@@ -178,15 +178,11 @@ export default {
           menus: [
             {
               title: this.$t('经销商合作'),
-              link: `${this.baseUrl}/`
+              link: `${this.baseUrl}/business#agency`
             },
             {
               title: this.$t('项目合作'),
-              link: `${this.baseUrl}/`
-            },
-            {
-              title: this.$t('典型案例'),
-              link: `${this.baseUrl}/`
+              link: `${this.baseUrl}/business#project`
             }
           ]
         },
