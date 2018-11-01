@@ -79,7 +79,7 @@ button {
 }
 
 .faq-accordion {
-  padding: 15px 0 0;
+  padding: 15px 0;
   background: #fff;
 }
 

@@ -3,6 +3,21 @@
     <section class="faq">
       <section class="faq-list container">
         <div class="columns">
+          <div class="column is-12 field has-addons has-addons-centered" v-if="faqs.length">
+            <div class="control">
+              <a class="button is-static">
+                <i class="fa fa-search"></i>
+              </a>
+            </div>
+            <div class="control">
+              <input class="input searchfaq" type="text" v-model="keywords" placeholder="请输入关键字， 例如：Cube">
+            </div>
+          </div>
+          <div class="column is-12">
+            <h2 v-if="searchFaqs.length" class="title has-text-centered">搜索结果</h2>
+          </div>  
+        </div>
+        <div class="columns">
           <div class="column is-one-quarter">
             <ul>
               <li v-for="(category, index) in categories" :key="index">
@@ -13,7 +28,8 @@
             </ul>
           </div>
           <div class="column is-three-quarters">
-            <faq-accordion :items="currentFaqs"></faq-accordion>
+            <faq-accordion v-if="searchFaqs.length" :items="searchFaqs"></faq-accordion>
+            <faq-accordion v-else :items="currentFaqs"></faq-accordion>
           </div>
         </div>
       </section>
@@ -24,8 +40,11 @@
 
 <style lang="stylus">
 .faq {
-  background: #edf1f2
+  background: #edf1f2;
   padding :31px 0 47px 0;
+  .searchfaq {
+    width: 22rem;
+  }
   .faq-list {
     ul {
       background: #fff;
@@ -100,6 +119,8 @@ export default {
       faq: {},
       faqs: [],
       arr: [],
+      keywords: '',
+      searchFaqs: [],
       categories: [
         {
           title: this.$t('Cube智能家庭网关'),
@@ -180,6 +201,21 @@ export default {
       const faqs = this.getFaqsByCategory(category.name)
       this.$set(this.faq, category.name, faqs)
     })
+  },
+  watch: {
+    keywords: function(val) {
+      this.searchFaqs = this.faqs.filter(item => {
+        const title = item.title.rendered
+        if (val) {
+          let reg = new RegExp(val, 'i')
+          if (title.search(reg) != -1) {
+            return item
+          }
+        } else {
+          return
+        }
+      })
+    }
   }
 }
 </script>
