@@ -2,7 +2,7 @@
   <section class="slider">
     <agile :slides="slides" :fade="true">
       <div v-for="(slide,i) in slides" :key="i" class="slide">
-        <div class="imgwrap" :style="{backgroundImage: `url(${slide.img})`}">
+        <div class="imgwrap" :class="slide.class" :style="{backgroundImage: `url(${slide.img})`}">
           <div class="contentwrap"></div>
         </div>
       </div>
@@ -22,7 +22,8 @@ export default {
         {
           img: `${this.$store.state.cdn}/2018/10/5780cd16e2ed56ed5832ad37f45e4d17.png`,
           icon: `<svg width="76" height="47" viewBox="0 0 76 47" xmlns="http://www.w3.org/2000/svg"><path d="M23.3.3c-12.7 0-23 10.3-23 23s10.3 23 23 23 23-10.3 23-23c0-12.6-10.3-23-23-23zm0 38c-8.3 0-15-6.7-15-15s6.7-15 15-15 15 6.7 15 15-6.7 15-15 15zm46.7-38c-1.5 1.6-3.5 3.1-5.8 4.5-2.3 1.3-4.5 2.2-6.6 2.7v7.5c4.3-1.2 7.7-3.1 10.5-5.6v36.9h7.5v-46h-5.6z" fill-rule="nonzero" fill="#DADBDB"/></svg>`,
-          title: this.$t('技术研发 产品集成')
+          title: this.$t('技术研发 产品集成'),
+          class: 'scroll-image'
         },
         {
           img: `${this.$store.state.cdn}/2018/11/d9fa7a298d3e849422c368e760fd4c1a.jpg`,
@@ -71,7 +72,20 @@ $height = 700px;
       @media (max-width: 600px) {
         height: 32rem;
       }
+
+      &.scroll-image {
+        background-position: left top;
+        animation: banner 15s linear 2s infinite;
+      }
     }
   }
 }
+@keyframes banner {
+    from {
+      background-position: left top;
+    }
+    to {
+       background-position: right top;
+    }
+  }
 </style>
