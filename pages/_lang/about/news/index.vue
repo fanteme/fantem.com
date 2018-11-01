@@ -232,7 +232,7 @@ export default {
       isloading: false,
       banner: {
         backgroundimg: '/2018/10/a876975db592cb60761b6d80506c8c04.jpg',
-        parallax: false,
+        parallax: true,
         height: '500px'
       },
       currentIndex: 0,

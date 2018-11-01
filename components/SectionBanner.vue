@@ -9,7 +9,7 @@
             </h2>
             <p class="subtitle">{{banner.subtitle}}</p>
             <button v-if="banner.modal" class="button" @click.stop.prevent="showModal(banner.modal)">{{banner.buttontxt}}</button>
-            <a v-else-if="banner.buttontxt" class="button">{{banner.buttontxt}}</a>
+            <a v-else-if="banner.buttontxt" target="_blank" :href="banner.link" class="button">{{banner.buttontxt}}</a>
           </div>
         </div>
         

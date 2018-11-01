@@ -28,6 +28,7 @@ export default {
         backgroundimg: '/2018/10/554875d42cd8e4352d5dde4e47b1c59c.jpg',
         title: this.$t('加入丰唐物联 共创智慧之家'),
         buttontxt: this.$t('加入我们'),
+        link: 'https://jobs.51job.com/all/co3309046.html',
         height: '640px',
         parallax: true
       }
