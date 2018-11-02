@@ -231,7 +231,7 @@ export default {
       pageCount: 1,
       isloading: false,
       banner: {
-        backgroundimg: '/2018/11/cb15fcb9383e141f716f2bf056e5fb27.jpg',
+        backgroundimg: '/2018/11/1408480d9d8cc475d125829491baf817.jpg',
         parallax: true,
         height: '500px'
       },

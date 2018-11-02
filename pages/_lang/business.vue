@@ -167,7 +167,10 @@ export default {
     }
   },
   mounted() {
-    this.scrollToAnchor()
+    if( this.$route.hash ) {
+      this.scrollToAnchor()
+    }
+   
   }
 }
 </script>

@@ -45,7 +45,7 @@ import SectionBanner from '~/components/SectionBanner'
     data() {
       return {
         service: {
-          backgroundimg: '/2018/11/dc6abdc493187acb22de55cc62226959.jpg',
+          backgroundimg: '/2018/11/4c646eb26112c37f1d847391d0a6579d.jpg',
           parallax: true,
           height: '540px'
         }

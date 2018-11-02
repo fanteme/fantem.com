@@ -29,6 +29,7 @@
   .suit
    .list
       min-height: 80px
+      box-shadow: none
     .group
       justify-content: space-around  
 

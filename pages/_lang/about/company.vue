@@ -103,7 +103,9 @@
               <p>{{$t('中国智能建筑行业最具影响力品牌')}}</p>
             </div>
             <div class="column is-6-mobile is-3-tablet">
-              <img :src="`${$store.state.cdn}/2018/10/2ea91c935d25455f015ceebf141ca491.svg`">
+              <figure class="center">
+                <img :src="`${$store.state.cdn}/2018/10/2ea91c935d25455f015ceebf141ca491.svg`">
+              </figure>
               <p>{{$t('中国国际高新技术成果交易会“优秀产品奖”')}}</p>
             </div>
             <div class="column is-6-mobile is-3-tablet">
@@ -226,7 +228,7 @@ import SectionBanner from '~/components/SectionBanner'
     data() {
       return {
         company: {
-          backgroundimg: '/2018/11/b82708dd94a46b5bab2c9c7499c2c28e.jpg',
+          backgroundimg: '/2018/11/fa9f711c39e0f237b914b771b8ecf6a9.jpg',
           parallax: true,
           height: '540px'
         }
