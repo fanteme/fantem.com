@@ -32,15 +32,15 @@
   "Z-wave联盟理事单位": "Z-wave联盟理事单位",
   "head": {
     "link": {
-      "animate": "http://cdn.fantem.cn/libs/css/animate.min.css",
-      "fontAwesome": "http://cdn.fantem.cn/libs/css/font-awesome.min.css"
+      "animate": "//cdn.jsdelivr.net/npm/animate.css",
+      "fontAwesome": "//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"
     },
     "meta": {
       "description": "丰唐物联技术（深圳）有限公司是由美国公司Aeon Labs LLC和深圳英唐智控2011年合资成立的一家集设计、研发、生产及销售于一体、专业从事物联网产品及无线智能家居产品研发制造的中美合资高新企业",
       "keywords": "丰唐物联,Fantem,丰唐物联官网,物联网,IOT,Oomi,智科技,慧生活,深圳,智能家居公司,智能家居系统,智能家居加盟,智能家居控制系统"
     },
     "script": {
-      "smoothScroll": "http://cdn.fantem.cn/libs/js/smooth-scroll.min.js"
+      "smoothScroll": "//cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.min.js"
     },
     "titleTemplate": "丰唐物联 - %s | 智科技 慧生活"
   },
