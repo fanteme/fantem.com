@@ -12,11 +12,11 @@
             <img class="img" width="300" :src="`${this.$store.state.cdn}/2018/10/b44f2d1f08a2a16a23d6a792bafdfb2d.svg`" alt="">
             <div class="columns">
               <div class="column center">
-                <img width="80" :src="`${this.$store.state.cdn}/2018/11/d4df1b7c19c06e0ce431b3f77a9a76dc.png`" alt="">
+                <img width="120" :src="`${this.$store.state.cdn}/2018/11/d4df1b7c19c06e0ce431b3f77a9a76dc.png`" alt="">
                 <a @click.stop="downloadApk" :href="`${$store.state.cdn}/com.fantem.phonecn.apk?t=${new Date().getTime()}`" class="button"><i class="fa fa-android fa-2x"></i>Android{{$t('下载')}}</a>
               </div>
               <div class="column center">
-                <img width="80" :src="`${this.$store.state.cdn}/2018/11/987690a5531bf967e0cf8e408357edaf.png`" alt="">
+                <img width="120" :src="`${this.$store.state.cdn}/2018/11/987690a5531bf967e0cf8e408357edaf.png`" alt="">
                 <a href="//itunes.apple.com/cn/app/oomi-pro/id1311087767" class="button"><i class="fa fa-apple fa-2x"></i>App store{{$t('下载')}}</a>
               </div>  
             </div>

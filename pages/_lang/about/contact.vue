@@ -22,7 +22,7 @@
         </div>
         <div class="columns">
           <div class="column">
-            <iframe width='100%' height='350' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='//www.google.cn/maps/embed?pb=!1m18!1m12!1m3!1d3685.183871143453!2d113.94425131540099!3d22.534783940035815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403ee04b9b0bc07%3A0x756b906bd375f3fd!2z6Iux5ZSQ5aSn5Y6m!5e0!3m2!1szh-CN!2scn!4v1537494459852'></iframe>
+            <iframe width='100%' height='350' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='https://lbs.amap.com/console/show/map/?1_1200_350_113.94648_22.534884&=%E8%8B%B1%E5%94%90%E5%A4%A7%E5%8E%A6&=%E7%A7%91%E6%8A%80%E5%9B%AD%E7%A7%91%E6%8A%80%E5%8D%97%E4%BA%94%E9%81%93%E8%8B%B1%E5%94%90%E5%A4%A7%E5%8E%A65%E6%A5%BC&=&=&='></iframe>
           </div>
         </div>
       </div>
