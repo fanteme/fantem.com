@@ -39,11 +39,11 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href: 'http://cdn.fantem.cn/libs/css/bulma.min.css'
+        href: 'https://cdn.jsdelivr.net/npm/bulma/css/bulma.min.css'
       },
       {
         rel: 'stylesheet',
-        href: 'http://cdn.fantem.cn/libs/css/video-js.min.css'
+        href: 'https://cdn.jsdelivr.net/npm/video.js@7.2.4/dist/video-js.min.css'
       }
     ],
     script: [
