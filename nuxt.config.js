@@ -49,8 +49,21 @@ export default {
     script: [
       {
         src: '/js/nav2lang.js'
+      },
+      {
+        innerHTML:
+          process.env.NODE_ENV === 'production'
+            ? `var _hmt = _hmt || [];
+				(function() {
+				  var hm = document.createElement("script");
+				  hm.src = "https://hm.baidu.com/hm.js?e3707bd6a84972cbcd8c9355d9c91c0e";
+				  var s = document.getElementsByTagName("script")[0]; 
+				  s.parentNode.insertBefore(hm, s);
+				})();`
+            : ''
       }
-    ]
+    ],
+    __dangerouslyDisableSanitizers: ['script']
   },
   /*
   ** Customize the progress-bar color
