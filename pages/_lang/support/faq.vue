@@ -194,7 +194,7 @@ export default {
   },
   async mounted() {
     let { data } = await this.$axios.get(
-      'http://api.fantem.cn/wp-json/wp/v2/sp_faq?per_page=100'
+      `${store.state.api}/sp_faq?per_page=100`
     )
     this.faqs = data
     this.categories.forEach(category => {

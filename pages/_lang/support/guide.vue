@@ -158,7 +158,7 @@ export default {
   },
   async mounted() {
     let { data } = await this.$axios.get(
-      'http://api.fantem.cn/wp-json/wp/v2/posts?categories=user-guide&per_page=30'
+      `${store.state.api}/posts?categories=user-guide&per_page=30`
     )
     this.guides = data
     this.categories.forEach(category => {
