@@ -1,7 +1,7 @@
 <template>
     <main class="main">
       <section class="company">
-        <section-banner :banner="company"></section-banner>\
+        <section-banner :banner="company"></section-banner>
         <section class="container">
           <h2 class="has-text-centered caption">{{$t('丰唐物联')}}</h2>
           <div class="columns has-text-centered feature">
@@ -226,7 +226,7 @@ import SectionBanner from '~/components/SectionBanner'
     data() {
       return {
         company: {
-          backgroundimg: '/2018/10/38f7fb00d09088e8d46495a0620a40c7.jpg',
+          backgroundimg: '/2018/11/b82708dd94a46b5bab2c9c7499c2c28e.jpg',
           parallax: true,
           height: '540px'
         }
