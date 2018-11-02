@@ -3,20 +3,20 @@
     <section class="app">
       <div class="container">
         <div class="columns download">
-          <div class="column is-7 has-text-centered">
+          <div class="column is-6-tablet is-7-desktop has-text-centered">
             <img :src="`${this.$store.state.cdn}/2018/10/917821c3812524b594aad9a5f99e7abd.png`">
           </div>
-          <div class="column is-5 has-text-centered">
+          <div class="column is-6-tablet is-5-desktop has-text-centered">
             <img class="icon" :src="`${this.$store.state.cdn}/2018/10/fdc02fcd26b7ab19b3809b22b2bbd040.png`">
             <p class="caption">OOMI Pro</p>
             <img class="img" width="300" :src="`${this.$store.state.cdn}/2018/10/b44f2d1f08a2a16a23d6a792bafdfb2d.svg`" alt="">
             <div class="columns">
-              <div class="column">
-                <img  width="80" :src="`${this.$store.state.cdn}/2018/11/d4df1b7c19c06e0ce431b3f77a9a76dc.png`" alt="">
+              <div class="column center">
+                <img width="80" :src="`${this.$store.state.cdn}/2018/11/d4df1b7c19c06e0ce431b3f77a9a76dc.png`" alt="">
                 <a @click.stop="downloadApk" :href="`${$store.state.cdn}/com.fantem.phonecn.apk?t=${new Date().getTime()}`" class="button"><i class="fa fa-android fa-2x"></i>Android{{$t('下载')}}</a>
               </div>
-              <div class="column">
-                <img  width="80" :src="`${this.$store.state.cdn}/2018/11/987690a5531bf967e0cf8e408357edaf.png`" alt="">
+              <div class="column center">
+                <img width="80" :src="`${this.$store.state.cdn}/2018/11/987690a5531bf967e0cf8e408357edaf.png`" alt="">
                 <a href="//itunes.apple.com/cn/app/oomi-pro/id1311087767" class="button"><i class="fa fa-apple fa-2x"></i>App store{{$t('下载')}}</a>
               </div>  
             </div>
@@ -50,11 +50,13 @@
         line-height: 44px
         margin: 23px 0 0 0
       .icon
-        margin-top: 15px;
-        width: auto;
-        height: auto;  
+        margin-top: 15px
+        width: auto
+        height: auto
       .img
-        margin: 35px 0 25px 
+        margin: 35px 0 25px
+      .center
+        flex-direction: column 
       .button
         font-size: 16px
         height: 46px

@@ -147,7 +147,7 @@
             }
 
             color: #231815;
-            font-size: 20px;
+            font-size: 18px;
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
@@ -338,7 +338,7 @@ export default {
         },
         {
           svg: `<svg xmlns="http://www.w3.org/2000/svg" width="49" height="49"><path fill="none" stroke="#ee7623" stroke-linecap="round" stroke-linejoin="round" d="M24.5 15.144v18.712M15.144 24.5h18.712m-9.356 24c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24z"/></svg>`,
-          txt: this.$t('系统最大可支持232个节点设备')
+          txt: this.$t('系统最大可支持232个节点设备-分到达看来是大驾光临克己复礼看')
         }
       ],
       suit: {

@@ -159,7 +159,7 @@ export default {
     ]
   },
   css: ['~/assets/styles/main.styl'],
-  modules: [['@nuxtjs/pwa', { workbox: false }], '@nuxtjs/axios'],
+  modules: ['@nuxtjs/pwa', '@nuxtjs/axios'],
   extensions: ['js', 'ts'],
   build: {
     extend(config, ctx) {

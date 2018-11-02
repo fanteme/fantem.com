@@ -3,7 +3,7 @@ export const state = () => ({
   locale: 'zh',
   fallbackLocale: 'zh',
   cdn: 'http://cdn.fantem.cn',
-  api: 'http://api.fantem.cn/wp-json/wp/v2',
+  api: 'https://api.fantem.cn/wp-json/wp/v2',
   showsupport: false
 })
 
