@@ -194,7 +194,7 @@ export default {
   },
   async mounted() {
     let { data } = await this.$axios.get(
-      `${store.state.api}/sp_faq?per_page=100`
+      `${this.$store.state.api}/sp_faq?per_page=100`
     )
     this.faqs = data
     this.categories.forEach(category => {

@@ -158,7 +158,7 @@ export default {
   },
   async mounted() {
     let { data } = await this.$axios.get(
-      `${store.state.api}/posts?categories=user-guide&per_page=30`
+      `${this.$store.state.api}/posts?categories=user-guide&per_page=30`
     )
     this.guides = data
     this.categories.forEach(category => {
