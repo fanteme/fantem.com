@@ -50,18 +50,24 @@
           </div>
         </div>
       </div>
-      <oomi3></oomi3>
+    </div>
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <section-fullpage></section-fullpage>
+        </div>
+      </div>
     </div>
     <div class="gap"></div>
   </section>
 </template>
 
 <script>
-import Oomi3 from '~/components/Oomi3.0.vue'
+import SectionFullpage from '~/components/SectionFullpage.vue'
 
 export default {
   components: {
-    Oomi3
+    SectionFullpage
   },
   data: () => ({
     isVisible: false
@@ -77,7 +83,7 @@ export default {
 
 <style lang="stylus">
 #section-feature {
-  background: radial-gradient(circle at top, #fff 50%, #ffe3cd) 0 0 / 100% 100% no-repeat;
+  // background: radial-gradient(circle at top, #fff 50%, #ffe3cd) 0 0 / 100% 100% no-repeat;
 
   .gap {
     height: 11px;

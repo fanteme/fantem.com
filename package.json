@@ -15,10 +15,12 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.1",
     "@nuxtjs/pwa": "^2.5.0",
+    "ks-vue-fullpage": "^1.2.8",
     "ks-vue-scrollmagic": "^1.0.2",
     "nuxt": "^2.2.0",
     "nuxt-property-decorator": "^1.2.0",
     "qrcode.vue": "^1.6.1",
+    "velocity-animate": "^1.5.2",
     "vue-i18n": "^8.1.0",
     "vue-observe-visibility": "^0.4.3",
     "vue-video-player": "^5.0.2",
