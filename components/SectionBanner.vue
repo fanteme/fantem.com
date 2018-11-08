@@ -123,7 +123,7 @@
                   <div class="control">
                     <textarea maxlength="200" class="textarea" :placeholder="$t('请描述您的需求，我们会尽快联系您。（200字以内）')" v-model="content"></textarea>
                   </div>
-                  <p class="has-text-right">还可以输入200字</p>
+                  <p class="has-text-right">{{$t('还可以输入200字')}}</p>
                 </div>
               </div>
             </div>
