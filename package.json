@@ -24,17 +24,11 @@
     "vue-i18n": "^8.1.0",
     "vue-observe-visibility": "^0.4.3",
     "vue-video-player": "^5.0.2",
-    "vue2-transitions": "^0.2.3",
-    "vuex-class": "^0.3.1"
+    "vue2-transitions": "^0.2.3"
   },
   "devDependencies": {
-    "@types/minimist": "^1.2.0",
-    "@types/node": "^10.9.4",
-    "minimist": "^1.2.0",
     "push-dir": "^0.4.1",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2",
-    "ts-loader": "^5.1.0",
-    "typescript": "^3.0.3"
+    "stylus-loader": "^3.0.2"
   }
 }

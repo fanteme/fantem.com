@@ -169,7 +169,7 @@ export default {
             },
             {
               title: this.$t('服务体系'),
-              link: `${this.baseUrl}/service`
+              link: `${this.baseUrl}/support/service`
             }
           ]
         },

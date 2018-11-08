@@ -91,7 +91,7 @@
                   <div class="control">
                     <div class="select is-normal" :class="{'is-success':isprojectType}">
                       <select v-model="projectType">
-                        <option v-for="item in projectlist" :key="item">{{item}}</option>
+                        <option v-for="(item, i) in projectlist" :key="i">{{item}}</option>
                       </select>
                     </div>
                   </div>
@@ -107,7 +107,7 @@
                   <div class="control">
                     <div class="select" :class="{'is-success':ishouseType}">
                       <select v-model="houseType">
-                        <option v-for="item in houselist" :key="item">{{item}}</option>
+                        <option v-for="(item, t) in houselist" :key="t">{{item}}</option>
                       </select>
                     </div>
                   </div>
