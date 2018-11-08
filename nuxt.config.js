@@ -153,12 +153,5 @@ export default {
   },
   css: ['~/assets/styles/main.styl'],
   modules: ['@nuxtjs/pwa', '@nuxtjs/axios'],
-  extensions: ['js', 'ts'],
-  build: {
-    extend(config, ctx) {
-      if (ctx.isClient) {
-        config.devtool = 'eval-source-map'
-      }
-    }
-  }
+  extensions: ['js', 'ts']
 }
