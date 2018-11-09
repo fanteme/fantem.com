@@ -51,7 +51,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="fluid-container">
       <div class="columns">
         <div class="column">
           <section-fullpage></section-fullpage>
