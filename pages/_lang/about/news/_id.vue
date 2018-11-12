@@ -8,7 +8,7 @@
             <nav class="breadcrumb is-small" aria-label="breadcrumbs">
               <ul>
                 <li><nuxt-link :to="`/${this.$store.state.locale}`">{{$t('首页')}}</nuxt-link></li>
-                <li><nuxt-link :to="`/${this.$store.state.locale}/news`">{{$t('新闻动态')}}</nuxt-link></li>
+                <li><nuxt-link :to="`/${this.$store.state.locale}/about/news`">{{$t('新闻动态')}}</nuxt-link></li>
               </ul>
             </nav>
             <div class="title" v-text="news.title.rendered"></div>
