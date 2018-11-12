@@ -10,11 +10,8 @@
               <p>{{section.text}}</p>
             </div>
           </div>
-          <div v-else-if="section.svg" class="center has-text-centered" :class="section.class" v-html="section.svg">
-            <div class="has-text-centered">
-              <img :src="section.img">
-              <p>{{section.text}}</p>
-            </div>
+          <div bo v-else-if="section.svg" class="center has-text-centered" :class="section.class" v-html="section.svg">
+            
           </div>
           <div v-else-if="section.imgs" class="center">
             <img width="250" :src="section.imgs">          
@@ -38,7 +35,7 @@
     position: relative
   
   .panel 
-    height: calc(100vh - 80px)
+    height: calc(100vh - 60px)
     width: 100%
     position: absolute
     top: 200px
@@ -158,7 +155,7 @@ export default {
             animOutLetters = {y: '-8%',scale: '1.3','z-index': '7'}
             break;
           case 7:
-            animFrom = {y: '-80%',scale: '1.3','z-index': '90'} // Finally, the last one comes from the top
+            animFrom = {y: '-8%',scale: '1.3','z-index': '90'} // Finally, the last one comes from the top
             animOutLetters = {y: '-8%',scale: '1.3','z-index': '8'}
             break;          
         }
