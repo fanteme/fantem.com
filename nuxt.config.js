@@ -15,11 +15,11 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href: 'https://cdn.jsdelivr.net/npm/bulma/css/bulma.min.css'
+        href: '/css/bulma.min.css'
       },
       {
         rel: 'stylesheet',
-        href: 'https://cdn.jsdelivr.net/npm/video.js@7.2.4/dist/video-js.min.css'
+        href: '/css/video-js.min.css'
       }
     ],
     script: [
@@ -52,7 +52,6 @@ export default {
     '~/plugins/vue-i18n.js',
     '~/plugins/vue-observe-visibility',
     '~/plugins/vue-video-player',
-    { src: '~/plugins/vue-ksvuefp', ssr: false },
     { src: '~/plugins/vue-scrollmagic', ssr: false }
   ],
   /*
@@ -149,6 +148,5 @@ export default {
     ]
   },
   css: ['~/assets/styles/main.styl'],
-  modules: ['@nuxtjs/pwa', '@nuxtjs/axios'],
-  extensions: ['js', 'ts']
+  modules: ['@nuxtjs/pwa', '@nuxtjs/axios']
 }
