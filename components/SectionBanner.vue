@@ -1,266 +1,264 @@
 <template>
-  <main class="main">
-    <section class="hero sectionbanner" :style="{height:banner.height}">
-        <div class="hero-body center" :class="{'parallax':banner.parallax}" :style="{backgroundImage: `url(${$store.state.cdn + banner.backgroundimg})`}">
-          <div class="container-fluid has-text-centered">
-            <div v-html="banner.icon"></div>
-            <h2 class="caption has-text-weight-semibold">
-              {{banner.title}}
-            </h2>
-            <p class="subtitle">{{banner.subtitle}}</p>
-            <button v-if="banner.modal" class="button" @click.stop.prevent="showModal(banner.modal)">{{banner.buttontxt}}</button>
-            <a v-else-if="banner.buttontxt" target="_blank" :href="banner.link" class="button">{{banner.buttontxt}}</a>
-          </div>
+  <section class="hero sectionbanner" :style="{height:banner.height}">
+      <div class="hero-body center" :class="{'parallax':banner.parallax}" :style="{backgroundImage: `url(${$store.state.cdn + banner.backgroundimg})`}">
+        <div class="container-fluid has-text-centered">
+          <div v-html="banner.icon"></div>
+          <h2 class="caption has-text-weight-semibold">
+            {{banner.title}}
+          </h2>
+          <p class="subtitle">{{banner.subtitle}}</p>
+          <button v-if="banner.modal" class="button" @click.stop.prevent="showModal(banner.modal)">{{banner.buttontxt}}</button>
+          <a v-else-if="banner.buttontxt" target="_blank" :href="banner.link" class="button">{{banner.buttontxt}}</a>
         </div>
-        
-        <div class="modal" :class="{'is-active': isActive && banner.modal == 'project'}">
-          <div class="modal-background" @click="closeModal"></div>
-          <div class="modal-content has-text-centered">
-            <div class="title has-text-centered has-text-weight-normal">
-              {{$t('请填写您的信息')}}
-            </div>
-            <div class="field is-horizontal">
-              <div class="field-label is-normal">
-                <label class="label">*</label>
-              </div>
-              <div class="field-body">
-                <div class="field">
-                  <p class="control">
-                    <input class="input" type="text" :placeholder="$t('公司名称')" :class="{'is-success':isCompany}" v-model="company">
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="field is-horizontal">
-              <div class="field-label is-normal">
-                <label class="label">*</label>
-              </div>
-              <div class="field-body">
-                <div class="field is-horizontal space-between">
-                  <p class="control">
-                    <input class="input" type="text" :placeholder="$t('姓名')" :class="{'is-success':isName}" v-model="name">
-                  </p>
-                  <p class="control">
-                    <input class="input" type="text" :placeholder="$t('职务')" v-model="duty">
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="field is-horizontal">
-              <div class="field-label is-normal">
-                <label class="label">*</label>
-              </div>
-              <div class="field-body">
-                <div class="field">
-                  <p class="control">
-                    <input class="input" type="text" :placeholder="$t('手机号码')" :class="{'is-success':isPhone}" v-model="phone">
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="field is-horizontal">
-              <div class="field-label is-normal">
-                <label class="label">*</label>
-              </div>
-              <div class="field-body">
-                <div class="field">
-                  <p class="control">
-                    <input class="input" type="text" :placeholder="$t('项目名称')" :class="{'is-success':isprojectName}" v-model="projectName">
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="field is-horizontal">
-              <div class="field-label is-normal">
-                <label class="label">*</label>
-              </div>
-              <div class="field-body">
-                <div class="field">
-                  <p class="control">
-                    <input class="input" type="text" :placeholder="$t('项目地址')" :class="{'is-success':isprojectAddress}" v-model="projectAddress">
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="field is-horizontal">
-              <div class="field-label is-normal">
-                <label class="label">*</label>
-              </div>
-              <div class="field-body">
-                <div class="field">
-                  <div class="control">
-                    <div class="select is-normal" :class="{'is-success':isprojectType}">
-                      <select v-model="projectType">
-                        <option v-for="(item, i) in projectlist" :key="i">{{item}}</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="field is-horizontal">
-              <div class="field-label is-normal">
-                <label class="label">*</label>
-              </div>
-              <div class="field-body">
-                <div class="field">
-                  <div class="control">
-                    <div class="select" :class="{'is-success':ishouseType}">
-                      <select v-model="houseType">
-                        <option v-for="(item, t) in houselist" :key="t">{{item}}</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="field is-horizontal">
-              <div class="field-label is-normal">
-                <label class="label"></label>
-              </div>
-              <div class="field-body">
-                <div class="field">
-                  <div class="control">
-                    <textarea maxlength="200" class="textarea" :placeholder="$t('请描述您的需求，我们会尽快联系您。（200字以内）')" v-model="content"></textarea>
-                  </div>
-                  <p class="has-text-right">{{$t('还可以输入200字')}}</p>
-                </div>
-              </div>
-            </div>
-            <button class="button" :class="{'is-loading':isLoading}" :disabled="!isDisabled" @click.stop.prevent="submit">{{$t('提交')}}</button>
-            <div class="field is-horizontal">
-              <div class="field-label is-normal">
-                <label class="label">*</label>
-              </div>
-              <div class="field-body">
-                <div class="field is-horizontal">
-                  <p class="control">
-                    {{$t('号必填项')}}
-                  </p>
-                </div>
-              </div>
-            </div>
-            <button class="modal-close is-large" aria-label="close" @click="closeModal"></button>
+      </div>
+      
+      <div class="modal" :class="{'is-active': isActive && banner.modal == 'project'}">
+        <div class="modal-background" @click="closeModal"></div>
+        <div class="modal-content has-text-centered">
+          <div class="title has-text-centered has-text-weight-normal">
+            {{$t('请填写您的信息')}}
           </div>
-      </div>  
-
-      <div class="modal" :class="{'is-active': isActive && banner.modal == 'agency'}">
-          <div class="modal-background" @click="closeModal"></div>
-          <div class="modal-content has-text-centered">
-            <div class="title has-text-centered has-text-weight-normal">
-              {{$t('请填写您的信息')}}
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">*</label>
             </div>
-            <div class="field is-horizontal">
-              <div class="field-label is-normal">
-                <label class="label">*</label>
-              </div>
-              <div class="field-body">
-                <div class="field">
-                  <p class="control">
-                    <input class="input" type="text" :placeholder="$t('公司名称')" :class="{'is-success':isCompany}" v-model="company">
-                  </p>
-                </div>
+            <div class="field-body">
+              <div class="field">
+                <p class="control">
+                  <input class="input" type="text" :placeholder="$t('公司名称')" :class="{'is-success':isCompany}" v-model="company">
+                </p>
               </div>
             </div>
-            <div class="field is-horizontal">
-              <div class="field-label is-normal">
-                <label class="label">*</label>
-              </div>
-              <div class="field-body">
-                <div class="field">
-                  <p class="control">
-                    <input class="input" type="text" :placeholder="$t('姓名')" :class="{'is-success':isName}" v-model="name">
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="field is-horizontal">
-              <div class="field-label is-normal">
-                <label class="label">*</label>
-              </div>
-              <div class="field-body">
-                <div class="field">
-                  <p class="control">
-                    <input class="input" type="text" :placeholder="$t('手机号码')" :class="{'is-success':isPhone}" v-model="phone">
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="field is-horizontal">
-              <div class="field-label is-normal">
-                <label class="label">*</label>
-              </div>
-              <div class="field-body">
-                <div class="field">
-                  <p class="control">
-                    <input class="input" type="text" :placeholder="$t('邮箱')" :class="{'is-success':isEmail}" v-model="email">
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="field is-horizontal">
-              <div class="field-label is-normal">
-                <label class="label">*</label>
-              </div>
-              <div class="field-body is-vertical">
-                <p class="has-text-left">{{$t('销售区域')}}</p>
-                <div class="field is-horizontal space-between">
-                  <div class="control">
-                    <div class="select" :class="{'is-success':isProv}">
-                      <select v-model="prov">
-                        <option v-for="(option, inx) in arr" :value="option.name" :key="inx">{{ option.name }}</option>
-                      </select>
-                    </div>
-                    <div class="select" :class="{'is-success':isCity}">
-                      <select v-model="city">
-                        <option v-for="(option, key) in cityArr" :value="option.name" :key="key">{{ option.name }}</option>
-                      </select>
-                    </div>
-                    <div class="select" :class="{'is-success':isDistrict}">
-                      <select v-model="district" v-if="district">
-                        <option v-for="(option, num) in districtArr" :value="option.name" :key="num">{{ option.name }}</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="field is-horizontal">
-              <div class="field-label is-normal">
-                <label class="label">*</label>
-              </div>
-              <div class="field-body is-vertical">
-                <p class="has-text-left">{{$t('合作意向')}}</p>
-                <div class="field">
-                  <div class="control">
-                    <div class="select" :class="{'is-success':isCooperation}">
-                      <select v-model="cooperation">
-                        <option v-for="item in cooperationlist" :key="item">{{item}}</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button class="button" :class="{'is-loading':isLoading}" :disabled="!isDisabled" @click.stop.prevent="submit">{{$t('提交')}}</button>
-            <div class="field is-horizontal">
-              <div class="field-label is-normal">
-                <label class="label">*</label>
-              </div>
-              <div class="field-body">
-                <div class="field is-horizontal">
-                  <p class="control">
-                    {{$t('号必填项')}}
-                  </p>
-                </div>
-              </div>
-            </div>
-            <button class="modal-close is-large" aria-label="close" @click="closeModal"></button>
           </div>
-      </div>  
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">*</label>
+            </div>
+            <div class="field-body">
+              <div class="field is-horizontal space-between">
+                <p class="control">
+                  <input class="input" type="text" :placeholder="$t('姓名')" :class="{'is-success':isName}" v-model="name">
+                </p>
+                <p class="control">
+                  <input class="input" type="text" :placeholder="$t('职务')" v-model="duty">
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">*</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <p class="control">
+                  <input class="input" type="text" :placeholder="$t('手机号码')" :class="{'is-success':isPhone}" v-model="phone">
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">*</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <p class="control">
+                  <input class="input" type="text" :placeholder="$t('项目名称')" :class="{'is-success':isprojectName}" v-model="projectName">
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">*</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <p class="control">
+                  <input class="input" type="text" :placeholder="$t('项目地址')" :class="{'is-success':isprojectAddress}" v-model="projectAddress">
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">*</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <div class="select is-normal" :class="{'is-success':isprojectType}">
+                    <select v-model="projectType">
+                      <option v-for="(item, i) in projectlist" :key="i">{{item}}</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">*</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <div class="select" :class="{'is-success':ishouseType}">
+                    <select v-model="houseType">
+                      <option v-for="(item, t) in houselist" :key="t">{{item}}</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label"></label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <textarea maxlength="200" class="textarea" :placeholder="$t('请描述您的需求，我们会尽快联系您。（200字以内）')" v-model="content"></textarea>
+                </div>
+                <p class="has-text-right">{{$t('还可以输入200字')}}</p>
+              </div>
+            </div>
+          </div>
+          <button class="button" :class="{'is-loading':isLoading}" :disabled="!isDisabled" @click.stop.prevent="submit">{{$t('提交')}}</button>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">*</label>
+            </div>
+            <div class="field-body">
+              <div class="field is-horizontal">
+                <p class="control">
+                  {{$t('号必填项')}}
+                </p>
+              </div>
+            </div>
+          </div>
+          <button class="modal-close is-large" aria-label="close" @click="closeModal"></button>
+        </div>
+    </div>  
 
-    </section>
-  </main>  
+    <div class="modal" :class="{'is-active': isActive && banner.modal == 'agency'}">
+        <div class="modal-background" @click="closeModal"></div>
+        <div class="modal-content has-text-centered">
+          <div class="title has-text-centered has-text-weight-normal">
+            {{$t('请填写您的信息')}}
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">*</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <p class="control">
+                  <input class="input" type="text" :placeholder="$t('公司名称')" :class="{'is-success':isCompany}" v-model="company">
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">*</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <p class="control">
+                  <input class="input" type="text" :placeholder="$t('姓名')" :class="{'is-success':isName}" v-model="name">
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">*</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <p class="control">
+                  <input class="input" type="text" :placeholder="$t('手机号码')" :class="{'is-success':isPhone}" v-model="phone">
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">*</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <p class="control">
+                  <input class="input" type="text" :placeholder="$t('邮箱')" :class="{'is-success':isEmail}" v-model="email">
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">*</label>
+            </div>
+            <div class="field-body is-vertical">
+              <p class="has-text-left">{{$t('销售区域')}}</p>
+              <div class="field is-horizontal space-between">
+                <div class="control">
+                  <div class="select" :class="{'is-success':isProv}">
+                    <select v-model="prov">
+                      <option v-for="(option, inx) in arr" :value="option.name" :key="inx">{{ option.name }}</option>
+                    </select>
+                  </div>
+                  <div class="select" :class="{'is-success':isCity}">
+                    <select v-model="city">
+                      <option v-for="(option, key) in cityArr" :value="option.name" :key="key">{{ option.name }}</option>
+                    </select>
+                  </div>
+                  <div class="select" :class="{'is-success':isDistrict}">
+                    <select v-model="district" v-if="district">
+                      <option v-for="(option, num) in districtArr" :value="option.name" :key="num">{{ option.name }}</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">*</label>
+            </div>
+            <div class="field-body is-vertical">
+              <p class="has-text-left">{{$t('合作意向')}}</p>
+              <div class="field">
+                <div class="control">
+                  <div class="select" :class="{'is-success':isCooperation}">
+                    <select v-model="cooperation">
+                      <option v-for="item in cooperationlist" :key="item">{{item}}</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="button" :class="{'is-loading':isLoading}" :disabled="!isDisabled" @click.stop.prevent="submit">{{$t('提交')}}</button>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">*</label>
+            </div>
+            <div class="field-body">
+              <div class="field is-horizontal">
+                <p class="control">
+                  {{$t('号必填项')}}
+                </p>
+              </div>
+            </div>
+          </div>
+          <button class="modal-close is-large" aria-label="close" @click="closeModal"></button>
+        </div>
+    </div>  
+
+  </section> 
 </template>
 <style lang="stylus">
   .sectionbanner
