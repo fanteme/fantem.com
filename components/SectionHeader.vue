@@ -4,7 +4,7 @@
     <div class="container" @mouseleave="HideHeader()">
       <div class="columns">
         <div v-for="(item, index) in secheader" :key="index" class="column is-2 has-text-centered" :class="item.class">
-          <nuxt-link :to="item.link" :class="{'nuxt-link-active': aAddClass && index ==0}">
+          <nuxt-link :to="item.link" :class="{'nuxt-link-active': aAddClass && index ==0 && !$route.hash}">
             <span v-html="item.icon" class="center"></span>
             <p>{{item.title}}</p>
           </nuxt-link>
@@ -68,9 +68,9 @@ export default {
     aAddClass() {
       let route, re
       if(this.$route.params.lang == 'en'){
-        route = this.$route.path.split("/")[2]
+        route = this.$route.fullPath.split("/")[2]
       }else {
-        name = this.$route.path.split("/")[1]
+        name = this.$route.fullPath.split("/")[1]
       }
       re = new RegExp(`${route}\/?$`)
       return re.test(this.$route.path)
