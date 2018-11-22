@@ -5924,11 +5924,17 @@ vue-video-player@^5.0.2:
     videojs-flash "^2.1.0"
     videojs-hotkeys "^0.2.20"
 
+vue-wow@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/vue-wow/-/vue-wow-1.1.2.tgz#bb73cc49e96a9572d1fbc4e69e2a80898abb1357"
+  dependencies:
+    vue "^2.5.2"
+
 vue2-transitions@^0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/vue2-transitions/-/vue2-transitions-0.2.3.tgz#69c9d75b1db05f231b80980c03459d68490ba27d"
 
-vue@^2.5.17:
+vue@^2.5.17, vue@^2.5.2:
   version "2.5.17"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.17.tgz#0f8789ad718be68ca1872629832ed533589c6ada"
 

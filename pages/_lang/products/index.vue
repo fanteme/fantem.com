@@ -157,16 +157,18 @@
                 <span>{{$t('感知水位溢出与漏水状态')}}</span>
               </div>
             </div>
-            <div class="column is-6-tablet is-6-fullhd" @click="previewProduct(476)">
-              <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/10/d70a537d7672355de18b8effec9b5001.png`" alt="">
-              </div>
-              <div class="content-wrap">
-                <h3>{{$t('智能六合一传感器')}}</h3>
-                <span>{{$t('多功能传感设备')}}</span>
-                <span>{{$t('集红外移动监测、震动、紫外线、亮度、温度、湿度感知于一体')}}</span>
-              </div>             
-            </div>
+            <div class="column is-6-tablet is-6-fullhd">
+              <nuxt-link :to="`/${this.$store.state.locale}/products/multisensor`">
+                <div class="img-wrap">
+                  <img :src="`${this.$store.state.cdn}/2018/10/d70a537d7672355de18b8effec9b5001.png`" alt="">
+                </div>
+                <div class="content-wrap">
+                  <h3>{{$t('智能六合一传感器')}}</h3>
+                  <span>{{$t('多功能传感设备')}}</span>
+                  <span>{{$t('集红外移动监测、震动、紫外线、亮度、温度、湿度感知于一体')}}</span>
+                </div>             
+              </nuxt-link>
+            </div>  
             <div class="column is-6-tablet is-6-fullhd">
               <div class="img-wrap">
                 <img :src="`${this.$store.state.cdn}/2018/10/5a9adf7ada73b4fbebcc96950264bc2a.png`" alt="">

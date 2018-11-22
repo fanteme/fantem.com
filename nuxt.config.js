@@ -52,6 +52,7 @@ export default {
     '~/plugins/vue-i18n.js',
     '~/plugins/vue-observe-visibility',
     '~/plugins/vue-video-player',
+    '~/plugins/vue-wow',
     { src: '~/plugins/vue-scrollmagic', ssr: false }
   ],
   /*
