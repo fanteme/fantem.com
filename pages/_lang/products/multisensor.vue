@@ -1,31 +1,6 @@
 <template>
   <main>
-    <section class="banner center">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-5">
-            <h1 class="title has-text-weight-normal">{{$t('智能六合一传感器')}}</h1>
-            <h4 class="subtitle has-text-weight-light">Oomi Multisensor</h4>
-            <p class="content has-text-weight-light">{{$t('Oomi Multisensor能将监测到的数据报告给网关，以便关联其他智能节点设备做出相应响应，为您提供一个智能的舒适生活环境。')}}</p> 
-          </div>
-          <div class="column is-7 has-text-right">
-            <u-animate-container>
-              <u-animate
-                name="fadeInDown"
-                delay="0s"
-                duration="1.5s"
-                :iteration="1"
-                :offset="0"
-                animateClass="animated"
-                :begin="false" 
-              >
-                <img :src="`${$store.state.cdn}/2018/11/34692619268a091497f51aa43d0344ae.png`"/>
-              </u-animate>
-            </u-animate-container>  
-          </div>
-        </div>
-      </div>     
-    </section>
+    <product-banner :banner="banner"></product-banner>
     <section class="section-features has-text-centered center" :style="{backgroundImage: `url(${this.$store.state.cdn}/2018/11/320bcf5d7180736199198684c011b577.jpg)`}">
       <div class="container">
         <div class="columns is-multiline is-mobile">
@@ -167,24 +142,6 @@
   </main>  
 </template>
 <style lang="stylus">
-  .banner
-    background: #eaeeef 
-    min-height: 775px
-    color: #3e3a39
-    .is-5
-      display: flex 
-      flex-direction: column
-      justify-content: center  
-    .title
-      color: #e76c26
-      font-size: 50px
-    .subtitle
-      font-size: 37px
-      margin: 28px 0 62px
-      color: #3e3a39
-    .content
-      font-size: 16px
-      line-height: 28px   
   .section-features
     padding-bottom: 75px
     background-size: cover 
@@ -376,14 +333,22 @@
 </style>
 <script>
 import {FadeTransition} from 'vue2-transitions'
+import ProductBanner from '~/components/ProductBanner'
+
   export default {
     components: {
-      FadeTransition
+      FadeTransition,ProductBanner
     },
     data() {
       return {
         showdetection: true,
         showlight: true,
+        banner: {
+          title: this.$t('智能六合一传感器'),
+          subtitle: 'Oomi Multisensor',
+          content: this.$t('Oomi Multisensor能将监测到的数据报告给网关，以便关联其他智能节点设备做出相应响应，为您提供一个智能的舒适生活环境。'),
+          img: `${this.$store.state.cdn}/2018/11/34692619268a091497f51aa43d0344ae.png`
+        },
         features: [
           {
             img: '<svg width="101" height="101" xmlns="http://www.w3.org/2000/svg"><g stroke="#FFF" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><path d="M50.25 19.55c4.109 0 7.451 3.25 7.451 7.24v25.434c4.423 2.582 7.221 7.327 7.221 12.651 0 8.092-6.585 14.675-14.672 14.675-8.089 0-14.672-6.583-14.672-14.675 0-5.324 2.798-10.069 7.221-12.65V26.79c0-3.99 3.342-7.24 7.451-7.24z"/><path d="M53.216 55.126V35.94c0-1.521-1.328-2.754-2.966-2.754-1.637 0-2.966 1.233-2.966 2.754v19.186c-4.181 1.269-7.221 5.154-7.221 9.747 0 5.628 4.559 10.19 10.187 10.19 5.626 0 10.185-4.562 10.185-10.19 0-4.593-3.038-8.478-7.22-9.747z"/><path d="M100.25 50.25c0 27.614-22.386 50-50 50s-50-22.386-50-50 22.386-50 50-50 50 22.386 50 50z" stroke-width=".5"/></g></svg>',

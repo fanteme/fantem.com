@@ -63,7 +63,7 @@ export default {
     routes: [
       '/en',
       '/en/about/news',
-      '/en/products',
+      '/en/products/multisensor',
       '/en/application',
       '/en/application/security',
       '/en/application/ent',
