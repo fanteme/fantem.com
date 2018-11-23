@@ -138,7 +138,8 @@
           </div>
         </div>
       </div>
-    </section>     
+    </section> 
+    <product-parameter :parameters="parameters"></product-parameter>    
   </main>  
 </template>
 <style lang="stylus">
@@ -334,10 +335,11 @@
 <script>
 import {FadeTransition} from 'vue2-transitions'
 import ProductBanner from '~/components/ProductBanner'
+import ProductParameter from '~/components/ProductParameter'
 
   export default {
     components: {
-      FadeTransition,ProductBanner
+      FadeTransition,ProductBanner,ProductParameter
     },
     data() {
       return {
@@ -349,6 +351,72 @@ import ProductBanner from '~/components/ProductBanner'
           content: this.$t('Oomi Multisensor能将监测到的数据报告给网关，以便关联其他智能节点设备做出相应响应，为您提供一个智能的舒适生活环境。'),
           img: `${this.$store.state.cdn}/2018/11/34692619268a091497f51aa43d0344ae.png`
         },
+        parameters: [
+          {
+            column: "is-2", 
+            item: this.$t('电源输入')
+          },
+          {
+            column: "is-4", 
+            value: "USB：5V – 1A"
+           },
+          {
+            column: "is-2", 
+            item: this.$t('电池')
+          },
+          {
+            column: "is-4", 
+            value: "CR123A 3V 1500mAh"
+           },
+           {
+            column: "is-2",  
+            item: this.$t('亮度测量范围')
+           },
+           {
+            column: "is-4",  
+            value: this.$t('0 LUX – 30000 LUX')
+           },
+           {
+            column: "is-2",  
+            item: this.$t('人体移动侦测最大距离')
+           },
+           {
+            column: "is-4", 
+            value: "5m"
+           },
+           {
+            column: "is-2",  
+            item: this.$t('工作环境')
+           },
+           {
+            column: "is-4",  
+            value: this.$t('温度：0 – 40℃ / 湿度：20 – 80% RH')
+           },
+           {
+            column: "is-2",  
+            item: this.$t('无线距离')
+           },
+           {
+            column: "is-4", 
+            value: this.$t('室内 40m')
+           },
+           {
+            column: "is-2",  
+            item: this.$t('无线功能')
+           },
+           {
+            column: "is-4", 
+            value: "Z-Wave Plus"
+           },
+           {
+            column: "is-2",  
+            item: this.$t('产品尺寸')
+           },
+           {
+            column: "is-4", 
+            value: this.$t('46 × 46 × 62mm（含底座）')
+           }
+         ],
         features: [
           {
             img: '<svg width="101" height="101" xmlns="http://www.w3.org/2000/svg"><g stroke="#FFF" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><path d="M50.25 19.55c4.109 0 7.451 3.25 7.451 7.24v25.434c4.423 2.582 7.221 7.327 7.221 12.651 0 8.092-6.585 14.675-14.672 14.675-8.089 0-14.672-6.583-14.672-14.675 0-5.324 2.798-10.069 7.221-12.65V26.79c0-3.99 3.342-7.24 7.451-7.24z"/><path d="M53.216 55.126V35.94c0-1.521-1.328-2.754-2.966-2.754-1.637 0-2.966 1.233-2.966 2.754v19.186c-4.181 1.269-7.221 5.154-7.221 9.747 0 5.628 4.559 10.19 10.187 10.19 5.626 0 10.185-4.562 10.185-10.19 0-4.593-3.038-8.478-7.22-9.747z"/><path d="M100.25 50.25c0 27.614-22.386 50-50 50s-50-22.386-50-50 22.386-50 50-50 50 22.386 50 50z" stroke-width=".5"/></g></svg>',

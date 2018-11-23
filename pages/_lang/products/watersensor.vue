@@ -87,6 +87,7 @@
         </div>
       </div>
     </section>    
+    <product-parameter :parameters="parameters"></product-parameter>  
   </main>  
 </template>
 <style lang="stylus">
@@ -149,24 +150,81 @@
       img 
         margin-top: 32px   
     .title
-      margin: 90px 0 35px 
-    .content
-      color: #3e3a39   
+      margin: 90px 0 35px
 </style>
 <script>
 import ProductBanner from "~/components/ProductBanner"
+import ProductParameter from '~/components/ProductParameter'
   export default {
     components: {
-      ProductBanner
+      ProductBanner,ProductParameter
     },
     data() {
       return {
-         banner: {
+        banner: {
           title: this.$t('智能水位传感器'),
           subtitle: 'OOMI WaterSensor',
           content: this.$t('OOMI智能水位传感器 是一款基于Z-Wave无线通讯协议的智能水位传感设备，能精确地感知到水位溢出或漏水的存在，同时通知网关触发智能场景或蜂鸣警示，让您即刻收到通知，采取应对措施。亦可联动智能机械手自动关闭水阀，让你在外也能远程操控，让您省心、放心。'),
           img: `${this.$store.state.cdn}/2018/11/07b0ddcb4058f54781d8eb0db7b1bcff.png`
         },
+        parameters: [
+          {
+            column: "is-2", 
+            item: this.$t('电池')
+          },
+          {
+            column: "is-4", 
+            value: "CR123A（3V 1500mAh）"
+           },
+           {
+            column: "is-2",  
+            item: this.$t('最大音量')
+           },
+           {
+            column: "is-4",  
+            value: this.$t('60dB（2米处）')
+           },
+           {
+            column: "is-2",  
+            item: this.$t('防护等级')
+           },
+           {
+            column: "is-4", 
+            value: "IP65"
+           },
+           {
+            column: "is-2",  
+            item: this.$t('工作环境')
+           },
+           {
+            column: "is-4",  
+            value: this.$t('温度：0 – 40℃ / 湿度：20 – 80% RH')
+           },
+           {
+            column: "is-2",  
+            item: this.$t('无线距离')
+           },
+           {
+            column: "is-4", 
+            value: this.$t('室内 40m')
+           },
+           {
+            column: "is-2",  
+            item: this.$t('无线功能')
+           },
+           {
+            column: "is-4", 
+            value: "Z-Wave Plus"
+           },
+           {
+            column: "is-2",  
+            item: this.$t('产品尺寸')
+           },
+           {
+            column: "is-4", 
+            value: "84.7 × 37.7 × 24.5mm"
+           }
+         ],
       }
     }
   }
