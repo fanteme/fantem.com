@@ -148,14 +148,16 @@
                 <span>{{$t('实时监测门窗柜体等物品开启/关闭状态')}}</span>
               </div>
             </div>
-            <div class="column is-6-tablet is-6-fullhd" @click="previewProduct(470)">
-              <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/10/3f2bec3082cc8a74843e3df4bfb63588.png`" alt="">
-              </div>
-              <div class="content-wrap">
-                <h3>{{$t('智能水位传感器')}}</h3>
-                <span>{{$t('感知水位溢出与漏水状态')}}</span>
-              </div>
+            <div class="column is-6-tablet is-6-fullhd">
+              <nuxt-link :to="`/${this.$store.state.locale}/products/watersensor`">
+                <div class="img-wrap">
+                  <img :src="`${this.$store.state.cdn}/2018/10/3f2bec3082cc8a74843e3df4bfb63588.png`" alt="">
+                </div>
+                <div class="content-wrap">
+                  <h3>{{$t('智能水位传感器')}}</h3>
+                  <span>{{$t('感知水位溢出与漏水状态')}}</span>
+                </div>
+              </nuxt-link>
             </div>
             <div class="column is-6-tablet is-6-fullhd">
               <nuxt-link :to="`/${this.$store.state.locale}/products/multisensor`">
@@ -456,7 +458,6 @@ export default {
       let { data } = await this.$axios.get(
         `${this.$store.state.api}/posts?categories=39&include=${val}`
       )
-      console.log(data[0])
       this.currentProduct = data[0]
       this.openModal()
     },
