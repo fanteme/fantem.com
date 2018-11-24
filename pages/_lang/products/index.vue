@@ -22,14 +22,16 @@
             </div>
           </div>
           <div class="columns">
-            <div class="column" @click="previewProduct(445)">
-              <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/10/36f5d4fea4f4f1c26f68c37bfa70a026.png`" alt="">
-              </div>
-              <div class="content-wrap">
-                <h3>{{$t('Cube智能家庭网关')}}</h3>
-                <span>{{$t('OOMI智能家居设备控制中心')}}</span>
-              </div>
+            <div class="column">
+              <nuxt-link :to="`/${this.$store.state.locale}/products/cube`">
+                <div class="img-wrap">
+                  <img :src="`${this.$store.state.cdn}/2018/10/36f5d4fea4f4f1c26f68c37bfa70a026.png`" alt="">
+                </div>
+                <div class="content-wrap">
+                  <h3>{{$t('Cube智能家庭网关')}}</h3>
+                  <span>{{$t('OOMI智能家居设备控制中心')}}</span>
+                </div>
+              </nuxt-link>
             </div>
             <div class="column" @click="previewProduct(450)">
               <div class="img-wrap">

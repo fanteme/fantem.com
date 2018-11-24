@@ -65,6 +65,7 @@ export default {
       '/en/about/news',
       '/en/products/multisensor',
       '/en/products/watersensor',
+      '/en/products/cube',
       '/en/application',
       '/en/application/security',
       '/en/application/ent',
