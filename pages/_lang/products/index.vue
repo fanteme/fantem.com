@@ -37,14 +37,16 @@
                 </div>
               </nuxt-link>
             </div>
-            <div class="column" @click="previewProduct(450)">
-              <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/10/9e1d66d8ffa3fd5772ab668eb99331fc.png`" alt="">
-              </div>
-              <div class="content-wrap">
-                <h3>{{$t('Hub智能家庭网关')}}</h3>
-                <span>{{$t('OOMI智能家居设备控制中心')}}</span>
-              </div>
+            <div class="column">
+              <nuxt-link :to="`/${this.$store.state.locale}/products/hub`">
+                <div class="img-wrap">
+                  <img :src="`${this.$store.state.cdn}/2018/10/9e1d66d8ffa3fd5772ab668eb99331fc.png`" alt="">
+                </div>
+                <div class="content-wrap">
+                  <h3>{{$t('Hub智能家庭网关')}}</h3>
+                  <span>{{$t('OOMI智能家居设备控制中心')}}</span>
+                </div>
+              </nuxt-link>
             </div>
           </div>  
           <div id="switch" class="caption  has-text-centered">{{$t('智能开关')}}</div>

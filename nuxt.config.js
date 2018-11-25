@@ -68,6 +68,7 @@ export default {
       '/en/products/watersensor',
       '/en/products/cube',
       '/en/products/touch',
+      '/en/products/hub',
       '/en/application',
       '/en/application/security',
       '/en/application/ent',
