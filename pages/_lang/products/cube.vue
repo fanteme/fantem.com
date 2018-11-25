@@ -471,43 +471,6 @@
         margin-bottom: 50px
       .dialog
         height: 720px
-
-  &-mode 
-    padding: 20px 0 50px
-    overflow: hidden
-    .column
-      background: #fff  
-      background-clip: content-box
-      flex-direction: column
-      cursor: pointer 
-      position: relative
-      transition: all 0.5s 
-      &:hover
-        svg 
-          g
-            stroke: #ee7623 
-        .title    
-          color: #ee7623
-         &:after
-          opacity: 1   
-      &:after
-        content: ''
-        height: 2px
-        width: 100% 
-        bottom: 0  
-        opacity: 0
-        background: #e76c26 
-        transition: all 0.5s 
-      &:last-child
-        &:after
-          display: none  
-      .wrap
-        height: 180px
-        margin-top:15px
-      .title
-        font-size: 26px  
-        color: #3e3a39x
-        margin-bottom: 60px
   &-right, &-left
     color: #3e3a39  
     background-repeat: no-repeat 

@@ -8,18 +8,22 @@
       <div class="container">
         <div class="OomiProducts">
           <div id="gateway" class="caption  has-text-centered">{{$t('智能网关')}}</div>
-          <div class="columns is-gapless" @click="previewProduct(452)">
+          <div class="columns is-gapless">
             <div  class="column is-8">
-              <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/10/0fc8cb72096f67de319ee559bc53c677.png`" alt="">
-              </div>
+              <nuxt-link :to="`/${this.$store.state.locale}/products/touch`">
+                <div class="img-wrap">
+                  <img :src="`${this.$store.state.cdn}/2018/10/0fc8cb72096f67de319ee559bc53c677.png`" alt="">
+                </div>
+              </nuxt-link>  
             </div>
             <div  class="column is-4 center">
-              <div class="content-wrap">
-                <h3>{{$t('智能操控平板')}}</h3>
-                <span>{{$t('OOMI智能家居设备操作中心')}}</span>
-              </div>
-            </div>
+              <nuxt-link :to="`/${this.$store.state.locale}/products/touch`">
+                <div class="content-wrap">
+                  <h3>{{$t('智能操控平板')}}</h3>
+                  <span>{{$t('OOMI智能家居设备操作中心')}}</span>
+                </div>
+              </nuxt-link>  
+            </div>          
           </div>
           <div class="columns">
             <div class="column">

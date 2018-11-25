@@ -63,9 +63,11 @@ export default {
     routes: [
       '/en',
       '/en/about/news',
+      '/en/products',
       '/en/products/multisensor',
       '/en/products/watersensor',
       '/en/products/cube',
+      '/en/products/touch',
       '/en/application',
       '/en/application/security',
       '/en/application/ent',
