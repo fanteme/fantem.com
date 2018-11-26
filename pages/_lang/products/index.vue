@@ -184,14 +184,16 @@
               </nuxt-link>
             </div>  
             <div class="column is-6-tablet is-6-fullhd">
-              <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/10/5a9adf7ada73b4fbebcc96950264bc2a.png`" alt="">
-              </div>
-              <div class="content-wrap">
-                <h3>{{$t('智能三合一传感器')}}</h3>
-                <span>{{$t('多功能传感设备')}}</span>
-                <span>{{$t('集红外移动监测、亮度、温度感知于一体')}}</span>
-              </div>
+              <nuxt-link :to="`/${this.$store.state.locale}/products/motionsensor`">
+                <div class="img-wrap">
+                  <img :src="`${this.$store.state.cdn}/2018/10/5a9adf7ada73b4fbebcc96950264bc2a.png`" alt="">
+                </div>
+                <div class="content-wrap">
+                  <h3>{{$t('智能三合一传感器')}}</h3>
+                  <span>{{$t('多功能传感设备')}}</span>
+                  <span>{{$t('集红外移动监测、亮度、温度感知于一体')}}</span>
+                </div>
+              </nuxt-link>
             </div>
           </div>
           <div id="auxiliary" class="caption has-text-centered">{{$t('智能辅助类')}}</div>
