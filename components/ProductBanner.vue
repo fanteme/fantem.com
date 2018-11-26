@@ -1,5 +1,5 @@
 <template>
-  <section class="productbanner center">
+  <section class="productbanner center" :class="[banner.class]">
       <div class="container">
         <div class="columns">
           <div class="column is-5">
@@ -28,7 +28,7 @@
 </template> 
 <style lang="stylus">
   .productbanner
-    background: #eaeeef 
+    background-color: #eaeeef 
     min-height: 775px
     color: #3e3a39
     .is-5

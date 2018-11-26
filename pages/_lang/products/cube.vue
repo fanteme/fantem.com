@@ -594,7 +594,8 @@ import ProductParameter from '~/components/ProductParameter'
           title: this.$t('智能家庭网关'),
           subtitle: 'OOMI Cube',
           content: this.$t('夜视监控摄像头 | 温度传感器 | 湿度传感器 | 亮度传感器 | 人体红外传感器 | 紫外线传感器 | 360°红外学习'),
-          img: `${this.$store.state.cdn}/2018/11/62a6f722acec28ea609bddfd2de7cb29.png`
+          img: `${this.$store.state.cdn}/2018/11/62a6f722acec28ea609bddfd2de7cb29.png`,
+          class: 'gray-radial-gradient'
         },
         parameters: [
           {

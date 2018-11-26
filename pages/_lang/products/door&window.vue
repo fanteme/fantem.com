@@ -150,7 +150,8 @@ import ProductParameter from '~/components/ProductParameter'
           title: this.$t('智能门窗感应器'),
           subtitle: 'OOMI Door/Window Sensor',
           content: this.$t('智能门窗传感器可用于监测门窗等的开启 / 关闭状态并报告至网关，以便关联其他设备做相应响应，并且可以与其他设备联动，根据自己的喜好设置智能场景。'),
-          img: `${this.$store.state.cdn}/2018/11/8000cfde5dc3cf9ecddb76f0f74f9809.png`
+          img: `${this.$store.state.cdn}/2018/11/8000cfde5dc3cf9ecddb76f0f74f9809.png`,
+          class: 'gray-radial-gradient'
         },
         parameters: [
           {
