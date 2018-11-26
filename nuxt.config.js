@@ -42,8 +42,8 @@ export default {
     __dangerouslyDisableSanitizers: ['script']
   },
   /*
-  ** Customize the progress-bar color
-  */
+   ** Customize the progress-bar color
+   */
   loading: { color: '#ed7422' },
   router: {
     middleware: 'vue-i18n'
@@ -56,8 +56,8 @@ export default {
     { src: '~/plugins/vue-scrollmagic', ssr: false }
   ],
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   generate: {
     dir: 'public',
     routes: [
@@ -65,6 +65,7 @@ export default {
       '/en/about/news',
       '/en/products',
       '/en/products/multisensor',
+      '/en/products/motionsensor',
       '/en/products/watersensor',
       '/en/products/cube',
       '/en/products/touch',
