@@ -111,11 +111,9 @@
 .section
   &-top
     color: #3e3a39
-    overflow: hidden
     &.tint-background-color
       background: #969eab
     .title
-      font-size: 36px
       padding: 95px 0 21px
     .content
       font-size: 16px
@@ -140,7 +138,6 @@
     &.monitoring
       img 
         margin:53px 0 98px     
-
 
 </style>
 <script>

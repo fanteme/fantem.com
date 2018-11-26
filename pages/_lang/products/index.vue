@@ -51,14 +51,16 @@
           </div>  
           <div id="switch" class="caption  has-text-centered">{{$t('智能开关')}}</div>
           <div class="columns is-multiline">
-            <div class="column is-6" @click="previewProduct(454)">
-              <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/10/8c936b8a72123f791a051e1958ef7897.png`" alt="">
-              </div>
-              <div class="content-wrap">
-                <h3>{{$t('智能插座')}}</h3>
-                <span>{{$t('常规家电无线远程定时智能操控')}}</span>
-              </div> 
+            <div class="column is-6">
+              <nuxt-link :to="`/${this.$store.state.locale}/products/plug`">
+                <div class="img-wrap">
+                  <img :src="`${this.$store.state.cdn}/2018/10/8c936b8a72123f791a051e1958ef7897.png`" alt="">
+                </div>
+                <div class="content-wrap">
+                  <h3>{{$t('智能插座')}}</h3>
+                  <span>{{$t('常规家电无线远程定时智能操控')}}</span>
+                </div> 
+              </nuxt-link>
             </div>
             <div class="column is-6" @click="previewProduct(456)">
               <div class="img-wrap">

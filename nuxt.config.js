@@ -70,6 +70,7 @@ export default {
       '/en/products/touch',
       '/en/products/hub',
       '/en/products/door&window',
+      '/en/products/plug',
       '/en/application',
       '/en/application/security',
       '/en/application/ent',
