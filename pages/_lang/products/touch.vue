@@ -12,14 +12,14 @@
         </div>  
       </div> 
     </section>
-    <section class="section-top function tint-background-color has-text-centered has-text-white" >
+    <section class="section-top function tint-background-color has-text-centered" >
       <div class="container">
         <div class="columns is-multiline">
           <div class="column is-12">
             <h2 class="title has-text-weight-normal has-text-white">{{$t('小身板，大功能，方寸之间蕴含多种可能')}}</h2>
           </div>
           <div class="column is-10 is-offset-1">
-            <p class="content has-text-weight-light">{{$t('OOMI Touch智能家庭控制平板，小身板，大功能，方寸之间蕴含多种可能！7英寸的触摸屏操控界面可实现智能家居设备操控、智能场景自定义、监控查询、设备查询、以及能耗监控等功能。另外还具有按键功能自定义、360°红外学习模块功能，可学习家中遥控器，轻松变身万能遥控，从此告别一器一遥控的时代！Touch 能做的远超你所想。')}}</p>
+            <p class="content has-text-weight-light has-text-white">{{$t('OOMI Touch智能家庭控制平板，小身板，大功能，方寸之间蕴含多种可能！7英寸的触摸屏操控界面可实现智能家居设备操控、智能场景自定义、监控查询、设备查询、以及能耗监控等功能。另外还具有按键功能自定义、360°红外学习模块功能，可学习家中遥控器，轻松变身万能遥控，从此告别一器一遥控的时代！Touch 能做的远超你所想。')}}</p>
           </div>
           <div class="column is-12">
             <img :src="`${this.$store.state.cdn}/2018/11/97c57060dae96633b0fbb6ce6eb99d59.png`">

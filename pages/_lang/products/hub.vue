@@ -109,7 +109,7 @@
             <p class="has-text-weight-light">{{$t('根据预设灯光阙值，智能识别家居环境中光线的明暗度，自动调节灯光亮度，感受美好生活。')}}</p>
             <div class="columns">
               <div class="column is-4 is-offset-2">
-                <img :src="`${this.$store.state.cdn}/2018/11/2b1d444ce01ab09f77e8cafabc95e547.png`">
+                <img :src="`${this.$store.state.cdn}/2018/11/f114be6b313dc21d41fe4ec2364e80e5.png`">
                 <p class="has-text-weight-light">{{$t('颜色自定义')}}</p>
               </div>
               <div class="column is-4">
@@ -182,6 +182,7 @@
     &:not(.full)  
       @media screen and (max-width: 768px) {
         padding-top: 450px
+        background-size: contain
       }
       @media screen and (max-width: 616px) {
         padding-top: 230px
@@ -190,20 +191,10 @@
       height: 800px
       @media screen and (max-width: 768px) {
         height: auto
-        min-height: 800px
+        min-height: 800px     
       }   
     .title
       margin-bottom: 38px     
-    .icons
-      ul 
-        display: flex
-        justify-content: flex-end
-        .arrow
-          margin: 39px 10px 0 10px
-        span 
-          display: inline-block
-          font-size: 14px
-          padding-top :9px  
 
   &-left
     &.connect
@@ -217,7 +208,9 @@
           font-size: 13px  
       .imgs 
         flex-direction: column 
-        padding: 45px 0 35px
+        padding: 40px 0 30px
+        img 
+          margin: 5px 0
     &.light-operated
       padding: 140px 0 0
       img 
@@ -226,6 +219,10 @@
     &.alarm
       .is-6
         padding: 109px 0 450px
+        @media screen and (max-width: 768px) {
+          height: auto
+           padding: 89px 0 150px
+        } 
       .icons
         margin-top: 80px
         ul

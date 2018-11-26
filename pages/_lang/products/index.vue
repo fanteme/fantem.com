@@ -147,14 +147,16 @@
           </div>
           <div id="sensor" class="caption  has-text-centered">{{$t('智能传感器')}}</div>
           <div class="columns is-multiline">
-            <div class="column is-6-tablet is-6-fullhd" @click="previewProduct(474)">
-              <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/10/e95ad8faff6f05c47e7a16685b1bd9b3.png`" alt="">
-              </div>
-              <div class="content-wrap">
-                <h3>{{$t('智能门窗传感器')}}</h3>
-                <span>{{$t('实时监测门窗柜体等物品开启/关闭状态')}}</span>
-              </div>
+            <div class="column is-6-tablet is-6-fullhd">
+              <nuxt-link :to="`/${this.$store.state.locale}/products/door&window`">
+                <div class="img-wrap">
+                  <img :src="`${this.$store.state.cdn}/2018/10/e95ad8faff6f05c47e7a16685b1bd9b3.png`" alt="">
+                </div>
+                <div class="content-wrap">
+                  <h3>{{$t('智能门窗传感器')}}</h3>
+                  <span>{{$t('实时监测门窗柜体等物品开启/关闭状态')}}</span>
+                </div>
+              </nuxt-link>
             </div>
             <div class="column is-6-tablet is-6-fullhd">
               <nuxt-link :to="`/${this.$store.state.locale}/products/watersensor`">

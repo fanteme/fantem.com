@@ -69,6 +69,7 @@ export default {
       '/en/products/cube',
       '/en/products/touch',
       '/en/products/hub',
+      '/en/products/door&window',
       '/en/application',
       '/en/application/security',
       '/en/application/ent',
