@@ -195,28 +195,34 @@
             </div>
           </div>
           <div id="auxiliary" class="caption has-text-centered">{{$t('智能辅助类')}}</div>
-          <div class="columns is-gapless" @click="previewProduct(478)">
+          <div class="columns is-gapless">
             <div class="column is-8">
-              <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/10/27db8c27766c4c6b4dff615ebf0e0e2c.png`" alt="">
-              </div>
+              <nuxt-link :to="`/${this.$store.state.locale}/products/infinitydock`">
+                <div class="img-wrap">
+                  <img :src="`${this.$store.state.cdn}/2018/10/27db8c27766c4c6b4dff615ebf0e0e2c.png`" alt="">
+                </div>
+              </nuxt-link>  
             </div>
             <div class="column is-4 center has-text-left">
-              <div class="content-wrap">
-                <h3>{{$t('智能充电底座')}}</h3>
-                <span>{{$t('智能操控平板即时充电续航')}}</span>
-              </div>
+              <nuxt-link :to="`/${this.$store.state.locale}/products/infinitydock`">
+                <div class="content-wrap">
+                  <h3>{{$t('智能充电底座')}}</h3>
+                  <span>{{$t('智能操控平板即时充电续航')}}</span>
+                </div>
+              </nuxt-link>  
             </div>
           </div>
           <div class="columns is-multiline">
-            <div class="column is-6-tablet is-6-fullhd" @click="previewProduct(480)">
-              <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/10/a3793ecf4046132d34f46b02a91e67a1.png`" alt="">
-              </div>
-              <div class="content-wrap">
-                <h3>{{$t('智能水位传感器底座')}}</h3>
-                <span>{{$t('OOMI智能水位传感器持续供电续航')}}</span>
-              </div>
+            <div class="column is-6-tablet is-6-fullhd">
+              <nuxt-link :to="`/${this.$store.state.locale}/products/watersensordock`">
+                <div class="img-wrap">
+                  <img :src="`${this.$store.state.cdn}/2018/10/a3793ecf4046132d34f46b02a91e67a1.png`" alt="">
+                </div>
+                <div class="content-wrap">
+                  <h3>{{$t('智能水位传感器底座')}}</h3>
+                  <span>{{$t('OOMI智能水位传感器持续供电续航')}}</span>
+                </div>
+              </nuxt-link>    
             </div>
             <div class="column is-6-tablet is-6-fullhd" @click="previewProduct(486)">
               <div class="img-wrap">

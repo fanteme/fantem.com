@@ -71,6 +71,8 @@ export default {
       '/en/products/hub',
       '/en/products/door&window',
       '/en/products/plug',
+      '/en/products/infinitydock',
+      '/en/products/watersensordock',
       '/en/application',
       '/en/application/security',
       '/en/application/ent',
