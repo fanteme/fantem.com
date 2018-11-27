@@ -137,7 +137,6 @@ import ProductParameter from '~/components/ProductParameter'
           title: this.$t('智能灯带'),
           subtitle: 'OOMI Colorstrip',
           content: this.$t('OOMI智能灯带是一款基于Z-Wave无线通讯协议的智能LED灯带，能实现不同颜色、亮度和颜色灰度之间的变换，可营造出适合身心的灯光环境，同时支持各种场景和智能场景设置。'),
-          backgroundimg: `${this.$store.state.cdn}/2018/11/7b9c24997d331aa11bc987aceed50576.jpg`,
           class: 'black'
       },
       parameters: [

@@ -71,14 +71,16 @@
                 <span>{{$t('无线远程智能控制电源开关')}}</span>
               </div>
             </div> 
-            <div class="column is-6" @click="previewProduct(460)">
-              <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/10/5e5ae9abb6a1b0ce07be45c1b76bea75.png`" alt="">
-              </div>
-              <div class="content-wrap"> 
-                <h3>{{$t('智能场景面板')}}</h3>
-                <span>{{$t('无线便携式自定义操控开关')}}</span>
-              </div>               
+            <div class="column is-6">
+              <nuxt-link :to="`/${this.$store.state.locale}/products/mote`">
+                <div class="img-wrap">
+                  <img :src="`${this.$store.state.cdn}/2018/10/5e5ae9abb6a1b0ce07be45c1b76bea75.png`" alt="">
+                </div>
+                <div class="content-wrap"> 
+                  <h3>{{$t('智能场景面板')}}</h3>
+                  <span>{{$t('无线便携式自定义操控开关')}}</span>
+                </div>  
+              </nuxt-link>             
             </div> 
             <div class="column is-6" @click="previewProduct(464)">
               <div class="img-wrap"> 

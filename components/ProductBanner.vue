@@ -1,30 +1,30 @@
 <template>
-  <section class="productbanner center" :class="[banner.class]" :style="{backgroundImage: `url(${banner.backgroundimg})`}">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-5">
-            <h1 class="title has-text-weight-normal">{{banner.title}}</h1>
-            <h4 class="subtitle has-text-weight-light">{{banner.subtitle}}</h4>
-            <p class="content has-text-weight-light">{{banner.content}}</p> 
-          </div>
-          <div class="column is-7 has-text-right">
-            <u-animate-container>
-              <u-animate
-                name="fadeInDown"
-                delay="0s"
-                duration="1.5s"
-                :iteration="1"
-                :offset="0"
-                animateClass="animated"
-                :begin="false" 
-              >
-                <img :src="banner.img"/>
-              </u-animate>
-            </u-animate-container>  
-          </div>
+  <section class="productbanner center" :class="[banner.class]">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-5">
+          <h1 class="title has-text-weight-normal">{{banner.title}}</h1>
+          <h4 class="subtitle has-text-weight-light">{{banner.subtitle}}</h4>
+          <p class="content has-text-weight-light">{{banner.content}}</p> 
         </div>
-      </div>     
-    </section>
+        <div class="column is-7 has-text-right">
+          <u-animate-container>
+            <u-animate
+              name="fadeInDown"
+              delay="0s"
+              duration="1.5s"
+              :iteration="1"
+              :offset="0"
+              animateClass="animated"
+              :begin="false" 
+            >
+              <img :src="banner.img"/>
+            </u-animate>
+          </u-animate-container>  
+        </div>
+      </div>
+    </div>     
+  </section>
 </template> 
 <style lang="stylus">
   .productbanner
@@ -48,7 +48,8 @@
       line-height: 28px   
     &.black
       background-size: cover
-      background-position: center  
+      background-position: center 
+      background-image: url(http://cdn.fantem.cn/2018/11/7b9c24997d331aa11bc987aceed50576.jpg) 
       .subtitle, .content
         color: #fff
 </style>
