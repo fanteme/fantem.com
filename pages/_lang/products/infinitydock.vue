@@ -25,7 +25,7 @@
             <h2 class="title has-text-weight-normal">{{$t('充满断电 智能休眠')}}</h2>
           </div>
           <div class="column is-6 is-offset-3">
-            <p>{{$t('防过充，平板寿命更长久!具备过流保护、短路保护、过温保护、过冲保护功能，给您一个安全的充电模式。')}}</p>  
+            <p class="has-text-weight-light">{{$t('防过充，平板寿命更长久!具备过流保护、短路保护、过温保护、过冲保护功能，给您一个安全的充电模式。')}}</p>  
           </div>
           <div class="column is-12">
             <img :src="`${this.$store.state.cdn}/2018/11/77102cf92125e8887c2204d91cb06c6e.png`">
@@ -36,13 +36,14 @@
     <product-parameter :parameters="parameters"></product-parameter>   
   </main>
 </template>
-<style lang="stylus">
+<style lang="stylus" scoped>
 &.section
   &-top
     &.charge
       padding: 81px 0 230px 
       background-position: center 
       background-repeat: no-repeat 
+      height: 800px
       @media screen and (max-width: 768px) {
         padding: 81px 0 80px 
       }   
@@ -53,6 +54,7 @@
         }  
     &.smart-stay
       padding: 81px 0 50px 
+      height: 815px
       img 
         margin: 30px 0 0 
 </style>

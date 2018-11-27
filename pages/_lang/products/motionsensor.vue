@@ -69,7 +69,7 @@
     <product-parameter :parameters="parameters"></product-parameter>    
   </main>  
 </template>
-<style lang="stylus">
+<style lang="stylus" scoped>
 .section-features {
   padding-bottom: 75px;
   background-size: cover;

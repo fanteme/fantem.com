@@ -90,7 +90,7 @@
     <product-parameter :parameters="parameters"></product-parameter>  
   </main>  
 </template>
-<style lang="stylus">
+<style lang="stylus" scoped>
 .section
   &-right
     position: relative

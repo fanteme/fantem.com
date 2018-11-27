@@ -125,11 +125,10 @@
     <product-parameter :parameters="parameters"></product-parameter>
   </main>  
 </template>
-<style lang="stylus">
+<style lang="stylus" scoped>
 .section
   &-top
     &.remote-control
-      background-position:center 
       padding: 65px 0 648px
       max-height: 900px 
       .title

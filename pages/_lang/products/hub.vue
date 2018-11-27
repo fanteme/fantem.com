@@ -60,7 +60,7 @@
             <div class="columns">
               <div class="column">
                 <h2 class="title has-text-weight-normal">{{$t('声光报警 震慑小偷')}}</h2>
-                <p>{{$t('红外人体感应，探测反应灵敏；布防报警声音响亮，有效震慑小偷。')}}</p>
+                <p class="has-text-weight-light">{{$t('红外人体感应，探测反应灵敏；布防报警声音响亮，有效震慑小偷。')}}</p>
                 <div class="columns">
                   <div class="column is-12">
                     <div class="icons has-text-centered">  
@@ -150,7 +150,7 @@
     <product-parameter :parameters="parameters"></product-parameter>
   </main>  
 </template>
-<style lang="stylus">
+<style lang="stylus" scoped>
 .section
   &-top
     color: #3e3a39

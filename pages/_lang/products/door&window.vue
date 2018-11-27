@@ -4,7 +4,7 @@
     <section class="section-right full interaction has-text-right has-text-white" :style="{backgroundImage: `url(${this.$store.state.cdn}/2018/11/4b8ac3cae3d1b86533767bcab3cce6fa.jpg)`}">
       <div class="container">
         <div class="columns">
-          <div class="column">
+          <div class="column is-5 is-offset-7">
             <h3 class="title has-text-weight-normal has-text-white">{{$t('感应门窗开合状态')}}</h3>
             <p class="content has-text-weight-light">{{$t('门窗传感器通过主体与磁铁之间的感应，判断门窗开关状态')}}</p>
           </div>
@@ -89,7 +89,7 @@
     <product-parameter :parameters="parameters"></product-parameter>  
   </main>
 </template>
-<style lang="stylus">
+<style lang="stylus" scoped>
 .section
   &-top
     background-size: cover

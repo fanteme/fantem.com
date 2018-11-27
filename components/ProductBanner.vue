@@ -1,5 +1,5 @@
 <template>
-  <section class="productbanner center" :class="[banner.class]">
+  <section class="productbanner center" :class="[banner.class]" :style="{backgroundImage: `url(${banner.backgroundimg})`}">
       <div class="container">
         <div class="columns">
           <div class="column is-5">
@@ -28,7 +28,8 @@
 </template> 
 <style lang="stylus">
   .productbanner
-    background-color: #eaeeef 
+    background-color: #eaeeef
+    background-repeat: no-repeat   
     min-height: 775px
     color: #3e3a39
     .is-5
@@ -45,6 +46,11 @@
     .content
       font-size: 16px
       line-height: 28px   
+    &.black
+      background-size: cover
+      background-position: center  
+      .subtitle, .content
+        color: #fff
 </style>
 <script>
   export default {

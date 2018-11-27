@@ -363,7 +363,7 @@
     <product-parameter :parameters="parameters"></product-parameter>   
   </main>
 </template>
-<style lang="stylus">
+<style lang="stylus" scoped>
 .icon-title
   color: #3e3a39
   font-size: 28px
@@ -396,6 +396,8 @@
       .title
         margin: 0 0 10px
     .easy-shuttle
+      max-height: 800px
+      overflow: hidden
       img
         margin-top: 14px
       .title

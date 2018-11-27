@@ -28,11 +28,10 @@
     <product-parameter :parameters="parameters"></product-parameter>   
   </main>
 </template>
-<style lang="stylus">
+<style lang="stylus" scoped>
 .section
   &-top 
     &.role,&.charge
-      background-position: center 
       padding: 105px 0 690px 
       @media screen and ( max-width: 1280px) {
         padding: 65px 0 590px 

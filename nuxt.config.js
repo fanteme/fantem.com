@@ -74,6 +74,7 @@ export default {
       '/en/products/plug',
       '/en/products/infinitydock',
       '/en/products/watersensordock',
+      '/en/products/colorstrip',
       '/en/application',
       '/en/application/security',
       '/en/application/ent',

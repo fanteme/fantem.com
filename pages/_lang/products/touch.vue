@@ -107,7 +107,7 @@
     <product-parameter :parameters="parameters"></product-parameter>  
   </main>  
 </template>
-<style lang="stylus">
+<style lang="stylus" scoped>
 .section
   &-top
     color: #3e3a39
@@ -128,7 +128,12 @@
         margin-top: 25px
     &.infraredmodes
       padding-bottom: 52px 
+      height: 900px 
+      @media screen and (max-width: 1280px) {
+        height: auto
+      }
     &.scene  
+      padding-bottom: 8px 
       .imgs
         margin-top: 65px
     &.detection

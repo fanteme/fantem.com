@@ -137,14 +137,16 @@
                 <span>{{$t('智能语音联动 调节灯泡颜色、亮度、颜色灰度')}}</span>
               </div>             
             </div>
-            <div class="column" @click="previewProduct(490)">
-              <div class="img-wrap center is-multiline">
-                <img :src="`${this.$store.state.cdn}/2018/10/3a31cea49aa01e84f3e92cf25abee67e.png`" alt="">
-              </div>
-              <div class="content-wrap"> 
-                <h3>{{$t('智能灯带')}}</h3>
-                <span>{{$t('1600万无极变色 长度任意裁剪')}}</span>  
-              </div>    
+            <div class="column">
+              <nuxt-link :to="`/${this.$store.state.locale}/products/colorstrip`">
+                <div class="img-wrap center is-multiline">
+                  <img :src="`${this.$store.state.cdn}/2018/10/3a31cea49aa01e84f3e92cf25abee67e.png`" alt="">
+                </div>
+                <div class="content-wrap"> 
+                  <h3>{{$t('智能灯带')}}</h3>
+                  <span>{{$t('1600万无极变色 长度任意裁剪')}}</span>  
+                </div> 
+              </nuxt-link>   
             </div>
           </div>
           <div id="sensor" class="caption  has-text-centered">{{$t('智能传感器')}}</div>
