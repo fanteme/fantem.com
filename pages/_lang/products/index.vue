@@ -62,14 +62,16 @@
                 </div> 
               </nuxt-link>
             </div>
-            <div class="column is-6" @click="previewProduct(456)">
-              <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/10/0952af6e1b9c16c925f74052f688714b.png`" alt="">
-              </div>
-              <div class="content-wrap">
-                <h3>{{$t('智能插座面板')}}</h3>
-                <span>{{$t('无线远程智能控制电源开关')}}</span>
-              </div>
+            <div class="column is-6">
+              <nuxt-link :to="`/${this.$store.state.locale}/products/powersocket`">
+                <div class="img-wrap">
+                  <img :src="`${this.$store.state.cdn}/2018/10/0952af6e1b9c16c925f74052f688714b.png`" alt="">
+                </div>
+                <div class="content-wrap">
+                  <h3>{{$t('智能插座面板')}}</h3>
+                  <span>{{$t('无线远程智能控制电源开关')}}</span>
+                </div>
+              </nuxt-link>
             </div> 
             <div class="column is-6">
               <nuxt-link :to="`/${this.$store.state.locale}/products/mote`">
