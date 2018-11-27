@@ -120,14 +120,16 @@
                 <span>{{$t('无线远程智能控制灯光与亮度调节')}}</span>
               </div>
             </div>
-            <div class="column is-6" @click="previewProduct(468)">
-              <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/10/5e9170adb6e8bdb4cb53268f1f569458.png`" alt="">
-              </div>
-              <div class="content-wrap">
-                <h3>{{$t('智能马达控制器')}}</h3>
-                <span>{{$t('无线远程交流电机控制')}}</span>
-              </div>
+            <div class="column is-6">
+              <nuxt-link :to="`/${this.$store.state.locale}/products/shutter`">
+                <div class="img-wrap">
+                  <img :src="`${this.$store.state.cdn}/2018/10/5e9170adb6e8bdb4cb53268f1f569458.png`" alt="">
+                </div>
+                <div class="content-wrap">
+                  <h3>{{$t('智能马达控制器')}}</h3>
+                  <span>{{$t('无线远程交流电机控制')}}</span>
+                </div>
+              </nuxt-link>   
             </div>
           </div>
           <div id="light" class="caption  has-text-centered">{{$t('智能照明')}}</div>
