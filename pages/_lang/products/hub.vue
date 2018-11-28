@@ -64,7 +64,7 @@
                 <div class="columns">
                   <div class="column is-12">
                     <div class="icons has-text-centered">  
-                      <ul class="">
+                      <ul>
                         <li>
                           <div><img :src="`${this.$store.state.cdn}/2018/11/234e18c08678099f02a463a69bdb09c8.svg`"></div>
                           <span class="has-text-weight-light">{{$t('感应门窗开启')}}</span>

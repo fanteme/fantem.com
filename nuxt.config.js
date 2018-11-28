@@ -76,6 +76,8 @@ export default {
       '/en/products/watersensordock',
       '/en/products/colorstrip',
       '/en/products/mote',
+      '/en/products/powersocket',
+      '/en/products/shutter',
       '/en/application',
       '/en/application/security',
       '/en/application/ent',
