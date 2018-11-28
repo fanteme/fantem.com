@@ -50,8 +50,8 @@ import ProductParameter from '~/components/ProductParameter'
       return {
          banner: {
           title: this.$t('智能水位传感器底座'),
-          subtitle: 'Oomi Water Sensor Dock',
-          content: this.$t('OMI Water sensor Dock智能水位传感器底座可为Oomi Watersensor智能水位传感器持续供电，还能通过探针线扩大其探测范围。当探针线中的两个触角探测到漏水时，设备会发出警报。'),
+          subtitle: 'OOMI Water Sensor Dock',
+          content: this.$t('OMI Water sensor Dock智能水位传感器底座可为OOMI Watersensor智能水位传感器持续供电，还能通过探针线扩大其探测范围。当探针线中的两个触角探测到漏水时，设备会发出警报。'),
           img: `${this.$store.state.cdn}/2018/11/f1b41c5568e89fa7d0c5bcedd0cb2038.png`,
           class: 'gray-radial-gradient'
         },

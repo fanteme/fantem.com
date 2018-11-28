@@ -5,7 +5,11 @@
       <div class="container">
         <p class="caption has-text-centered">{{$t('八大优势 稳定可靠')}}</p>
         <div class="columns is-multiline">
-          <div class="column is-3 has-text-centered" v-for="(feature, index) in features" :key="index">
+          <div
+            class="column is-3 has-text-centered"
+            v-for="(feature, index) in features"
+            :key="index"
+          >
             <div class="item">
               <p class="svg" v-html="feature.svg"></p>
               <p class="txt" :title="feature.txt">{{feature.txt}}</p>
@@ -17,12 +21,24 @@
     <div class="container-fluid">
       <div class="video">
         <video v-if="$store.state.locale == 'zh'" class="video-bg" autoplay muted loop>
-          <source :src="`${this.$store.state.cdn}/2018/10/24aec23f6ebd496946466b9d5a1040f4.mp4`" type="video/mp4" />
-          <source :src="`${this.$store.state.cdn}/2018/10/e7e51e94be4f329ccaf8098ebaa5a699.webm`" type="video/webm" />
+          <source
+            :src="`${this.$store.state.cdn}/2018/10/24aec23f6ebd496946466b9d5a1040f4.mp4`"
+            type="video/mp4"
+          >
+          <source
+            :src="`${this.$store.state.cdn}/2018/10/e7e51e94be4f329ccaf8098ebaa5a699.webm`"
+            type="video/webm"
+          >
         </video>
         <video v-else class="video-bg" autoplay muted loop>
-          <source :src="`${this.$store.state.cdn}/2018/10/cb582bed11b7af621226669e6fdb052b.mp4`" type="video/mp4" />
-          <source :src="`${this.$store.state.cdn}/2018/10/66d880c1448ae8ea2ed7001ceca92a48.webm`" type="video/webm" />
+          <source
+            :src="`${this.$store.state.cdn}/2018/10/cb582bed11b7af621226669e6fdb052b.mp4`"
+            type="video/mp4"
+          >
+          <source
+            :src="`${this.$store.state.cdn}/2018/10/66d880c1448ae8ea2ed7001ceca92a48.webm`"
+            type="video/webm"
+          >
         </video>
       </div>
     </div>
@@ -159,7 +175,7 @@
 }
 
 .video-bg {
-  vertical-align: top
+  vertical-align: top;
 }
 
 .application-house {
@@ -302,7 +318,7 @@ export default {
         subalign: 'has-text-centered',
         subcolor: 'has-text-white',
         detail: this.$t(
-          '您可以通过智能操控平板 Oomi Touch 或手机，随时随地观察室内外的闭路监控点的影像，并可通过本地储存卡或云录像查看较早前发生的影像。另外，Oomi 智能安防系统拥有多重防线的布防，一旦发现入侵者，将触发智能安防系统并自动报警，及时通知主人或相关安保人员，及时阻止违法犯罪行为的发生，保障个人的利益不受侵害。同时，Oomi智能安防系统不仅仅局限于提供防范的功能，还包括火灾、煤气泄漏的监测以及老人、小孩意外事态的急救报警等人性化的功能。'
+          '您可以通过智能操控平板 OOMI Touch 或手机，随时随地观察室内外的闭路监控点的影像，并可通过本地储存卡或云录像查看较早前发生的影像。另外，OOMI 智能安防系统拥有多重防线的布防，一旦发现入侵者，将触发智能安防系统并自动报警，及时通知主人或相关安保人员，及时阻止违法犯罪行为的发生，保障个人的利益不受侵害。同时，OOMI智能安防系统不仅仅局限于提供防范的功能，还包括火灾、煤气泄漏的监测以及老人、小孩意外事态的急救报警等人性化的功能。'
         ),
         detalign: 'has-text-centered',
         detcolor: 'has-text-white'
@@ -338,7 +354,9 @@ export default {
         },
         {
           svg: `<svg xmlns="http://www.w3.org/2000/svg" width="49" height="49"><path fill="none" stroke="#ee7623" stroke-linecap="round" stroke-linejoin="round" d="M24.5 15.144v18.712M15.144 24.5h18.712m-9.356 24c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24z"/></svg>`,
-          txt: this.$t('系统最大可支持232个节点设备-分到达看来是大驾光临克己复礼看')
+          txt: this.$t(
+            '系统最大可支持232个节点设备-分到达看来是大驾光临克己复礼看'
+          )
         }
       ],
       suit: {
