@@ -22,6 +22,7 @@ async function readDir(path) {
   })
 }
 const news = [
+  '/en/about/news',
   '/about/news/91',
   '/en/about/news/91',
   '/about/news/104',
