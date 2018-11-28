@@ -78,6 +78,8 @@ export default {
       '/en/products/mote',
       '/en/products/powersocket',
       '/en/products/shutter',
+      '/en/products/bulb',
+      '/en/products/switch',
       '/en/application',
       '/en/application/security',
       '/en/application/ent',

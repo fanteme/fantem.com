@@ -37,8 +37,8 @@
             </div> 
           </div>
         </div>
-        <ul class="columns is-multiline is-mobile">
-          <li class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-third-widescreen is-one-quarter-fullhd" v-for="(item, index) in news" :key="index">
+        <ul class="columns is-multiline">
+          <li class="column is-half-tablet is-one-third-desktop is-one-third-widescreen is-one-quarter-fullhd" v-for="(item, index) in news" :key="index">
             <nuxt-link :to="`/about/news/${item.id}`">
               <div class="newsinner-img-wrap">
                 <div class="newsinner-img-mask">

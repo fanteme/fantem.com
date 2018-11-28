@@ -98,7 +98,7 @@
     </section>
     <section
       class="section-right monitoring has-text-centered"
-      :style="{backgroundImage: `url(${this.$store.state.cdn}/2018/11/00e828382b397f8618b2cbe1ee066a8d.jpg)`}"
+      :style="{backgroundImage: `url(${this.$store.state.cdn}/2018/11/b856797a09c8eeecec379aad21712733.jpg)`}"
     >
       <div class="container">
         <div class="columns">
@@ -139,8 +139,10 @@
       padding: 75px 0 0;
 
       .icons {
-        justify-content: center;
-        margin: 45px 0 13px;
+        ul {
+          justify-content: center;
+          margin: 45px 0 13px;
+        }
       }
     }
   }
