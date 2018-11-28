@@ -115,14 +115,16 @@
                 </div> 
               </nuxt-link>     
             </div>
-            <div class="column is-6" @click="previewProduct(466)">
-              <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/10/67ccdc28db8f9a5a37326dec3bb6f731.png`" alt="">
-              </div>
-              <div class="content-wrap">
-                <h3>{{$t('智能嵌入式调光开关')}}</h3>
-                <span>{{$t('无线远程智能控制灯光与亮度调节')}}</span>
-              </div>
+            <div class="column is-6">
+              <nuxt-link :to="`/${this.$store.state.locale}/products/dimmer`">
+                <div class="img-wrap">
+                  <img :src="`${this.$store.state.cdn}/2018/10/67ccdc28db8f9a5a37326dec3bb6f731.png`" alt="">
+                </div>
+                <div class="content-wrap">
+                  <h3>{{$t('智能嵌入式调光开关')}}</h3>
+                  <span>{{$t('无线远程智能控制灯光与亮度调节')}}</span>
+                </div>
+              </nuxt-link>
             </div>
             <div class="column is-6">
               <nuxt-link :to="`/${this.$store.state.locale}/products/shutter`">
