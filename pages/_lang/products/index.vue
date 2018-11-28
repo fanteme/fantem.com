@@ -249,14 +249,16 @@
                 <span>{{$t('增强Z-Wave信号 杜绝信号盲区')}}</span>
               </div>
             </div>
-            <div class="column is-6-tablet is-6-fullhd" @click="previewProduct(482)">
-              <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/10/45d1cb63fdfda346832b1c1068839fec.png`" alt="">
-              </div>
-              <div class="content-wrap">
-                <h3>{{$t('智能警示器')}}</h3>
-                <span>{{$t('无线声光警示器 防范于未然')}}</span>
-              </div>
+            <div class="column is-6-tablet is-6-fullhd">
+              <nuxt-link :to="`/${this.$store.state.locale}/products/siren`">
+                <div class="img-wrap">
+                  <img :src="`${this.$store.state.cdn}/2018/10/45d1cb63fdfda346832b1c1068839fec.png`" alt="">
+                </div>
+                <div class="content-wrap">
+                  <h3>{{$t('智能警示器')}}</h3>
+                  <span>{{$t('无线声光警示器 防范于未然')}}</span>
+                </div>
+              </nuxt-link>    
             </div>
             <div class="column is-6-tablet is-6-fullhd">
               <div class="img-wrap">
@@ -276,14 +278,16 @@
                 <span>{{$t('普通家电轻松转换智能设备')}}</span>
               </div>
             </div>
-            <div class="column is-6-tablet is-6-fullhd" @click="previewProduct(484)">
-              <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/10/bcb33af07107428248c0ee7288334c5e.png`" alt="">
-              </div>
-              <div class="content-wrap">
-                <h3>{{$t('智能空调红外转换器')}}</h3>
-                <span>{{$t('直插式空调控制设备 轻松实现空调智能化')}}</span>
-              </div>
+            <div class="column is-6-tablet is-6-fullhd">
+              <nuxt-link :to="`/${this.$store.state.locale}/products/irblasterac`">
+                <div class="img-wrap">
+                  <img :src="`${this.$store.state.cdn}/2018/10/bcb33af07107428248c0ee7288334c5e.png`" alt="">
+                </div>
+                <div class="content-wrap">
+                  <h3>{{$t('智能空调红外转换器')}}</h3>
+                  <span>{{$t('直插式空调控制设备 轻松实现空调智能化')}}</span>
+                </div>
+              </nuxt-link>    
             </div>
           </div>
         </div> 
