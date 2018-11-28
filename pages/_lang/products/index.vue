@@ -102,14 +102,16 @@
                 <span>{{$t('无线遥控与远程操控二合一')}}</span>
               </div>             
             </div>  
-            <div class="column is-6" @click="previewProduct(462)">
-              <div class="img-wrap"> 
-                <img :src="`${this.$store.state.cdn}/2018/10/439124df4d5c053206878fa9ee9e721e.png`" alt="">
-              </div>
-              <div class="content-wrap"> 
-                <h3>{{$t('智能嵌入式开关')}}</h3>
-                <span>{{$t('无线远程智能控制灯光')}}</span>
-              </div> 
+            <div class="column is-6">
+              <nuxt-link :to="`/${this.$store.state.locale}/products/switch`">
+                <div class="img-wrap"> 
+                  <img :src="`${this.$store.state.cdn}/2018/10/439124df4d5c053206878fa9ee9e721e.png`" alt="">
+                </div>
+                <div class="content-wrap"> 
+                  <h3>{{$t('智能嵌入式开关')}}</h3>
+                  <span>{{$t('无线远程智能控制灯光')}}</span>
+                </div> 
+              </nuxt-link>     
             </div>
             <div class="column is-6" @click="previewProduct(466)">
               <div class="img-wrap">
@@ -134,14 +136,16 @@
           </div>
           <div id="light" class="caption  has-text-centered">{{$t('智能照明')}}</div>
           <div class="columns">
-            <div class="column" @click="previewProduct(488)">
-              <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/10/d91f2c8f481bc4acb44c64c341624fe7.png`" alt="">
-              </div>
-              <div class="content-wrap">
-                <h3>{{$t('智能灯泡')}}</h3>
-                <span>{{$t('智能语音联动 调节灯泡颜色、亮度、颜色灰度')}}</span>
-              </div>             
+            <div class="column">
+              <nuxt-link :to="`/${this.$store.state.locale}/products/bulb`">
+                <div class="img-wrap">
+                  <img :src="`${this.$store.state.cdn}/2018/10/d91f2c8f481bc4acb44c64c341624fe7.png`" alt="">
+                </div>
+                <div class="content-wrap">
+                  <h3>{{$t('智能灯泡')}}</h3>
+                  <span>{{$t('智能语音联动 调节灯泡颜色、亮度、颜色灰度')}}</span>
+                </div> 
+              </nuxt-link>              
             </div>
             <div class="column">
               <nuxt-link :to="`/${this.$store.state.locale}/products/colorstrip`">
