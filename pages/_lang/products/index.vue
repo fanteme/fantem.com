@@ -91,14 +91,16 @@
                 <span>{{$t('无线远程智能场景触摸控制')}}</span>
               </div>  
             </div>
-            <div class="column is-6" @click="previewProduct(458)">
-              <div class="img-wrap"> 
-                <img :src="`${this.$store.state.cdn}/2018/10/eba1ec6bd9e7ab3ceca229a4084896eb.png`" alt="">
-              </div>
-              <div class="content-wrap"> 
-                <h3>{{$t('智能窗帘电机')}}</h3>
-                <span>{{$t('无线遥控与远程操控二合一')}}</span>
-              </div>             
+            <div class="column is-6">
+              <nuxt-link :to="`/${this.$store.state.locale}/products/curtain`">
+                <div class="img-wrap"> 
+                  <img :src="`${this.$store.state.cdn}/2018/10/eba1ec6bd9e7ab3ceca229a4084896eb.png`" alt="">
+                </div>
+                <div class="content-wrap"> 
+                  <h3>{{$t('智能窗帘电机')}}</h3>
+                  <span>{{$t('无线遥控与远程操控二合一')}}</span>
+                </div>
+              </nuxt-link>       
             </div>  
             <div class="column is-6" @click="previewProduct(462)">
               <div class="img-wrap"> 
