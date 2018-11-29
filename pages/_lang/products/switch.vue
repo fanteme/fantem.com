@@ -146,7 +146,7 @@ import ProductParameter from '~/components/ProductParameter'
           },
           {
             column: "is-4", 
-            value: '250V ～ 50Hz'
+            value: '220V ～ 50Hz'
           },
           {
             column: "is-2",  
@@ -194,7 +194,7 @@ import ProductParameter from '~/components/ProductParameter'
           },
           {
             column: "is-4", 
-            value: this.$t('一路开关：42.5× 40 × 20.5mm / 二路开关：44× 40 × 20.5mm ')
+            value: this.$t('一路开关：42.5× 40 × 20.5mm / 二路开关：44× 40 × 20.5mm')
           }
         ]
       }

@@ -211,7 +211,7 @@ export default {
         },
         {
           column: 'is-4',
-          value: '250V ～ 50Hz'
+          value: '220V ～ 50Hz'
         },
         {
           column: 'is-2',

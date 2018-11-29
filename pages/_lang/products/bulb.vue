@@ -108,7 +108,6 @@
   &-justify
     &.customization
       height: 800px
-
 </style>
 <script>
 import ProductBanner from "~/components/ProductBanner"
@@ -133,7 +132,7 @@ import ProductParameter from '~/components/ProductParameter'
           },
           {
             column: "is-4", 
-            value: '250V ～ 50Hz'
+            value: '220V ～ 50Hz'
           },
           {
             column: "is-2",  

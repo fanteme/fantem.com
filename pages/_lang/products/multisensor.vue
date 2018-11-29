@@ -173,7 +173,7 @@
     </section>
     <section
       class="section-product normal"
-      :style="{backgroundImage: `url(${this.$store.state.cdn}/2018/11/e5bf70d0a8ac9c0e5cc42fc345633747.jpg`}"
+      :style="{backgroundImage: `url(${this.$store.state.cdn}/2018/11/e5bf70d0a8ac9c0e5cc42fc345633747.jpg)`}"
     >
       <div class="container">
         <div class="columns">
@@ -433,7 +433,7 @@
     top: 0;
     left: 0;
     z-index: 1;
-    background-image: url('http://cdn.fantem.cn/2018/11/c99a1cf2fb5a8d5d542b18828d286390.jpg'); // cdn.fantem.cn/2018/11/c99a1cf2fb5a8d5d542b18828d286390.jpg)
+    background-image: url('http://cdn.fantem.cn/2018/11/c99a1cf2fb5a8d5d542b18828d286390.jpg');
   }
 
   .has-text-white {
@@ -501,7 +501,7 @@ export default {
         },
         {
           column: 'is-4',
-          value: this.$t('0 LUX – 30000 LUX')
+          value: '0 LUX – 30000 LUX'
         },
         {
           column: 'is-2',

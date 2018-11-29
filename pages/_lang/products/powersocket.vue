@@ -211,7 +211,6 @@
         background-image: linear-gradient( 135deg, #fefefe, #c6d6cb) 
         img
           margin-top :28px 
-
 </style>
 <script>
 import ProductBanner from "~/components/ProductBanner"
@@ -236,7 +235,7 @@ import ProductParameter from '~/components/ProductParameter'
           },
           {
             column: "is-4", 
-            value: '250V ～ 50Hz'
+            value: '220V ～ 50Hz'
           },
           {
             column: "is-2",  

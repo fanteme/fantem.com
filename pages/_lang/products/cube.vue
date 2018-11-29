@@ -92,21 +92,21 @@
               <ul>
                 <li>
                   <div><img :src="`${this.$store.state.cdn}/2018/11/9a91d7737326cd9836070f234acd8fb7.svg`"></div>
-                  <span>{{$t('开启离家模式')}}</span>
+                  <span class="has-text-weight-light">{{$t('开启离家模式')}}</span>
                 </li>
                 <li>
                   <img class="arrow" :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`">
                 </li>
                 <li>
                   <div><img :src="`${this.$store.state.cdn}/2018/11/ce321944a30ae129fbfb0daa36509067.svg`"></div>
-                  <span>{{$t('发现异常')}}</span>
+                  <span class="has-text-weight-light">{{$t('发现异常')}}</span>
                 </li>
                 <li>
                   <img class="arrow" :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`">
                 </li>
                 <li>
                   <div><img :src="`${this.$store.state.cdn}/2018/11/560ad151878c1b3d5db13411debe5279.svg`"></div>
-                  <span>{{$t('发送报警消息')}}</span>
+                  <span class="has-text-weight-light">{{$t('发送报警消息')}}</span>
                 </li>
               </ul>  
             </div>
@@ -186,7 +186,7 @@
                 <div class="icons has-text-centered">
                   <ul>
                     <li>
-                      <div><img :src="`${this.$store.state.cdn}/2018/11/9a91d7737326cd9836070f234acd8fb7.svg`"></div>
+                      <div><img :src="`${this.$store.state.cdn}/2018/11/c5e9683e8e83a7f2587e9e19b34bcf65.svg`"></div>
                       <span class="has-text-weight-light">{{$t('检测空气质量')}}</span>
                     </li>
                     <li>
@@ -200,14 +200,14 @@
                       <img class="arrow" :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`">
                     </li>
                     <li>
-                      <div><img :src="`${this.$store.state.cdn}/2018/11/560ad151878c1b3d5db13411debe5279.svg`"></div>
+                      <div><img :src="`${this.$store.state.cdn}/2018/11/3eae16ccd55a877bf82560fe4fc7f3f6.svg`"></div>
                       <span class="has-text-weight-light">{{$t('联动插座设备')}}</span>
                     </li>
                     <li>
                       <img class="arrow" :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`">
                     </li>
                     <li>
-                      <div><img :src="`${this.$store.state.cdn}/2018/11/560ad151878c1b3d5db13411debe5279.svg`"></div>
+                      <div><img :src="`${this.$store.state.cdn}/2018/11/82b1849a9dfbed0621a6a75a41dac135.svg`"></div>
                       <span class="has-text-weight-light">{{$t('开启加湿器')}}</span>
                     </li>
                   </ul>  
@@ -229,7 +229,7 @@
                 <div class="icons has-text-centered">
                   <ul>
                     <li>
-                      <div><img :src="`${this.$store.state.cdn}/2018/11/9a91d7737326cd9836070f234acd8fb7.svg`"></div>
+                      <div><img :src="`${this.$store.state.cdn}/2018/11/0898c31a461b7eed9749ab14588abdb9.svg`"></div>
                       <span class="has-text-weight-light">{{$t('检测室内温度')}}</span>
                     </li>
                     <li>
@@ -243,14 +243,14 @@
                       <img class="arrow" :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`">
                     </li>
                     <li>
-                      <div><img :src="`${this.$store.state.cdn}/2018/11/560ad151878c1b3d5db13411debe5279.svg`"></div>
+                      <div><img :src="`${this.$store.state.cdn}/2018/11/241b8ace1dc74dfdebb6733cbdaa242c.svg`"></div>
                       <span class="has-text-weight-light">{{$t('联动遥控设备')}}</span>
                     </li>
                     <li>
                       <img class="arrow" :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`">
                     </li>
                     <li>
-                      <div><img :src="`${this.$store.state.cdn}/2018/11/560ad151878c1b3d5db13411debe5279.svg`"></div>
+                      <div><img :src="`${this.$store.state.cdn}/2018/11/96cbe9cf0ed15f1f023519683ef84f45.svg`"></div>
                       <span class="has-text-weight-light">{{$t('开启空调')}}</span>
                     </li>
                   </ul>  
@@ -638,7 +638,7 @@ import ProductParameter from '~/components/ProductParameter'
            },
            {
             column: "is-4", 
-            value: this.$t('Z-Wave Plus, 802.11b/g/n (Wi-Fi), 蓝牙 4.0 ')
+            value: this.$t('Z-Wave Plus, 802.11b/g/n (Wi-Fi), 蓝牙 4.0')
            },
            {
             column: "is-2",  

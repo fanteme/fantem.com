@@ -448,7 +448,7 @@ export default {
         },
         {
           column: 'is-4',
-          value: this.$t('14cm/s')
+          value: '14cm/s'
         },
         {
           column: 'is-2',

@@ -61,7 +61,7 @@
               <div class="column">
                 <h2 class="title has-text-weight-normal">{{$t('声光报警 震慑小偷')}}</h2>
                 <p class="has-text-weight-light">{{$t('红外人体感应，探测反应灵敏；布防报警声音响亮，有效震慑小偷。')}}</p>
-                <div class="columns">
+                <div class="columns is-multiline">
                   <div class="column is-12">
                     <div class="icons has-text-centered">  
                       <ul>
@@ -77,14 +77,20 @@
                           <span class="has-text-weight-light">{{$t('发现异常')}}</span>
                         </li>
                         <li>
-                          <img class="arrow" :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`">
+                          <img class="arrow" :src="`${this.$store.state.cdn}/2018/11/bcaba529b22fb8c05eac36f6a7ebc24a.svg`">
                         </li>
                         <li>
                           <div><img :src="`${this.$store.state.cdn}/2018/11/0557be76d71bdffcc21567b91e91696c.svg`"></div>
                           <span class="has-text-weight-light">{{$t('感应人体移动')}}</span>
                         </li>
-                        <li>
-                          <img class="arrow" :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`">
+                      </ul>  
+                    </div>
+                  </div>
+                  <div class="column is-12 last-child">
+                    <div class="icons has-text-centered">  
+                      <ul>
+                        <li class="first-child">
+                          <img class="arrow" :src="`${this.$store.state.cdn}/2018/11/5a9a93f67742cb4652164dc01860c1a1.svg`">
                         </li>
                         <li>
                           <div><img :src="`${this.$store.state.cdn}/2018/11/1605c0dfc95a9cc5247f39ff4cbaa0ef.svg`"></div>
@@ -227,7 +233,14 @@
         margin-top: 80px
         ul
           justify-content: center
-
+      .last-child
+        .icons
+          margin: 0  
+          ul
+            flex-direction: column 
+            .first-child
+              img 
+                margin: 0
 </style>
 <script>
 import ProductBanner from "~/components/ProductBanner"
@@ -267,7 +280,7 @@ import ProductParameter from '~/components/ProductParameter'
         },
         {
           column: "is-4", 
-          value: this.$t('温度：0 – 40℃ / 湿度：20 – 80% RH ')
+          value: this.$t('温度：0 – 40℃ / 湿度：20 – 80% RH')
         },
         {
           column: "is-2",  
@@ -275,7 +288,7 @@ import ProductParameter from '~/components/ProductParameter'
         },
         {
           column: "is-4", 
-          value: this.$t('Z-Wave Plus, 802.11b/g/n (Wi-Fi), 蓝牙 4.0 ')
+          value: this.$t('Z-Wave Plus, 802.11b/g/n (Wi-Fi), 蓝牙 4.0')
         },
         {
           column: "is-2",  

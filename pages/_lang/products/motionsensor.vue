@@ -50,7 +50,7 @@
         </div>
       </div>
     </section> 
-    <section class="section-product normal"  :style="{backgroundImage: `url(${this.$store.state.cdn}/2018/11/71a64e2e9280796506a75c96462fe7ac.jpg`}">
+    <section class="section-product normal"  :style="{backgroundImage: `url(${this.$store.state.cdn}/2018/11/71a64e2e9280796506a75c96462fe7ac.jpg)`}">
       <div class="container" >
         <div class="columns">
           <div class="column is-6 has-text-centered has-text-white normal">
@@ -60,7 +60,7 @@
         </div>
       </div>
     </section>
-    <section class="section-product normal"  :style="{backgroundImage: `url(${this.$store.state.cdn}/2018/11/20e424d452fd09f561239c1235ac2b5f.jpg`}">
+    <section class="section-product normal"  :style="{backgroundImage: `url(${this.$store.state.cdn}/2018/11/20e424d452fd09f561239c1235ac2b5f.jpg)`}">
       <div class="container" >
         <div class="columns">
           <div class="column is-12 has-text-centered has-text-white normal">

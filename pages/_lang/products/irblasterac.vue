@@ -171,7 +171,7 @@ import ProductParameter from '~/components/ProductParameter'
            },
            {
             column: "is-4", 
-            value: this.$t('温度：0 – 40℃  湿度：20 – 80% RH')
+            value: this.$t('温度：0 – 40℃ / 湿度：20 – 80% RH')
            },
            {
             column: "is-2",  

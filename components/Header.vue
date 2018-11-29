@@ -262,7 +262,7 @@ export default {
               link: `${this.baseUrl}/products/#gateway`
             },
             {
-              icon: '<svg xmlns="http://www.w3.org/2000/svg" width="49" height="50"><path fill="none" stroke="#211613" stroke-linecap="round" stroke-linejoin="round" stroke-width=".882" d="M12 1.7C5.842 1.7.85 6.692.85 12.85S5.842 24 12 24h11.12V12.84A11.13 11.13 0 0 0 12 1.7m35.76 11.14a11.12 11.12 0 1 0-22.23 0V24h11.12c6.143-.011 11.116-4.997 11.11-11.14M.87 37.56a11.12 11.12 0 1 0 22.23 0V26.42H12A11.13 11.13 0 0 0 .88 37.56m35.8-11.14H25.6v11.14c.033 6.111 5.008 11.042 11.12 11.02 6.111-.022 11.05-4.988 11.04-11.1-.011-6.111-4.969-11.06-11.08-11.06"/></svg>',
+              icon: '<svg width="29" height="49" xmlns="http://www.w3.org/2000/svg"><g stroke="#211613" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><path d="M28.5 3.5a3 3 0 0 0-3-3h-21a3 3 0 0 0-3 3v42a3 3 0 0 0 3 3h21a3 3 0 0 0 3-3v-42z"/><path d="M24 29a3 3 0 0 0-3-3H9a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V29z"/></g></svg>',
               title: `${this.$t('智能开关')}`,
               link: `${this.baseUrl}/products/#switch`
             },
