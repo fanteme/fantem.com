@@ -8,7 +8,7 @@
       <div class="container">
         <div class="columns is-multiline is-mobile">
           <div class="column is-12 content">
-            <h2 class="title has-text-white">{{$t('智能窗帘电机 聪明贴心的窗帘管家')}}</h2>
+            <h2 class="title has-text-white has-text-weight-normal">{{$t('智能窗帘电机 聪明贴心的窗帘管家')}}</h2>
           </div>
           <div
             class="column is-4-mobile is-2-desktop"
@@ -17,7 +17,7 @@
             :class="{'is-offset-3-desktop': index==0}"
           >
             <div v-html="feature.img"></div>
-            <p class="title has-text-weight-normal">{{feature.text}}</p>
+            <p class="sutitle has-text-weight-normal orange">{{feature.text}}</p>
           </div>
         </div>
       </div>
@@ -27,7 +27,8 @@
         <div class="columns">
           <div class="column is-5-desktop has-text-white">
             <h2 class="content">{{$t('一键开启窗帘 开合自如')}}</h2>
-            <p>{{$t('随开随关，控制自如。只需轻轻一按OOMI智能场景面板，即可打开或者关闭窗帘，开合自如，享受科技的温暖。') + $t('（需搭配具备OOMI网关功能的设备，联动使用）')}}</p>
+            <p class="has-text-weight-light">{{$t('随开随关，控制自如。只需轻轻一按OOMI智能场景面板，即可打开或者关闭窗帘，开合自如，享受科技的温暖。')}}</p>
+            <p class="has-text-weight-light">{{$t('（需搭配具备OOMI网关功能的设备，联动使用）')}}</p>
             <img :src="`${$store.state.cdn}/2018/11/2ffe4043986e412df282c790f4b548af.png`">
           </div>
         </div>
@@ -39,9 +40,10 @@
     >
       <div class="container">
         <div class="columns">
-          <div class="column is-12 has-text-centered has-text-white normal">
-            <h2 class="content">{{$t('定时设置 场景联动')}}</h2>
-            <p>{{$t('智能产品联动使用，可根据个人作息习惯和需要，设定窗帘定时开关。阳光如约照进房间，叫醒睡眼惺忪的你。') + $t('（需搭配具备OOMI网关功能的设备，联动使用）')}}</p>
+          <div class="column is-10 is-offset-1 has-text-centered has-text-white normal">
+            <h2 class="content has-text-weight-normal">{{$t('定时设置 场景联动')}}</h2>
+            <p class="has-text-weight-light">{{$t('智能产品联动使用，可根据个人作息习惯和需要，设定窗帘定时开关。阳光如约照进房间，叫醒睡眼惺忪的你。')}}</p>
+            <p class="has-text-weight-light">{{$t('（需搭配具备OOMI网关功能的设备，联动使用）')}}</p>
           </div>
         </div>
       </div>
@@ -70,8 +72,9 @@
                 ></path>
               </g>
             </svg>
-            <h2 class="content">{{$t('自定义停位点 尽在掌握')}}</h2>
-            {{$t('可控时代，窗帘随您的心情而动。通过场景面板开关按钮，可让窗帘停在指定的位置。') + $t('（需搭配具备OOMI网关功能的设备，联动使用）')}}
+            <h2 class="content has-text-weight-normal">{{$t('自定义停位点 尽在掌握')}}</h2>
+            <p class="has-text-weight-light">{{$t('可控时代，窗帘随您的心情而动。通过场景面板开关按钮，可让窗帘停在指定的位置。')}}</p>
+            <p class="has-text-weight-light">{{$t('（需搭配具备OOMI网关功能的设备，联动使用）')}}</p>
           </div>
         </div>
       </div>
@@ -102,8 +105,9 @@
                 ></path>
               </g>
             </svg>
-            <h2 class="content">{{$t('语音控制 言听“机 ”从')}}</h2>
-            {{$t('能听能说，自在交互。搭配天猫精灵，声音控制开关，让家居更简单。') + $t('（需搭配具备OOMI网关功能的设备，联动使用）')}}
+            <h2 class="content has-text-weight-normal">{{$t('语音控制 言听“机 ”从')}}</h2>
+            <p class="has-text-weight-light">{{$t('能听能说，自在交互。搭配天猫精灵，声音控制开关，让家居更简单。')}}</p>
+            <p class="has-text-weight-light">{{$t('（需搭配具备OOMI网关功能的设备，联动使用）')}}</p>
           </div>
         </div>
       </div>
@@ -112,8 +116,8 @@
       <div class="container">
         <div class="columns">
           <div class="column is-12 has-text-centered normal">
-            <h2 class="content" style="color: #f26f21">{{$t('高品质铝材 匠心之作')}}</h2>
-            <p class="has-text-black">{{$t('OOMI智能窗帘电机通过国家CCC认证，外壳采用高品质铝材，耐高温、耐冲击、防腐能力强，历久弥新。')}}</p>
+            <h2 class="title has-text-weight-normal">{{$t('高品质铝材 匠心之作')}}</h2>
+            <p class="has-text-weight-light">{{$t('OOMI智能窗帘电机通过国家CCC认证，外壳采用高品质铝材，耐高温、耐冲击、防腐能力强，历久弥新。')}}</p>
             <div class="center" style="postion:relative">
               <img :src="`${$store.state.cdn}/2018/11/50a94cfc6425333135caca5de745e644.png`">
             </div>
@@ -126,20 +130,25 @@
 </template>
 <style lang="stylus" scoped>
 .section-features {
-  padding-bottom: 75px;
+  padding-bottom: 100px;
   background-size: cover;
 
   .content {
     font-size: 16px;
     line-height: 28px;
-    margin: 78px 0 94px 0;
+    margin: 78px 0 0 0;
   }
 
   .title {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 38px;
+    color: #3e3a39;
+  }
+  .sutitle {
     font-size: 25px;
     line-height: 36px;
     margin-top: 12px;
-    color: #e76c26;
   }
 }
 
@@ -147,6 +156,11 @@
   position: relative;
   overflow: hidden;
   padding: 101px 0 202px 0;
+
+  svg {
+    margin-bottom: 75px;
+  }
+  
 
   &.one {
     &:before {
@@ -255,9 +269,9 @@
     z-index: 3;
 
     .content {
-      font-size: 28px;
+      font-size: 36px;
       line-height: 42px;
-      margin-bottom: 45px;
+      margin-bottom: 38px;
     }
   }
 }
@@ -290,14 +304,15 @@
 
     .title {
       font-size: 36px;
-      margin: 100px 0 42px;
+      margin: 100px 0 38px;
+      color: #3e3a39;
     }
 
     .content {
-      font-size: 28px;
-      padding: 70px 0;
+      font-size: 36px;
+      padding: 70px 0 0;
       text-align: center;
-      margin: 0 0 8px 0;
+      margin: 0 0 38px 0;
     }
 
     img {
@@ -417,7 +432,7 @@ export default {
         },
         {
           column: 'is-4',
-          value: '250V ～ 50Hz'
+          value: '220V ～ 50Hz'
         },
         {
           column: 'is-2',

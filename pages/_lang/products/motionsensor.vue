@@ -4,22 +4,26 @@
     <section class="section-features has-text-centered center" style="background: #e8eced">
       <div class="container">
         <div class="columns is-multiline is-mobile">
-          <div class="column is-12 content  has-text-weight-light">
+          <div class="column is-10 is-offset-1 content has-text-weight-light">
             <h2 class="title has-text-weight-normal">{{$t('智能三合一传感器')}}</h2>
             {{$t('OOMI智能三合一传感器是一款多功能的传感器设备，集温度、亮度、人体红外监测功能于一体。能轻松将监测到的数据信息报告至网关，以便关联其他智能节点设备做相应响应，为您提供一个舒适的智能生活环境。')}}
           </div>
-          <div class="column is-4-mobile is-4-fullhd" v-for="(feature, index) in features" :key="index">
-            <div v-html="feature.img"></div>
-            <p class="title has-text-weight-normal">{{feature.text}}</p>
+          <div class="column is-8 is-offset-2">
+            <div class="columns is-mobile">
+              <div class="column is-4-mobile is-4-fullhd" v-for="(feature, index) in features" :key="index">
+                <div v-html="feature.img"></div>
+                <p class="sutitle has-text-weight-normal">{{feature.text}}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>    
     </section>
-    <section class="section-product normal" :style="{backgroundImage: `url(${this.$store.state.cdn}/2018/11/9331b21efb15708ec18470fe0b5b1250.jpg)`}">
+    <section class="section-product normal has-text-centered" :style="{backgroundImage: `url(${this.$store.state.cdn}/2018/11/9331b21efb15708ec18470fe0b5b1250.jpg)`}">
       <div class="container">
         <div class="columns">
-          <div class="column is-12 normal" style="background:none">
-            <p class="content has-text-center">{{$t('OOMI智能三合一传感器，可以搭配其他智能产品实现丰富的玩法，即使家里的无线网络不稳定或中断，智能节点设备也可正常工作！')}}</p>
+          <div class="column is-10 is-offset-1 normal">
+            <p class="subtitle has-text-center">{{$t('OOMI智能三合一传感器，可以搭配其他智能产品实现丰富的玩法，即使家里的无线网络不稳定或中断，智能节点设备也可正常工作！')}}</p>
           </div>
         </div>
       </div>
@@ -27,11 +31,11 @@
     <section class="section-temperature " :style="{background: `#dde6f5 url(${this.$store.state.cdn}/2018/11/da89b965b3451b06a9eb4305ebb647e9.png) no-repeat right 64px top`}">
       <div class="container">
         <div class="columns">
-          <div class="column is-12 normal has-text-centered">
-            <h2 class="has-text-black is-size-3">
+          <div class="column is-10 is-offset-1 normal has-text-centered">
+            <h2 class="title has-text-weight-normal">
               {{$t('温度传感器 感知温度变化')}}
             </h2>
-            <p class="has-text-black content">
+            <p class="content has-text-weight-light">
               {{$t('搭配OOMI网关，实时检测温度状态。当温度过高时，传感器向网关发送指令，可联动OOMI智能插座自动打开空调制冷，给您带来舒适的居家环境。')}}
             </p>
             <div class="center" style="postion:relative">
@@ -50,8 +54,8 @@
       <div class="container" >
         <div class="columns">
           <div class="column is-6 has-text-centered has-text-white normal">
-            <h2 class="content">{{$t('亮度传感器 光亮完美掌控')}}</h2>
-            <p>{{$t('智能光控感应，总是为您的舒适着想。根据预设灯光阈值，智能识别家居环境中光线的明暗度，自动调节灯光亮度，感受美好生活。')}}</p>
+            <h2 class="content has-text-weight-normal has-text-white">{{$t('亮度传感器 光亮完美掌控')}}</h2>
+            <p class="has-text-weight-light">{{$t('智能光控感应，总是为您的舒适着想。根据预设灯光阈值，智能识别家居环境中光线的明暗度，自动调节灯光亮度，感受美好生活。')}}</p>
           </div>
         </div>
       </div>
@@ -60,8 +64,8 @@
       <div class="container" >
         <div class="columns">
           <div class="column is-12 has-text-centered has-text-white normal">
-            <h2 class="content">{{$t('人体红外感应器 移动触发场景')}}</h2>
-            <p>{{$t('搭配OOMI智能家居套装，智能探测人或宠物移动，并可在手机上轻松查看室内所有情况。')}}</p>
+            <h2 class="content has-text-weight-normal has-text-white">{{$t('人体红外感应器 移动触发场景')}}</h2>
+            <p class="has-text-weight-light">{{$t('搭配OOMI智能家居套装，智能探测人或宠物移动，并可在手机上轻松查看室内所有情况。')}}</p>
           </div>
         </div>
       </div>
@@ -73,18 +77,25 @@
 .section-features {
   padding-bottom: 75px;
   background-size: cover;
+  color: #3e3a39;
 
   .content {
     font-size: 16px;
     line-height: 28px;
-    margin: 78px 0 94px 0;
+    margin: 78px 0 65px 0;
   }
 
   .title {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 38px;
+    color: #3e3a39;
+  }
+  .sutitle {
     font-size: 25px;
     line-height: 36px;
     margin-top: 12px;
-    color: #e76c26;
+    color: #3e3a39;
   }
 }
 
@@ -159,7 +170,10 @@
       padding-top: 230px;
     }
   }
-
+  .subtitle {
+    font-size: 28px;
+    padding: 65px 0 0 
+  }
   &.normal {
     height: 800px;
 
@@ -174,10 +188,11 @@
     }
 
     .content {
-      font-size: 28px;
-      padding: 70px 0;
+      font-size: 36px;
+      padding: 70px 0 0;
       text-align: center;
-      margin: 0 0 8px 0;
+      margin: 0 0 38px 0;
+      color: #3e3a39;
     }
 
     img {
@@ -271,11 +286,16 @@
 
 .section-temperature {
   padding: 80px 0 110px;
-
+  color: #3e3a39;
+  .title  {
+    font-size: 36px
+  }
+  
   p.content {
-    padding: 40px 0;
+    padding: 14px 0 40px;
     max-width: 740px;
     margin: 0 auto;
+    color: #3e3a39;
   }
 }
 </style>
@@ -325,7 +345,7 @@ export default {
         },
         {
           column: 'is-4',
-          value: this.$t('0 LUX – 30000 LUX')
+          value: '0 LUX – 30000 LUX'
         },
         {
           column: 'is-2',

@@ -263,22 +263,26 @@
               </nuxt-link>    
             </div>
             <div class="column is-6-tablet is-6-fullhd">
-              <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/10/de5322230c57b2555ea260610b64c415.png`" alt="">
-              </div>
-              <div class="content-wrap">
-                <h3>{{$t('智能多功能警示器')}}</h3>
-                <span>{{$t('无线声光警示器 安防漏洞即时警报')}}</span>
-              </div>
+              <nuxt-link :to="`/${this.$store.state.locale}/products/sirenplus`">
+                <div class="img-wrap">
+                  <img :src="`${this.$store.state.cdn}/2018/10/de5322230c57b2555ea260610b64c415.png`" alt="">
+                </div>
+                <div class="content-wrap">
+                  <h3>{{$t('智能多功能警示器')}}</h3>
+                  <span>{{$t('无线声光警示器 安防漏洞即时警报')}}</span>
+                </div>
+              </nuxt-link>  
             </div>
             <div class="column is-6-tablet is-6-fullhd">
-              <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/10/015c865b905c9538339bef5eaa3dd0e9.png`" alt="">
-              </div>
-              <div class="content-wrap">
-                <h3>{{$t('智能红外转换器')}}</h3>
-                <span>{{$t('普通家电轻松转换智能设备')}}</span>
-              </div>
+              <nuxt-link :to="`/${this.$store.state.locale}/products/irblaster`">
+                <div class="img-wrap">
+                  <img :src="`${this.$store.state.cdn}/2018/10/015c865b905c9538339bef5eaa3dd0e9.png`" alt="">
+                </div>
+                <div class="content-wrap">
+                  <h3>{{$t('智能红外转换器')}}</h3>
+                  <span>{{$t('普通家电轻松转换智能设备')}}</span>
+                </div>
+              </nuxt-link>
             </div>
             <div class="column is-6-tablet is-6-fullhd">
               <nuxt-link :to="`/${this.$store.state.locale}/products/irblasterac`">
