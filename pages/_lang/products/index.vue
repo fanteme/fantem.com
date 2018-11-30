@@ -84,14 +84,16 @@
                 </div>  
               </nuxt-link>             
             </div> 
-            <div class="column is-6" @click="previewProduct(464)">
-              <div class="img-wrap"> 
-                <img :src="`${this.$store.state.cdn}/2018/10/141890ba007ea3450083a6e4adf637a0.png`" alt="">
-              </div>  
-              <div class="content-wrap">
-                <h3>{{$t('智能开关')}}</h3>
-                <span>{{$t('无线远程智能场景触摸控制')}}</span>
-              </div>  
+            <div class="column is-6">
+              <nuxt-link :to="`/${this.$store.state.locale}/products/smartswitch`">
+                <div class="img-wrap"> 
+                  <img :src="`${this.$store.state.cdn}/2018/10/141890ba007ea3450083a6e4adf637a0.png`" alt="">
+                </div>  
+                <div class="content-wrap">
+                  <h3>{{$t('智能开关')}}</h3>
+                  <span>{{$t('无线远程智能场景触摸控制')}}</span>
+                </div>  
+              </nuxt-link>      
             </div>
             <div class="column is-6">
               <nuxt-link :to="`/${this.$store.state.locale}/products/curtain`">
@@ -242,14 +244,16 @@
                 </div>
               </nuxt-link>    
             </div>
-            <div class="column is-6-tablet is-6-fullhd" @click="previewProduct(486)">
-              <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/10/d4ec42815ba57a023fc28d596471c36b.png`" alt="">
-              </div>  
-              <div class="content-wrap">
-                <h3>{{$t('智能中继器')}}</h3>
-                <span>{{$t('增强Z-Wave信号 杜绝信号盲区')}}</span>
-              </div>
+            <div class="column is-6-tablet is-6-fullhd">
+              <nuxt-link :to="`/${this.$store.state.locale}/products/rangeextander`">
+                <div class="img-wrap">
+                  <img :src="`${this.$store.state.cdn}/2018/10/d4ec42815ba57a023fc28d596471c36b.png`" alt="">
+                </div>  
+                <div class="content-wrap">
+                  <h3>{{$t('智能中继器')}}</h3>
+                  <span>{{$t('增强Z-Wave信号 杜绝信号盲区')}}</span>
+                </div>
+              </nuxt-link>    
             </div>
             <div class="column is-6-tablet is-6-fullhd">
               <nuxt-link :to="`/${this.$store.state.locale}/products/siren`">

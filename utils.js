@@ -80,7 +80,8 @@ const news = [
   '/about/news/913',
   '/en/about/news/913',
   '/about/news/953',
-  '/en/about/news/953'
+  '/en/about/news/953',
+  '/en/about/news/1509'
 ]
 
 export default {

@@ -58,7 +58,7 @@
     </section>
     <section
       class="section-convenience"
-      :style="{background: `#e7eef4 url(${this.$store.state.cdn}/2018/11/a34cd4f51160b04eb0918d18aa9d0e97.jpg) no-repeat center/cover`}"
+      :style="{background: `#e7eef4 url(${this.$store.state.cdn}/2018/11/74a04dc930b0cb49a436899820233094.jpg) no-repeat center/cover`}"
     >
       <div class="container">
         <div class="columns">
@@ -86,7 +86,7 @@
 <style lang="stylus" scoped>
 .section {
   &-top {
-    padding: 40px 0 160px;
+    padding: 40px 0 260px;
     .title {
       margin-bottom: 38px  
     }
