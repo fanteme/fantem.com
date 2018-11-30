@@ -35,7 +35,7 @@
     </section>
   </div>
 </template>
-<style lang="stylus">
+<style lang="stylus" scoped>
 .pinContainer 
     width: 100%
     height: 100vh

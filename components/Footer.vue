@@ -50,6 +50,7 @@
 footer.footer {
   padding: 4rem 1.5rem 3rem;
   background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
 
   .company {
     font-size: 12px;
@@ -114,6 +115,7 @@ footer.footer {
     position: fixed;
     right: 48px;
     bottom: 96px;
+    background: rgba(255,255,255,0.4);
   }
 }
 </style>
