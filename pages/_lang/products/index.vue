@@ -341,7 +341,7 @@
   color: #231815;
 
   i, .hero {
-    height: 701px;
+    height: 540px;
   }
 
   .hero-body {
@@ -349,6 +349,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center
+    @media screen and (min-width: 1361px) {
+      background-position: 0 -50px
+    }
   }
 
   .caption {
