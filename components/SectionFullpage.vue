@@ -15,8 +15,8 @@
           </div>
           <div v-else-if="section.svg" class="has-text-centered" :class="section.class" >
             <div class="content has-text-center">{{section.content}}</div>
-            <div v-if="$store.state.locale == 'en'" v-html="section.svgen"></div>
-            <div v-else v-html="section.svg"></div>
+            <div class="wrap" v-if="$store.state.locale == 'en'" v-html="section.svgen"></div>
+            <div class="wrap" v-else v-html="section.svg"></div>
           </div>
           <div v-else-if="section.imgs" class="has-text-centered">
             <div class="content has-text-center">{{section.content}}</div>
@@ -102,11 +102,9 @@
     @media screen and (max-width: 414px ) {
       font-size: 12px
     }
-  .imgs  
-    @media screen and (max-width: 1024px ) {
-      // flex-direction: column
-    }
-    
+  .wrap
+    width: 900px
+    margin: 0 auto 
 </style>
 <script>
 export default {
@@ -2755,19 +2753,19 @@ export default {
             break;
           case 2:
             animFrom = {y: '-5%',scale: '1.3','z-index': '99'} // Third one comes from the right
-            animOutLetters = {y: '-8%',scale: '1.3','z-index': '3'}
+            animOutLetters = {y: '-8%',scale: '1','z-index': '3'}
             break;
           case 3:
             animFrom = {y: '-5%',scale: '1.3','z-index': '98'} // Finally, the last one comes from the top
-            animOutLetters = {y: '-8%',scale: '1.3','z-index': '4'}
+            animOutLetters = {y: '-8%',scale: '1','z-index': '4'}
             break;
           case 4:
             animFrom = {y: '-5%',scale: '1.3','z-index': '97'} // Finally, the last one comes from the top
-            animOutLetters = {y: '-8%',scale: '1.3','z-index': '5'}
+            animOutLetters = {y: '-8%',scale: '1','z-index': '5'}
             break;
           case 5:
             animFrom = {y: '-5%',scale: '1.3','z-index': '96'} // Finally, the last one comes from the top
-            animOutLetters = {y: '-8%',scale: '1.3','z-index': '6'}
+            animOutLetters = {y: '-8%',scale: '1','z-index': '6'}
             break;
           case 6:
             animFrom = {y: '-5%',scale: '1.3','z-index': '95'} // Finally, the last one comes from the top
