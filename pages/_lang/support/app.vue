@@ -8,7 +8,7 @@
           </div>
           <div class="column is-6-tablet is-5-desktop has-text-centered">
             <img class="icon" :src="`${this.$store.state.cdn}/2018/10/fdc02fcd26b7ab19b3809b22b2bbd040.png`">
-            <p class="caption">OOMI Pro</p>
+            <p class="caption">OOMI</p>
             <img class="img" width="300" :src="`${this.$store.state.cdn}/2018/10/b44f2d1f08a2a16a23d6a792bafdfb2d.svg`" alt="">
             <div class="columns">
               <div class="column center">

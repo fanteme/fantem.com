@@ -35,19 +35,20 @@
     </section>
   </div>
 </template>
-<style lang="stylus" scoped>
+<style lang="stylus">
 .pinContainer 
-    width: 100%
-    height: 100vh
-    overflow: hidden
-    position: relative
+  width: 100%
+  height: 100vh
+  overflow: hidden
+  position: relative
   
   .panel 
     height: 110vh
     width: 100%
     position: absolute
-    top: 200px
-    left:0
+    top: 30px
+    left: 0px
+    padding: 0 20px 
     display: flex
     justify-content: center
     align-items: center
@@ -88,7 +89,10 @@
       }
   .content
     width: 55%   
-    margin: 0 auto
+    margin: 0 auto 50px
+    @media screen and (max-width: 667px ) {
+      width: 95% 
+    }  
     @media screen and (max-width: 667px ) {
       font-size: 14px
     }
@@ -102,9 +106,7 @@
     @media screen and (max-width: 414px ) {
       font-size: 12px
     }
-  .wrap
-    width: 900px
-    margin: 0 auto 
+
 </style>
 <script>
 export default {
@@ -2744,7 +2746,7 @@ export default {
         let animFrom, animOutLetters;
         switch (i) { // Set animFrom value, depending on the index i of the item
           case 0:
-            animFrom = { y: '-35%', scale: '1.3','z-index': '101'}
+            animFrom = { y: '-25%', scale: '1.3','z-index': '101'}
             animOutLetters = {y: '-8%', scale: '1.1','z-index': '1'}
             break; // First panel is already visible on page load, so no animation
           case 1:
