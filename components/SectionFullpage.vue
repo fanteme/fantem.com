@@ -59,7 +59,9 @@
     } 
     svg 
       width: 720px
-
+      @media screen and (max-width: 1360px ) {
+        width: 580px
+      }
       @media screen and (max-width: 1024px ) {
         width: 400px
       }
@@ -81,12 +83,26 @@
       }
     .img
       width: 290px
+      @media screen and (max-width: 1360px ) {
+        width: 170px
+      }
       @media screen and (max-width: 1024px ) {
         width: 150px
       }
       @media screen and (max-width: 667px ) {
         width: 80px
       }
+  .imgs
+    .house
+      @media screen and (max-width: 1360px ) {
+        width: 520px
+      }
+      @media screen and (max-width: 1024px ) {
+        width: 400px
+      }
+      @media screen and (max-width: 667px ) {
+        width: 350px
+      }    
   .content
     width: 55%   
     margin: 0 auto 50px
