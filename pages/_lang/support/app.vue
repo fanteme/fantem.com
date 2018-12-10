@@ -13,7 +13,7 @@
             <div class="columns">
               <div class="column center">
                 <img width="120" :src="`${this.$store.state.cdn}/2018/11/d4df1b7c19c06e0ce431b3f77a9a76dc.png`" alt="">
-                <a @click.stop="downloadApk" :href="`${$store.state.cdn}/com.fantem.phonecn.apk?t=${new Date().getTime()}`" class="button"><i class="fa fa-android fa-2x"></i>Android{{$t('下载')}}</a>
+                <a @click.stop="downloadApk" :href="apk.acf.fileurl" class="button"><i class="fa fa-android fa-2x"></i>Android{{$t('下载')}}</a>
               </div>
               <div class="column center">
                 <img width="120" :src="`${this.$store.state.cdn}/2018/11/987690a5531bf967e0cf8e408357edaf.png`" alt="">
@@ -69,21 +69,32 @@
 </style>
 <script>
   export default {
-     head() {
+    head() {
       return { title: this.$t('技术支持') +'-'+ 'app'+this.$t('下载') }
     },
     data() {
       return {
-        isActive: false
+        isActive: false,
+        apk: {
+          acf: {
+            fileurl: ''
+          }
+        }
       }
     },
-   methods: {
-    downloadApk() {
-      let ua = navigator.userAgent.toLowerCase()
-      if (ua.match(/MicroMessenger/i) == 'micromessenger') {
-        this.isActive = true
+    methods: {
+      downloadApk() {
+        let ua = navigator.userAgent.toLowerCase()
+        if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+          this.isActive = true
+        }
       }
+    },
+    async mounted() {
+      let { data } = await this.$axios.get(
+        `${this.$store.state.api}/apk?per_page=1`
+      )
+      this.apk = data[0]
     }
-  }
   }
 </script>
