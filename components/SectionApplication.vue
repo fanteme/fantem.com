@@ -1,50 +1,64 @@
 <template>
-  <section class="application">
-    <div class="container-fluid has-text-centered">
-      <h2 class="caption">{{$t('应用场景')}}</h2>
-      <div class="columns">
-        <div class="column" :style="{backgroundImage: `url(${$store.state.cdn}/fantem/application-security-and-protection.jpg)`}">
-          <h2 class="caption">{{$t('安防模式')}}</h2>
-          <p class="subtittle">{{$t('安防策略提前设置 用户一键操作即可')}}</p>
-          <nuxt-link class="more" :to="`${baseUrl}/application/security`">{{$t('进一步了解')}}<svg width="10" height="14" viewBox="0 0 10 14" xmlns="http://www.w3.org/2000/svg"><path d="M8.9 6.6l-7.1-6.2c-.2-.2-.5-.2-.7 0-.2.2-.2.5 0 .7l6.6 5.8-6.6 5.8c-.2.2-.2.5 0 .7.1.1.2.2.4.2.1 0 .2 0 .3-.1l7.1-6.2c.1-.1.2-.2.2-.4l-.2-.3z" fill-rule="nonzero" fill="#EE7623"/></svg></nuxt-link>
+  <section class="application" :style="{backgroundImage: `url(${$store.state.cdn}/2018/12/0d9792dafd8981b219a3c1cfd5e1af56.jpg)`}">
+    <div class="container has-text-left">
+      <h2 class="caption has-text-centered">{{$t('应用场景')}}</h2>
+      <div class="columns is-multiline is-gapless">
+        <div class="column is-6 security">
+          <nuxt-link :to="`${baseUrl}/application/security`">
+            <div class="wrap" :style="{backgroundImage: `url(${$store.state.cdn}/2018/12/efc319901fe8d3f0c2b637132350edb2.jpg)`}">
+              <h2 class="caption">{{$t('安防模式')}}<svg width="12" height="20" xmlns="http://www.w3.org/2000/svg"><path stroke="#3E3A39" stroke-width="2" d="M1 1l9.47 9L1 19" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"/></svg></h2>
+              <p class="subtitle">{{$t('安防策略提前设置 用户一键操作即可')}}</p>
+            </div>
+          </nuxt-link>  
         </div>
-      </div>
-      <div class="columns">
-        <div class="column" :style="{backgroundImage: `url(${$store.state.cdn}/fantem/application-environment.jpg)`}">
-          <h2 class="caption has-text-white">{{$t('娱乐模式')}}</h2>
-          <p class="subtittle has-text-white">{{$t('轻松营造各种娱乐氛围')}}</p>
-          <nuxt-link class="more" :to="`${baseUrl}/application/ent`">{{$t('进一步了解')}}<svg width="10" height="14" viewBox="0 0 10 14" xmlns="http://www.w3.org/2000/svg"><path d="M8.9 6.6l-7.1-6.2c-.2-.2-.5-.2-.7 0-.2.2-.2.5 0 .7l6.6 5.8-6.6 5.8c-.2.2-.2.5 0 .7.1.1.2.2.4.2.1 0 .2 0 .3-.1l7.1-6.2c.1-.1.2-.2.2-.4l-.2-.3z" fill-rule="nonzero" fill="#EE7623"/></svg></nuxt-link>
+        <div class="column is-6">
+          <div class="columns is-multiline is-gapless">
+            <div class="column is-12">
+              <nuxt-link :to="`${baseUrl}/application/ent`">
+                <div class="wrap" :style="{backgroundImage: `url(${$store.state.cdn}/2018/12/dc732f52b4a023c27b617e696ea233fa.jpg)`}">
+                  <h2 class="caption has-text-white">{{$t('娱乐模式')}}<svg width="12" height="20" xmlns="http://www.w3.org/2000/svg"><path stroke="#fff" stroke-width="2" d="M1 1l9.47 9L1 19" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"/></svg></h2>
+                  <p class="subtitle has-text-white">{{$t('轻松营造各种娱乐氛围')}}</p>
+                </div>
+              </nuxt-link>
+            </div>
+            <div class="column is-12">
+              <nuxt-link :to="`${baseUrl}/application/health`">
+                <div class="wrap" :style="{backgroundImage: `url(${$store.state.cdn}/2018/12/03d53ff1bfe01b7ab7b59928801c3766.jpg)`}">
+                  <h2 class="caption has-text-white">{{$t('健康模式')}}<svg width="12" height="20" xmlns="http://www.w3.org/2000/svg"><path stroke="#fff" stroke-width="2" d="M1 1l9.47 9L1 19" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"/></svg></h2>
+                  <p class="subtitle has-text-white">{{$t('家居安全护航，家庭健康保障')}}</p>
+                </div>
+              </nuxt-link>
+            </div>
+          </div>
         </div>
-        <div class="column" :style="{backgroundImage: `url(${$store.state.cdn}/fantem/application-energy.jpg)`}">
-          <h2 class="caption">{{$t('节能模式')}}</h2>
-          <p class="subtittle">{{$t('释放家中遥控器 远程控制 能耗监测')}}</p>
-          <nuxt-link class="more" :to="`${baseUrl}/application/eco`">{{$t('进一步了解')}}<svg width="10" height="14" viewBox="0 0 10 14" xmlns="http://www.w3.org/2000/svg"><path d="M8.9 6.6l-7.1-6.2c-.2-.2-.5-.2-.7 0-.2.2-.2.5 0 .7l6.6 5.8-6.6 5.8c-.2.2-.2.5 0 .7.1.1.2.2.4.2.1 0 .2 0 .3-.1l7.1-6.2c.1-.1.2-.2.2-.4l-.2-.3z" fill-rule="nonzero" fill="#EE7623"/></svg></nuxt-link>
+        <div class="column is-6">
+          <nuxt-link :to="`${baseUrl}/application/eco`">
+            <div class="wrap" :style="{backgroundImage: `url(${$store.state.cdn}/2018/12/883b4b2f160df141aabcf906b3990eae.jpg)`}">
+              <h2 class="caption">{{$t('节能模式')}}<svg width="12" height="20" xmlns="http://www.w3.org/2000/svg"><path stroke="#3E3A39" stroke-width="2" d="M1 1l9.47 9L1 19" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"/></svg></h2>
+              <p class="subtitle">{{$t('释放家中遥控器 远程控制 能耗监测')}}</p>
+            </div>
+          </nuxt-link>
         </div>
-      </div>
-      <div class="columns">
-        <div class="column" :style="{backgroundImage: `url(${$store.state.cdn}/fantem/application-health.jpg)`}">
-          <h2 class="caption">{{$t('健康模式')}}</h2>
-          <p class="subtittle">{{$t('家居安全护航，家庭健康保障')}}</p>
-          <nuxt-link class="more" :to="`${baseUrl}/application/health`">{{$t('进一步了解')}}<svg width="10" height="14" viewBox="0 0 10 14" xmlns="http://www.w3.org/2000/svg"><path d="M8.9 6.6l-7.1-6.2c-.2-.2-.5-.2-.7 0-.2.2-.2.5 0 .7l6.6 5.8-6.6 5.8c-.2.2-.2.5 0 .7.1.1.2.2.4.2.1 0 .2 0 .3-.1l7.1-6.2c.1-.1.2-.2.2-.4l-.2-.3z" fill-rule="nonzero" fill="#EE7623"/></svg></nuxt-link>
+        <div class="column is-6">
+          <nuxt-link :to="`${baseUrl}/application/scene`">
+            <div class="wrap" :style="{backgroundImage: `url(${$store.state.cdn}/2018/12/c0be9cb1ee6245e168db88a1401a2216.jpg)`}">
+              <h2 class="caption">{{$t('场景')}}<svg width="12" height="20" xmlns="http://www.w3.org/2000/svg"><path stroke="#3E3A39" stroke-width="2" d="M1 1l9.47 9L1 19" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"/></svg></h2>
+              <p class="subtitle">{{$t('DIY 专属你的场景模式!')}}</p>
+            </div>
+          </nuxt-link>
         </div>
-        <div class="column" :style="{backgroundImage: `url(${$store.state.cdn}/fantem/application-scenes.jpg)`}">
-          <h2 class="caption">{{$t('场景')}}</h2>
-          <p class="subtittle">{{$t('DIY 专属你的场景模式!')}}</p>
-          <nuxt-link class="more" :to="`${baseUrl}/application/scene`">{{$t('进一步了解')}}<svg width="10" height="14" viewBox="0 0 10 14" xmlns="http://www.w3.org/2000/svg"><path d="M8.9 6.6l-7.1-6.2c-.2-.2-.5-.2-.7 0-.2.2-.2.5 0 .7l6.6 5.8-6.6 5.8c-.2.2-.2.5 0 .7.1.1.2.2.4.2.1 0 .2 0 .3-.1l7.1-6.2c.1-.1.2-.2.2-.4l-.2-.3z" fill-rule="nonzero" fill="#EE7623"/></svg></nuxt-link>
       </div>
     </div>  
-  </div>  
   </section>  
 </template>
 <style lang="stylus">
 .application {
-  .container-fluid {
-    padding-top: 60px;
-    margin-bottom: 17px;
-
+  background-size: cover;
+  .container {
+    padding: 60px 0 30px;
+   
     >h2 {
       margin: 0 0 32px 0;
-
       &:after {
         display: block;
         margin: 0 auto;
@@ -56,16 +70,42 @@
       }
     }
   }
-
-  .column {
-    @media screen and (min-width: 769px) {
-      margin: 5px;
+  .is-6,.is-12 {
+    margin: 6px 
+    .wrap {
+      height: 320px;
+      margin: 6px;
+      background-position: bottom;
+      background-size: cover;
     }
-
-    height: 650px;
-    padding-top: 60px;
-    background-position: center;
-    background-size: cover;
+    &.security {
+      .wrap {
+         height: 652px; 
+      }
+    } 
+    a {
+      transition: all .2s linear;
+      height: 100%;
+      display: block;
+      &:hover {
+        transform: translate3d(0,-3px,0);
+      } 
+    } 
+  }
+  .wrap {
+    height: 100%; 
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.2);
+    .caption {
+      font-size: 28px;
+      color: #3e3a39;
+      svg {
+        margin-left: 32px;
+      }
+    }
   }
 
   .caption {
@@ -73,30 +113,13 @@
     line-height: 44px;
   }
 
-  .subtittle {
+  .subtitle {
     font-size: 18px;
     line-height: 22px;
-    margin: 17px 0 12px;
-  }
-
-  .more {
-    color: #ee7623;
-    padding-bottom: 10px;
-    border-bottom: 2px solid transparent;
-
-    svg {
-      margin-left: 14px;
-      vertical-align: middle;
-    }
-
-    &:hover {
-      transition: all 0.5s;
-      border-bottom-color: #ee7623;
-    }
+    margin: 7px 0 38px;
   }
 }
 </style>
-
 <script>
 export default {
   computed: {

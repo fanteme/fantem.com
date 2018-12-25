@@ -15,8 +15,8 @@
           </div>
           <div v-else-if="section.svg" class="has-text-centered" :class="section.class" >
             <div class="content has-text-center">{{section.content}}</div>
-            <div v-if="$store.state.locale == 'en'" v-html="section.svgen"></div>
-            <div v-else v-html="section.svg"></div>
+            <div class="wrap" v-if="$store.state.locale == 'en'" v-html="section.svgen"></div>
+            <div class="wrap" v-else v-html="section.svg"></div>
           </div>
           <div v-else-if="section.imgs" class="has-text-centered">
             <div class="content has-text-center">{{section.content}}</div>
@@ -37,17 +37,18 @@
 </template>
 <style lang="stylus">
 .pinContainer 
-    width: 100%
-    height: 100vh
-    overflow: hidden
-    position: relative
+  width: 100%
+  height: 100vh
+  overflow: hidden
+  position: relative
   
   .panel 
     height: 110vh
     width: 100%
     position: absolute
-    top: 200px
-    left:0
+    top: 30px
+    left: 0px
+    padding: 0 20px 
     display: flex
     justify-content: center
     align-items: center
@@ -58,7 +59,9 @@
     } 
     svg 
       width: 720px
-
+      @media screen and (max-width: 1360px ) {
+        width: 580px
+      }
       @media screen and (max-width: 1024px ) {
         width: 400px
       }
@@ -80,15 +83,32 @@
       }
     .img
       width: 290px
+      @media screen and (max-width: 1360px ) {
+        width: 170px
+      }
       @media screen and (max-width: 1024px ) {
         width: 150px
       }
       @media screen and (max-width: 667px ) {
         width: 80px
       }
+  .imgs
+    .house
+      @media screen and (max-width: 1360px ) {
+        width: 520px
+      }
+      @media screen and (max-width: 1024px ) {
+        width: 400px
+      }
+      @media screen and (max-width: 667px ) {
+        width: 350px
+      }    
   .content
     width: 55%   
-    margin: 0 auto
+    margin: 0 auto 50px
+    @media screen and (max-width: 667px ) {
+      width: 95% 
+    }  
     @media screen and (max-width: 667px ) {
       font-size: 14px
     }
@@ -102,11 +122,7 @@
     @media screen and (max-width: 414px ) {
       font-size: 12px
     }
-  .imgs  
-    @media screen and (max-width: 1024px ) {
-      // flex-direction: column
-    }
-    
+
 </style>
 <script>
 export default {
@@ -2746,7 +2762,7 @@ export default {
         let animFrom, animOutLetters;
         switch (i) { // Set animFrom value, depending on the index i of the item
           case 0:
-            animFrom = { y: '-35%', scale: '1.3','z-index': '101'}
+            animFrom = { y: '-25%', scale: '1.3','z-index': '101'}
             animOutLetters = {y: '-8%', scale: '1.1','z-index': '1'}
             break; // First panel is already visible on page load, so no animation
           case 1:
@@ -2755,19 +2771,19 @@ export default {
             break;
           case 2:
             animFrom = {y: '-5%',scale: '1.3','z-index': '99'} // Third one comes from the right
-            animOutLetters = {y: '-8%',scale: '1.3','z-index': '3'}
+            animOutLetters = {y: '-8%',scale: '1','z-index': '3'}
             break;
           case 3:
             animFrom = {y: '-5%',scale: '1.3','z-index': '98'} // Finally, the last one comes from the top
-            animOutLetters = {y: '-8%',scale: '1.3','z-index': '4'}
+            animOutLetters = {y: '-8%',scale: '1','z-index': '4'}
             break;
           case 4:
             animFrom = {y: '-5%',scale: '1.3','z-index': '97'} // Finally, the last one comes from the top
-            animOutLetters = {y: '-8%',scale: '1.3','z-index': '5'}
+            animOutLetters = {y: '-8%',scale: '1','z-index': '5'}
             break;
           case 5:
             animFrom = {y: '-5%',scale: '1.3','z-index': '96'} // Finally, the last one comes from the top
-            animOutLetters = {y: '-8%',scale: '1.3','z-index': '6'}
+            animOutLetters = {y: '-8%',scale: '1','z-index': '6'}
             break;
           case 6:
             animFrom = {y: '-5%',scale: '1.3','z-index': '95'} // Finally, the last one comes from the top

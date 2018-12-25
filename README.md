@@ -1,7 +1,7 @@
-<a href="https://travis-ci.com/nuxtify/shiminger.com"><img src="https://travis-ci.org/fanteme/fantem.com.svg?branch=master" alt="Build Status"></a>
+<a href="https://travis-ci.org/fanteme/fantem.com"><img src="https://travis-ci.org/fanteme/fantem.com.svg?branch=master" alt="Build Status"></a>
 # fantem.com
 
-> Nuxt.js TypeScript project
+> Nuxt.js project
 
 ## Build Setup
 

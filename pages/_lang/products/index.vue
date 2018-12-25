@@ -2,7 +2,7 @@
   <main class="main">
     <section class="products">
       <div class="hero">
-        <div class="hero-body" :style="{backgroundImage: `url(${$store.state.cdn}/2018/11/2fa06259d4a02a920c57fb13baa961a9.jpg)`}">
+        <div class="hero-body" :style="{backgroundImage: `url(${$store.state.cdn}/2018/11/c95c3bfd1d4d0cc36c4799ce253f1af0.jpg)`}">
         </div>
       </div>
       <div class="container">
@@ -25,7 +25,7 @@
               </nuxt-link>  
             </div>          
           </div>
-          <div class="columns">
+          <div class="columns is-multiline">
             <div class="column">
               <nuxt-link :to="`/${this.$store.state.locale}/products/cube`">
                 <div class="img-wrap">
@@ -84,14 +84,16 @@
                 </div>  
               </nuxt-link>             
             </div> 
-            <div class="column is-6" @click="previewProduct(464)">
-              <div class="img-wrap"> 
-                <img :src="`${this.$store.state.cdn}/2018/10/141890ba007ea3450083a6e4adf637a0.png`" alt="">
-              </div>  
-              <div class="content-wrap">
-                <h3>{{$t('智能开关')}}</h3>
-                <span>{{$t('无线远程智能场景触摸控制')}}</span>
-              </div>  
+            <div class="column is-6">
+              <nuxt-link :to="`/${this.$store.state.locale}/products/smartswitch`">
+                <div class="img-wrap"> 
+                  <img :src="`${this.$store.state.cdn}/2018/10/141890ba007ea3450083a6e4adf637a0.png`" alt="">
+                </div>  
+                <div class="content-wrap">
+                  <h3>{{$t('智能开关')}}</h3>
+                  <span>{{$t('无线远程智能场景触摸控制')}}</span>
+                </div>  
+              </nuxt-link>      
             </div>
             <div class="column is-6">
               <nuxt-link :to="`/${this.$store.state.locale}/products/curtain`">
@@ -139,7 +141,7 @@
             </div>
           </div>
           <div id="light" class="caption  has-text-centered">{{$t('智能照明')}}</div>
-          <div class="columns">
+          <div class="columns is-multiline">
             <div class="column">
               <nuxt-link :to="`/${this.$store.state.locale}/products/bulb`">
                 <div class="img-wrap">
@@ -242,14 +244,16 @@
                 </div>
               </nuxt-link>    
             </div>
-            <div class="column is-6-tablet is-6-fullhd" @click="previewProduct(486)">
-              <div class="img-wrap">
-                <img :src="`${this.$store.state.cdn}/2018/10/d4ec42815ba57a023fc28d596471c36b.png`" alt="">
-              </div>  
-              <div class="content-wrap">
-                <h3>{{$t('智能中继器')}}</h3>
-                <span>{{$t('增强Z-Wave信号 杜绝信号盲区')}}</span>
-              </div>
+            <div class="column is-6-tablet is-6-fullhd">
+              <nuxt-link :to="`/${this.$store.state.locale}/products/rangeextander`">
+                <div class="img-wrap">
+                  <img :src="`${this.$store.state.cdn}/2018/10/d4ec42815ba57a023fc28d596471c36b.png`" alt="">
+                </div>  
+                <div class="content-wrap">
+                  <h3>{{$t('智能中继器')}}</h3>
+                  <span>{{$t('增强Z-Wave信号 杜绝信号盲区')}}</span>
+                </div>
+              </nuxt-link>    
             </div>
             <div class="column is-6-tablet is-6-fullhd">
               <nuxt-link :to="`/${this.$store.state.locale}/products/siren`">
@@ -337,13 +341,17 @@
   color: #231815;
 
   i, .hero {
-    height: 701px;
+    height: 540px;
   }
 
   .hero-body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center
+    @media screen and (min-width: 1361px) {
+      background-position: 0 -50px
+    }
   }
 
   .caption {
@@ -377,7 +385,7 @@
         padding: 6px;
         background: #fff;
         background-clip: content-box;
-
+       
         .img-wrap {
           background: radial-gradient(white, #e8e8e8);
 
@@ -397,6 +405,26 @@
           span {
             font-size: 16px;
             color: #727171;
+          }
+        }
+      }
+      &.is-gapless {
+        transition: all .2s linear;
+        &:hover {
+          box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+          transform: translate3d(0, -2px, 0);
+          z-index: 3; 
+        }
+      }
+      &.is-multiline {
+        a {
+          height: 100%;
+          display: block;
+          transition: all .2s linear;
+          &:hover {
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+            transform: translate3d(0, -2px, 0);
+            z-index: 3; 
           }
         }
       }

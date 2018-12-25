@@ -189,7 +189,7 @@ export default {
         content: {}
       },
       banner: {
-        backgroundimg: '/2018/10/a876975db592cb60761b6d80506c8c04.jpg',
+        backgroundimg: '/2018/11/1408480d9d8cc475d125829491baf817.jpg',
         parallax: false,
         height: '500px'
       }

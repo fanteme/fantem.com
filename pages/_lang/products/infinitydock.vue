@@ -71,7 +71,7 @@ import ProductParameter from '~/components/ProductParameter'
           title: this.$t('智能充电底座'),
           subtitle: 'OOMI Infinity Dock',
           content: this.$t('OOMI智能底座(与 OOMI Touch 搭配使用) OOMI Infinity Dock 可为 OOMI Touch 即时充电，为其保驾护航。OOMI智能底座是通过触点接触对Touch进 行充电的HID设备，拥有NFC和USB通讯接口。此外，在进行相关配置后，可 通过Touch触碰触发用户自定义的场景模式。'),
-          img: `${this.$store.state.cdn}/2018/11/5fbc6b4dda9453c41b6f04a9ed5cbf1f.png`,
+          img: `${this.$store.state.cdn}/2018/11/18b21e2969ab62cda4b10c326b06b167.png`,
           class: 'gray-radial-gradient'
         },
         parameters: [

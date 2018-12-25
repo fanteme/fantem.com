@@ -29,6 +29,9 @@ export default {
         src: '/js/nav2lang.js'
       },
       {
+        src: '/js/intersection-observer.js'
+      },
+      {
         innerHTML:
           process.env.NODE_ENV === 'production'
             ? `var _hmt = _hmt || [];
