@@ -46,15 +46,14 @@
         </div>
       </div>
     </section>
-    <section class="section-right linkage has-text-right" :style="{backgroundImage: `url(${this.$store.state.cdn}/2018/11/c170ed1f4c9489b9007fed92d6a83ea0.jpg)`}">
+    <section class="section-right linkage has-text-right" :style="{backgroundImage: `url(${this.$store.state.cdn}/2019/01/c170ed1f4c9489b9007fed92d6a83ea0.jpg)`}">
       <div class="container">
         <div class="columns is-multiline">
           <div class="column is-6 is-offset-6">
             <h2 class="title has-text-weight-normal has-text-white">{{$t('多设备智能联动')}}</h2>
             <p class="has-text-weight-light has-text-white">{{$t('早上7点：定时开灯，叫你起床。清晨，用灯光引导你的身体慢慢苏醒；')}}</p>
             <p class="has-text-weight-light has-text-white">{{$t('晚上19点：下班回家，打开房门，灯光自动为您亮起，让您享受美妙的夜晚；')}}</p>
-            <p class="has-text-weight-light has-text-white">{{$t('晚上22点：伸手一按OOMI智能场景面板即可关灯，再也不用跑到墙边去按开关。')}}</p>z
-
+            <p class="has-text-weight-light has-text-white">{{$t('晚上22点：伸手一按OOMI智能场景面板即可关灯，再也不用跑到墙边去按开关。')}}</p>
           </div>
         </div>
       </div>
