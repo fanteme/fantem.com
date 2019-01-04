@@ -89,7 +89,7 @@
             </g>
           </svg>
         </i>
-        <a href="https://itunes.apple.com/cn/app/oomi-pro/id1311087767?mt=8">
+        <a href="https://itunes.apple.com/cn/app/oomi/id1142860128?mt=8">
           <span>苹果App Store</span>
         </a>
       </div>
