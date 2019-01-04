@@ -17,7 +17,7 @@
               </div>
               <div class="column center">
                 <img width="120" :src="`${this.$store.state.cdn}/2018/11/987690a5531bf967e0cf8e408357edaf.png`" alt="">
-                <a href="//itunes.apple.com/cn/app/oomi-pro/id1311087767" class="button"><i class="fa fa-apple fa-2x"></i>App store{{$t('下载')}}</a>
+                <a href="https://itunes.apple.com/cn/app/oomi/id1142860128?mt=8" class="button"><i class="fa fa-apple fa-2x"></i>App store{{$t('下载')}}</a>
               </div>  
             </div>
           </div>
