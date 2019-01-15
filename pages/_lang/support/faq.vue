@@ -10,20 +10,26 @@
               </a>
             </div>
             <div class="control">
-              <input class="input searchfaq" type="text" v-model="keywords" placeholder="请输入关键字， 例如：Cube">
+              <input
+                class="input searchfaq"
+                type="text"
+                v-model="keywords"
+                placeholder="请输入关键字， 例如：Cube"
+              >
             </div>
           </div>
           <div class="column is-12">
             <h2 v-if="searchFaqs.length" class="title has-text-centered">搜索结果</h2>
-          </div>  
+          </div>
         </div>
         <div class="columns">
           <div class="column is-one-quarter">
             <ul>
               <li v-for="(category, index) in categories" :key="index">
-                <nuxt-link :to="`${baseUrl}/support/faq#${category.slug}`" :class="{'nuxt-link-active': category.active}">
-                  {{category.title}}
-                </nuxt-link>
+                <nuxt-link
+                  :to="`${baseUrl}/support/faq#${category.slug}`"
+                  :class="{'nuxt-link-active': category.active}"
+                >{{category.title}}</nuxt-link>
               </li>
             </ul>
           </div>
@@ -34,21 +40,23 @@
         </div>
       </section>
     </section>
-    
   </main>
 </template>
 
 <style lang="stylus">
 .faq {
   background: #edf1f2;
-  padding :31px 0 47px 0;
+  padding: 31px 0 47px 0;
+
   .searchfaq {
     width: 22rem;
   }
+
   .faq-list {
     ul {
       background: #fff;
-      padding: 20px 0; 
+      padding: 20px 0;
+
       li {
         line-height: 45px;
         padding-left: 51px;
@@ -69,7 +77,6 @@
     }
   }
 }
-
 </style>
 
 <script>
@@ -80,7 +87,7 @@ export default {
   },
   head() {
     return {
-      title: this.$t('技术支持') +'-'+ this.title
+      title: this.$t('技术支持') + '-' + this.title
     }
   },
   computed: {
@@ -101,10 +108,10 @@ export default {
     },
     currentFaqs() {
       if (this.title == '常见问题FAQ' && this.faqs.length > 0) {
-        let num , i
-        for(i = 0; this.arr.length < 10; i++) {
+        let num, i
+        for (i = 0; this.arr.length < 10; i++) {
           num = Math.floor(Math.random() * this.faqs.length)
-          if(this.arr.indexOf(this.faqs[num]) == -1 ) {
+          if (this.arr.indexOf(this.faqs[num]) == -1) {
             this.arr.push(this.faqs[num])
           }
         }
@@ -114,7 +121,7 @@ export default {
       }
     }
   },
-  data()  {
+  data() {
     return {
       faq: {},
       faqs: [],
@@ -127,11 +134,11 @@ export default {
           name: 'Cube智能家庭网关',
           slug: 'cube'
         },
-        {
-          title: this.$t('Touch智能家庭控制平板'),
-          name: 'Touch智能家庭控制平板',
-          slug: 'touch'
-        },
+        // {
+        //   title: this.$t('Touch智能家庭控制平板'),
+        //   name: 'Touch智能家庭控制平板',
+        //   slug: 'touch'
+        // },
         {
           title: this.$t('智能传感器类'),
           name: '智能传感器类',
@@ -183,7 +190,7 @@ export default {
           slug: 'third-party'
         }
       ]
-   } 
+    }
   },
   methods: {
     getFaqsByCategory(category) {
