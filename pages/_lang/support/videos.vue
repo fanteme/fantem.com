@@ -4,19 +4,28 @@
       <div class="container-fluid">
         <div class="video">
           <video class="video-bg" autoplay muted loop>
-            <source :src="`${this.$store.state.cdn}/fantem/videos/%E8%A7%86%E9%A2%91%E4%B8%AD%E5%BF%83800PX.mp4`" type="video/mp4" />
-            <source :src="`${this.$store.state.cdn}/fantem/videos/%E8%A7%86%E9%A2%91%E4%B8%AD%E5%BF%83800PX.webm`" type="video/webm" />
+            <source
+              :src="`${this.$store.state.cdn}/fantem/videos/%E8%A7%86%E9%A2%91%E4%B8%AD%E5%BF%83800PX.mp4`"
+              type="video/mp4"
+            >
+            <source
+              :src="`${this.$store.state.cdn}/fantem/videos/%E8%A7%86%E9%A2%91%E4%B8%AD%E5%BF%83800PX.webm`"
+              type="video/webm"
+            >
           </video>
         </div>
       </div>
       <div class="container">
-        <div class="field has-addons has-addons-centered" v-if="videos.length">
-        </div>
+        <div class="field has-addons has-addons-centered" v-if="videos.length"></div>
         <div v-for="(category, index) in categories" :key="index">
           <h2 :id="category" v-if="videos.length" class="caption">{{category}}</h2>
           <div class="columns is-multiline">
-            <div class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-third-widescreen is-one-quarter-fullhd" v-for="(video, index) in video[category]" :key="index">
-              <img :src="video.source+video.poster"/>
+            <div
+              class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-third-widescreen is-one-quarter-fullhd"
+              v-for="(video, index) in video[category]"
+              :key="index"
+            >
+              <img :src="video.source+video.poster">
               <i class="fa fa-play-circle-o" @click="showModal(video)"></i>
               <div class="subtitle has-text-centered" v-text="video.title.rendered"></div>
             </div>
@@ -103,11 +112,11 @@ export default {
     return {
       video: {},
       categories: [
-        'APP使用',
-        '产品使用',
-        '出入网操作',
+        '组网教程',
+        '产品添加/删除',
+        // '出入网操作',
         '开关接线',
-        '场景设置',
+        '高级操作',
         '第三方兼容'
       ],
       showvideo: false,
