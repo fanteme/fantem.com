@@ -1,7 +1,7 @@
 <template>
   <main class="main">
     <section class="videos">
-      <div class="container-fluid">
+      <div class="container-fluid is-hidden-mobile">
         <div class="video">
           <video class="video-bg" autoplay muted loop>
             <source
