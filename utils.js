@@ -7,7 +7,6 @@ const pages = path.join(__dirname , '/pages/_lang')
 let routes = []
 
 async function readDir(path) {
-  
   const files = await fs.readdirSync(path)
   await files.forEach(async file => {
     const stat = await fs.statSync(path + '/' + file)
@@ -26,6 +25,7 @@ async function readDir(path) {
 }
 async function newspath() {
   const { data } = await axios.get('https://api.fantem.cn/wp-json/wp/v2/getnewsid')
+  data.push('/page/training', '/en/page/training')
   return data
 }
 
