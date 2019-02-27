@@ -26,9 +26,14 @@ export default {
   components: {
     agile
   },
-  data() {
-    return {
-      slides: [
+  computed: {
+    baseUrl() {
+      return this.$store.state.locale == this.$store.state.fallbackLocale
+        ? ''
+        : `/${this.$store.state.locale}`
+    },
+    slides() {
+      return [
         {
           img: `${
             this.$store.state.cdn
@@ -57,7 +62,7 @@ export default {
           }/2019/02/5a8dfcb580581020a99d14f59d784048.jpg`,
           icon: `<svg width="92" height="47" viewBox="0 0 92 47" xmlns="http://www.w3.org/2000/svg"><path d="M23.1.8c-12.7 0-23 10.3-23 23s10.3 23 23 23 23-10.3 23-23-10.3-23-23-23zm0 38c-8.3 0-15-6.7-15-15s6.7-15 15-15 15 6.7 15 15-6.7 15-15 15zm62.1-7.9v-30.1h-6.9l-22.5 29v7.2h22.2v9.9h7.2v-9.9h6.8v-6h-6.8v-.1zm-7.2 0h-16.1l15.9-20.6h.2v20.6z" fill-rule="nonzero" fill="#DADBDB"/></svg>`,
           title: this.$t('最新动态'),
-          to: `/${this.$store.state.locale}/page/training`
+          to: `${this.baseUrl}/page/training`
         }
       ]
     }
