@@ -3,21 +3,21 @@
     <div class="faq-accordion-wrapper">
       <transition name="accordion-fade-slide" mode="out-in">
         <div class="accordion">
-          <div
-            class="accordion__item"
-            v-for="(item, i) in items"
-            :key="`accordion-item-${i}`"
-          >
+          <div class="accordion__item" v-for="(item, i) in items" :key="`accordion-item-${i}`">
             <div class="accordion__title" @click="makeActive(i)">
-              <p class="accordion__title-text">{{ item.title.rendered }}</p>
+              <p
+                class="accordion__title-text"
+              >{{ $store.state.locale == 'en' && item.acf.en_title ? item.acf.en_title : item.title.rendered }}</p>
               <button :class="generateButtonClasses(i)"></button>
             </div>
-              <collapse-transition>
-                <div class="accordion__value_wrap" v-if="i === activeQuestionIndex">
-                  <p class="accordion__value" v-html="item.content.rendered">
-                  </p>
-                </div>
-              </collapse-transition>
+            <collapse-transition>
+              <div class="accordion__value_wrap" v-if="i === activeQuestionIndex">
+                <p
+                  class="accordion__value"
+                  v-html="$store.state.locale == 'en' && item.acf.en_content ? item.acf.en_content : item.content.rendered"
+                ></p>
+              </div>
+            </collapse-transition>
           </div>
         </div>
       </transition>
@@ -63,9 +63,9 @@ export default {
 </script>
 
 <style lang="stylus">
-ol{
-  li{
-    margin-left: 18px
+ol {
+  li {
+    margin-left: 18px;
   }
 }
 
@@ -100,10 +100,7 @@ button {
 }
 
 .accordion {
-
   &__item {
-   
-
     &:last-child {
       border-bottom: none;
     }
@@ -114,7 +111,7 @@ button {
     justify-content: space-between;
     align-items: center;
     padding: 15px 5px 15px 9px;
-    margin: 0 28px; 
+    margin: 0 28px;
     border-bottom: 1px solid $border-color;
     cursor: pointer;
     transition: all 0.3s;
@@ -133,15 +130,17 @@ button {
       margin-right: 10px;
     }
   }
+
   &__value_wrap {
     background: #f7f7f7;
-    padding: 20px 28px; 
+    padding: 20px 28px;
   }
+
   &__value {
     padding: 0 10px 0px 10px;
     font-size: 14px;
-    
   }
+
   &__toggle-button {
     position: relative;
     width: 16px;

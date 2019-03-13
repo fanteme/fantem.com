@@ -138,7 +138,7 @@ export default {
         `${this.$store.state.api}/video_cat?per_page=10`
       )
       this.categories = data.sort((x, y) =>
-        x.description > y.description ? 1 : -1
+        Number(x.description) > Number(y.description) ? 1 : -1
       )
     },
     getVideosByCategory(category) {

@@ -29,7 +29,7 @@
                 <nuxt-link
                   :to="`${baseUrl}/support/faq#${category.slug}`"
                   :class="{'nuxt-link-active': category.active}"
-                >{{category.title}}</nuxt-link>
+                >{{ $t(category.name) }}</nuxt-link>
               </li>
             </ul>
           </div>
@@ -90,6 +90,15 @@ export default {
       title: this.$t('技术支持') + '-' + this.title
     }
   },
+  data() {
+    return {
+      faqs: [],
+      keywords: '',
+      searchFaqs: [],
+      categories: [],
+      randomFaqs: []
+    }
+  },
   computed: {
     baseUrl() {
       return this.$store.state.locale == this.$store.state.fallbackLocale
@@ -98,119 +107,39 @@ export default {
     },
     title() {
       if (this.$route.hash) {
-        let faq = this.categories.find(category => {
+        let cat = this.categories.find(category => {
           return category.slug == this.$route.hash.substr(1)
         })
-        return faq.name
+        if (cat) {
+          return cat.name
+        }
       } else {
-        return '常见问题FAQ'
+        return this.$t('常见问题')
       }
     },
     currentFaqs() {
-      if (this.title == '常见问题FAQ' && this.faqs.length > 0) {
+      if (this.title == this.$t('常见问题') && this.faqs.length > 0) {
         let num, i
-        for (i = 0; this.arr.length < 10; i++) {
+        for (i = 0; this.randomFaqs.length < 10; i++) {
           num = Math.floor(Math.random() * this.faqs.length)
-          if (this.arr.indexOf(this.faqs[num]) == -1) {
-            this.arr.push(this.faqs[num])
+          if (this.randomFaqs.indexOf(this.faqs[num]) == -1) {
+            this.randomFaqs.push(this.faqs[num])
           }
         }
-        return this.arr
+        return this.randomFaqs
       } else {
-        return this.faq[this.title]
+        const cat = this.categories.find(category => {
+          return category.name == this.title
+        })
+        if (cat) {
+          return cat.faqs
+        }
+        return []
       }
     }
   },
-  data() {
-    return {
-      faq: {},
-      faqs: [],
-      arr: [],
-      keywords: '',
-      searchFaqs: [],
-      categories: [
-        {
-          title: this.$t('Cube智能家庭网关'),
-          name: 'Cube智能家庭网关',
-          slug: 'cube'
-        },
-        // {
-        //   title: this.$t('Touch智能家庭控制平板'),
-        //   name: 'Touch智能家庭控制平板',
-        //   slug: 'touch'
-        // },
-        {
-          title: this.$t('智能传感器类'),
-          name: '智能传感器类',
-          slug: 'smart-sensor'
-        },
-        {
-          title: this.$t('智能单火开关'),
-          name: '智能单火开关',
-          slug: 'smart-single-fire-switch'
-        },
-        {
-          title: this.$t('智能零火开关'),
-          name: '智能零火开关',
-          slug: 'smart-zero-fire-switch'
-        },
-        {
-          title: this.$t('智能嵌入式开关'),
-          name: '智能嵌入式开关',
-          slug: 'smart-embed-switch'
-        },
-        {
-          title: this.$t('智能灯泡/灯带'),
-          name: '智能灯泡/灯带',
-          slug: 'smart-bulb-colorstrip'
-        },
-        {
-          name: this.$t('智能插座/场景面板'),
-          name: '智能插座/场景面板',
-          slug: 'smart-plug-panel'
-        },
-        {
-          title: this.$t('智能多功能警示器'),
-          name: '智能多功能警示器',
-          slug: 'smart-multi-fun-siren'
-        },
-        {
-          title: this.$t('智能红外转换器'),
-          name: '智能红外转换器',
-          slug: 'smart-ir-switch'
-        },
-        {
-          title: this.$t('智能窗帘电机'),
-          name: '智能窗帘电机',
-          slug: 'fantem-curtain-controller'
-        },
-        {
-          title: this.$t('第三方产品'),
-          name: '第三方产品',
-          slug: 'third-party'
-        }
-      ]
-    }
-  },
-  methods: {
-    getFaqsByCategory(category) {
-      return this.faqs.filter(element => {
-        return element['category'] === category
-      })
-    }
-  },
-  async mounted() {
-    let { data } = await this.$axios.get(
-      `${this.$store.state.api}/sp_faq?per_page=100`
-    )
-    this.faqs = data
-    this.categories.forEach(category => {
-      const faqs = this.getFaqsByCategory(category.name)
-      this.$set(this.faq, category.name, faqs)
-    })
-  },
   watch: {
-    keywords: function(val) {
+    keywords(val) {
       this.searchFaqs = this.faqs.filter(item => {
         const title = item.title.rendered
         if (val) {
@@ -223,6 +152,35 @@ export default {
         }
       })
     }
+  },
+  methods: {
+    async getFaqs() {
+      const { data } = await this.$axios.get(
+        `${this.$store.state.api}/faq?per_page=100`
+      )
+      this.faqs = data
+    },
+    async getFaqCategories() {
+      let { data } = await this.$axios.get(
+        `${this.$store.state.api}/faq_cat?per_page=20`
+      )
+      this.categories = data.sort((x, y) =>
+        Number(x.description) > Number(y.description) ? 1 : -1
+      )
+    },
+    getFaqsByCategory(category) {
+      return this.faqs.filter(element => {
+        return element['faq_cat'].includes(category.id)
+      })
+    }
+  },
+  async created() {
+    await this.getFaqCategories()
+    await this.getFaqs()
+    this.categories.forEach(category => {
+      const faqs = this.getFaqsByCategory(category)
+      this.$set(category, 'faqs', faqs)
+    })
   }
 }
 </script>
