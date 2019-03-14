@@ -13,17 +13,17 @@
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.3.1",
-    "@nuxtjs/pwa": "^2.5.0",
+    "@nuxtjs/axios": "^5.4.1",
+    "@nuxtjs/pwa": "^3.0.0-beta.12",
     "ks-vue-scrollmagic": "^1.0.2",
-    "nuxt": "^2.2.0",
+    "nuxt": "^2.4.5",
     "qrcode.vue": "^1.6.1",
     "velocity-animate": "^1.5.2",
-    "vue-i18n": "^8.1.0",
+    "vue-i18n": "^8.9.0",
     "vue-observe-visibility": "^0.4.3",
     "vue-video-player": "^5.0.2",
-    "vue-wow": "^1.1.2",
-    "vue2-transitions": "^0.2.3"
+    "vue-wow": "^1.1.4",
+    "vue2-transitions": "^0.3.0"
   },
   "devDependencies": {
     "push-dir": "^0.4.1",
