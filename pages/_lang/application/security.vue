@@ -1,5 +1,5 @@
 <template>
-  <main class="main">
+  <main class="main application">
     <application-hero :hero="hero"></application-hero>
     <section class="application-advantage">
       <div class="container">
@@ -44,83 +44,111 @@
     </div>
     <section class="application-features">
       <div class="columns is-gapless is-multiline">
-        <div class="column is-6">
-          <div class="columns is-multiline">
-            <div class="column is-12">
-              <img src="http://cdn.fantem.cn/2018/09/48ea83b56b20ea741e68a0b43c98131d.jpg">
-            </div>
-            <div class="column is-12 has-text-right description">
-              <h2>{{$t('智能防护——智能红外传感器')}}</h2>
-              <p>{{$t('红外人体感应，5米/120°超大范围探测，监测家中异动，智能探测人或宠物移动。智能声光报警，有效震慑外来入侵者，手机上轻松查看室内所有情况。')}}</p>
-            </div>
-          </div>
+        <div class="column is-6 center has-text-right" style="background: #fff;min-height:530px;">
+          <span>
+            <h2>{{$t('防盗报警--智能门窗传感器')}}</h2>
+            <p>{{$t('无线门磁被触碰打开，会发生警报，您的手机会收到报警信息提醒，提醒您家里有不速之客到来，并且主机会收到信号，现场高分贝蜂鸣威慑，有效震慑外来之客！')}}</p>
+            <img :src="`${this.$store.state.cdn}/2019/03/80fe6467fa007de580bb79599dbb64a7.png`">
+          </span>
         </div>
-        <div class="column is-6">
-          <div class="columns is-multiline">
-            <div class="column is-12 description">
-              <h2>{{$t('防盗报警——门磁')}}</h2>
-              <p>{{$t('无线门磁被触碰打开，会发生警报，您的手机会收到报警信息提醒，提醒您家里有不速之客到来，并且主机会收到信号，现场高分贝蜂鸣威慑，有效震慑外来之客！')}}</p>
-            </div>
-            <div class="column is-12">
-              <img src="http://cdn.fantem.cn/2018/09/903286e99f9e2098a3738b9078a72091.jpg">
-            </div>
-          </div>
+        <div class="column is-6 center" style="background: #727272;min-height:530px;">
+          <span>
+            <h2 class="has-text-white">{{$t('智能防护--智能六/三合一传感器')}}</h2>
+            <p class="has-text-white">{{$t('红外人体感应，5米/120°超大范围探测，监测家中异动，智能探测人或宠物移动。')}}</p>
+            <img :src="`${this.$store.state.cdn}/2019/03/0853d14dfc9dc4157839200cf3500f6e.png`">
+          </span>
         </div>
-        <div class="column is-12">
-          <div class="columns is-gapless">
-            <div class="column">
-              <img src="http://cdn.fantem.cn/2018/09/71efe471ff9925e69bbae4d49ac0e318.jpg">
-            </div>
-            <div class="column center">
-              <span>
-                <h2>{{$t('安全管家——智能有害气体传感器')}}</h2>
-                <p>{{$t('红稳定监测到可能影响您与家人身体健康的空气污染物的存在，例如CO、PM2.5、VOC等。当传感器检测到气体浓度高于设定的浓度值，会有声音和灯光闪动双重提醒并发送通知至手机上，及时警示，让您在第一时间内掌握家中空气质量，及时作出相关防护措施。')}}</p>
-              </span>
-            </div>
-          </div>
+        <div
+          class="column is-6 center has-text-right"
+          style="background: #727272;min-height:530px;"
+        >
+          <span>
+            <img :src="`${this.$store.state.cdn}/2019/03/962268e5e007629e012a98b60ccc165a.png`">
+            <h2 class="has-text-white">{{$t('安全管家--智能警示器')}}</h2>
+            <p class="has-text-white">{{$t('智能声光报警，有效震慑外来入侵者，手机上轻松查看室内所有情况。')}}</p>
+          </span>
         </div>
-        <div class="column is-6">
-          <div class="columns is-multiline">
-            <div class="column is-12 has-text-right description">
-              <h2>{{$t('贴心助手——智能水位传感器')}}</h2>
-              <p>{{$t('实时水体感应，兼具水位控制和漏水浸漫提醒功能。可通过手机APP实现预设安防场景，一旦监测水位达到预设高度，立即远程提示报警，让您即时知晓，并采取应对措施。同时也可联动智能机械手自动关闭水阀，让你在外也能远程操控，让您省心、放心。')}}</p>
-            </div>
-            <div class="column is-12">
-              <img src="http://cdn.fantem.cn/2018/09/a25bf67ffd8be418b1d5fae30ca0fd76.jpg">
-            </div>
-          </div>
-        </div>
-        <div class="column is-6">
-          <div class="columns is-multiline">
-            <div class="column is-12">
-              <img src="http://cdn.fantem.cn/2018/09/7551ef81a179ce612faefedfef83fa6c.jpg">
-            </div>
-            <div class="column is-12 description">
-              <h2>{{$t('一键操作——智能安防控制')}}</h2>
-              <p>{{$t('一键设置撤防模式、居家模式、离家模式。支持门锁、门磁、智能人体红外传感器、智能有害气体传感器、智能摄像头等多种安防设备的组合与联动。做到一键离家的同时切断家中灯光和非必要电器的电源，且布防工作开始；回家时一键撤防，满足您对家庭安全的所有需求！')}}</p>
-            </div>
-          </div>
-        </div>
-        <div class="column is-12">
-          <div class="columns is-gapless">
-            <div class="column center has-text-right">
-              <span>
-                <h2>{{$t('一键操作——智能安防控制')}}</h2>
-                <p>{{$t('出厂前己提前设置好布防、撤防模式')}}</p>
-              </span>
-            </div>
-            <div class="column">
-              <img src="http://cdn.fantem.cn/2018/09/2cfb4598ce3738398fab70848d3760c2.jpg">
-            </div>
-          </div>
+        <div class="column is-6 center" style="background: #fff;min-height:530px;">
+          <span>
+            <img :src="`${this.$store.state.cdn}/2019/03/f3eb83c927be29173b4e9e819ee3c059.png`">
+            <h2>{{$t('贴心助手--智能水位传感器')}}</h2>
+            <p>{{$t('实时水体感应，兼具水位控制和漏水浸漫提醒功能。可通过手机APP实现预设安防场景，一旦监测水位达到预设高度，立即远程提示报警，让您即时知晓，并采取应对措施。同时也可联动智能机械手自动关闭水阀，让你在外也能远程操控，让您省心、放心。')}}</p>
+          </span>
         </div>
       </div>
-      <application-suit :suit="suit"></application-suit>
+      <div class="columns" style="min-height:760px;margin-top:-1.85rem">
+        <div
+          class="column is-12 center"
+          style="background: url(http://cdn.fantem.cn/2019/03/55ffd381194cc25a8e61f5bee124116f.jpg) no-repeat fixed center center/cover"
+        >
+          <span>
+            <h2 class="has-text-centered has-text-white">{{$t('安全管家--智能烟雾传感器')}}</h2>
+            <p
+              style="max-width: 796px;margin-bottom: 30px;"
+              class="has-text-centered has-text-white"
+            >{{$t('有效监测家居环境中的有害气体，例如CO、烟雾等。当有害气体浓度超出预设阈值时会触发警报，伴随声音和灯光的双重提醒，并发送通知至手机上，及时警示，提醒您作出相应防护措施，为您和您的家人提供24小时的安全保护。')}}</p>
+            <img :src="`${this.$store.state.cdn}/2019/03/1e94b445202a3ea65bcaa5c0d982c0b6.png`">
+          </span>
+        </div>
+      </div>
+      <div class="columns" style="min-height:760px;margin-top:-1.85rem">
+        <div
+          class="column is-12 center"
+          style="background: url(http://cdn.fantem.cn/2019/03/11468e7720557fd43e29e4b41979acf0.jpg) no-repeat fixed center center/cover"
+        >
+          <span>
+            <h2 class="has-text-centered has-text-white">{{$t('安全管家--智能有害气体传感器')}}</h2>
+            <p
+              style="max-width: 796px;margin-bottom: 30px;"
+              class="has-text-centered has-text-white"
+            >{{$t('稳定监测到可能影响您与家人身体健康的空气污染物的存在，例如PM2.5、VOCs等。当传感器监测到有害气体浓度高于预先设置的阈值时，您的手机会受到预警信息提醒，提醒您及时作出相应的措施。')}}</p>
+            <div class="has-text-centered">
+              <img :src="`${this.$store.state.cdn}/2019/03/9805c0fc0f9065f865de3723d28c7807.png`">
+            </div>
+          </span>
+        </div>
+      </div>
+      <div class="columns" style="min-height:860px;margin-top:-1.85rem">
+        <div
+          class="column is-12 center"
+          style="background: url(http://cdn.fantem.cn/2019/03/a08abb7c3745f6c2a890131ca9511e16.jpg) no-repeat center center/cover"
+        >
+          <span style="margin-bottom: 20%;">
+            <h2 class="has-text-centered">{{$t('一键操作--智能安防控制')}}</h2>
+            <p
+              style="max-width: 796px;margin-bottom: 30px;"
+              class="has-text-centered"
+            >{{$t('一键设置撤防模式、居家模式、离家模式。支持门锁、门磁、智能人体红外传感器、智能有害气体传感器、智能摄像头等多种安防设备的组合与联动。做到一键离家的同时切断家中灯光和非必要电器的电源，且布防工作开始；回家时一键撤防，满足您对家庭安全的所有需求！')}}</p>
+          </span>
+        </div>
+      </div>
+      <div class="columns" style="min-height:760px;margin-top:-1.85rem">
+        <div
+          class="column is-12 center"
+          style="background: url(http://cdn.fantem.cn/2019/03/5638cd94e49833bed9b2ad3429cdc798.jpg) no-repeat center center/cover"
+        >
+          <span>
+            <h2 class="has-text-centered has-text-white">{{$t('一键操作--智能安防控制')}}</h2>
+            <p
+              style="max-width: 796px;margin-bottom: 30px;"
+              class="has-text-centered has-text-white"
+            >{{$t('出厂前已提前设置好布防、撤防模式')}}</p>
+            <div class="has-text-centered">
+              <img :src="`${this.$store.state.cdn}/2019/03/9805c0fc0f9065f865de3723d28c7807.png`">
+            </div>
+          </span>
+        </div>
+      </div>
+      <!-- <application-suit :suit="suit"></application-suit> -->
     </section>
   </main>
 </template>
 
 <style lang="stylus">
+.application {
+  background-color: #eaeeef;
+}
+
 .application-advantage {
   padding: 50px 0;
 
@@ -128,22 +156,13 @@
     color: #3e3a39;
     font-size: 36px;
     margin-bottom: 50px;
-
-    &:after {
-      display: block;
-      margin: 0 auto;
-      content: '';
-      margin-top: 8px;
-      width: 73px;
-      height: 2px;
-      background-color: #ed7422;
-    }
   }
 
   .columns {
     .column {
       .item {
         padding: 50px 0;
+        background-color: #fff;
         box-shadow: 0 0 5px 1px #848484;
 
         p {
@@ -225,16 +244,6 @@
         font-size: 36px;
         margin-bottom: 50px;
         position: relative;
-
-        &:after {
-          position: absolute;
-          display: block;
-          left: 0;
-          content: '';
-          width: 73px;
-          height: 2px;
-          background-color: #ed7422;
-        }
       }
 
       &.description {
@@ -307,20 +316,17 @@ export default {
   data() {
     return {
       hero: {
-        bg: 'http://cdn.fantem.cn/2018/09/e838aa40ff7687a92f5adb146b0f3fb9.jpg',
-        isnum: 'is-12',
-        isalgin: '',
-        isoffset: 'is-offset-0',
-        title: this.$t('OOMI智能家居') + '—— ' + this.$t('安防模式'),
-        titalign: 'has-text-centered',
+        bg: 'http://cdn.fantem.cn/2019/03/6fe0a1fc8af6214544d289779aba6ade.jpg',
+        icon:
+          'http://cdn.fantem.cn/2019/03/0157280674b66a151eb819e6a8457f40.png',
+        title: this.$t('OOMI智能家居系统') + '--' + this.$t('安防模式'),
+        align: 'has-text-centered',
         titcolor: 'has-text-white',
         subtitle: this.$t('家的安全，亲人的安全，一直是我们的渴望。'),
-        subalign: 'has-text-centered',
         subcolor: 'has-text-white',
         detail: this.$t(
-          '您可以通过智能操控平板 OOMI Touch 或手机，随时随地观察室内外的闭路监控点的影像，并可通过本地储存卡或云录像查看较早前发生的影像。另外，OOMI 智能安防系统拥有多重防线的布防，一旦发现入侵者，将触发智能安防系统并自动报警，及时通知主人或相关安保人员，及时阻止违法犯罪行为的发生，保障个人的利益不受侵害。同时，OOMI智能安防系统不仅仅局限于提供防范的功能，还包括火灾、煤气泄漏的监测以及老人、小孩意外事态的急救报警等人性化的功能。'
+          '您可以通过智能操控平板 Oomi Touch 或手机，随时随地观察室内外的闭路监控点的影像，并可通过本地储存卡或云录像查看较早前发生的影像。另外，Oomi 智能安防系统拥有多重防线的布防，一旦发现入侵者，将触发智能安防系统并自动报警，及时通知主人或相关安保人员，及时阻止违法犯罪行为的发生，保障个人的利益不受侵害。同时，Oomi智能安防系统不仅仅局限于提供防范的功能，还包括火灾、煤气泄漏的监测以及老人、小孩意外事态的急救报警等人性化的功能。'
         ),
-        detalign: 'has-text-centered',
         detcolor: 'has-text-white'
       },
       features: [
@@ -354,9 +360,7 @@ export default {
         },
         {
           svg: `<svg xmlns="http://www.w3.org/2000/svg" width="49" height="49"><path fill="none" stroke="#ee7623" stroke-linecap="round" stroke-linejoin="round" d="M24.5 15.144v18.712M15.144 24.5h18.712m-9.356 24c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24z"/></svg>`,
-          txt: this.$t(
-            '系统最大可支持232个节点设备-分到达看来是大驾光临克己复礼看'
-          )
+          txt: this.$t('系统最大可支持232个节点设备')
         }
       ],
       suit: {
