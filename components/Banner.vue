@@ -26,6 +26,20 @@ export default {
   components: {
     agile
   },
+  data: () => ({
+    banners: {
+      banner1: '',
+      banner2: '',
+      banner3: '',
+      banner4: ''
+    }
+  }),
+  async created() {
+    let { data } = await this.$axios.get(
+      `${this.$store.state.api}/banner?slug=home`
+    )
+    this.banners = data[0].acf
+  },
   computed: {
     baseUrl() {
       return this.$store.state.locale == this.$store.state.fallbackLocale
@@ -35,31 +49,23 @@ export default {
     slides() {
       return [
         {
-          img: `${
-            this.$store.state.cdn
-          }/2018/11/3fde37b9928139cb671c743d2de74223.jpg`,
+          img: this.banners.banner1,
           icon: `<svg width="76" height="47" viewBox="0 0 76 47" xmlns="http://www.w3.org/2000/svg"><path d="M23.3.3c-12.7 0-23 10.3-23 23s10.3 23 23 23 23-10.3 23-23c0-12.6-10.3-23-23-23zm0 38c-8.3 0-15-6.7-15-15s6.7-15 15-15 15 6.7 15 15-6.7 15-15 15zm46.7-38c-1.5 1.6-3.5 3.1-5.8 4.5-2.3 1.3-4.5 2.2-6.6 2.7v7.5c4.3-1.2 7.7-3.1 10.5-5.6v36.9h7.5v-46h-5.6z" fill-rule="nonzero" fill="#DADBDB"/></svg>`,
           title: this.$t('技术研发 产品集成'),
-          class: 'scroll-image'
+          class: 'marquee'
         },
         {
-          img: `${
-            this.$store.state.cdn
-          }/2018/11/d9fa7a298d3e849422c368e760fd4c1a.jpg`,
+          img: this.banners.banner2,
           icon: `<svg width="90" height="47" viewBox="0 0 90 47" xmlns="http://www.w3.org/2000/svg"><path d="M67.4 40.3c1-2.3 3.8-4.9 8.4-8 4.4-3 7.6-5.4 9.4-7.3 2.9-3.2 4.4-6.8 4.4-10.7 0-4-1.4-7.3-4.2-9.8-2.8-2.5-6.4-3.8-10.8-3.8-4.9 0-8.8 1.6-11.8 4.9-2.9 3.1-4.4 7.1-4.4 12.2h7.4c.1-3.5.9-6.3 2.3-8 1.4-1.9 3.5-2.8 6.3-2.8 2.6 0 4.5.6 5.9 1.8 1.3 1.2 2 3 2 5.5s-1 4.9-3 7.1c-1.3 1.3-3.3 3-6.2 5.1-5.2 3.6-8.7 6.4-10.4 8.3-3 3.4-4.5 7.4-4.5 12h31.5v-6.5h-22.3zm-44.2-39.5c-12.7 0-23 10.3-23 23s10.3 23 23 23 23-10.3 23-23-10.3-23-23-23zm0 38c-8.3 0-15-6.7-15-15s6.7-15 15-15 15 6.7 15 15-6.7 15-15 15z" fill-rule="nonzero" fill="#DADBDB"/></svg>`,
           title: this.$t('客制化解决方案')
         },
         {
-          img: `${
-            this.$store.state.cdn
-          }/2018/11/1fb9c52bfd2a0ee347270d572291777a.jpg`,
+          img: this.banners.banner3,
           icon: `<svg width="91" height="47" viewBox="0 0 91 47" xmlns="http://www.w3.org/2000/svg"><path d="M23.2.8c-12.7 0-23 10.3-23 23s10.3 23 23 23 23-10.3 23-23-10.3-23-23-23zm0 38c-8.3 0-15-6.7-15-15s6.7-15 15-15 15 6.7 15 15-6.7 15-15 15zm64.7-12.6c-1.4-1.6-3.4-2.8-6-3.6 4.9-1.6 7.4-4.8 7.4-9.7 0-3.8-1.4-6.8-4-9-2.7-2.2-6.4-3.2-10.8-3.2-4.3 0-7.9 1.2-10.7 3.7-3 2.5-4.6 6-5 10.4h7.1c.2-2.7 1.1-4.6 2.6-6 1.4-1.3 3.4-1.9 6-1.9 2.5 0 4.5.6 5.8 1.7 1.2 1.1 1.8 2.7 1.8 4.9s-.7 3.8-2 5c-1.4 1.1-3.3 1.7-6 1.7h-3.1v5.5h3.1c2.9 0 5 .6 6.5 1.8 1.5 1.2 2.3 3 2.3 5.6 0 2.1-.7 3.8-2.2 5.3-1.6 1.5-3.8 2.4-6.6 2.4-2.5 0-4.6-.7-6.1-2.2-1.7-1.6-2.6-3.8-2.7-6.6h-7.4c.4 5 2.1 8.8 5.2 11.4 2.8 2.4 6.5 3.5 11.1 3.5 4.8 0 8.7-1.4 11.7-4 2.9-2.6 4.3-6 4.3-10-.1-2.8-.8-5-2.3-6.7z" fill-rule="nonzero" fill="#DADBDB"/></svg>`,
           title: this.$t('OOMI 生态圈')
         },
         {
-          img: `${
-            this.$store.state.cdn
-          }/2019/03/5212604805ac7872823094d298750a6b.jpg`,
+          img: this.banners.banner4,
           icon: `<svg width="92" height="47" viewBox="0 0 92 47" xmlns="http://www.w3.org/2000/svg"><path d="M23.1.8c-12.7 0-23 10.3-23 23s10.3 23 23 23 23-10.3 23-23-10.3-23-23-23zm0 38c-8.3 0-15-6.7-15-15s6.7-15 15-15 15 6.7 15 15-6.7 15-15 15zm62.1-7.9v-30.1h-6.9l-22.5 29v7.2h22.2v9.9h7.2v-9.9h6.8v-6h-6.8v-.1zm-7.2 0h-16.1l15.9-20.6h.2v20.6z" fill-rule="nonzero" fill="#DADBDB"/></svg>`,
           title: this.$t('最新动态')
         }
@@ -80,6 +86,10 @@ $height = 700px;
   min-height: 32rem;
   height: calc(100vh - 80px);
 
+  .slide {
+    height: 100%;
+  }
+
   @media (max-width: 600px) {
     height: 32rem;
   }
@@ -90,27 +100,31 @@ $height = 700px;
       height: 100%;
       position: relative;
       background-size: cover;
-      background-position: 50%;
+      background-position: 50% 80%;
 
       @media (max-width: 600px) {
         height: 32rem;
       }
 
-      &.scroll-image {
+      &.marquee {
         background-position: left top;
-        animation: banner 15s linear 2s infinite;
+        animation: marquee 20s linear 4s infinite;
       }
     }
   }
 }
 
-@keyframes banner {
-  from {
+@keyframes marquee {
+  0% {
     background-position: left top;
   }
 
-  to {
+  50% {
     background-position: right top;
+  }
+
+  100% {
+    background-position: left top;
   }
 }
 </style>

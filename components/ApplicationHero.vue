@@ -4,18 +4,13 @@
       <div class="hero-content center" :style="{backgroundImage: `url(${hero.bg})`}">
         <div class="container">
           <div class="columns">
-            <div class="column" :class="[hero.isnum, hero.isoffset]">
-              <h1 :class="[hero.titalign, hero.titcolor]">
-                {{ hero.title }}
-              </h1>
-              <h2 :class="[hero.subalign, hero.subcolor]">
-                {{ hero.subtitle }}
-              </h2>
-              <p :class="[hero.detalign, hero.detcolor]">
-                {{ hero.detail }}
-              </p>
+            <div class="column" :class="hero.align">
+              <img :src="hero.icon">
+              <h1 :class="hero.titcolor">{{ hero.title }}</h1>
+              <h2 :class="hero.subcolor">{{ hero.subtitle }}</h2>
+              <p :class="hero.detcolor">{{ hero.detail }}</p>
             </div>
-          </div>          
+          </div>
         </div>
       </div>
     </div>
@@ -43,7 +38,7 @@
       background-size: cover;
 
       .dark {
-        color: #231815
+        color: #231815;
       }
     }
   }
