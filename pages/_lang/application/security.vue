@@ -163,8 +163,6 @@
       .item {
         padding: 50px 0;
         background-color: #fff;
-        box-shadow: 0 0 5px 1px #848484;
-
         p {
           &.svg {
             height: 50px;
