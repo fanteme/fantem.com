@@ -6,25 +6,10 @@
         <p class="caption has-text-centered">{{$t('智能节能 定时开启')}}</p>
         <div
           class="subtitle has-text-centered is-size-6"
-        >{{$t('OOMI智能家居节点设备支持定时开关的功能，您可以关闭没有必要长期待机的家电，智能控制厨卫家电，定时供断电，绿色节能且环保。')}}</div>
+        >{{ $t('OOMI智能开关支持定时开关设置的功能，您可以关闭没有必要长期待机的电器设备，以及对厨卫电器进行定时供断电的智能化控制，绿色节能又环保。') }}</div>
         <div class="columns">
           <div class="column">
             <img :src="`${this.$store.state.cdn}/2018/10/188d4736ccb47a7d1fb3f32b35852c1a.jpg`" alt>
-          </div>
-        </div>
-      </div>
-      <div
-        class="sectionA boderT"
-        :style="{backgroundImage: `url(${this.$store.state.cdn}/2018/10/1fd2ee7a11164225c00ba9b779a9a232.jpg)`}"
-      >
-        <div class="container">
-          <div class="columns">
-            <div class="column is-offset-7">
-              <p class="caption has-text-centered">{{$t('一键离家 智能红外感应')}}</p>
-              <div
-                class="subtitle has-text-centered is-size-6"
-              >{{$t('一键离家：只需一键点击，即可离家，并且自动关闭家中的灯光及电器；智能红外感应：人来灯亮，人走灯灭，智能感应人体移动。')}}</div>
-            </div>
           </div>
         </div>
       </div>
@@ -38,7 +23,7 @@
               <p class="caption has-text-centered has-text-white">{{$t('智慧节能 能耗检测')}}</p>
               <div
                 class="subtitle has-text-centered is-size-6 has-text-white"
-              >{{$t('实时监控家用电器工作状态及能耗，支持实际功率检测和用电量查询，使用OOMI智能家居系统就能轻松知晓。让您清楚了解家电的用电情况，更科学的使用电器，减少不必要的待机时间，节能又环保。')}}</div>
+              >{{ $t('实时监控家中电器设备的工作状态及能耗，支持实际功率检测和用电量查询，让您清楚了解家中电器设备的用电情况，让您更科学的使用电器设备，减少不必要的待机时间，节能又环保。') }}</div>
             </div>
           </div>
         </div>
@@ -50,7 +35,7 @@
               <p class="caption has-text-centered">{{$t('远程开关 一键可控')}}</p>
               <div
                 class="subtitle has-text-centered is-size-6"
-              >{{$t('手机远程遥控，随时随地一键可控。各类电器的电源、开关状态在手机上一目了然！每当离开家或许要出差时，再也不用为关灯或者电器断电问题担心，通过OOMI APP，在手机上可以随时查看，控制电源开关，一键操作，安心无忧。')}}</div>
+              >{{ $t('手机远程遥控，随时随地一键可控。各类电器设备的电源、开关状态在手机上一目了然，通过OOMI APP，可以远程控制电器设备的电源开关。') }}</div>
               <div class="group has-text-centered">
                 <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66">
                   <g fill="none" fill-rule="evenodd" stroke="#E76C26">
@@ -142,22 +127,6 @@
           </div>
         </div>
       </div>
-      <div class="container has-text-centered">
-        <div class="columns is-centered">
-          <div class="column is-11">
-            <p class="caption">{{$t('组网简单 轻松拓展')}}</p>
-            <div
-              class="subtitle is-size-6"
-            >{{$t('组网设置超乎想象的简单！OOMI 使用自主创新的 Tap - and - Touch 专利技术，只需让 OOMI Touch 轻触其他 OOMI 产品，便可建立连接，实现 OOMI 系统对智能家电的全操控！且系统最大可支持232个节点设备，可轻松拓展新设备。')}}</div>
-          </div>
-        </div>
-        <div class="columns">
-          <div class="column center">
-            <img :src="`${this.$store.state.cdn}/2018/10/f7982857ba3d7308dcb34e648d711321.jpg`" alt>
-          </div>
-        </div>
-      </div>
-      <div class="sectionD"></div>
     </section>
   </main>
 </template>
@@ -170,16 +139,6 @@
     color: #3e3a39;
     font-size: 36px;
     margin: 50px auto;
-
-    &:after {
-      display: block;
-      margin: 0 auto;
-      content: '';
-      margin-top: 8px;
-      width: 73px;
-      height: 2px;
-      background-color: #ed7422;
-    }
   }
 
   .subtitle {
@@ -188,17 +147,14 @@
     margin-bottom: 47px;
   }
 
-  .sectionA {
-    min-height: 800px;
-    margin-top: 33px;
-  }
-
   .boderT {
     border-top: 12px solid #edf1f2;
   }
 
   .sectionB {
     min-height: 860px;
+    margin-top: 30px;
+    background-position: 30%;
   }
 
   .sectionC {
@@ -217,11 +173,6 @@
       color: #e77636;
     }
   }
-
-  .sectionD {
-    background: #edf1f2;
-    height: 75px;
-  }
 }
 </style>
 
@@ -238,20 +189,17 @@ export default {
       hero: {
         bg: `${
           this.$store.state.cdn
-        }/2018/10/8da7523e7a042f1ba690592ad6e50ec3.jpg`,
-        isnum: 'is-8',
-        isalgin: '',
-        isoffset: 'is-offset-1',
-        title: this.$t('OOMI智能家居') + '—— ' + this.$t('节能模式'),
-        titalign: 'has-text-centered',
+        }/2019/03/023b0f30c902c4b7eebd386b41bb5d0f.jpg`,
+        icon: `${
+          this.$store.state.cdn
+        }/2019/03/e5f8805a2668935f8be4ab6fe2595e48.svg`,
+        title: this.$t('OOMI智能家居系统') + '--' + this.$t('节能模式'),
+        align: 'has-text-centered',
         titcolor: 'has-text-white',
-        subtitle: '',
-        subalign: 'has-text-centered',
         subcolor: 'has-text-white',
         detail: this.$t(
-          'OOMI智能家居系统支持家用电器远程无线智能操控，能让您轻松控制家里的电器，并监控电器的工作状态及能耗，实时检测家中的用电情况，分析各类电器的耗电量，根据您的用电数据，从源头优化用电组合，为您科学节省能源，让生活更便捷，更加环保，为您节约每一分钱！'
+          'OOMI智能家居系统支持无线远程智能操控，通过OOMI Touch或OOMI APP能让您轻松操控家中的电器设备，以及监控电器设备的工作状态和能耗，实时监测家中的用电情况。'
         ),
-        detalign: 'has-text-centered',
         detcolor: 'has-text-white'
       }
     }
