@@ -137,16 +137,6 @@
     color: #3e3a39;
     font-size: 36px;
     margin: 50px auto;
-
-    &:after {
-      display: block;
-      margin: 0 auto;
-      content: '';
-      margin-top: 8px;
-      width: 73px;
-      height: 2px;
-      background-color: #ed7422;
-    }
   }
 
   h4 {

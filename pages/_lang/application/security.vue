@@ -163,6 +163,7 @@
       .item {
         padding: 50px 0;
         background-color: #fff;
+
         p {
           &.svg {
             height: 50px;
@@ -267,16 +268,6 @@
     color: #3e3a39;
     font-size: 36px;
     margin: 50px auto;
-
-    &:after {
-      display: block;
-      margin: 0 auto;
-      content: '';
-      margin-top: 8px;
-      width: 73px;
-      height: 2px;
-      background-color: #ed7422;
-    }
   }
 
   .subtitle {
@@ -314,9 +305,12 @@ export default {
   data() {
     return {
       hero: {
-        bg: 'http://cdn.fantem.cn/2019/03/6fe0a1fc8af6214544d289779aba6ade.jpg',
-        icon:
-          'http://cdn.fantem.cn/2019/03/0157280674b66a151eb819e6a8457f40.png',
+        bg: `${
+          this.$store.state.cdn
+        }/2019/03/6fe0a1fc8af6214544d289779aba6ade.jpg`,
+        icon: `${
+          this.$store.state.cdn
+        }/2019/03/0157280674b66a151eb819e6a8457f40.png`,
         title: this.$t('OOMI智能家居系统') + '--' + this.$t('安防模式'),
         align: 'has-text-centered',
         titcolor: 'has-text-white',
