@@ -125,8 +125,8 @@
     >
       <div class="container">
         <div class="columns is-variable is-0">
-          <div class="column is-6 is-offset-6 has-text-right theme-background-color">
-            <div class="columns is-variable is-0">
+          <div class="column center is-6 is-offset-6 has-text-right theme-background-color">
+            <div class="columns">
               <div class="column is-10 is-offset-2">
                 <h3>{{$t('联动智能设备 创造舒适生活环境')}}</h3>
                 <h3 class="title orange has-text-weight-normal">{{$t('拒绝湿度失衡')}}</h3>
@@ -499,7 +499,7 @@
     }
 
     &.normal {
-      height: 600px;
+      padding: 60px 0;
 
       @media screen and (max-width: 768px) {
         height: auto;
@@ -532,8 +532,6 @@
       }
 
       .is-6 {
-        padding: 196px 0 94px;
-
         @media screen and (max-width: 768px) {
           padding: 70px 0 44px;
         }
@@ -546,8 +544,6 @@
   }
 
   &-right {
-    min-height: 600px;
-
     &.monitoring {
       .columns {
         padding: 30px 0 0;
@@ -569,8 +565,6 @@
       }
 
       .is-6 {
-        padding: 66px 0 85px;
-
         .title {
           margin-top: 134px;
 
