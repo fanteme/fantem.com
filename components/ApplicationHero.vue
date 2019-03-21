@@ -20,7 +20,7 @@
 <style lang="stylus">
 .application-hero {
   .hero {
-    height: 490px;
+    height: 720px;
 
     h1 {
       font-size: 44px;
@@ -36,6 +36,11 @@
       background-attachment: fixed;
       background-repeat: no-repeat;
       background-size: cover;
+
+      p {
+        margin: 0 auto;
+        max-width: 800px;
+      }
 
       .dark {
         color: #231815;
