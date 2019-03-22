@@ -42,7 +42,7 @@
       class="section-justify infrared"
       :style="{backgroundImage: `url(${this.$store.state.cdn}/2018/11/e6b5635dd52f042307579f5019c715b9.jpg)`}"
     >
-      <div class="container">
+      <div class="container-fluid">
         <div class="columns is-gapless">
           <div class="column white-background-color is-6 has-text-centered">
             <img
@@ -119,156 +119,138 @@
         </div>
       </div>
     </section>
-    <section
-      class="section-right refused-dry normal"
-      :style="{backgroundImage: `url(${this.$store.state.cdn}/2019/03/a6a0fed3ccd1056fd3acb83269f48b1d.jpg)`}"
-    >
-      <div class="container">
-        <div class="columns is-variable is-0">
-          <div class="column center is-6 is-offset-6 has-text-right theme-background-color">
-            <div class="columns">
-              <div class="column is-10 is-offset-2">
-                <h3>{{$t('联动智能设备 创造舒适生活环境')}}</h3>
-                <h3 class="title orange has-text-weight-normal">{{$t('拒绝湿度失衡')}}</h3>
-                <p
-                  class="has-text-weight-light"
-                >{{$t('当传感器检测到室内环境过于干燥/潮湿时，Cube智能家庭网关可通过联动智能插座，打开与其相连的加湿器/除湿器，将室内湿度调至适宜水平。')}}</p>
-                <div class="icons has-text-centered">
-                  <ul>
-                    <li>
-                      <div>
-                        <img
-                          :src="`${this.$store.state.cdn}/2018/11/c5e9683e8e83a7f2587e9e19b34bcf65.svg`"
-                        >
-                      </div>
-                      <span class="has-text-weight-light">{{$t('检测空气质量')}}</span>
-                    </li>
-                    <li>
-                      <img
-                        class="arrow"
-                        :src="`${this.$store.state.cdn}/2019/03/4ea37a74e474b040a763d4f9c7cc6ec9.svg`"
-                      >
-                    </li>
-                    <li>
-                      <div>
-                        <img
-                          :src="`${this.$store.state.cdn}/2018/11/ce321944a30ae129fbfb0daa36509067.svg`"
-                        >
-                      </div>
-                      <span class="has-text-weight-light">{{$t('分析数据')}}</span>
-                    </li>
-                    <li>
-                      <img
-                        class="arrow"
-                        :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`"
-                      >
-                    </li>
-                    <li>
-                      <div>
-                        <img
-                          :src="`${this.$store.state.cdn}/2018/11/3eae16ccd55a877bf82560fe4fc7f3f6.svg`"
-                        >
-                      </div>
-                      <span class="has-text-weight-light">{{$t('联动插座设备')}}</span>
-                    </li>
-                    <li>
-                      <img
-                        class="arrow"
-                        :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`"
-                      >
-                    </li>
-                    <li>
-                      <div>
-                        <img
-                          :src="`${this.$store.state.cdn}/2018/11/82b1849a9dfbed0621a6a75a41dac135.svg`"
-                        >
-                      </div>
-                      <span class="has-text-weight-light">{{$t('开启加湿器')}}</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+    <section class="section-right refused-dry">
+      <div class="columns is-desktop is-gapless">
+        <div class="column center">
+          <img :src="`${this.$store.state.cdn}/2019/03/a6a0fed3ccd1056fd3acb83269f48b1d.jpg`">
+        </div>
+        <div class="column center theme-background-color">
+          <div
+            class="center"
+            style="flex-direction:column;justify-content:space-around;height:100%;margin:0 10%;padding:5% 0;"
+          >
+            <h3>{{$t('联动智能设备 创造舒适生活环境')}}</h3>
+            <h3 class="title orange has-text-weight-normal">{{$t('拒绝湿度失衡')}}</h3>
+            <p
+              class="has-text-weight-light"
+            >{{$t('当传感器检测到室内环境过于干燥/潮湿时，Cube智能家庭网关可通过联动智能插座，打开与其相连的加湿器/除湿器，将室内湿度调至适宜水平。')}}</p>
+            <div class="icons has-text-centered">
+              <ul>
+                <li>
+                  <img
+                    :src="`${this.$store.state.cdn}/2018/11/c5e9683e8e83a7f2587e9e19b34bcf65.svg`"
+                  >
+                  <p class="has-text-weight-light">{{$t('检测空气质量')}}</p>
+                </li>
+                <li>
+                  <img
+                    class="arrow"
+                    :src="`${this.$store.state.cdn}/2019/03/4ea37a74e474b040a763d4f9c7cc6ec9.svg`"
+                  >
+                </li>
+                <li>
+                  <img
+                    :src="`${this.$store.state.cdn}/2018/11/ce321944a30ae129fbfb0daa36509067.svg`"
+                  >
+                  <p class="has-text-weight-light">{{$t('分析数据')}}</p>
+                </li>
+                <li>
+                  <img
+                    class="arrow"
+                    :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`"
+                  >
+                </li>
+                <li>
+                  <img
+                    :src="`${this.$store.state.cdn}/2018/11/3eae16ccd55a877bf82560fe4fc7f3f6.svg`"
+                  >
+                  <p class="has-text-weight-light">{{$t('联动插座设备')}}</p>
+                </li>
+                <li>
+                  <img
+                    class="arrow"
+                    :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`"
+                  >
+                </li>
+                <li>
+                  <img
+                    :src="`${this.$store.state.cdn}/2018/11/82b1849a9dfbed0621a6a75a41dac135.svg`"
+                  >
+                  <p class="has-text-weight-light">{{$t('开启加湿器')}}</p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section
-      class="section-left refused-hot normal"
-      :style="{backgroundImage: `url(${this.$store.state.cdn}/2019/03/11a9497f93cb8ea5a6427eddf5470d9c.jpg)`}"
-    >
-      <div class="container">
-        <div class="columns is-variable is-0">
-          <div class="column is-6 theme-background-color">
-            <div class="columns is-variable is-0">
-              <div class="column is-10">
-                <h3 class="title orange has-text-weight-normal">{{$t('拒绝极端室温')}}</h3>
-                <p
-                  class="has-text-weight-light"
-                >{{$t('当温度过高/过低时，传感器可联动OOMI智能空调红外转换器自动开启空调制冷/制热模式，时刻维持恒温舒适的家居环境。')}}</p>
-                <div class="icons has-text-centered">
-                  <ul>
-                    <li>
-                      <div>
-                        <img
-                          :src="`${this.$store.state.cdn}/2018/11/0898c31a461b7eed9749ab14588abdb9.svg`"
-                        >
-                      </div>
-                      <span class="has-text-weight-light">{{$t('检测室内温度')}}</span>
-                    </li>
-                    <li>
-                      <img
-                        class="arrow"
-                        :src="`${this.$store.state.cdn}/2019/03/4ea37a74e474b040a763d4f9c7cc6ec9.svg`"
-                      >
-                    </li>
-                    <li>
-                      <div>
-                        <img
-                          :src="`${this.$store.state.cdn}/2018/11/ce321944a30ae129fbfb0daa36509067.svg`"
-                        >
-                      </div>
-                      <span class="has-text-weight-light">{{$t('分析数据')}}</span>
-                    </li>
-                    <li>
-                      <img
-                        class="arrow"
-                        :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`"
-                      >
-                    </li>
-                    <li>
-                      <div>
-                        <img
-                          :src="`${this.$store.state.cdn}/2018/11/241b8ace1dc74dfdebb6733cbdaa242c.svg`"
-                        >
-                      </div>
-                      <span class="has-text-weight-light">{{$t('联动遥控设备')}}</span>
-                    </li>
-                    <li>
-                      <img
-                        class="arrow"
-                        :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`"
-                      >
-                    </li>
-                    <li>
-                      <div>
-                        <img
-                          :src="`${this.$store.state.cdn}/2018/11/96cbe9cf0ed15f1f023519683ef84f45.svg`"
-                        >
-                      </div>
-                      <span class="has-text-weight-light">{{$t('开启空调')}}</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+    <section class="section-left refused-hot">
+      <div class="columns is-desktop is-gapless">
+        <div class="column center theme-background-color">
+          <div
+            class="center"
+            style="flex-direction:column;justify-content:space-around;height:100%;margin:0 10%;padding:5% 0;"
+          >
+            <h3 class="title orange has-text-weight-normal">{{$t('拒绝极端室温')}}</h3>
+            <p
+              class="has-text-weight-light"
+            >{{$t('当温度过高/过低时，传感器可联动OOMI智能空调红外转换器自动开启空调制冷/制热模式，时刻维持恒温舒适的家居环境。')}}</p>
+            <div class="icons has-text-centered">
+              <ul>
+                <li>
+                  <img
+                    :src="`${this.$store.state.cdn}/2018/11/0898c31a461b7eed9749ab14588abdb9.svg`"
+                  >
+                  <p class="has-text-weight-light">{{$t('检测室内温度')}}</p>
+                </li>
+                <li>
+                  <img
+                    class="arrow"
+                    :src="`${this.$store.state.cdn}/2019/03/4ea37a74e474b040a763d4f9c7cc6ec9.svg`"
+                  >
+                </li>
+                <li>
+                  <img
+                    :src="`${this.$store.state.cdn}/2018/11/ce321944a30ae129fbfb0daa36509067.svg`"
+                  >
+                  <p class="has-text-weight-light">{{$t('分析数据')}}</p>
+                </li>
+                <li>
+                  <img
+                    class="arrow"
+                    :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`"
+                  >
+                </li>
+                <li>
+                  <img
+                    :src="`${this.$store.state.cdn}/2018/11/241b8ace1dc74dfdebb6733cbdaa242c.svg`"
+                  >
+                  <p class="has-text-weight-light">{{$t('联动遥控设备')}}</p>
+                </li>
+                <li>
+                  <img
+                    class="arrow"
+                    :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`"
+                  >
+                </li>
+                <li>
+                  <img
+                    :src="`${this.$store.state.cdn}/2018/11/96cbe9cf0ed15f1f023519683ef84f45.svg`"
+                  >
+                  <p class="has-text-weight-light">{{$t('开启空调')}}</p>
+                </li>
+              </ul>
             </div>
           </div>
+        </div>
+        <div class="column">
+          <img :src="`${this.$store.state.cdn}/2019/03/11a9497f93cb8ea5a6427eddf5470d9c.jpg`">
         </div>
       </div>
     </section>
     <section class="section-top light gray-radial-gradient has-text-centered">
       <div class="container">
-        <div class="columns is-multiline is-variable is-0">
+        <div class="columns is-multiline">
           <div class="column is-12">
             <h3 class="icon-title center has-text-weight-normal">
               <strong class="has-text-weight-normal">03</strong>
@@ -280,9 +262,7 @@
             <p class="has-text-weight-light">{{$t('智能识别家居环境光线明暗度，可结合预设的智能场景自动调节灯光亮度。')}}</p>
           </div>
           <div class="column is-12">
-            <div class="columns is-variable is-0">
-              <img :src="`${this.$store.state.cdn}/2019/03/4f3df5e82c80d968c5560148ac0222a5.jpg`">
-            </div>
+            <img :src="`${this.$store.state.cdn}/2019/03/4f3df5e82c80d968c5560148ac0222a5.jpg`">
           </div>
         </div>
       </div>
@@ -461,8 +441,9 @@
     }
 
     &.light {
+      padding-bottom: 36px;
       .has-text-weight-light {
-        margin: 19px 0 60px;
+        margin: 20px 0 20px;
       }
 
       img {
@@ -484,18 +465,12 @@
   &-right, &-left {
     background-repeat: no-repeat;
 
-    &:not(.normal) {
-      background-size: cover;
+    img {
+      vertical-align: top;
     }
 
-    &:not(.full) {
-      @media screen and (max-width: 768px) {
-        padding-top: 450px;
-      }
-
-      @media screen and (max-width: 616px) {
-        padding-top: 230px;
-      }
+    &:not(.normal) {
+      background-size: cover;
     }
 
     &.normal {
@@ -512,7 +487,11 @@
     }
 
     .title {
-      margin: 38px 0 40px;
+      margin: 0;
+
+      &.orange {
+        color: #f26f21;
+      }
     }
   }
 
@@ -522,59 +501,17 @@
         justify-content: flex-start;
       }
     }
-
-    &.refused-hot {
-      background-color: #eff3f4;
-      background-position: left 50vw center;
-
-      @media screen and (max-width: 768px) {
-        background-position: unset;
-      }
-
-      .is-6 {
-        @media screen and (max-width: 768px) {
-          padding: 70px 0 44px;
-        }
-
-        .icons {
-          margin-top: 75px;
-        }
-      }
-    }
   }
 
   &-right {
     &.monitoring {
+      min-height: 800px;
+
       .columns {
         padding: 30px 0 0;
 
         @media screen and (max-width: 1280px) {
           padding: 100px 0;
-        }
-      }
-    }
-
-    &.refused-dry {
-      overflow: hidden;
-      background-size: contain;
-      background-color: #eff3f4;
-      background-position: right 50vw center;
-
-      @media screen and (max-width: 768px) {
-        background-position: unset;
-      }
-
-      .is-6 {
-        .title {
-          margin-top: 134px;
-
-          @media screen and (max-width: 768px) {
-            margin-top: 64px;
-          }
-        }
-
-        .icons {
-          margin-top: 50px;
         }
       }
     }
@@ -584,6 +521,7 @@
     overflow: hidden;
 
     &.infrared {
+      background-size: cover;
       background-repeat: no-repeat;
       background-position: top right;
 
