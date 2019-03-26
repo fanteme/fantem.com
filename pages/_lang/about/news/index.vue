@@ -13,7 +13,10 @@
                     <nuxt-link :to="`/about/news/${currentNews[0].id}`">
                       <figure>
                         <div class="newsinner-img-bg">
-                          <img :src="currentNews[0]['_embedded']['wp:featuredmedia'][0]['source_url']" v-if="currentNews[0]['_embedded']['wp:featuredmedia']">
+                          <img
+                            :src="currentNews[0]['_embedded']['wp:featuredmedia'][0]['source_url']"
+                            v-if="currentNews[0]['_embedded']['wp:featuredmedia']"
+                          >
                           <img src="https://picsum.photos/640/400/?random" v-else>
                         </div>
                       </figure>
@@ -34,17 +37,24 @@
                   </div>
                 </div>
               </div>
-            </div> 
+            </div>
           </div>
         </div>
         <ul class="columns is-multiline">
-          <li class="column is-half-tablet is-one-third-desktop is-one-third-widescreen is-one-quarter-fullhd" v-for="(item, index) in news" :key="index">
+          <li
+            class="column is-half-tablet is-one-third-desktop is-one-third-widescreen is-one-quarter-fullhd"
+            v-for="(item, index) in news"
+            :key="index"
+          >
             <nuxt-link :to="`/about/news/${item.id}`">
               <div class="newsinner-img-wrap">
                 <div class="newsinner-img-mask">
                   <figure>
                     <div class="newsinner-img-bg">
-                      <img :src="item._embedded['wp:featuredmedia'][0].source_url" v-if="item._embedded['wp:featuredmedia']">
+                      <img
+                        :src="item._embedded['wp:featuredmedia'][0].source_url"
+                        v-if="item._embedded['wp:featuredmedia']"
+                      >
                       <img src="https://picsum.photos/640/400/?random" v-else>
                     </div>
                   </figure>
@@ -57,15 +67,30 @@
           </li>
         </ul>
         <nav class="pagination" role="navigation" aria-label="pagination">
-          <nuxt-link class="pagination-previous button" :title="$t('上一页')" :to="currentPage <= 1 ? `?page=1`:`?page=${Number(currentPage)-1}`" :disabled="currentPage-1?false:true">{{$t('上一页')}}</nuxt-link>
-          <nuxt-link class="pagination-next button" :title="$t('下一页')" :to="currentPage >= pageCount-1 ? `?page=${pageCount}`:`?page=${Number(currentPage)+1}`" :disabled="pageCount-currentPage?false:true">{{$t('下一页')}}</nuxt-link>
+          <nuxt-link
+            class="pagination-previous button"
+            :title="$t('上一页')"
+            :to="currentPage <= 1 ? `?page=1`:`?page=${Number(currentPage)-1}`"
+            :disabled="currentPage-1?false:true"
+          >{{$t('上一页')}}</nuxt-link>
+          <nuxt-link
+            class="pagination-next button"
+            :title="$t('下一页')"
+            :to="currentPage >= pageCount-1 ? `?page=${pageCount}`:`?page=${Number(currentPage)+1}`"
+            :disabled="pageCount-currentPage?false:true"
+          >{{$t('下一页')}}</nuxt-link>
           <ul class="pagination-list">
             <li v-for="(i,index) in pageCount" :key="index">
-              <nuxt-link class="pagination-link button" :class="isloading && currentPage == i? 'is-loading' : ''" :to="`?page=${i}`" v-text="i"></nuxt-link>
+              <nuxt-link
+                class="pagination-link button"
+                :class="isloading && currentPage == i? 'is-loading' : ''"
+                :to="`?page=${i}`"
+                v-text="i"
+              ></nuxt-link>
             </li>
           </ul>
         </nav>
-      </div>  
+      </div>
     </section>
   </main>
 </template>
@@ -79,8 +104,10 @@
     line-height: 44px;
     margin: 20px 0 30px;
   }
+
   .hotnews {
   }
+
   &-img {
     &-wrap {
       overflow: hidden;
@@ -116,55 +143,61 @@
       }
     }
   }
-  .column{
+
+  .column {
     background-color: #fff;
     background-clip: content-box;
-    border-radius: 17px;  
+    border-radius: 17px;
 
     a {
       display: block;
-      border-radius: 5px; 
-      overflow: hidden; 
+      border-radius: 5px;
+      overflow: hidden;
       background-color: #fff;
     }
+
     p {
       margin: 10px 9px;
       color: #3e3a39;
 
       &:nth-of-type(1) {
         font-size: 18px;
-        line-height: 22px; 
+        line-height: 22px;
       }
 
       &:nth-of-type(2) {
         font-size: 16px;
-        line-height: 20px; 
+        line-height: 20px;
       }
 
       &:nth-of-type(3) {
         font-size: 12px;
       }
     }
+
     .newsinner-img-mask {
       padding-top: 44%;
     }
+
     .center {
       align-items: stretch;
     }
+
     .content-wrap {
       padding: 91px 25px 20px 10px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between; 
+      justify-content: space-between;
 
       @media screen and (max-width: 1280px) {
         padding: 25px 25px 20px 10px;
       }
-       
+
       .stick-dots {
         display: flex;
         justify-content: flex-end;
-        align-items: stretch; 
+        align-items: stretch;
+
         span {
           cursor: pointer;
           background-color: #eaeaea;
@@ -172,10 +205,11 @@
           margin: 0 6px;
           width: 12px;
           height: 12px;
+
           &.active {
             background-color: #e76c26;
           }
-        } 
+        }
       }
     }
   }
@@ -193,6 +227,7 @@
           color: #fff;
         }
       }
+
       &:nth-child(1) {
         .pagination-link:not(.nuxt-link-active) {
           background-color: #f79f24;
@@ -221,8 +256,25 @@
 <script>
 import SectionBanner from '~/components/SectionBanner'
 export default {
+  components: {
+    SectionBanner
+  },
   head() {
-    return { title: this.$t('新闻动态') }
+    return {
+      title: '公司动态_丰唐物联_OOMI',
+      meta: [
+        {
+          name: 'keywords',
+          content:
+            '丰唐物联,OOMI,大宅系统,OOMI智能家居系统,智能家居,智能家居系统'
+        },
+        {
+          name: 'description',
+          content:
+            '丰唐物联技术（深圳）有限公司集设计研发、生产、销售于一体，提供智能家居整体解决方案，是一家专注物联网产品及无线智能家居产品的高端品牌企业。'
+        }
+      ]
+    }
   },
   data() {
     return {
@@ -238,9 +290,6 @@ export default {
       currentIndex: 0,
       hotnews: []
     }
-  },
-  components: {
-    SectionBanner
   },
   watch: {
     $route: async function(val) {
@@ -269,7 +318,7 @@ export default {
   },
   computed: {
     currentNews() {
-      return this.hotnews.slice(this.currentIndex, this.currentIndex+1)
+      return this.hotnews.slice(this.currentIndex, this.currentIndex + 1)
     }
   },
   async mounted() {
@@ -292,9 +341,9 @@ export default {
       this.pageCount = Number(headers['x-wp-totalpages'])
     }
     let { headers, data } = await this.$axios.get(
-        `${this.$store.state.api}/posts?categories=hotnews&per_page=12&_embed`
+      `${this.$store.state.api}/posts?categories=hotnews&per_page=12&_embed`
     )
-      this.hotnews = data
+    this.hotnews = data
   },
   methods: {
     getDate(val) {

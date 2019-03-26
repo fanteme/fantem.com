@@ -13,20 +13,34 @@
         <div class="columns">
           <div class="column">
             <h5>{{$t('商务合作')}}</h5>
-            <p>{{$t('邮箱') + ": "}}<a href="mailto:saleschina@fantem.com?subject=商务合作">saleschina@fantem.com</a></p>
+            <p>
+              {{$t('邮箱') + ": "}}
+              <a href="mailto:saleschina@fantem.com?subject=商务合作">saleschina@fantem.com</a>
+            </p>
           </div>
           <div class="column">
             <h5>{{$t('市场合作')}}</h5>
-            <p>{{$t('邮箱') + ": "}}<a href="mailto:marketing@fantem.com?subject=市场合作">marketing@fantem.com</a></p>
+            <p>
+              {{$t('邮箱') + ": "}}
+              <a href="mailto:marketing@fantem.com?subject=市场合作">marketing@fantem.com</a>
+            </p>
           </div>
         </div>
         <div class="columns">
           <div class="column">
-            <iframe width='100%' height='350' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='https://lbs.amap.com/console/show/map/?1_1200_350_113.94648_22.534884&=%E8%8B%B1%E5%94%90%E5%A4%A7%E5%8E%A6&=%E7%A7%91%E6%8A%80%E5%9B%AD%E7%A7%91%E6%8A%80%E5%8D%97%E4%BA%94%E9%81%93%E8%8B%B1%E5%94%90%E5%A4%A7%E5%8E%A65%E6%A5%BC&=&=&='></iframe>
+            <iframe
+              width="100%"
+              height="350"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              src="https://lbs.amap.com/console/show/map/?1_1200_350_113.94648_22.534884&=%E8%8B%B1%E5%94%90%E5%A4%A7%E5%8E%A6&=%E7%A7%91%E6%8A%80%E5%9B%AD%E7%A7%91%E6%8A%80%E5%8D%97%E4%BA%94%E9%81%93%E8%8B%B1%E5%94%90%E5%A4%A7%E5%8E%A65%E6%A5%BC&=&=&="
+            ></iframe>
           </div>
         </div>
       </div>
-    </section> 
+    </section>
   </main>
 </template>
 <style lang="stylus" scoped>
@@ -78,7 +92,18 @@ export default {
   },
   head() {
     return {
-      title: this.$t('关于丰唐物联') + '-' + this.$t('联系我们')
+      title: '联系我们_丰唐物联_OOMI',
+      meta: [
+        {
+          name: 'keywords',
+          content: '丰唐物联,智能家居,智能家居系统,OOMI,OOMI智能家居系统'
+        },
+        {
+          name: 'description',
+          content:
+            '丰唐物联是一家专注于物联网产品及无线智能家居产品的高端品牌企业，致力于为人们提供安全、节能、便捷和舒适的智慧生活，是行业领先的智能家居产品和系统方案服务提供商。'
+        }
+      ]
     }
   },
   data() {

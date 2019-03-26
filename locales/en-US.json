@@ -35,14 +35,9 @@
       "animate": "/css/animate.min.css",
       "fontAwesome": "/css/font-awesome.min.css"
     },
-    "meta": {
-      "description": "Fantem Technologies Co.,Ltd. was founded in 2011. This joint venture between Aeon Labs and Yitoa Intelligent Control Co., Ltd. combines the advanced technologies from an American Silicon Valley firm with the advantages of a Chinese public company. ",
-      "keywords": "Fantem,Fantem website,ShenZhen,Manufacturing,OEM,ODM,IOT,Z-Wave,Oomi,smart home,multi sensor,recessor,door/window sensor,water sensor,smart bulb,plug,mote,siren,range extender"
-    },
     "script": {
       "smoothScroll": "/js/smooth-scroll.min.js"
-    },
-    "titleTemplate": "Fantem - %s | Smart Technology Intelligent Life"
+    }
   },
   "一个账号，集中控制！": "Centralized control through one account.",
   "一键开启聚会模式。周末约上三五好友，来家中开启一场久违的Party！在闪烁的温暖灯光下、适宜的音乐中，让老友的情谊更加绵长。": "Open party mode with one touch. Holding a party with some friends on weekend! Let the old friendship long live in the twinkling warm light and the wonderful music",

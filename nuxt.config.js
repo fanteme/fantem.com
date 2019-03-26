@@ -2,7 +2,6 @@ import utils from './utils'
 
 export default {
   head: {
-    title: '官网首页',
     htmlAttrs: {
       lang: 'zh'
     },

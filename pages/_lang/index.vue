@@ -20,7 +20,21 @@ export default {
     News
   },
   head() {
-    return { title: this.$t('首页') }
+    return {
+      title: '丰唐物联_智能家居_智能家居系统_智能家居解决方案',
+      meta: [
+        {
+          name: 'keywords',
+          content:
+            '丰唐物联,OOMI,大宅系统,OOMI智能家居系统,智能家居,智能家居系统,智能家居公司,智能家居解决方案,OOMI3.0大宅系统'
+        },
+        {
+          name: 'description',
+          content:
+            '丰唐物联技术（深圳）有限公司集设计研发、生产、销售于一体，提供智能家居整体解决方案，是一家专注物联网产品及无线智能家居产品的高端品牌企业。'
+        }
+      ]
+    }
   },
   async asyncData({ app, store }) {
     const { data } = await app.$axios.get(

@@ -3,7 +3,7 @@
     <section class="join">
       <section-banner :banner="join"></section-banner>
     </section>
-  </main>  
+  </main>
 </template>
 <style lang="stylus">
 .join {
@@ -19,7 +19,18 @@ export default {
   },
   head() {
     return {
-      title: this.$t('关于丰唐物联') + '-' + this.$t('加入我们')
+      title: '加入我们_OOMI_丰唐物联',
+      meta: [
+        {
+          name: 'keywords',
+          content: '丰唐物联,智能家居,智能家居系统,OOMI,OOMI智能家居系统'
+        },
+        {
+          name: 'description',
+          content:
+            '丰唐物联是一家专注于物联网产品及无线智能家居产品的高端品牌企业，致力于为人们提供安全、节能、便捷和舒适的智慧生活，是行业领先的智能家居产品和系统方案服务提供商。'
+        }
+      ]
     }
   },
   data() {

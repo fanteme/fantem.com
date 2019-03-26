@@ -6,17 +6,20 @@
         <div class="container">
           <div class="caption has-text-centered">{{$t('选择丰唐物联的理由')}}</div>
           <div class="columns is-multiline">
-            <div class="column is-4 has-text-centered" v-for="(reason, index) in reasons" :key="index">
+            <div
+              class="column is-4 has-text-centered"
+              v-for="(reason, index) in reasons"
+              :key="index"
+            >
               <div class="img" v-html="reason.icon"></div>
               <h4>{{reason.title}}</h4>
               <p>{{reason.text}}</p>
             </div>
-          </div>  
-        </div> 
+          </div>
+        </div>
       </div>
       <section-banner id="agency" :banner="agency"></section-banner>
       <section-banner id="project" :banner="project"></section-banner>
-      
     </section>
   </main>
 </template>
@@ -66,11 +69,25 @@
 <script>
 import SectionBanner from '~/components/SectionBanner'
 export default {
-  head() {
-    return { title: this.$t('商务合作') }
-  },
   components: {
     SectionBanner
+  },
+  head() {
+    return {
+      title: '商务合作_智能家居招商_智能家居代理加盟',
+      meta: [
+        {
+          name: 'keywords',
+          content:
+            '智能家居招商,智能家居加盟,智能家居代理,智能家居加盟代理,智能家居招商加盟,智能家居哪家好,智能家居排名'
+        },
+        {
+          name: 'description',
+          content:
+            '丰唐物联技术（深圳）有限公司提供智能家居整体解决方案，并面向全国招募智能家居加盟商，智能家居招商、智能家居代理加盟。'
+        }
+      ]
+    }
   },
   data() {
     return {
@@ -167,10 +184,9 @@ export default {
     }
   },
   mounted() {
-    if( this.$route.hash ) {
+    if (this.$route.hash) {
       this.scrollToAnchor()
     }
-   
   }
 }
 </script>

@@ -48,7 +48,21 @@ export default {
     SectionBanner
   },
   head() {
-    return { title: this.$t('技术支持') + '-' + this.$t('服务体系') }
+    return {
+      title: '服务体系_智能家居系统_智能安防系统_智能照明系统_智能家电系统',
+      meta: [
+        {
+          name: 'keywords',
+          content:
+            '智能家居系统,智能安防系统,智能照明系统,智能家电系统,智能场景系统,智能影音系统,智能娱乐系统,智能环境系统,智能门窗系统'
+        },
+        {
+          name: 'description',
+          content:
+            'OOMI智能家居系统包含了智能交互中心，涵盖了智能控制中心、智能照明系统、智能安防系统、智能影音系统、智能环境系统、智能娱乐系统、能源管理系统、门窗遮阳系统等。'
+        }
+      ]
+    }
   },
   data() {
     return {

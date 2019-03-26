@@ -100,13 +100,25 @@
 <script>
 import videojs from '~/components/Video'
 export default {
-  head() {
-    return {
-      title: this.$t('技术支持') + '-' + this.$t('视频中心')
-    }
-  },
   components: {
     videojs
+  },
+  head() {
+    return {
+      title: '视频中心_丰唐物联_OOMI',
+      meta: [
+        {
+          name: 'keywords',
+          content:
+            '智能家居系统,OOMI智能家居,OOMI大宅系统,OOMI智能家居系统,丰唐物联'
+        },
+        {
+          name: 'description',
+          content:
+            '丰唐物联技术（深圳）有限公司一直致力于智能家居产品及家居整体智能控制解决方案的研究与实践，提供智能家居整体解决方案，为您轻松打造舒适便利的智能家居生活环境。'
+        }
+      ]
+    }
   },
   data() {
     return {
