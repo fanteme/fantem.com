@@ -12,6 +12,14 @@
               class="content has-text-weight-light has-text-white"
             >{{ $t('OOMI Touch智能家庭控制平板，小身板，大功能，方寸之间蕴含多种可能！7英寸的触摸屏操控界面可实现智能家居设备操控、智能场景自定义、监控查询、设备查询、以及能耗监控等功能。另外它还具有物理按键自定义，可结合OOMI 系列网关，学习并精简家中遥控器，轻松变身万能遥控，从此告别一器一遥控的时代！') }}</p>
           </div>
+          <div class="column is-12 center">
+            <div class="columns is-fullwidth center">
+              <div class="svg column" v-for="(item, index) in features" :key="index">
+                <img :src="item.icon">
+                <p class="has-text-white">{{ item.name }}</p>
+              </div>
+            </div>
+          </div>
           <div class="column is-12">
             <img :src="`${this.$store.state.cdn}/2019/03/f1a535dee2c194439d48988e78169788.png`">
           </div>
@@ -47,6 +55,40 @@
       </div>
     </section>
     <section class="section-top scene has-text-centered">
+      <div class="container">
+        <div class="columns is-multiline">
+          <div class="column is-12">
+            <h2 class="title has-text-weight-normal">{{$t('NFC组网功能')}}</h2>
+          </div>
+          <div class="column is-10 is-offset-1">
+            <p
+              class="content has-text-weight-light"
+            >{{ $t('使用自主创新的Tap-and-Touch专利技术，刷新智能家居安装新定义！只需让OOMI Touch轻触其他OOMI产品，便可建立连接，实现OOMI系统对智能家居的全操控。') }}</p>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="num center">1</div>
+            <figure class="center">
+              <img :src="`${this.$store.state.cdn}/2019/03/7e3dcf4d14b48b4a00aa60b43f6e4598.svg`">
+            </figure>
+          </div>
+          <div class="column">
+            <div class="num center">2</div>
+            <figure class="center">
+              <img :src="`${this.$store.state.cdn}/2019/03/f2a1bd1ec4462293edb395ff337e4f65.svg`">
+            </figure>
+          </div>
+          <div class="column">
+            <div class="num center">3</div>
+            <figure class="center">
+              <img :src="`${this.$store.state.cdn}/2019/03/49261e1263381854b24c1492142741a5.svg`">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="background-color: #f0f4f5;" class="section-top scene has-text-centered">
       <div class="container">
         <div class="columns is-multiline">
           <div class="column is-12">
@@ -129,6 +171,20 @@
 .section {
   &-top {
     color: #3e3a39;
+
+    .num {
+      width: 42px;
+      height: 42px;
+      color: #e66c25;
+      font-size: 24px;
+      font-weight: 500;
+      border: 1px solid #f26f21;
+      border-radius: 50%;
+    }
+
+    figure {
+      height: calc(100% - 35px);
+    }
 
     &.tint-background-color {
       background: #969eab;
@@ -213,6 +269,50 @@ export default {
   },
   data() {
     return {
+      features: [
+        {
+          icon: `${
+            this.$store.state.cdn
+          }/2019/03/56513837e5edf31d5037b0c364f1115d.svg`,
+          name: this.$t('设备操控')
+        },
+        {
+          icon: `${
+            this.$store.state.cdn
+          }/2019/03/5653f70e00321c00085e28fd98f98b25.svg`,
+          name: this.$t('智能场景自定义')
+        },
+        {
+          icon: `${
+            this.$store.state.cdn
+          }/2019/03/5f9276570a3c9e5096186613a938df81.svg`,
+          name: this.$t('监控查询')
+        },
+        {
+          icon: `${
+            this.$store.state.cdn
+          }/2019/03/68d96cdaf31a1695269f4cca58d7ccc2.svg`,
+          name: this.$t('设备查询')
+        },
+        {
+          icon: `${
+            this.$store.state.cdn
+          }/2019/03/d918050ce1b32ba0d129a7280c79bc13.svg`,
+          name: this.$t('能耗监控')
+        },
+        {
+          icon: `${
+            this.$store.state.cdn
+          }/2019/03/e1a134394a82665b641bc307f4370460.svg`,
+          name: this.$t('按键功能自定义')
+        },
+        {
+          icon: `${
+            this.$store.state.cdn
+          }/2019/03/3c52daf6759d3cd1607a95e0597e1060.svg`,
+          name: this.$t('快速入网')
+        }
+      ],
       infraredmodes: [
         {
           icon:
