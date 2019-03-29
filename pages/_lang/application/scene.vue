@@ -2,15 +2,6 @@
   <main>
     <application-hero :hero="hero"></application-hero>
     <section class="application-features">
-      <div class="container">
-        <div class="columns">
-          <div class="column">
-            <div
-              class="subtitle has-text-centered has-text-black is-size-6 marginT"
-            >{{$t('OOMI场景模式能充分满足您在生活中的各类需求，借助OOMI一系列智能节点设备打造出各种可调整、灵活性强、支持多场景应用的智能家居场景模式。OOMI系列智能节点设备功能的组合，不仅能帮您大大减少传统家居繁琐的单设备操作所带来的麻烦，同时也省去不必要的生活成本。另外，您可以通过OOMI智能控制平板、OOMI PRO APP或场景控制面板，根据您自己的需求和使用习惯，联动不同的OOMI智能节点设备，自行设置不同的场景模式！')}}</div>
-          </div>
-        </div>
-      </div>
       <div class="container-fluid has-text-centered">
         <div class="columns is-gapless">
           <div
