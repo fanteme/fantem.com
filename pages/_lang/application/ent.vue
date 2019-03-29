@@ -40,7 +40,7 @@
       </div>
       <div
         class="container-fluid"
-        :style="{backgroundImage: `url(${$store.state.cdn}/2019/03/01af2495f10d92712f6fccbca8e48fdc.jpg)`, minHeight: '760px'}"
+        :style="{backgroundImage: `url(${$store.state.cdn}/2019/03/668fe29376c1b552a7a8fa851f05c986.jpg)`, minHeight: '760px'}"
       >
         <p
           class="caption has-text-centered has-text-white"

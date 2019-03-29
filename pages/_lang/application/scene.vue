@@ -212,19 +212,17 @@ export default {
       hero: {
         bg: `${
           this.$store.state.cdn
-        }/2018/10/befa44773cf80f3d742d9fcca7d3fc3d.jpg`,
-        isnum: 'is-10',
-        isalgin: '',
-        isoffset: 'is-offset-1',
-        title: this.$t('OOMI智能家居') + '—— ' + this.$t('场景模式'),
-        titalign: 'has-text-left',
-        titcolor: 'dark',
-        subtitle: '',
-        subalign: 'has-text-centered',
-        subcolor: 'has-text-white',
-        detail: '',
-        detalign: 'has-text-centered',
-        detcolor: 'has-text-white'
+        }/2019/03/3b6f9118f92afe7849364c8eed627365.jpg`,
+        icon: `${
+          this.$store.state.cdn
+        }/2019/03/742646d2ad908f2128752e003f8c016d.svg`,
+        title: this.$t('OOMI智能家居系统') + '--' + this.$t('场景模式'),
+        align: 'has-text-centered',
+        titcolor: 'has-text-black',
+        detail: this.$t(
+          'OOMI智能场景模式能充分满足您在生活中的各种需求，借助OOMI一系列智能节点设备可以打造出各种可调整、灵活性强的智能家居场景模式。另外，您还可以通过OOMI智能家庭控制平板、OOMI APP或智能场景面板，联动OOMI智能节点设备，设置不同的场景模式！'
+        ),
+        detcolor: 'has-text-black'
       },
       show: [false, false, false, false, false, false, false],
       suit: {
