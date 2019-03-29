@@ -91,7 +91,7 @@
           <div class="column is-5" @mouseover="showText(5)" @mouseleave="hideText(5)">
             <div
               class="modeB center positionR"
-              :style="{backgroundImage: `url(${this.$store.state.cdn}/2018/10/2c8695801381298e043ec39729af632f.jpg)`}"
+              :style="{backgroundImage: `url(${this.$store.state.cdn}/2019/03/76d4de0595bac2079067fb4498a2a033.jpg)`}"
             >
               <h4 class="has-text-white center">{{$t('回家模式')}}</h4>
               <transition enter-active-class="fadeInUp" leave-active-class="fadeOutDown">

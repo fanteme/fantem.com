@@ -283,21 +283,18 @@ export default {
       hero: {
         bg: `${
           this.$store.state.cdn
-        }/2018/10/caf9338ab4ad7701cdd85eaa4f4c4802.jpg`,
-        isnum: 'is-4',
-        isalgin: '',
-        isoffset: 'is-offset-0',
-        title: this.$t('OOMI智能家居') + '—— ' + this.$t('健康模式'),
-        titalign: 'has-text-left',
-        titcolor: 'dark',
-        subtitle: '',
-        subalign: 'has-text-centered',
+        }/2019/03/3bf039a5448cd91712c9d87ee9c99775.jpg`,
+        icon: `${
+          this.$store.state.cdn
+        }/2019/03/5bcca22e197aec90bb463341c7ee1ec4.svg`,
+        title: this.$t('OOMI智能家居系统') + '--' + this.$t('健康模式'),
+        align: 'has-text-centered',
+        titcolor: 'has-text-white',
         subcolor: 'has-text-white',
         detail: this.$t(
-          '让孩子们在安全的环境下健康长大、给家人一个安全、舒适的居住环境，一直是我们的追求。'
+          'OOMI智能健康系统能够实时、快速、高效监测家中空气质量,如：PM2.5、TVOC等有害气体的浓度，并可以联动家中新风系统、空调、空气净化器等空净设备，对空气质量进行优化，以此来控制温度、湿度之间的协调统一，为您提供一个“恒温、恒湿、恒氧、恒净”的家居环境。'
         ),
-        detalign: 'has-text-left',
-        detcolor: 'dark'
+        detcolor: 'has-text-white'
       },
       suit: {
         title: this.$t('健康模式 套装选择'),

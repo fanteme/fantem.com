@@ -324,7 +324,7 @@ export default {
         }/2019/03/6fe0a1fc8af6214544d289779aba6ade.jpg`,
         icon: `${
           this.$store.state.cdn
-        }/2019/03/0157280674b66a151eb819e6a8457f40.png`,
+        }/2019/03/0ebd63bd55d23e1e3271d47918412025.svg`,
         title: this.$t('OOMI智能家居系统') + '--' + this.$t('安防模式'),
         align: 'has-text-centered',
         titcolor: 'has-text-white',

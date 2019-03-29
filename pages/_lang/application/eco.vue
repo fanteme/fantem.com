@@ -203,7 +203,7 @@ export default {
       hero: {
         bg: `${
           this.$store.state.cdn
-        }/2019/03/023b0f30c902c4b7eebd386b41bb5d0f.jpg`,
+        }/2019/03/f6767ea2b1a04ae04ab090bdff20d228.jpg`,
         icon: `${
           this.$store.state.cdn
         }/2019/03/e5f8805a2668935f8be4ab6fe2595e48.svg`,
