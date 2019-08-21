@@ -119,6 +119,20 @@
               </nuxt-link>
             </div>
             <div class="column is-6">
+              <nuxt-link :to="`/${this.$store.state.locale}/products/panel`">
+                <div class="img-wrap">
+                  <img
+                    :src="`${this.$store.state.cdn}/2019/08/5ddfe0427060c97cdc80457cd558cca5.png`"
+                    alt
+                  >
+                </div>
+                <div class="content-wrap">
+                  <h3>{{$t('智能触控面板(S系列)')}}</h3>
+                  <span>{{$t('无线远程智能灯光场景控制')}}</span>
+                </div>
+              </nuxt-link>
+            </div>
+            <div class="column is-6">
               <nuxt-link :to="`/${this.$store.state.locale}/products/curtain`">
                 <div class="img-wrap">
                   <img
