@@ -150,14 +150,14 @@
                 </li>
                 <li>
                   <img
-                    :src="`${this.$store.state.cdn}/2018/11/ce321944a30ae129fbfb0daa36509067.svg`"
+                    :src="`${this.$store.state.cdn}/2019/03/4ea37a74e474b040a763d4f9c7cc6ec9.svg`"
                   >
                   <p class="has-text-weight-light">{{$t('分析数据')}}</p>
                 </li>
                 <li>
                   <img
                     class="arrow"
-                    :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`"
+                    :src="`${this.$store.state.cdn}/2019/03/4ea37a74e474b040a763d4f9c7cc6ec9.svg`"
                   >
                 </li>
                 <li>
@@ -169,7 +169,7 @@
                 <li>
                   <img
                     class="arrow"
-                    :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`"
+                    :src="`${this.$store.state.cdn}/2019/03/4ea37a74e474b040a763d4f9c7cc6ec9.svg`"
                   >
                 </li>
                 <li>
@@ -211,14 +211,14 @@
                 </li>
                 <li>
                   <img
-                    :src="`${this.$store.state.cdn}/2018/11/ce321944a30ae129fbfb0daa36509067.svg`"
+                    :src="`${this.$store.state.cdn}/2019/03/4ea37a74e474b040a763d4f9c7cc6ec9.svg`"
                   >
                   <p class="has-text-weight-light">{{$t('分析数据')}}</p>
                 </li>
                 <li>
                   <img
                     class="arrow"
-                    :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`"
+                    :src="`${this.$store.state.cdn}/2019/03/4ea37a74e474b040a763d4f9c7cc6ec9.svg`"
                   >
                 </li>
                 <li>
@@ -230,7 +230,7 @@
                 <li>
                   <img
                     class="arrow"
-                    :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`"
+                    :src="`${this.$store.state.cdn}/2019/03/4ea37a74e474b040a763d4f9c7cc6ec9.svg`"
                   >
                 </li>
                 <li>

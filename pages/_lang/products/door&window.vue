@@ -38,21 +38,21 @@
                   <span class="has-text-weight-light">{{$t('检测门窗异常开启')}}</span>
                 </li>
                 <li>
-                  <img class="arrow" :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`">
+                  <img class="arrow" :src="`${this.$store.state.cdn}/2019/03/4ea37a74e474b040a763d4f9c7cc6ec9.svg`">
                 </li>
                 <li>
                   <div><img :src="`${this.$store.state.cdn}/2018/11/ff14a87d0b763fda83977782d4ec8deb.svg`"></div>
                   <span class="has-text-weight-light">{{$t('报告网关')}}</span>
                 </li>
                 <li>
-                  <img class="arrow" :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`">
+                  <img class="arrow" :src="`${this.$store.state.cdn}/2019/03/4ea37a74e474b040a763d4f9c7cc6ec9.svg`">
                 </li>
                 <li>
                   <div><img :src="`${this.$store.state.cdn}/2018/11/8cc4d4ee5b7087743c458fd90d6ad05b.svg`"></div>
                   <span class="has-text-weight-light">{{$t('开启摄像头录像')}}</span>
                 </li>
                 <li>
-                  <img class="arrow" :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`">
+                  <img class="arrow" :src="`${this.$store.state.cdn}/2019/03/4ea37a74e474b040a763d4f9c7cc6ec9.svg`">
                 </li>
                 <li>
                   <div><img :src="`${this.$store.state.cdn}/2018/11/de874843cfab88051652b9ab2c432c89.svg`"></div>

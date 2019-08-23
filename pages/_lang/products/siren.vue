@@ -39,14 +39,14 @@
                   <span class="has-text-weight-light">{{$t('智能门窗传感器')}}</span>
                 </li>
                 <li>
-                  <img class="arrow" :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`">
+                  <img class="arrow" :src="`${this.$store.state.cdn}/2019/03/4ea37a74e474b040a763d4f9c7cc6ec9.svg`">
                 </li>
                 <li>
                   <div><img :src="`${this.$store.state.cdn}/2018/11/8cc4d4ee5b7087743c458fd90d6ad05b.svg`"></div>
                   <span class="has-text-weight-light">{{$t('智能家庭网关')}}</span>
                 </li>
                 <li>
-                  <img class="arrow" :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`">
+                  <img class="arrow" :src="`${this.$store.state.cdn}/2019/03/4ea37a74e474b040a763d4f9c7cc6ec9.svg`">
                 </li>
                 <li>
                   <div><img :src="`${this.$store.state.cdn}/2018/11/1605c0dfc95a9cc5247f39ff4cbaa0ef.svg`"></div>
@@ -74,14 +74,14 @@
                       <span class="has-text-weight-light">{{$t('智能场景')}}</span>
                     </li>
                     <li>
-                      <img class="arrow" :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`">
+                      <img class="arrow" :src="`${this.$store.state.cdn}/2019/03/4ea37a74e474b040a763d4f9c7cc6ec9.svg`">
                     </li>
                     <li>
                       <div><img :src="`${this.$store.state.cdn}/2018/11/1605c0dfc95a9cc5247f39ff4cbaa0ef.svg`"></div>
                       <span class="has-text-weight-light">{{$t('智能警示器')}}</span>
                     </li>
                     <li>
-                      <img class="arrow" :src="`${this.$store.state.cdn}/2018/11/4ea37a74e474b040a763d4f9c7cc6ec9.svg`">
+                      <img class="arrow" :src="`${this.$store.state.cdn}/2019/03/4ea37a74e474b040a763d4f9c7cc6ec9.svg`">
                     </li>
                     <li>
                       <div><img :src="`${this.$store.state.cdn}/2018/11/b3848a1662e263a5e605a985f8d16791.svg`"></div>
