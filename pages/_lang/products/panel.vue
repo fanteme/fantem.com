@@ -45,7 +45,7 @@
     <section class="section-right life has-text-centered" :style="{backgroundImage: `url(${this.$store.state.cdn}/2019/08/c6d9a3e894e1e6fd21992a32b3ff4741.jpeg)`}">
       <div class="container">
         <div class="columns is-multiline center">
-         <div class="column is-4 is-offset-8">
+         <div class="column is-5 is-offset-7">
            <h2 class="title has-text-weight-normal has-text-white">{{$t('个性化场景设定')}}</h2>
            <p class="has-text-weight-light has-text-white">{{$t('按键可短按长按都有不同的场景模式，还可设置不同的生活情景模式，实现电器设备的智能化控制。变化多样的模式设置，为你量身定制。')}}</p>
          </div>
@@ -55,7 +55,7 @@
     <section class="section-right life has-text-right" :style="{backgroundImage: `url(${this.$store.state.cdn}/2019/08/7a0008f8948e63f106c9dc3d67a47b8d.jpeg)`}">
       <div class="container">
         <div class="columns is-multiline center">
-          <div class="column is-4 is-offset-8">
+          <div class="column is-5 is-offset-7">
             <h2 class="title has-text-weight-normal has-text-orange ">{{$t('极简操作 智慧生活')}}</h2>
             <p class="has-text-weight-light has-text-orange">
                {{$t('无需改线或重新布线，直接替换普通翘板按键开关，并通过连接OOMI智能家庭网关，联动OOMI相关智能节点设备，还有远程OOMI APP控制更可让您不在家也能了解其状态。无曲边极简工艺美学，展现出轻奢优雅。边框电镀铬拉丝但边缘毫无刮手感觉，历经多次打磨，极致贴合，匠心工艺只为做到最好。 满足你对智能家居生活的所有需求，达到你想要的预期效果。')}}
@@ -67,7 +67,7 @@
     <section class="section-right life has-text-right" :style="{backgroundImage: `url(${this.$store.state.cdn}/2019/08/c014ebd01c77c9cded927080181beb2b.jpg)`}">
       <div class="container">
         <div class="columns is-multiline center">
-          <div class="column is-4 is-offset-8">
+          <div class="column is-5 is-offset-8">
             <h2 class="title has-text-weight-normal has-text-white ">{{$t('多种方式智能联动')}}</h2>
             <p class="has-text-weight-light has-text-white">{{$t('清晨时刻，定时开灯，叫你起床。早上用柔和的灯光让你在睡梦中慢慢苏醒；')}}</p>
             <p class="has-text-weight-light has-text-white">{{$t('傍晚时刻，疲惫一天的你，下班回家，灯光自动为您开启回家模式，让您放松身体享受自在时光；')}}</p>
@@ -175,7 +175,7 @@ import ProductBanner from "~/components/ProductBanner"
         },
         {
           column: "is-4",
-          value: '86 × 86 × 30mm(一/二路) 86 × 86 × 32mm(四路) '
+          value: this.$t('86 × 86 × 30mm(一/二路) 86 × 86 × 32mm(四路)')
         },
         {
           column: "is-2",
@@ -199,7 +199,7 @@ import ProductBanner from "~/components/ProductBanner"
         },
         {
           column: "is-4",
-          value: this.$t('10A × 1 路( 零火一路 )  / 8A × 2 路( 零火二路 )  / 4A × 4 路 ( 零火四路 )')
+          value: this.$t('10A × 1 路 ( 零火一路 )  / 8A × 2 路 ( 零火二路 )  / 4A × 4 路 ( 零火四路 )')
         }
       ]
     }
