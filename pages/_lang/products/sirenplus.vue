@@ -18,7 +18,7 @@
                 <p class="has-text-weight-light">{{$t('门铃功能')}}</p>
               </div>
               <div class="column is-3">
-                <img :src="`${this.$store.state.cdn}/2018/11/3375645f87191993c72e366a84d2161f.svg`">
+                <img :src="`${this.$store.state.cdn}/2018/11/987d93d299c71bf3a0091c6466c7885f.svg`">
                 <p class="has-text-weight-light">{{$t('低功耗')}}</p>
               </div>
               <div class="column is-3">
