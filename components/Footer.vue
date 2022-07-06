@@ -4,8 +4,12 @@
       <div class="columns">
         <div class="column is-8">
           <section class="columns is-multiline is-mobile">
-            <ul class="column is-half-mobile" :key="index" v-for="(menu, index) of menus">
-              <h2 class="caption">{{menu.title}}</h2>
+            <ul
+              class="column is-half-mobile"
+              :key="index"
+              v-for="(menu, index) of menus"
+            >
+              <h2 class="caption">{{ menu.title }}</h2>
               <li v-for="(item, index) of menu.menus" :key="index">
                 <nuxt-link :to="item.link" v-text="item.title"></nuxt-link>
               </li>
@@ -14,32 +18,32 @@
         </div>
         <div class="column is-4 contact has-text-right has-text-left-mobile">
           <ul>
-            <li class="tel has-text-weight-semibold">400-880-3757</li>
+            <li class="tel has-text-weight-semibold">18902454488</li>
             <li class="wechat-mp">
               <div class="qrcode">
                 <img
                   width="85"
-                  :src="`${this.$store.state.cdn}/2018/11/ce44235d3aaeff8387bb0307ead2b106.png`"
-                >
+                  :src="
+                    `${this.$store.state.cdn}/2018/11/ce44235d3aaeff8387bb0307ead2b106.png`
+                  "
+                />
               </div>
-              <span>{{$t('关注我们')}}</span>
+              <span>{{ $t('关注我们') }}</span>
             </li>
           </ul>
         </div>
       </div>
       <div class="columns">
         <div class="column">
-          <hr>
+          <hr />
         </div>
       </div>
       <div class="columns">
         <div class="column has-text-left company">
-          ©2018 {{$t('丰唐物联技术（深圳）有限公司')}}
-          <a
-            target="_blank"
-            href="http://www.miitbeian.gov.cn"
-            class="icp"
-          >粤ICP备14021056号-1</a>
+          ©2018 {{ $t('丰唐物联技术（深圳）有限公司') }}
+          <a target="_blank" href="http://www.miitbeian.gov.cn" class="icp"
+            >粤ICP备14021056号-1</a
+          >
         </div>
         <div class="column has-text-right">
           <ul class="is-inline-flex link">
@@ -164,12 +168,12 @@ export default {
     isDisplay2Top: false
   }),
   computed: {
-    baseUrl() {
+    baseUrl () {
       return this.$store.state.locale == this.$store.state.fallbackLocale
         ? ''
         : `/${this.$store.state.locale}`
     },
-    menus() {
+    menus () {
       return [
         {
           title: this.$t('关于丰唐物联'),
@@ -247,7 +251,7 @@ export default {
     }
   },
   methods: {
-    switchLang(locale) {
+    switchLang (locale) {
       if (/^\/en/.test(this.$route.path)) {
         if (locale == 'en') {
           return
@@ -266,7 +270,7 @@ export default {
         })
       }
     },
-    go2top() {
+    go2top () {
       let timer = setInterval(() => {
         let oTop = document.documentElement.scrollTop || document.body.scrollTop
         let speed = Math.floor(-oTop / 10)
@@ -278,7 +282,7 @@ export default {
       }, 30)
     }
   },
-  mounted() {
+  mounted () {
     window.addEventListener('scroll', () => {
       let scrollTop =
         document.documentElement.scrollTop ||

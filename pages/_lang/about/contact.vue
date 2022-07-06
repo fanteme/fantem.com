@@ -3,26 +3,50 @@
     <section class="contact">
       <section-banner :banner="contact"></section-banner>
       <div class="container">
-        <h3>{{$t('联系方式')}}</h3>
-        <h4>{{$t('丰唐物联技术（深圳）有限公司')}}</h4>
-        <p>{{$t('公司地址') + ': ' + $t('深圳市南山区高新南十道深圳湾科技生态园10A栋909室')}}</p>
-        <p>{{$t('工厂地址') + ': ' + $t('广东省深圳市光明新区光明办事处第二工业区白花园路18号 英唐科技产业园')}}</p>
-        <p>{{$t('邮编') + ': ' + 518000}}</p>
-        <p>{{$t('服务热线') + ': ' + $t('400-880-3757（周一至周五 9:00-18：00）')}}</p>
+        <h3>{{ $t('联系方式') }}</h3>
+        <h4>{{ $t('丰唐物联技术（深圳）有限公司') }}</h4>
+        <p>
+          {{
+            $t('公司地址') +
+              ': ' +
+              $t(
+                '广东省深圳市光明新区光明办事处第二工业区白花园路18号 英唐科技产业园 3楼'
+              )
+          }}
+        </p>
+        <p>
+          {{
+            $t('工厂地址') +
+              ': ' +
+              $t(
+                '广东省深圳市光明新区光明办事处第二工业区白花园路18号 英唐科技产业园 3楼'
+              )
+          }}
+        </p>
+        <p>{{ $t('邮编') + ': ' + 518000 }}</p>
+        <p>
+          {{
+            $t('服务热线') + ': ' + $t('18902454488（周一至周五 9:00-18：00）')
+          }}
+        </p>
         <p></p>
         <div class="columns">
           <div class="column">
-            <h5>{{$t('商务合作')}}</h5>
+            <h5>{{ $t('商务合作') }}</h5>
             <p>
-              {{$t('邮箱') + ": "}}
-              <a href="mailto:saleschina@fantem.com?subject=商务合作">saleschina@fantem.com</a>
+              {{ $t('邮箱') + ': ' }}
+              <a href="mailto:saleschina@fantem.com?subject=商务合作"
+                >saleschina@fantem.com</a
+              >
             </p>
           </div>
           <div class="column">
-            <h5>{{$t('市场合作')}}</h5>
+            <h5>{{ $t('市场合作') }}</h5>
             <p>
-              {{$t('邮箱') + ": "}}
-              <a href="mailto:marketing@fantem.com?subject=市场合作">marketing@fantem.com</a>
+              {{ $t('邮箱') + ': ' }}
+              <a href="mailto:marketing@fantem.com?subject=市场合作"
+                >marketing@fantem.com</a
+              >
             </p>
           </div>
         </div>
@@ -90,7 +114,7 @@ export default {
   components: {
     SectionBanner
   },
-  head() {
+  head () {
     return {
       title: '联系我们_丰唐物联_OOMI',
       meta: [
@@ -106,7 +130,7 @@ export default {
       ]
     }
   },
-  data() {
+  data () {
     return {
       contact: {
         backgroundimg: '/2018/10/0e5d76afce01f3f58b89a24c74047217.jpg',
